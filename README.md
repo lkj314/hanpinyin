@@ -30,16 +30,20 @@ HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要�
 ### 1. 安装小狼毫
 下载 Weasel（https://rime.im），安装时自带 `luna_pinyin`（中文拼音词库，本方案的中文候选来自它）。
 
-### 2. 部署本项目
-最简单：
-```bat
-cd HanPinyin\rime
-python deploy.py
-```
-它会把 `sino_mix.schema.yaml` + 生成的 `hanpinyin.dict.yaml` 复制到 `%AppData%\Rime\` 并提示你「重新部署」。
+### 2. 部署 / 更新本项目（双击即可，无需 Python）
 
-### 3. 重新部署
-右键任务栏小狼毫图标 → **「重新部署」**。
+仓库根目录里有 **`一键更新.bat`**。平时更新（拿到新版本词库 / 拼音规则后）只需：
+
+1. 保证 `一键更新.bat` 和 `rime\` 文件夹在一起（即整个仓库一起放着）。
+2. **双击 `一键更新.bat`**。
+3. 它自动把 `sino_mix.schema.yaml` + `hanpinyin.dict.yaml` 复制到小狼毫用户目录，并**自动重启小狼毫触发重新部署**。
+
+> 全程**不需要 Python、不需要重装小狼毫**。窗口最后会提示 Done，关掉即可。
+> 若候选栏没立刻变化，再右键任务栏小狼毫图标 → **「重新部署」** 一次。
+
+### 3. 首次使用需要做的（只做一次）
+- 右键任务栏小狼毫图标 → **「输入法设定」** → 在方案列表里勾选 **「韩文拼音 HanPinyin」**（即 `sino_mix`）。之后 `Win+空格` 就能切到它。
+- 这一步只需做一次，之后更新都只双击 `一键更新.bat`。
 
 ### 4. 使用
 `Win+空格` 切到「韩文拼音 HanPinyin」，记事本里打 `nihao` → 候选窗出现 `안녕하세요` / `你好`，数字键或空格选词。
@@ -63,13 +67,14 @@ python deploy.py
 - `data/phrases.json` —— 整句短语：`{ "pinyin": "ni hao", "korean": "안녕하세요" }`
 - `rime/extra_phrases.txt` —— 策划的多语言常用词条（韩/日/英/中混排），拼音为连贯码（如 `nihao`）。
 
-改完：
+改完数据源后，**需要重新生成词库**（这一步仍用 Python 跑一次 `build_dict.py`，把数据变成 `hanpinyin.dict.yaml`）：
 ```bat
 cd HanPinyin\rime
 python build_dict.py     # 重新生成 hanpinyin.dict.yaml
-python deploy.py         # 复制到 %AppData%/Rime/
 ```
-再到小狼毫「重新部署」。
+生成之后，**部署还是双击仓库根的 `一键更新.bat`**（它负责复制 + 重新部署，不需要 Python）。
+
+> 一句话区分：日常「拿到新版本」= 双击 `一键更新.bat`；只有**你自己改了词库数据**才需要额外跑一次 `build_dict.py`。
 
 ---
 
@@ -77,6 +82,7 @@ python deploy.py         # 复制到 %AppData%/Rime/
 
 ```
 HanPinyin/
+├── 一键更新.bat          # 双击部署（复制+重新部署，无需 Python）
 ├── README.md
 ├── data/                 # 词库与 schema（核心资产）
 │   ├── main_dict.json    # 主词库（拼音空格分隔音节）
