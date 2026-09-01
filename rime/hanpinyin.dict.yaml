@@ -1,0 +1,6515 @@
+# HanPinyin 词库（由 data/*.json + rime/extra_phrases.txt 自动生成，请勿手改；
+# 改数据源后重跑 build_dict.py，再在小狼毫里「重新部署」）
+# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码
+---
+name: hanpinyin
+version: "2.3"
+sort: by_weight
+use_preset_vocabulary: false
+columns:
+  - text
+  - code
+  - weight
+max_phrase_length: 20
+...
+ㅂㅂ	baibai	100
+도와줘	bangmang	100
+ㅈㅅ	baoyi	100
+턴 터졌어	batadale	100
+터졌어	bengbuzhu	100
+죄송해요	buhaoyisi	100
+안돼	buxing	100
+못한다	caiji	100
+가자	chong	100
+리메이크	chongkai	100
+텔레포트	chuansong	100
+대박	dabao	100
+솔로킬	dansha	100
+정글	daye	100
+궁	dazhao	100
+잠깐만	dengyixia	100
+점화	dianhuo	100
+적왔어	direnlaile	100
+적 사라졌어	direnxiaoshile	100
+퍼스트블러드	diyidixue	100
+알겠어	dongle	100
+물건	dongxi	100
+미안해요	duibuqi	100
+죄송합니다	duibuqi	100
+라인전	duixian	100
+팀원 조심해	duiyouxiaoxin	100
+얼마	duoshao	100
+배고파	ele	100
+역전	fanpan	100
+파밍	fayu	100
+서폿	fuzhu	100
+치자	ganba	100
+와드 줘	geiwoyan	100
+물 한 잔 주세요	geiwoyibeishui	100
+축하해	gongxi	100
+하하	haha	100
+좋아요	haode	100
+오랜만이에요	haojiubujianle	100
+만나서 반가워요	hengaoxingrenshini	100
+귀환	huicheng	100
+화이팅	jiayou	100
+화이팅 우리	jiayouwomen	100
+모여	jihe	100
+망했어	jile	100
+오늘 날씨 진짜 좋아요	jintiantianqizhenhao	100
+쩐다	juele	100
+캐리	kali	100
+보다	kan	100
+메시지 보면 답장해 주세요	kandaoxiaoxiqinghuifu	100
+트롤	keng	100
+돼	keyi	100
+카드로 계산할 수 있어요?	keyiyongkama	100
+웁	ku	100
+빨리	kuaidian	100
+빨리 와서 도와줘	kuailaizhuwo	100
+졸려	kunle	100
+오다	lai	100
+쩐다	lihai	100
+여기서 멀어요?	lizheliyuanma	100
+용	long	100
+지쳤어	male	100
+금방	mashang	100
+괜찮아요	meiguanxi	100
+내일 봐요	mingtianjianba	100
+내일 시간 있어요?	mingtianyoushijianma	100
+어디	nali	100
+바론	nanjue	100
+너	ni	100
+전화번호가 몇 번이에요?	nidedianhuahaomashiduoshao	100
+안녕하세요	nihao	100
+안녕 친구야	nihaopengyou	100
+어디 가	niquna	100
+너 진짜 대단하다	nitailihaile	100
+개쩔	niubi	100
+요즘 어떻게 지내세요?	nizuijinguodezenmeyang	100
+친구	pengyou	100
+예쁘다	piaoliang	100
+용 잡아	qingbalong	100
+포장해 주세요	qingbangwodabao	100
+잘 부탁드립니다	qingduoduoguanzhao	100
+메뉴판 주세요	qinggeiwocaidan	100
+천천히 말해 주세요	qingmanyidianshuo	100
+잠시만 기다려 주세요	qingshaodengyixia	100
+다시 한번 말해 주세요	qingzaishuoyibian	100
+한번 불러봐	qingzhuyixia	100
+가다	qu	100
+사람	ren	100
+트리플킬	sansha	100
+탑	shangdan	100
+점멸	shanxian	100
+누구	shei	100
+승리는 우리 거야	shenglishiwomende	100
+빡쳤어	shengqi	100
+생일축하해	shengrikuaile	100
+뭐	shenme	100
+시간	shijian	100
+시야	shiye	100
+잘생겼다	shuai	100
+더블킬	shuangsha	100
+졌어	shule	100
+순풍	shunfeng	100
+죽었어	sile	100
+아무거나	suibian	100
+그	ta	100
+얘네 바론 해	tamenzaidalong	100
+싫어	taoyan	100
+도망쳤어	tataopaole	100
+항복	touxiang	100
+에이스	tuanmie	100
+한타	tuanzhan	100
+푸시	tuita	100
+잘자	wanan	100
+잘 자 친구야	wananpengyou	100
+끝났어	wanle	100
+오후 내내 했어	wanleyixiawu	100
+왜	weishenme	100
+저	wo	100
+사랑해요	woaini	100
+잘 모르겠어요	wobutaidong	100
+헐	wocao	100
+잘 먹었습니다	wochibaole	100
+늦어서 죄송해요	wochidaoleduibuqi	100
+감기 걸렸어요	woganmaole	100
+보고 싶어요	wohaoxiangni	100
+연락할게요	wohuihenilianxi	100
+오늘 진짜 피곤해요	wojintianhenlei	100
+우리	women	100
+우리 한타 가자	womenkaituanba	100
+우리 승리했어	womenshenglile	100
+언제 만날까요?	womenshenmeshihoujianmian	100
+우리 같이 밥 먹어요	womenyiqichifanba	100
+같이 밀어붙이자	womenyiqitui	100
+길을 잃었어요	womilule	100
+나 갈게	woxianghuijia	100
+지금 갈게	woxianzailai	100
+라인 먹을게	woyaochixian	100
+리콜할게	woyaohuicheng	100
+몸이 좀 안 좋아요	woyoudianbushufu	100
+나 정글이야	wozaidaye	100
+나 서포터야	wozaifuzhu	100
+나 탑이야	wozaishanglu	100
+나 봇이야	wozaixialu	100
+나 미드야	wozaizhonglu	100
+노잼	wuliao	100
+다음 판 하자	xiajuzailai	100
+봇	xialu	100
+ㅋㅋㅋ	xiaole	100
+ㅅㅅ	xiaoshi	100
+조심	xiaoxin	100
+적 조심해	xiaoxindifang	100
+감사합니다	xiexie	100
+다들 고마워	xiexiedajia	100
+고마워	xiexieni	100
+도와줘서 고마워요	xiexienidebangzhu	100
+좋아해	xihuan	100
+수고했어요, 푹 쉬어요	xinkulehaohaoxiuxi	100
+화장실이 어디예요?	xishoujianzainali	100
+학교	xuexiao	100
+와드	yan	100
+이따가 전화할게요	yihuiergeinidadianhua	100
+조심히 가세요	yilupingan	100
+이겼어	yingle	100
+같이 가자	yiqishang	100
+한판더	zailai	100
+있어	zaima	100
+우리 물러나자	zanmentuiba	100
+좋은아침	zaoan	100
+어떻게	zenme	100
+기차역 어떻게 가요?	zenmequhuochezhan	100
+이것	zhege	100
+이거 얼마예요?	zhegeduoshaoqian	100
+이거 진짜 맛있어요	zhegehenhaochi	100
+이 챔피언 센 느껴	zhegeyingxionghenqiang	100
+이번 판 이겼어	zhejuwoyingle	100
+진짜	zhende	100
+정말 죄송합니다	zhendeduibuqi	100
+미드	zhongdan	100
+주말에 뭐 해요?	zhoumoniganshenme	100
+준비 시작	zhunbeikaishi	100
+생일 축하해요	zhunishengrikuaile	100
+ㄱㄱ	zouqi	100
+도와줘	bangman	99
+帮忙	bangmang	99
+도와줘	banman	99
+도와줘	banmang	99
+턴 터졌어	batadane	99
+턴 터졌어	batadare	99
+터졌어	benbuzhu	99
+터졌어	benbuzu	99
+绷不住	bengbuzhu	99
+터졌어	bengbuzu	99
+죄송해요	bufaoyishi	99
+죄송해요	bufaoyisi	99
+죄송해요	buhaoyishi	99
+안돼	buxin	99
+不行	buxing	99
+菜	caiji	99
+못한다	chaiji	99
+가자	chon	99
+冲	chong	99
+重开	chongkai	99
+리메이크	chonkai	99
+텔레포트	chuangshon	99
+텔레포트	chuangshong	99
+텔레포트	chuangson	99
+텔레포트	chuangsong	99
+텔레포트	chuanshon	99
+텔레포트	chuanshong	99
+텔레포트	chuanson	99
+传送	chuansong	99
+가자	con	99
+가자	cong	99
+리메이크	congkai	99
+리메이크	conkai	99
+텔레포트	cuangshon	99
+텔레포트	cuangshong	99
+텔레포트	cuangson	99
+텔레포트	cuangsong	99
+텔레포트	cuanshon	99
+텔레포트	cuanshong	99
+텔레포트	cuanson	99
+텔레포트	cuansong	99
+大爆	dabao	99
+솔로킬	dangsa	99
+솔로킬	dangsha	99
+솔로킬	dansa	99
+单杀	dansha	99
+궁	dazao	99
+大招	dazhao	99
+等下	dengyixia	99
+잠깐만	denyixia	99
+점화	dianfuo	99
+점화	diangfuo	99
+점화	dianghuo	99
+点火	dianhuo	99
+적왔어	dilenglaile	99
+적왔어	dilenglaine	99
+적왔어	dilenglaire	99
+적왔어	dilengnaile	99
+적왔어	dilengnaine	99
+적왔어	dilengnaire	99
+적왔어	dilengraile	99
+적왔어	dilengraine	99
+적왔어	dilengraire	99
+적 사라졌어	dilengxiaoshile	99
+적 사라졌어	dilengxiaoshine	99
+적 사라졌어	dilengxiaoshire	99
+적 사라졌어	dilengxiaosile	99
+적 사라졌어	dilengxiaosine	99
+적 사라졌어	dilengxiaosire	99
+적왔어	dilenlaile	99
+적왔어	dilenlaine	99
+적왔어	dilenlaire	99
+적왔어	dilennaile	99
+적왔어	dilennaine	99
+적왔어	dilennaire	99
+적왔어	dilenraile	99
+적왔어	dilenraine	99
+적왔어	dilenraire	99
+적 사라졌어	dilenxiaoshile	99
+적 사라졌어	dilenxiaoshine	99
+적 사라졌어	dilenxiaoshire	99
+적 사라졌어	dilenxiaosile	99
+적 사라졌어	dilenxiaosine	99
+적 사라졌어	dilenxiaosire	99
+적왔어	direnglaile	99
+적왔어	direnglaine	99
+적왔어	direnglaire	99
+적왔어	direngnaile	99
+적왔어	direngnaine	99
+적왔어	direngnaire	99
+적왔어	direngraile	99
+적왔어	direngraine	99
+적왔어	direngraire	99
+적 사라졌어	direngxiaoshile	99
+적 사라졌어	direngxiaoshine	99
+적 사라졌어	direngxiaoshire	99
+적 사라졌어	direngxiaosile	99
+적 사라졌어	direngxiaosine	99
+적 사라졌어	direngxiaosire	99
+敌人来了	direnlaile	99
+적왔어	direnlaine	99
+적왔어	direnlaire	99
+적왔어	dirennaile	99
+적왔어	dirennaine	99
+적왔어	dirennaire	99
+적왔어	direnraile	99
+적왔어	direnraine	99
+적왔어	direnraire	99
+적 사라졌어	direnxiaoshine	99
+적 사라졌어	direnxiaoshire	99
+적 사라졌어	direnxiaosile	99
+적 사라졌어	direnxiaosine	99
+적 사라졌어	direnxiaosire	99
+一血	diyidixue	99
+懂了	dongle	99
+알겠어	dongne	99
+알겠어	dongre	99
+东西	dongxi	99
+알겠어	donle	99
+알겠어	donne	99
+알겠어	donre	99
+물건	donxi	99
+ごめんなさい	duibuqi	99
+对线	duixian	99
+라인전	duixiang	99
+팀원 조심해	duiyouxiaoxing	99
+얼마	duosao	99
+多少	duoshao	99
+饿	ele	99
+배고파	ene	99
+배고파	ere	99
+하하	fafa	99
+하하	faha	99
+역전	fangpan	99
+역전	fangpang	99
+翻盘	fanpan	99
+역전	fanpang	99
+좋아요	faode	99
+오랜만이에요	faojiubujiangle	99
+오랜만이에요	faojiubujiangne	99
+오랜만이에요	faojiubujiangre	99
+오랜만이에요	faojiubujianle	99
+오랜만이에요	faojiubujianne	99
+오랜만이에요	faojiubujianre	99
+发育	fayu	99
+귀환	fuicen	99
+귀환	fuiceng	99
+귀환	fuichen	99
+귀환	fuicheng	99
+서폿	fuzu	99
+打	ganba	99
+치자	gangba	99
+물 한 잔 주세요	geiwoyibeisui	99
+恭喜	gongxi	99
+축하해	gonxi	99
+하하	hafa	99
+哈哈	haha	99
+역전	hangpan	99
+역전	hangpang	99
+역전	hanpan	99
+역전	hanpang	99
+好的	haode	99
+오랜만이에요	haojiubujiangle	99
+오랜만이에요	haojiubujiangne	99
+오랜만이에요	haojiubujiangre	99
+오랜만이에요	haojiubujianne	99
+오랜만이에요	haojiubujianre	99
+파밍	hayu	99
+귀환	huicen	99
+귀환	huiceng	99
+귀환	huichen	99
+回城	huicheng	99
+서폿	huzhu	99
+서폿	huzu	99
+加油	jiayou	99
+화이팅 우리	jiayouwomeng	99
+모여	jife	99
+集合	jihe	99
+寄了	jile	99
+망했어	jine	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizenfao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizengfao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizenghao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizenhao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizhenfao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizhengfao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizhenghao	99
+오늘 날씨 진짜 좋아요	jingtiangtiangqizhenhao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizenfao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizengfao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizenghao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizenhao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizhenfao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizhengfao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizhenghao	99
+오늘 날씨 진짜 좋아요	jingtiangtianqizhenhao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizenfao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizengfao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizenghao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizenhao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizhenfao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizhengfao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizhenghao	99
+오늘 날씨 진짜 좋아요	jingtiantiangqizhenhao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizenfao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizengfao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizenghao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizenhao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizhenfao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizhengfao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizhenghao	99
+오늘 날씨 진짜 좋아요	jingtiantianqizhenhao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizenfao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizengfao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizenghao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizenhao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizhenfao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizhengfao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizhenghao	99
+오늘 날씨 진짜 좋아요	jintiangtiangqizhenhao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizenfao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizengfao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizenghao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizenhao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizhenfao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizhengfao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizhenghao	99
+오늘 날씨 진짜 좋아요	jintiangtianqizhenhao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizenfao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizengfao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizenghao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizenhao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizhenfao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizhengfao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizhenghao	99
+오늘 날씨 진짜 좋아요	jintiantiangqizhenhao	99
+오늘 날씨 진짜 좋아요	jintiantianqizenfao	99
+오늘 날씨 진짜 좋아요	jintiantianqizengfao	99
+오늘 날씨 진짜 좋아요	jintiantianqizenghao	99
+오늘 날씨 진짜 좋아요	jintiantianqizenhao	99
+오늘 날씨 진짜 좋아요	jintiantianqizhenfao	99
+오늘 날씨 진짜 좋아요	jintiantianqizhengfao	99
+오늘 날씨 진짜 좋아요	jintiantianqizhenghao	99
+망했어	jire	99
+绝了	juele	99
+쩐다	juene	99
+쩐다	juere	99
+看	kan	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqinfuifu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqinfuihu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqingfuifu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqingfuihu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqinghuihu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqinhuifu	99
+메시지 보면 답장해 주세요	kandaoxiaoxiqinhuihu	99
+보다	kang	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinfuifu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinfuihu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqingfuifu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqingfuihu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinghuifu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinghuihu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinhuifu	99
+메시지 보면 답장해 주세요	kangdaoxiaoxiqinhuihu	99
+캐리	kani	99
+캐리	kari	99
+트롤	ken	99
+坑	keng	99
+可以	keyi	99
+哭	ku	99
+快点	kuaidian	99
+빨리	kuaidiang	99
+빨리 와서 도와줘	kuailaizuwo	99
+빨리 와서 도와줘	kuainaizhuwo	99
+빨리 와서 도와줘	kuainaizuwo	99
+빨리 와서 도와줘	kuairaizhuwo	99
+빨리 와서 도와줘	kuairaizuwo	99
+困了	kunle	99
+졸려	kunne	99
+졸려	kunre	99
+来	lai	99
+어디	lali	99
+바론	langjue	99
+어디	lani	99
+바론	lanjue	99
+어디	lari	99
+사람	len	99
+사람	leng	99
+너	li	99
+전화번호가 몇 번이에요?	lidedianfuafaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianfuafaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianfuafaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianfuafaomasiduoshao	99
+전화번호가 몇 번이에요?	lidedianfuahaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianfuahaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianfuahaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianfuahaomasiduoshao	99
+전화번호가 몇 번이에요?	lidediangfuafaomashiduosao	99
+전화번호가 몇 번이에요?	lidediangfuafaomashiduoshao	99
+전화번호가 몇 번이에요?	lidediangfuafaomasiduosao	99
+전화번호가 몇 번이에요?	lidediangfuafaomasiduoshao	99
+전화번호가 몇 번이에요?	lidediangfuahaomashiduosao	99
+전화번호가 몇 번이에요?	lidediangfuahaomashiduoshao	99
+전화번호가 몇 번이에요?	lidediangfuahaomasiduosao	99
+전화번호가 몇 번이에요?	lidediangfuahaomasiduoshao	99
+전화번호가 몇 번이에요?	lidedianghuafaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianghuafaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianghuafaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianghuafaomasiduoshao	99
+전화번호가 몇 번이에요?	lidedianghuahaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianghuahaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianghuahaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianghuahaomasiduoshao	99
+전화번호가 몇 번이에요?	lidedianhuafaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianhuafaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianhuafaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianhuafaomasiduoshao	99
+전화번호가 몇 번이에요?	lidedianhuahaomashiduosao	99
+전화번호가 몇 번이에요?	lidedianhuahaomashiduoshao	99
+전화번호가 몇 번이에요?	lidedianhuahaomasiduosao	99
+전화번호가 몇 번이에요?	lidedianhuahaomasiduoshao	99
+쩐다	lifai	99
+안녕하세요	lifao	99
+안녕 친구야	lifaopengyou	99
+안녕 친구야	lifaopenyou	99
+厉害	lihai	99
+안녕하세요	lihao	99
+안녕 친구야	lihaopengyou	99
+안녕 친구야	lihaopenyou	99
+어디 가	liqula	99
+어디 가	liquna	99
+너 진짜 대단하다	litailifaile	99
+너 진짜 대단하다	litailifaine	99
+너 진짜 대단하다	litailifaire	99
+너 진짜 대단하다	litailihaile	99
+너 진짜 대단하다	litailihaine	99
+너 진짜 대단하다	litailihaire	99
+너 진짜 대단하다	litainifaile	99
+너 진짜 대단하다	litainifaine	99
+너 진짜 대단하다	litainifaire	99
+너 진짜 대단하다	litainihaile	99
+너 진짜 대단하다	litainihaine	99
+너 진짜 대단하다	litainihaire	99
+너 진짜 대단하다	litairifaile	99
+너 진짜 대단하다	litairifaine	99
+너 진짜 대단하다	litairifaire	99
+너 진짜 대단하다	litairihaile	99
+너 진짜 대단하다	litairihaine	99
+너 진짜 대단하다	litairihaire	99
+개쩔	liubi	99
+여기서 멀어요?	lizeliyuanma	99
+여기서 멀어요?	lizeniyuanma	99
+여기서 멀어요?	lizeriyuanma	99
+여기서 멀어요?	lizheniyuanma	99
+여기서 멀어요?	lizheriyuanma	99
+요즘 어떻게 지내세요?	lizhuijingguodezengmeyang	99
+요즘 어떻게 지내세요?	lizhuijingguodezenmeyang	99
+요즘 어떻게 지내세요?	lizhuijingguodezhengmeyang	99
+요즘 어떻게 지내세요?	lizhuijingguodezhenmeyang	99
+요즘 어떻게 지내세요?	lizhuijinguodezengmeyang	99
+요즘 어떻게 지내세요?	lizhuijinguodezenmeyang	99
+요즘 어떻게 지내세요?	lizhuijinguodezhengmeyang	99
+요즘 어떻게 지내세요?	lizhuijinguodezhenmeyang	99
+요즘 어떻게 지내세요?	lizuijingguodezengmeyang	99
+요즘 어떻게 지내세요?	lizuijingguodezenmeyang	99
+요즘 어떻게 지내세요?	lizuijingguodezhengmeyang	99
+요즘 어떻게 지내세요?	lizuijingguodezhenmeyang	99
+요즘 어떻게 지내세요?	lizuijinguodezengmeyang	99
+요즘 어떻게 지내세요?	lizuijinguodezenmeyang	99
+요즘 어떻게 지내세요?	lizuijinguodezhengmeyang	99
+요즘 어떻게 지내세요?	lizuijinguodezhenmeyang	99
+용	lon	99
+龙	long	99
+麻了	male	99
+지쳤어	mane	99
+지쳤어	mare	99
+금방	masan	99
+금방	masang	99
+금방	mashan	99
+马上	mashang	99
+괜찮아요	meiguangxi	99
+没关系	meiguanxi	99
+내일 봐요	mingtiangjianba	99
+내일 봐요	mingtiangjiangba	99
+내일 시간 있어요?	mingtiangyoushijiangma	99
+내일 시간 있어요?	mingtiangyoushijianma	99
+내일 시간 있어요?	mingtiangyousijiangma	99
+내일 시간 있어요?	mingtiangyousijianma	99
+내일 봐요	mingtianjiangba	99
+내일 시간 있어요?	mingtianyoushijiangma	99
+내일 시간 있어요?	mingtianyousijiangma	99
+내일 시간 있어요?	mingtianyousijianma	99
+내일 봐요	mintiangjianba	99
+내일 봐요	mintiangjiangba	99
+내일 시간 있어요?	mintiangyoushijiangma	99
+내일 시간 있어요?	mintiangyoushijianma	99
+내일 시간 있어요?	mintiangyousijiangma	99
+내일 시간 있어요?	mintiangyousijianma	99
+내일 봐요	mintianjianba	99
+내일 봐요	mintianjiangba	99
+내일 시간 있어요?	mintianyoushijiangma	99
+내일 시간 있어요?	mintianyoushijianma	99
+내일 시간 있어요?	mintianyousijiangma	99
+내일 시간 있어요?	mintianyousijianma	99
+오다	nai	99
+哪里	nali	99
+바론	nangjue	99
+어디	nani	99
+男爵	nanjue	99
+어디	nari	99
+你	ni	99
+전화번호가 몇 번이에요?	nidedianfuafaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianfuafaomashiduoshao	99
+전화번호가 몇 번이에요?	nidedianfuafaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianfuafaomasiduoshao	99
+전화번호가 몇 번이에요?	nidedianfuahaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianfuahaomashiduoshao	99
+전화번호가 몇 번이에요?	nidedianfuahaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianfuahaomasiduoshao	99
+전화번호가 몇 번이에요?	nidediangfuafaomashiduosao	99
+전화번호가 몇 번이에요?	nidediangfuafaomashiduoshao	99
+전화번호가 몇 번이에요?	nidediangfuafaomasiduosao	99
+전화번호가 몇 번이에요?	nidediangfuafaomasiduoshao	99
+전화번호가 몇 번이에요?	nidediangfuahaomashiduosao	99
+전화번호가 몇 번이에요?	nidediangfuahaomashiduoshao	99
+전화번호가 몇 번이에요?	nidediangfuahaomasiduosao	99
+전화번호가 몇 번이에요?	nidediangfuahaomasiduoshao	99
+전화번호가 몇 번이에요?	nidedianghuafaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianghuafaomashiduoshao	99
+전화번호가 몇 번이에요?	nidedianghuafaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianghuafaomasiduoshao	99
+전화번호가 몇 번이에요?	nidedianghuahaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianghuahaomashiduoshao	99
+전화번호가 몇 번이에요?	nidedianghuahaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianghuahaomasiduoshao	99
+전화번호가 몇 번이에요?	nidedianhuafaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianhuafaomashiduoshao	99
+전화번호가 몇 번이에요?	nidedianhuafaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianhuafaomasiduoshao	99
+전화번호가 몇 번이에요?	nidedianhuahaomashiduosao	99
+전화번호가 몇 번이에요?	nidedianhuahaomasiduosao	99
+전화번호가 몇 번이에요?	nidedianhuahaomasiduoshao	99
+쩐다	nifai	99
+안녕하세요	nifao	99
+안녕 친구야	nifaopengyou	99
+안녕 친구야	nifaopenyou	99
+쩐다	nihai	99
+こんにちは	nihao	99
+안녕 친구야	nihaopenyou	99
+어디 가	niqula	99
+너 진짜 대단하다	nitailifaile	99
+너 진짜 대단하다	nitailifaine	99
+너 진짜 대단하다	nitailifaire	99
+너 진짜 대단하다	nitailihaine	99
+너 진짜 대단하다	nitailihaire	99
+너 진짜 대단하다	nitainifaile	99
+너 진짜 대단하다	nitainifaine	99
+너 진짜 대단하다	nitainifaire	99
+너 진짜 대단하다	nitainihaile	99
+너 진짜 대단하다	nitainihaine	99
+너 진짜 대단하다	nitainihaire	99
+너 진짜 대단하다	nitairifaile	99
+너 진짜 대단하다	nitairifaine	99
+너 진짜 대단하다	nitairifaire	99
+너 진짜 대단하다	nitairihaile	99
+너 진짜 대단하다	nitairihaine	99
+너 진짜 대단하다	nitairihaire	99
+牛	niubi	99
+여기서 멀어요?	nizeliyuanma	99
+여기서 멀어요?	nizeniyuanma	99
+여기서 멀어요?	nizeriyuanma	99
+여기서 멀어요?	nizheliyuanma	99
+여기서 멀어요?	nizheniyuanma	99
+여기서 멀어요?	nizheriyuanma	99
+요즘 어떻게 지내세요?	nizhuijingguodezengmeyang	99
+요즘 어떻게 지내세요?	nizhuijingguodezenmeyang	99
+요즘 어떻게 지내세요?	nizhuijingguodezhengmeyang	99
+요즘 어떻게 지내세요?	nizhuijingguodezhenmeyang	99
+요즘 어떻게 지내세요?	nizhuijinguodezengmeyang	99
+요즘 어떻게 지내세요?	nizhuijinguodezenmeyang	99
+요즘 어떻게 지내세요?	nizhuijinguodezhengmeyang	99
+요즘 어떻게 지내세요?	nizhuijinguodezhenmeyang	99
+요즘 어떻게 지내세요?	nizuijingguodezengmeyang	99
+요즘 어떻게 지내세요?	nizuijingguodezenmeyang	99
+요즘 어떻게 지내세요?	nizuijingguodezhengmeyang	99
+요즘 어떻게 지내세요?	nizuijingguodezhenmeyang	99
+요즘 어떻게 지내세요?	nizuijinguodezengmeyang	99
+요즘 어떻게 지내세요?	nizuijinguodezhengmeyang	99
+요즘 어떻게 지내세요?	nizuijinguodezhenmeyang	99
+용	non	99
+용	nong	99
+朋友	pengyou	99
+친구	penyou	99
+예쁘다	piaolian	99
+漂亮	piaoliang	99
+예쁘다	piaonian	99
+예쁘다	piaoniang	99
+예쁘다	piaorian	99
+예쁘다	piaoriang	99
+용 잡아	qinbalon	99
+용 잡아	qinbalong	99
+포장해 주세요	qinbangwodabao	99
+용 잡아	qinbanon	99
+용 잡아	qinbanong	99
+포장해 주세요	qinbanwodabao	99
+용 잡아	qinbaron	99
+용 잡아	qinbarong	99
+잘 부탁드립니다	qinduoduoguangzao	99
+잘 부탁드립니다	qinduoduoguangzhao	99
+잘 부탁드립니다	qinduoduoguanzao	99
+잘 부탁드립니다	qinduoduoguanzhao	99
+용 잡아	qingbalon	99
+용 잡아	qingbanon	99
+용 잡아	qingbanong	99
+포장해 주세요	qingbanwodabao	99
+용 잡아	qingbaron	99
+용 잡아	qingbarong	99
+잘 부탁드립니다	qingduoduoguangzao	99
+잘 부탁드립니다	qingduoduoguangzhao	99
+잘 부탁드립니다	qingduoduoguanzao	99
+메뉴판 주세요	qingeiwocaidan	99
+메뉴판 주세요	qingeiwocaidang	99
+메뉴판 주세요	qingeiwochaidan	99
+메뉴판 주세요	qingeiwochaidang	99
+메뉴판 주세요	qinggeiwocaidang	99
+메뉴판 주세요	qinggeiwochaidan	99
+메뉴판 주세요	qinggeiwochaidang	99
+천천히 말해 주세요	qingmangyidiangshuo	99
+천천히 말해 주세요	qingmangyidiangsuo	99
+천천히 말해 주세요	qingmangyidianshuo	99
+천천히 말해 주세요	qingmangyidiansuo	99
+천천히 말해 주세요	qingmanyidiangshuo	99
+천천히 말해 주세요	qingmanyidiangsuo	99
+천천히 말해 주세요	qingmanyidiansuo	99
+잠시만 기다려 주세요	qingsaodengyixia	99
+잠시만 기다려 주세요	qingsaodenyixia	99
+잠시만 기다려 주세요	qingshaodenyixia	99
+다시 한번 말해 주세요	qingzaishuoyibiang	99
+다시 한번 말해 주세요	qingzaisuoyibian	99
+다시 한번 말해 주세요	qingzaisuoyibiang	99
+다시 한번 말해 주세요	qingzhaishuoyibian	99
+다시 한번 말해 주세요	qingzhaishuoyibiang	99
+다시 한번 말해 주세요	qingzhaisuoyibian	99
+다시 한번 말해 주세요	qingzhaisuoyibiang	99
+한번 불러봐	qingzuyixia	99
+천천히 말해 주세요	qinmangyidiangshuo	99
+천천히 말해 주세요	qinmangyidiangsuo	99
+천천히 말해 주세요	qinmangyidianshuo	99
+천천히 말해 주세요	qinmangyidiansuo	99
+천천히 말해 주세요	qinmanyidiangshuo	99
+천천히 말해 주세요	qinmanyidiangsuo	99
+천천히 말해 주세요	qinmanyidianshuo	99
+천천히 말해 주세요	qinmanyidiansuo	99
+잠시만 기다려 주세요	qinsaodengyixia	99
+잠시만 기다려 주세요	qinsaodenyixia	99
+잠시만 기다려 주세요	qinshaodengyixia	99
+잠시만 기다려 주세요	qinshaodenyixia	99
+다시 한번 말해 주세요	qinzaishuoyibian	99
+다시 한번 말해 주세요	qinzaishuoyibiang	99
+다시 한번 말해 주세요	qinzaisuoyibian	99
+다시 한번 말해 주세요	qinzaisuoyibiang	99
+다시 한번 말해 주세요	qinzhaishuoyibian	99
+다시 한번 말해 주세요	qinzhaishuoyibiang	99
+다시 한번 말해 주세요	qinzhaisuoyibian	99
+다시 한번 말해 주세요	qinzhaisuoyibiang	99
+한번 불러봐	qinzhuyixia	99
+한번 불러봐	qinzuyixia	99
+去	qu	99
+오다	rai	99
+人	ren	99
+사람	reng	99
+쩐다	rifai	99
+쩐다	rihai	99
+여기서 멀어요?	rizeliyuanma	99
+여기서 멀어요?	rizeniyuanma	99
+여기서 멀어요?	rizeriyuanma	99
+여기서 멀어요?	rizheliyuanma	99
+여기서 멀어요?	rizheniyuanma	99
+여기서 멀어요?	rizheriyuanma	99
+용	ron	99
+용	rong	99
+탑	sandan	99
+탑	sandang	99
+탑	sangdan	99
+탑	sangdang	99
+트리플킬	sangsa	99
+트리플킬	sangsha	99
+점멸	sangxian	99
+점멸	sangxiang	99
+트리플킬	sansa	99
+三杀	sansha	99
+점멸	sanxian	99
+점멸	sanxiang	99
+누구	sei	99
+생일축하해	senglikuaile	99
+생일축하해	senglikuaine	99
+생일축하해	senglikuaire	99
+승리는 우리 거야	senglishiwomende	99
+승리는 우리 거야	senglishiwomengde	99
+승리는 우리 거야	senglisiwomende	99
+승리는 우리 거야	senglisiwomengde	99
+뭐	sengme	99
+승리는 우리 거야	sengnishiwomende	99
+승리는 우리 거야	sengnishiwomengde	99
+승리는 우리 거야	sengnisiwomende	99
+승리는 우리 거야	sengnisiwomengde	99
+빡쳤어	sengqi	99
+생일축하해	sengrikuaile	99
+생일축하해	sengrikuaine	99
+생일축하해	sengrikuaire	99
+승리는 우리 거야	sengrishiwomende	99
+승리는 우리 거야	sengrishiwomengde	99
+승리는 우리 거야	sengrisiwomende	99
+승리는 우리 거야	sengrisiwomengde	99
+생일축하해	senlikuaile	99
+생일축하해	senlikuaine	99
+생일축하해	senlikuaire	99
+승리는 우리 거야	senlishiwomende	99
+승리는 우리 거야	senlishiwomengde	99
+승리는 우리 거야	senlisiwomende	99
+승리는 우리 거야	senlisiwomengde	99
+뭐	senme	99
+승리는 우리 거야	sennishiwomende	99
+승리는 우리 거야	sennishiwomengde	99
+승리는 우리 거야	sennisiwomende	99
+승리는 우리 거야	sennisiwomengde	99
+빡쳤어	senqi	99
+생일축하해	senrikuaile	99
+생일축하해	senrikuaine	99
+생일축하해	senrikuaire	99
+승리는 우리 거야	senrishiwomende	99
+승리는 우리 거야	senrishiwomengde	99
+승리는 우리 거야	senrisiwomende	99
+승리는 우리 거야	senrisiwomengde	99
+탑	shandan	99
+탑	shandang	99
+탑	shangdang	99
+트리플킬	shangsa	99
+트리플킬	shangsha	99
+점멸	shangxian	99
+점멸	shangxiang	99
+트리플킬	shansa	99
+트리플킬	shansha	99
+闪现	shanxian	99
+점멸	shanxiang	99
+谁	shei	99
+생일축하해	shenglikuaile	99
+생일축하해	shenglikuaine	99
+생일축하해	shenglikuaire	99
+승리는 우리 거야	shenglishiwomengde	99
+승리는 우리 거야	shenglisiwomende	99
+승리는 우리 거야	shenglisiwomengde	99
+뭐	shengme	99
+승리는 우리 거야	shengnishiwomende	99
+승리는 우리 거야	shengnishiwomengde	99
+승리는 우리 거야	shengnisiwomende	99
+승리는 우리 거야	shengnisiwomengde	99
+生气	shengqi	99
+生日快乐	shengrikuaile	99
+생일축하해	shengrikuaine	99
+생일축하해	shengrikuaire	99
+승리는 우리 거야	shengrishiwomende	99
+승리는 우리 거야	shengrishiwomengde	99
+승리는 우리 거야	shengrisiwomende	99
+승리는 우리 거야	shengrisiwomengde	99
+생일축하해	shenlikuaile	99
+생일축하해	shenlikuaine	99
+생일축하해	shenlikuaire	99
+승리는 우리 거야	shenlishiwomende	99
+승리는 우리 거야	shenlishiwomengde	99
+승리는 우리 거야	shenlisiwomende	99
+승리는 우리 거야	shenlisiwomengde	99
+什么	shenme	99
+승리는 우리 거야	shennishiwomende	99
+승리는 우리 거야	shennishiwomengde	99
+승리는 우리 거야	shennisiwomende	99
+승리는 우리 거야	shennisiwomengde	99
+빡쳤어	shenqi	99
+생일축하해	shenrikuaile	99
+생일축하해	shenrikuaine	99
+생일축하해	shenrikuaire	99
+승리는 우리 거야	shenrishiwomende	99
+승리는 우리 거야	shenrishiwomengde	99
+승리는 우리 거야	shenrisiwomende	99
+승리는 우리 거야	shenrisiwomengde	99
+时间	shijian	99
+시간	shijiang	99
+죽었어	shile	99
+죽었어	shine	99
+죽었어	shire	99
+视野	shiye	99
+帅	shuai	99
+더블킬	shuangsa	99
+双杀	shuangsha	99
+더블킬	shuansa	99
+더블킬	shuansha	99
+아무거나	shuibian	99
+아무거나	shuibiang	99
+输了	shule	99
+졌어	shune	99
+순풍	shunfen	99
+顺风	shunfeng	99
+순풍	shunhen	99
+순풍	shunheng	99
+졌어	shure	99
+시간	sijian	99
+시간	sijiang	99
+死了	sile	99
+죽었어	sine	99
+죽었어	sire	99
+시야	siye	99
+잘생겼다	suai	99
+더블킬	suangsa	99
+더블킬	suangsha	99
+더블킬	suansa	99
+더블킬	suansha	99
+随便	suibian	99
+아무거나	suibiang	99
+졌어	sule	99
+졌어	sune	99
+순풍	sunfen	99
+순풍	sunfeng	99
+순풍	sunhen	99
+순풍	sunheng	99
+졌어	sure	99
+他	ta	99
+얘네 바론 해	tamengzaidalon	99
+얘네 바론 해	tamengzaidalong	99
+얘네 바론 해	tamengzaidanon	99
+얘네 바론 해	tamengzaidanong	99
+얘네 바론 해	tamengzaidaron	99
+얘네 바론 해	tamengzaidarong	99
+얘네 바론 해	tamengzhaidalon	99
+얘네 바론 해	tamengzhaidalong	99
+얘네 바론 해	tamengzhaidanon	99
+얘네 바론 해	tamengzhaidanong	99
+얘네 바론 해	tamengzhaidaron	99
+얘네 바론 해	tamengzhaidarong	99
+얘네 바론 해	tamenzaidalon	99
+얘네 바론 해	tamenzaidanon	99
+얘네 바론 해	tamenzaidanong	99
+얘네 바론 해	tamenzaidaron	99
+얘네 바론 해	tamenzaidarong	99
+얘네 바론 해	tamenzhaidalon	99
+얘네 바론 해	tamenzhaidalong	99
+얘네 바론 해	tamenzhaidanon	99
+얘네 바론 해	tamenzhaidanong	99
+얘네 바론 해	tamenzhaidaron	99
+얘네 바론 해	tamenzhaidarong	99
+讨厌	taoyan	99
+도망쳤어	tataopaone	99
+도망쳤어	tataopaore	99
+항복	touxian	99
+投降	touxiang	99
+에이스	tuangmie	99
+한타	tuangzan	99
+한타	tuangzang	99
+한타	tuangzhan	99
+한타	tuangzhang	99
+团灭	tuanmie	99
+한타	tuanzan	99
+한타	tuanzang	99
+团战	tuanzhan	99
+한타	tuanzhang	99
+推	tuita	99
+晚安	wanan	99
+잘자	wanang	99
+잘 자 친구야	wanangpengyou	99
+잘 자 친구야	wanangpenyou	99
+잘 자 친구야	wananpenyou	99
+完了	wanle	99
+끝났어	wanne	99
+오후 내내 했어	wanneyixiawu	99
+끝났어	wanre	99
+오후 내내 했어	wanreyixiawu	99
+왜	weisengme	99
+왜	weisenme	99
+왜	weishengme	99
+为什么	weishenme	99
+我	wo	99
+사랑해요	woaili	99
+잘 모르겠어요	wobutaidon	99
+卧槽	wocao	99
+헐	wochao	99
+잘 먹었습니다	wochibaone	99
+잘 먹었습니다	wochibaore	99
+늦어서 죄송해요	wochidaoneduibuqi	99
+늦어서 죄송해요	wochidaoreduibuqi	99
+잘 먹었습니다	wocibaole	99
+잘 먹었습니다	wocibaone	99
+잘 먹었습니다	wocibaore	99
+늦어서 죄송해요	wocidaoleduibuqi	99
+늦어서 죄송해요	wocidaoneduibuqi	99
+늦어서 죄송해요	wocidaoreduibuqi	99
+보고 싶어요	wofaoxiangli	99
+보고 싶어요	wofaoxiangni	99
+보고 싶어요	wofaoxianli	99
+보고 싶어요	wofaoxianni	99
+연락할게요	wofuifeliliangxi	99
+연락할게요	wofuifelilianxi	99
+연락할게요	wofuifeliniangxi	99
+연락할게요	wofuifelinianxi	99
+연락할게요	wofuifeliriangxi	99
+연락할게요	wofuifelirianxi	99
+연락할게요	wofuifeniliangxi	99
+연락할게요	wofuifenilianxi	99
+연락할게요	wofuifeniniangxi	99
+연락할게요	wofuifeninianxi	99
+연락할게요	wofuifeniriangxi	99
+연락할게요	wofuifenirianxi	99
+연락할게요	wofuiheliliangxi	99
+연락할게요	wofuihelilianxi	99
+연락할게요	wofuiheliniangxi	99
+연락할게요	wofuihelinianxi	99
+연락할게요	wofuiheliriangxi	99
+연락할게요	wofuihelirianxi	99
+연락할게요	wofuiheniliangxi	99
+연락할게요	wofuihenilianxi	99
+연락할게요	wofuiheniniangxi	99
+연락할게요	wofuiheninianxi	99
+연락할게요	wofuiheniriangxi	99
+연락할게요	wofuihenirianxi	99
+감기 걸렸어요	wogangmaole	99
+감기 걸렸어요	wogangmaone	99
+감기 걸렸어요	wogangmaore	99
+감기 걸렸어요	woganmaone	99
+감기 걸렸어요	woganmaore	99
+보고 싶어요	wohaoxiangli	99
+보고 싶어요	wohaoxianli	99
+보고 싶어요	wohaoxianni	99
+연락할게요	wohuifeliliangxi	99
+연락할게요	wohuifelilianxi	99
+연락할게요	wohuifeliniangxi	99
+연락할게요	wohuifelinianxi	99
+연락할게요	wohuifeliriangxi	99
+연락할게요	wohuifelirianxi	99
+연락할게요	wohuifeniliangxi	99
+연락할게요	wohuifenilianxi	99
+연락할게요	wohuifeniniangxi	99
+연락할게요	wohuifeninianxi	99
+연락할게요	wohuifeniriangxi	99
+연락할게요	wohuifenirianxi	99
+연락할게요	wohuiheliliangxi	99
+연락할게요	wohuihelilianxi	99
+연락할게요	wohuiheliniangxi	99
+연락할게요	wohuihelinianxi	99
+연락할게요	wohuiheliriangxi	99
+연락할게요	wohuihelirianxi	99
+연락할게요	wohuiheniliangxi	99
+연락할게요	wohuiheniniangxi	99
+연락할게요	wohuiheninianxi	99
+연락할게요	wohuiheniriangxi	99
+연락할게요	wohuihenirianxi	99
+오늘 진짜 피곤해요	wojingtianfenglei	99
+오늘 진짜 피곤해요	wojingtianfengnei	99
+오늘 진짜 피곤해요	wojingtianfengrei	99
+오늘 진짜 피곤해요	wojingtianfenlei	99
+오늘 진짜 피곤해요	wojingtianfennei	99
+오늘 진짜 피곤해요	wojingtianfenrei	99
+오늘 진짜 피곤해요	wojingtiangfenglei	99
+오늘 진짜 피곤해요	wojingtiangfengnei	99
+오늘 진짜 피곤해요	wojingtiangfengrei	99
+오늘 진짜 피곤해요	wojingtiangfenlei	99
+오늘 진짜 피곤해요	wojingtiangfennei	99
+오늘 진짜 피곤해요	wojingtiangfenrei	99
+오늘 진짜 피곤해요	wojingtianghenglei	99
+오늘 진짜 피곤해요	wojingtianghengnei	99
+오늘 진짜 피곤해요	wojingtianghengrei	99
+오늘 진짜 피곤해요	wojingtianghenlei	99
+오늘 진짜 피곤해요	wojingtianghennei	99
+오늘 진짜 피곤해요	wojingtianghenrei	99
+오늘 진짜 피곤해요	wojingtianhenglei	99
+오늘 진짜 피곤해요	wojingtianhengnei	99
+오늘 진짜 피곤해요	wojingtianhengrei	99
+오늘 진짜 피곤해요	wojingtianhenlei	99
+오늘 진짜 피곤해요	wojingtianhennei	99
+오늘 진짜 피곤해요	wojingtianhenrei	99
+오늘 진짜 피곤해요	wojintianfenglei	99
+오늘 진짜 피곤해요	wojintianfengnei	99
+오늘 진짜 피곤해요	wojintianfengrei	99
+오늘 진짜 피곤해요	wojintianfenlei	99
+오늘 진짜 피곤해요	wojintianfennei	99
+오늘 진짜 피곤해요	wojintianfenrei	99
+오늘 진짜 피곤해요	wojintiangfenglei	99
+오늘 진짜 피곤해요	wojintiangfengnei	99
+오늘 진짜 피곤해요	wojintiangfengrei	99
+오늘 진짜 피곤해요	wojintiangfenlei	99
+오늘 진짜 피곤해요	wojintiangfennei	99
+오늘 진짜 피곤해요	wojintiangfenrei	99
+오늘 진짜 피곤해요	wojintianghenglei	99
+오늘 진짜 피곤해요	wojintianghengnei	99
+오늘 진짜 피곤해요	wojintianghengrei	99
+오늘 진짜 피곤해요	wojintianghenlei	99
+오늘 진짜 피곤해요	wojintianghennei	99
+오늘 진짜 피곤해요	wojintianghenrei	99
+오늘 진짜 피곤해요	wojintianhenglei	99
+오늘 진짜 피곤해요	wojintianhengnei	99
+오늘 진짜 피곤해요	wojintianhengrei	99
+오늘 진짜 피곤해요	wojintianhennei	99
+오늘 진짜 피곤해요	wojintianhenrei	99
+我们	women	99
+우리	womeng	99
+우리 한타 가자	womengkaituanba	99
+우리 한타 가자	womengkaituangba	99
+우리 같이 밥 먹어요	womengyiqichifanba	99
+우리 같이 밥 먹어요	womengyiqichifangba	99
+우리 같이 밥 먹어요	womengyiqichihanba	99
+우리 같이 밥 먹어요	womengyiqichihangba	99
+우리 같이 밥 먹어요	womengyiqicifanba	99
+우리 같이 밥 먹어요	womengyiqicifangba	99
+우리 같이 밥 먹어요	womengyiqicihanba	99
+우리 같이 밥 먹어요	womengyiqicihangba	99
+같이 밀어붙이자	womengyiqitui	99
+우리 한타 가자	womenkaituangba	99
+우리 같이 밥 먹어요	womenyiqichifangba	99
+우리 같이 밥 먹어요	womenyiqichihanba	99
+우리 같이 밥 먹어요	womenyiqichihangba	99
+우리 같이 밥 먹어요	womenyiqicifanba	99
+우리 같이 밥 먹어요	womenyiqicifangba	99
+우리 같이 밥 먹어요	womenyiqicihanba	99
+우리 같이 밥 먹어요	womenyiqicihangba	99
+길을 잃었어요	womilune	99
+길을 잃었어요	womilure	99
+길을 잃었어요	wominule	99
+길을 잃었어요	wominune	99
+길을 잃었어요	wominure	99
+길을 잃었어요	womirule	99
+길을 잃었어요	womirune	99
+길을 잃었어요	womirure	99
+나 갈게	woxianfuijia	99
+나 갈게	woxiangfuijia	99
+지금 갈게	woxiangzailai	99
+지금 갈게	woxiangzainai	99
+지금 갈게	woxiangzairai	99
+지금 갈게	woxiangzhailai	99
+지금 갈게	woxiangzhainai	99
+지금 갈게	woxiangzhairai	99
+나 갈게	woxianhuijia	99
+지금 갈게	woxianzainai	99
+지금 갈게	woxianzairai	99
+지금 갈게	woxianzhailai	99
+지금 갈게	woxianzhainai	99
+지금 갈게	woxianzhairai	99
+라인 먹을게	woyaochixiang	99
+라인 먹을게	woyaocixian	99
+라인 먹을게	woyaocixiang	99
+리콜할게	woyaofuicen	99
+리콜할게	woyaofuiceng	99
+리콜할게	woyaofuichen	99
+리콜할게	woyaofuicheng	99
+리콜할게	woyaohuicen	99
+리콜할게	woyaohuiceng	99
+리콜할게	woyaohuichen	99
+몸이 좀 안 좋아요	woyoudianbushuhu	99
+몸이 좀 안 좋아요	woyoudianbusufu	99
+몸이 좀 안 좋아요	woyoudianbusuhu	99
+몸이 좀 안 좋아요	woyoudiangbushufu	99
+몸이 좀 안 좋아요	woyoudiangbushuhu	99
+몸이 좀 안 좋아요	woyoudiangbusufu	99
+몸이 좀 안 좋아요	woyoudiangbusuhu	99
+나 서포터야	wozaifuzu	99
+나 서포터야	wozaihuzhu	99
+나 서포터야	wozaihuzu	99
+나 탑이야	wozaisanglu	99
+나 탑이야	wozaisangnu	99
+나 탑이야	wozaisangru	99
+나 탑이야	wozaisanlu	99
+나 탑이야	wozaisannu	99
+나 탑이야	wozaisanru	99
+나 탑이야	wozaishangnu	99
+나 탑이야	wozaishangru	99
+나 탑이야	wozaishanlu	99
+나 탑이야	wozaishannu	99
+나 탑이야	wozaishanru	99
+나 봇이야	wozaixianu	99
+나 봇이야	wozaixiaru	99
+나 미드야	wozaizhongnu	99
+나 미드야	wozaizhongru	99
+나 미드야	wozaizhonlu	99
+나 미드야	wozaizhonnu	99
+나 미드야	wozaizhonru	99
+나 미드야	wozaizonglu	99
+나 미드야	wozaizongnu	99
+나 미드야	wozaizongru	99
+나 미드야	wozaizonlu	99
+나 미드야	wozaizonnu	99
+나 미드야	wozaizonru	99
+나 정글이야	wozhaidaye	99
+나 서포터야	wozhaifuzhu	99
+나 서포터야	wozhaifuzu	99
+나 서포터야	wozhaihuzhu	99
+나 서포터야	wozhaihuzu	99
+나 탑이야	wozhaisanglu	99
+나 탑이야	wozhaisangnu	99
+나 탑이야	wozhaisangru	99
+나 탑이야	wozhaisanlu	99
+나 탑이야	wozhaisannu	99
+나 탑이야	wozhaisanru	99
+나 탑이야	wozhaishanglu	99
+나 탑이야	wozhaishangnu	99
+나 탑이야	wozhaishangru	99
+나 탑이야	wozhaishanlu	99
+나 탑이야	wozhaishannu	99
+나 탑이야	wozhaishanru	99
+나 봇이야	wozhaixialu	99
+나 봇이야	wozhaixianu	99
+나 봇이야	wozhaixiaru	99
+나 미드야	wozhaizhonglu	99
+나 미드야	wozhaizhongnu	99
+나 미드야	wozhaizhongru	99
+나 미드야	wozhaizhonlu	99
+나 미드야	wozhaizhonnu	99
+나 미드야	wozhaizhonru	99
+나 미드야	wozhaizonglu	99
+나 미드야	wozhaizongnu	99
+나 미드야	wozhaizongru	99
+나 미드야	wozhaizonlu	99
+나 미드야	wozhaizonnu	99
+나 미드야	wozhaizonru	99
+无聊	wuliao	99
+노잼	wuniao	99
+노잼	wuriao	99
+다음 판 하자	xiajuzainai	99
+다음 판 하자	xiajuzairai	99
+다음 판 하자	xiajuzhailai	99
+다음 판 하자	xiajuzhainai	99
+다음 판 하자	xiajuzhairai	99
+봇	xianu	99
+笑了	xiaole	99
+ㅋㅋㅋ	xiaone	99
+ㅋㅋㅋ	xiaore	99
+ㅅㅅ	xiaosi	99
+小心	xiaoxin	99
+적 조심해	xiaoxindifan	99
+적 조심해	xiaoxindihan	99
+적 조심해	xiaoxindihang	99
+조심	xiaoxing	99
+적 조심해	xiaoxingdifan	99
+적 조심해	xiaoxingdifang	99
+적 조심해	xiaoxingdihan	99
+적 조심해	xiaoxingdihang	99
+봇	xiaru	99
+ありがとう	xiexie	99
+고마워	xiexieli	99
+도와줘서 고마워요	xiexielidebangzhu	99
+도와줘서 고마워요	xiexielidebangzu	99
+도와줘서 고마워요	xiexielidebanzhu	99
+도와줘서 고마워요	xiexielidebanzu	99
+도와줘서 고마워요	xiexienidebangzu	99
+도와줘서 고마워요	xiexienidebanzhu	99
+도와줘서 고마워요	xiexienidebanzu	99
+좋아해	xifuan	99
+좋아해	xifuang	99
+喜欢	xihuan	99
+좋아해	xihuang	99
+수고했어요, 푹 쉬어요	xingkulefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkulefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkulehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkulehaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkunefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkunefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkunehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkunehaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkurefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkurefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkurehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xingkurehaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkulefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkulefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkulehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkunefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkunefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkunehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkunehaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkurefaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkurefaohaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkurehaofaoxiuxi	99
+수고했어요, 푹 쉬어요	xinkurehaohaoxiuxi	99
+화장실이 어디예요?	xishoujiangzailali	99
+화장실이 어디예요?	xishoujiangzailani	99
+화장실이 어디예요?	xishoujiangzailari	99
+화장실이 어디예요?	xishoujiangzainali	99
+화장실이 어디예요?	xishoujiangzainani	99
+화장실이 어디예요?	xishoujiangzainari	99
+화장실이 어디예요?	xishoujiangzhailali	99
+화장실이 어디예요?	xishoujiangzhailani	99
+화장실이 어디예요?	xishoujiangzhailari	99
+화장실이 어디예요?	xishoujiangzhainali	99
+화장실이 어디예요?	xishoujiangzhainani	99
+화장실이 어디예요?	xishoujiangzhainari	99
+화장실이 어디예요?	xishoujianzailali	99
+화장실이 어디예요?	xishoujianzailani	99
+화장실이 어디예요?	xishoujianzailari	99
+화장실이 어디예요?	xishoujianzainani	99
+화장실이 어디예요?	xishoujianzainari	99
+화장실이 어디예요?	xishoujianzhailali	99
+화장실이 어디예요?	xishoujianzhailani	99
+화장실이 어디예요?	xishoujianzhailari	99
+화장실이 어디예요?	xishoujianzhainali	99
+화장실이 어디예요?	xishoujianzhainani	99
+화장실이 어디예요?	xishoujianzhainari	99
+화장실이 어디예요?	xisoujiangzailali	99
+화장실이 어디예요?	xisoujiangzailani	99
+화장실이 어디예요?	xisoujiangzailari	99
+화장실이 어디예요?	xisoujiangzainali	99
+화장실이 어디예요?	xisoujiangzainani	99
+화장실이 어디예요?	xisoujiangzainari	99
+화장실이 어디예요?	xisoujiangzhailali	99
+화장실이 어디예요?	xisoujiangzhailani	99
+화장실이 어디예요?	xisoujiangzhailari	99
+화장실이 어디예요?	xisoujiangzhainali	99
+화장실이 어디예요?	xisoujiangzhainani	99
+화장실이 어디예요?	xisoujiangzhainari	99
+화장실이 어디예요?	xisoujianzailali	99
+화장실이 어디예요?	xisoujianzailani	99
+화장실이 어디예요?	xisoujianzailari	99
+화장실이 어디예요?	xisoujianzainali	99
+화장실이 어디예요?	xisoujianzainani	99
+화장실이 어디예요?	xisoujianzainari	99
+화장실이 어디예요?	xisoujianzhailali	99
+화장실이 어디예요?	xisoujianzhailani	99
+화장실이 어디예요?	xisoujianzhailari	99
+화장실이 어디예요?	xisoujianzhainali	99
+화장실이 어디예요?	xisoujianzhainani	99
+화장실이 어디예요?	xisoujianzhainari	99
+学校	xuexiao	99
+眼	yan	99
+이따가 전화할게요	yifuiergeilidadianfua	99
+이따가 전화할게요	yifuiergeilidadiangfua	99
+이따가 전화할게요	yifuiergeilidadianghua	99
+이따가 전화할게요	yifuiergeilidadianhua	99
+이따가 전화할게요	yifuiergeinidadianfua	99
+이따가 전화할게요	yifuiergeinidadiangfua	99
+이따가 전화할게요	yifuiergeinidadianghua	99
+이따가 전화할게요	yifuiergeinidadianhua	99
+이따가 전화할게요	yihuiergeilidadianfua	99
+이따가 전화할게요	yihuiergeilidadiangfua	99
+이따가 전화할게요	yihuiergeilidadianghua	99
+이따가 전화할게요	yihuiergeilidadianhua	99
+이따가 전화할게요	yihuiergeinidadianfua	99
+이따가 전화할게요	yihuiergeinidadiangfua	99
+이따가 전화할게요	yihuiergeinidadianghua	99
+조심히 가세요	yilupinan	99
+조심히 가세요	yilupinang	99
+조심히 가세요	yilupingang	99
+赢了	yingle	99
+이겼어	yingne	99
+이겼어	yingre	99
+조심히 가세요	yinupinan	99
+조심히 가세요	yinupinang	99
+조심히 가세요	yinupingan	99
+조심히 가세요	yinupingang	99
+같이 가자	yiqisan	99
+같이 가자	yiqisang	99
+같이 가자	yiqishan	99
+조심히 가세요	yirupinan	99
+조심히 가세요	yirupinang	99
+조심히 가세요	yirupingan	99
+조심히 가세요	yirupingang	99
+再来	zailai	99
+在吗	zaima	99
+한판더	zainai	99
+한판더	zairai	99
+우리 물러나자	zangmengtuiba	99
+우리 물러나자	zangmentuiba	99
+우리 물러나자	zanmengtuiba	99
+早安	zaoan	99
+좋은아침	zaoang	99
+이것	zege	99
+이거 얼마예요?	zegeduosaoqian	99
+이거 얼마예요?	zegeduosaoqiang	99
+이거 얼마예요?	zegeduoshaoqian	99
+이거 얼마예요?	zegeduoshaoqiang	99
+이거 진짜 맛있어요	zegefenfaochi	99
+이거 진짜 맛있어요	zegefenfaoci	99
+이거 진짜 맛있어요	zegefengfaochi	99
+이거 진짜 맛있어요	zegefengfaoci	99
+이거 진짜 맛있어요	zegefenghaochi	99
+이거 진짜 맛있어요	zegefenghaoci	99
+이거 진짜 맛있어요	zegefenhaochi	99
+이거 진짜 맛있어요	zegefenhaoci	99
+이거 진짜 맛있어요	zegehenfaochi	99
+이거 진짜 맛있어요	zegehenfaoci	99
+이거 진짜 맛있어요	zegehengfaochi	99
+이거 진짜 맛있어요	zegehengfaoci	99
+이거 진짜 맛있어요	zegehenghaochi	99
+이거 진짜 맛있어요	zegehenghaoci	99
+이거 진짜 맛있어요	zegehenhaochi	99
+이거 진짜 맛있어요	zegehenhaoci	99
+이 챔피언 센 느껴	zegeyingxiongfengqian	99
+이 챔피언 센 느껴	zegeyingxiongfengqiang	99
+이 챔피언 센 느껴	zegeyingxiongfenqian	99
+이 챔피언 센 느껴	zegeyingxiongfenqiang	99
+이 챔피언 센 느껴	zegeyingxionghengqian	99
+이 챔피언 센 느껴	zegeyingxionghengqiang	99
+이 챔피언 센 느껴	zegeyingxionghenqian	99
+이 챔피언 센 느껴	zegeyingxionghenqiang	99
+이번 판 이겼어	zejuwoyingle	99
+이번 판 이겼어	zejuwoyingne	99
+이번 판 이겼어	zejuwoyingre	99
+진짜	zende	99
+정말 죄송합니다	zendeduibuqi	99
+진짜	zengde	99
+정말 죄송합니다	zengdeduibuqi	99
+어떻게	zengme	99
+기차역 어떻게 가요?	zengmequfuocezan	99
+기차역 어떻게 가요?	zengmequfuocezang	99
+기차역 어떻게 가요?	zengmequfuocezhan	99
+기차역 어떻게 가요?	zengmequfuocezhang	99
+기차역 어떻게 가요?	zengmequfuochezan	99
+기차역 어떻게 가요?	zengmequfuochezang	99
+기차역 어떻게 가요?	zengmequfuochezhan	99
+기차역 어떻게 가요?	zengmequfuochezhang	99
+기차역 어떻게 가요?	zengmequhuocezan	99
+기차역 어떻게 가요?	zengmequhuocezang	99
+기차역 어떻게 가요?	zengmequhuocezhan	99
+기차역 어떻게 가요?	zengmequhuocezhang	99
+기차역 어떻게 가요?	zengmequhuochezan	99
+기차역 어떻게 가요?	zengmequhuochezang	99
+기차역 어떻게 가요?	zengmequhuochezhan	99
+기차역 어떻게 가요?	zengmequhuochezhang	99
+怎么	zenme	99
+기차역 어떻게 가요?	zenmequfuocezan	99
+기차역 어떻게 가요?	zenmequfuocezang	99
+기차역 어떻게 가요?	zenmequfuocezhan	99
+기차역 어떻게 가요?	zenmequfuocezhang	99
+기차역 어떻게 가요?	zenmequfuochezan	99
+기차역 어떻게 가요?	zenmequfuochezang	99
+기차역 어떻게 가요?	zenmequfuochezhan	99
+기차역 어떻게 가요?	zenmequfuochezhang	99
+기차역 어떻게 가요?	zenmequhuocezan	99
+기차역 어떻게 가요?	zenmequhuocezang	99
+기차역 어떻게 가요?	zenmequhuocezhan	99
+기차역 어떻게 가요?	zenmequhuocezhang	99
+기차역 어떻게 가요?	zenmequhuochezan	99
+기차역 어떻게 가요?	zenmequhuochezang	99
+기차역 어떻게 가요?	zenmequhuochezhang	99
+한판더	zhailai	99
+있어	zhaima	99
+한판더	zhainai	99
+한판더	zhairai	99
+우리 물러나자	zhangmengtuiba	99
+우리 물러나자	zhangmentuiba	99
+우리 물러나자	zhanmengtuiba	99
+우리 물러나자	zhanmentuiba	99
+좋은아침	zhaoan	99
+좋은아침	zhaoang	99
+这个	zhege	99
+이거 얼마예요?	zhegeduosaoqian	99
+이거 얼마예요?	zhegeduosaoqiang	99
+이거 얼마예요?	zhegeduoshaoqiang	99
+이거 진짜 맛있어요	zhegefenfaochi	99
+이거 진짜 맛있어요	zhegefenfaoci	99
+이거 진짜 맛있어요	zhegefengfaochi	99
+이거 진짜 맛있어요	zhegefengfaoci	99
+이거 진짜 맛있어요	zhegefenghaochi	99
+이거 진짜 맛있어요	zhegefenghaoci	99
+이거 진짜 맛있어요	zhegefenhaochi	99
+이거 진짜 맛있어요	zhegefenhaoci	99
+이거 진짜 맛있어요	zhegehenfaochi	99
+이거 진짜 맛있어요	zhegehenfaoci	99
+이거 진짜 맛있어요	zhegehengfaochi	99
+이거 진짜 맛있어요	zhegehengfaoci	99
+이거 진짜 맛있어요	zhegehenghaochi	99
+이거 진짜 맛있어요	zhegehenghaoci	99
+이거 진짜 맛있어요	zhegehenhaoci	99
+이 챔피언 센 느껴	zhegeyingxiongfengqian	99
+이 챔피언 센 느껴	zhegeyingxiongfengqiang	99
+이 챔피언 센 느껴	zhegeyingxiongfenqian	99
+이 챔피언 센 느껴	zhegeyingxiongfenqiang	99
+이 챔피언 센 느껴	zhegeyingxionghengqian	99
+이 챔피언 센 느껴	zhegeyingxionghengqiang	99
+이 챔피언 센 느껴	zhegeyingxionghenqian	99
+이번 판 이겼어	zhejuwoyingne	99
+이번 판 이겼어	zhejuwoyingre	99
+真的	zhende	99
+진짜	zhengde	99
+정말 죄송합니다	zhengdeduibuqi	99
+어떻게	zhengme	99
+기차역 어떻게 가요?	zhengmequfuocezan	99
+기차역 어떻게 가요?	zhengmequfuocezang	99
+기차역 어떻게 가요?	zhengmequfuocezhan	99
+기차역 어떻게 가요?	zhengmequfuocezhang	99
+기차역 어떻게 가요?	zhengmequfuochezan	99
+기차역 어떻게 가요?	zhengmequfuochezang	99
+기차역 어떻게 가요?	zhengmequfuochezhan	99
+기차역 어떻게 가요?	zhengmequfuochezhang	99
+기차역 어떻게 가요?	zhengmequhuocezan	99
+기차역 어떻게 가요?	zhengmequhuocezang	99
+기차역 어떻게 가요?	zhengmequhuocezhan	99
+기차역 어떻게 가요?	zhengmequhuocezhang	99
+기차역 어떻게 가요?	zhengmequhuochezan	99
+기차역 어떻게 가요?	zhengmequhuochezang	99
+기차역 어떻게 가요?	zhengmequhuochezhan	99
+기차역 어떻게 가요?	zhengmequhuochezhang	99
+어떻게	zhenme	99
+기차역 어떻게 가요?	zhenmequfuocezan	99
+기차역 어떻게 가요?	zhenmequfuocezang	99
+기차역 어떻게 가요?	zhenmequfuocezhan	99
+기차역 어떻게 가요?	zhenmequfuocezhang	99
+기차역 어떻게 가요?	zhenmequfuochezan	99
+기차역 어떻게 가요?	zhenmequfuochezang	99
+기차역 어떻게 가요?	zhenmequfuochezhan	99
+기차역 어떻게 가요?	zhenmequfuochezhang	99
+기차역 어떻게 가요?	zhenmequhuocezan	99
+기차역 어떻게 가요?	zhenmequhuocezang	99
+기차역 어떻게 가요?	zhenmequhuocezhan	99
+기차역 어떻게 가요?	zhenmequhuocezhang	99
+기차역 어떻게 가요?	zhenmequhuochezan	99
+기차역 어떻게 가요?	zhenmequhuochezang	99
+기차역 어떻게 가요?	zhenmequhuochezhan	99
+기차역 어떻게 가요?	zhenmequhuochezhang	99
+미드	zhondan	99
+미드	zhondang	99
+미드	zhongdang	99
+주말에 뭐 해요?	zhoumoligangsengme	99
+주말에 뭐 해요?	zhoumoligangsenme	99
+주말에 뭐 해요?	zhoumoligangshengme	99
+주말에 뭐 해요?	zhoumoligangshenme	99
+주말에 뭐 해요?	zhoumoligansengme	99
+주말에 뭐 해요?	zhoumoligansenme	99
+주말에 뭐 해요?	zhoumoliganshengme	99
+주말에 뭐 해요?	zhoumoliganshenme	99
+주말에 뭐 해요?	zhoumonigangsengme	99
+주말에 뭐 해요?	zhoumonigangsenme	99
+주말에 뭐 해요?	zhoumonigangshengme	99
+주말에 뭐 해요?	zhoumonigangshenme	99
+주말에 뭐 해요?	zhoumonigansengme	99
+주말에 뭐 해요?	zhoumonigansenme	99
+주말에 뭐 해요?	zhoumoniganshengme	99
+ㄱㄱ	zhouqi	99
+준비 시작	zhunbeikaisi	99
+미드	zondan	99
+미드	zondang	99
+미드	zongdan	99
+미드	zongdang	99
+주말에 뭐 해요?	zoumoligangsengme	99
+주말에 뭐 해요?	zoumoligangsenme	99
+주말에 뭐 해요?	zoumoligangshengme	99
+주말에 뭐 해요?	zoumoligangshenme	99
+주말에 뭐 해요?	zoumoligansengme	99
+주말에 뭐 해요?	zoumoligansenme	99
+주말에 뭐 해요?	zoumoliganshengme	99
+주말에 뭐 해요?	zoumoliganshenme	99
+주말에 뭐 해요?	zoumonigangsengme	99
+주말에 뭐 해요?	zoumonigangsenme	99
+주말에 뭐 해요?	zoumonigangshengme	99
+주말에 뭐 해요?	zoumonigangshenme	99
+주말에 뭐 해요?	zoumonigansengme	99
+주말에 뭐 해요?	zoumonigansenme	99
+주말에 뭐 해요?	zoumoniganshengme	99
+주말에 뭐 해요?	zoumoniganshenme	99
+준비 시작	zunbeikaishi	99
+준비 시작	zunbeikaisi	99
+帮忙	bangman	98
+帮忙	banman	98
+帮忙	banmang	98
+绷不住	benbuzhu	98
+绷不住	benbuzu	98
+绷不住	bengbuzu	98
+不行	buxin	98
+菜	chaiji	98
+冲	chon	98
+重开	chonkai	98
+传送	chuangshon	98
+传送	chuangshong	98
+传送	chuangson	98
+传送	chuangsong	98
+传送	chuanshon	98
+传送	chuanshong	98
+传送	chuanson	98
+冲	con	98
+冲	cong	98
+重开	congkai	98
+重开	conkai	98
+传送	cuangshon	98
+传送	cuangshong	98
+传送	cuangson	98
+传送	cuangsong	98
+传送	cuanshon	98
+传送	cuanshong	98
+传送	cuanson	98
+传送	cuansong	98
+单杀	dangsa	98
+单杀	dangsha	98
+单杀	dansa	98
+大招	dazao	98
+等下	denyixia	98
+点火	dianfuo	98
+点火	diangfuo	98
+点火	dianghuo	98
+敌人来了	dilenglaile	98
+敌人来了	dilenglaine	98
+敌人来了	dilenglaire	98
+敌人来了	dilengnaile	98
+敌人来了	dilengnaine	98
+敌人来了	dilengnaire	98
+敌人来了	dilengraile	98
+敌人来了	dilengraine	98
+敌人来了	dilengraire	98
+敌人来了	dilenlaile	98
+敌人来了	dilenlaine	98
+敌人来了	dilenlaire	98
+敌人来了	dilennaile	98
+敌人来了	dilennaine	98
+敌人来了	dilennaire	98
+敌人来了	dilenraile	98
+敌人来了	dilenraine	98
+敌人来了	dilenraire	98
+敌人来了	direnglaile	98
+敌人来了	direnglaine	98
+敌人来了	direnglaire	98
+敌人来了	direngnaile	98
+敌人来了	direngnaine	98
+敌人来了	direngnaire	98
+敌人来了	direngraile	98
+敌人来了	direngraine	98
+敌人来了	direngraire	98
+敌人来了	direnlaine	98
+敌人来了	direnlaire	98
+敌人来了	dirennaile	98
+敌人来了	dirennaine	98
+敌人来了	dirennaire	98
+敌人来了	direnraile	98
+敌人来了	direnraine	98
+敌人来了	direnraire	98
+懂了	dongne	98
+懂了	dongre	98
+懂了	donle	98
+懂了	donne	98
+懂了	donre	98
+东西	donxi	98
+sorry	duibuqi	98
+对线	duixiang	98
+多少	duosao	98
+饿	ene	98
+饿	ere	98
+哈哈	fafa	98
+哈哈	faha	98
+翻盘	fangpan	98
+翻盘	fangpang	98
+翻盘	fanpang	98
+好的	faode	98
+回城	fuicen	98
+回城	fuiceng	98
+回城	fuichen	98
+回城	fuicheng	98
+打	gangba	98
+恭喜	gonxi	98
+哈哈	hafa	98
+翻盘	hangpan	98
+翻盘	hangpang	98
+翻盘	hanpan	98
+翻盘	hanpang	98
+发育	hayu	98
+回城	huicen	98
+回城	huiceng	98
+回城	huichen	98
+集合	jife	98
+꽃됐어	jile	98
+寄了	jine	98
+寄了	jire	98
+绝了	juene	98
+绝了	juere	98
+看	kang	98
+坑	ken	98
+快点	kuaidiang	98
+困了	kunne	98
+困了	kunre	98
+哪里	lali	98
+男爵	langjue	98
+哪里	lani	98
+男爵	lanjue	98
+哪里	lari	98
+人	len	98
+人	leng	98
+你	li	98
+厉害	lifai	98
+こんにちは	lifao	98
+こんにちは	lihao	98
+牛	liubi	98
+龙	lon	98
+털렸어	male	98
+麻了	mane	98
+麻了	mare	98
+马上	masan	98
+马上	masang	98
+马上	mashan	98
+没关系	meiguangxi	98
+来	nai	98
+男爵	nangjue	98
+哪里	nani	98
+哪里	nari	98
+厉害	nifai	98
+こんにちは	nifao	98
+厉害	nihai	98
+hello	nihao	98
+龙	non	98
+龙	nong	98
+朋友	penyou	98
+漂亮	piaolian	98
+漂亮	piaonian	98
+漂亮	piaoniang	98
+漂亮	piaorian	98
+漂亮	piaoriang	98
+来	rai	98
+人	reng	98
+厉害	rifai	98
+厉害	rihai	98
+龙	ron	98
+龙	rong	98
+三杀	sangsa	98
+三杀	sangsha	98
+闪现	sangxian	98
+闪现	sangxiang	98
+三杀	sansa	98
+闪现	sanxian	98
+闪现	sanxiang	98
+谁	sei	98
+生日快乐	senglikuaile	98
+生日快乐	senglikuaine	98
+生日快乐	senglikuaire	98
+什么	sengme	98
+生气	sengqi	98
+生日快乐	sengrikuaile	98
+生日快乐	sengrikuaine	98
+生日快乐	sengrikuaire	98
+生日快乐	senlikuaile	98
+生日快乐	senlikuaine	98
+生日快乐	senlikuaire	98
+什么	senme	98
+生气	senqi	98
+生日快乐	senrikuaile	98
+生日快乐	senrikuaine	98
+生日快乐	senrikuaire	98
+三杀	shangsa	98
+三杀	shangsha	98
+闪现	shangxian	98
+闪现	shangxiang	98
+三杀	shansa	98
+三杀	shansha	98
+闪现	shanxiang	98
+生日快乐	shenglikuaile	98
+生日快乐	shenglikuaine	98
+生日快乐	shenglikuaire	98
+什么	shengme	98
+生日快乐	shengrikuaine	98
+生日快乐	shengrikuaire	98
+生日快乐	shenlikuaile	98
+生日快乐	shenlikuaine	98
+生日快乐	shenlikuaire	98
+生气	shenqi	98
+生日快乐	shenrikuaile	98
+生日快乐	shenrikuaine	98
+生日快乐	shenrikuaire	98
+时间	shijiang	98
+死了	shile	98
+死了	shine	98
+死了	shire	98
+双杀	shuangsa	98
+双杀	shuansa	98
+双杀	shuansha	98
+随便	shuibian	98
+随便	shuibiang	98
+输了	shune	98
+顺风	shunfen	98
+顺风	shunhen	98
+顺风	shunheng	98
+输了	shure	98
+时间	sijian	98
+时间	sijiang	98
+死了	sine	98
+死了	sire	98
+视野	siye	98
+帅	suai	98
+双杀	suangsa	98
+双杀	suangsha	98
+双杀	suansa	98
+双杀	suansha	98
+随便	suibiang	98
+输了	sule	98
+输了	sune	98
+顺风	sunfen	98
+顺风	sunfeng	98
+顺风	sunhen	98
+顺风	sunheng	98
+输了	sure	98
+投降	touxian	98
+团灭	tuangmie	98
+团战	tuangzan	98
+团战	tuangzang	98
+团战	tuangzhan	98
+团战	tuangzhang	98
+团战	tuanzan	98
+团战	tuanzang	98
+团战	tuanzhang	98
+晚安	wanang	98
+完了	wanne	98
+完了	wanre	98
+为什么	weisengme	98
+为什么	weisenme	98
+为什么	weishengme	98
+卧槽	wochao	98
+我们	womeng	98
+无聊	wuniao	98
+无聊	wuriao	98
+웃겼어	xiaole	98
+笑了	xiaone	98
+笑了	xiaore	98
+小心	xiaoxing	98
+thanks	xiexie	98
+喜欢	xifuan	98
+喜欢	xifuang	98
+喜欢	xihuang	98
+赢了	yingne	98
+赢了	yingre	98
+뭐해	zaima	98
+再来	zainai	98
+再来	zairai	98
+早安	zaoang	98
+这个	zege	98
+真的	zende	98
+真的	zengde	98
+怎么	zengme	98
+再来	zhailai	98
+在吗	zhaima	98
+再来	zhainai	98
+再来	zhairai	98
+早安	zhaoan	98
+早安	zhaoang	98
+真的	zhengde	98
+怎么	zhengme	98
+怎么	zhenme	98
+对不起	duibuqi	97
+꽃됐어	jine	97
+꽃됐어	jire	97
+hello	lifao	97
+hello	lihao	97
+털렸어	mane	97
+털렸어	mare	97
+hello	nifao	97
+你好	nihao	97
+웃겼어	xiaone	97
+웃겼어	xiaore	97
+谢谢	xiexie	97
+뭐해	zhaima	97
+你好	lifao	96
+你好	lihao	96
+你好	nifao	96
+ㅂㅂ	baib	95
+도와줘	bangm	95
+ㅈㅅ	baoy	95
+턴 터졌어	batdl	95
+ㅂㅂ	bb	95
+터졌어	bbz	95
+터졌어	bengbz	95
+죄송해요	bhys	95
+도와줘	bm	95
+턴 터졌어	btdl	95
+죄송해요	buhys	95
+안돼	bux	95
+안돼	bx	95
+ㅈㅅ	by	95
+못한다	caij	95
+리메이크	chongk	95
+텔레포트	chuans	95
+못한다	cj	95
+리메이크	ck	95
+텔레포트	cs	95
+대박	dab	95
+솔로킬	dans	95
+정글	day	95
+궁	daz	95
+대박	db	95
+미안해요	dbq	95
+죄송합니다	dbq	95
+잠깐만	dengyx	95
+점화	dh	95
+점화	dianh	95
+적왔어	dirll	95
+적 사라졌어	dirxsl	95
+퍼스트블러드	diydx	95
+알겠어	dl	95
+알겠어	dongl	95
+물건	dongx	95
+적왔어	drll	95
+적 사라졌어	drxsl	95
+솔로킬	ds	95
+얼마	ds	95
+미안해요	duibq	95
+죄송합니다	duibq	95
+라인전	duix	95
+팀원 조심해	duiyxx	95
+얼마	duos	95
+라인전	dx	95
+물건	dx	95
+정글	dy	95
+퍼스트블러드	dydx	95
+잠깐만	dyx	95
+팀원 조심해	dyxx	95
+궁	dz	95
+배고파	el	95
+역전	fanp	95
+파밍	fay	95
+역전	fp	95
+서폿	fuz	95
+파밍	fy	95
+서폿	fz	95
+치자	ganb	95
+치자	gb	95
+와드 줘	geiwy	95
+물 한 잔 주세요	geiwybs	95
+축하해	gongx	95
+와드 줘	gwy	95
+물 한 잔 주세요	gwybs	95
+축하해	gx	95
+하하	hah	95
+좋아요	haod	95
+오랜만이에요	haojbjl	95
+귀환	hc	95
+좋아요	hd	95
+만나서 반가워요	hengxrsn	95
+만나서 반가워요	hgxrsn	95
+하하	hh	95
+오랜만이에요	hjbjl	95
+귀환	huic	95
+모여	jh	95
+화이팅	jiay	95
+화이팅 우리	jiaywm	95
+모여	jih	95
+망했어	jil	95
+오늘 날씨 진짜 좋아요	jinttqzh	95
+망했어	jl	95
+쩐다	jl	95
+오늘 날씨 진짜 좋아요	jttqzh	95
+쩐다	juel	95
+화이팅	jy	95
+화이팅 우리	jywm	95
+캐리	kal	95
+메시지 보면 답장해 주세요	kandxxqhf	95
+빨리	kd	95
+메시지 보면 답장해 주세요	kdxxqhf	95
+돼	key	95
+카드로 계산할 수 있어요?	keyykm	95
+졸려	kl	95
+캐리	kl	95
+빨리 와서 도와줘	klzw	95
+빨리	kuaid	95
+빨리 와서 도와줘	kuailzw	95
+졸려	kunl	95
+돼	ky	95
+카드로 계산할 수 있어요?	kyykm	95
+쩐다	lh	95
+쩐다	lih	95
+여기서 멀어요?	lizlym	95
+여기서 멀어요?	lzlym	95
+지쳤어	mal	95
+금방	mas	95
+괜찮아요	meigx	95
+괜찮아요	mgx	95
+내일 봐요	mingtjb	95
+내일 시간 있어요?	mingtysjm	95
+지쳤어	ml	95
+금방	ms	95
+내일 봐요	mtjb	95
+내일 시간 있어요?	mtysjm	95
+어디	nal	95
+바론	nanj	95
+개쩔	nb	95
+전화번호가 몇 번이에요?	nddhhmsds	95
+안녕하세요	nh	95
+안녕 친구야	nhpy	95
+전화번호가 몇 번이에요?	niddhhmsds	95
+안녕하세요	nih	95
+안녕 친구야	nihpy	95
+어디 가	niqn	95
+너 진짜 대단하다	nitlhl	95
+개쩔	niub	95
+요즘 어떻게 지내세요?	nizjgdzmy	95
+바론	nj	95
+어디	nl	95
+어디 가	nqn	95
+너 진짜 대단하다	ntlhl	95
+요즘 어떻게 지내세요?	nzjgdzmy	95
+친구	pengy	95
+예쁘다	piaol	95
+예쁘다	pl	95
+친구	py	95
+용 잡아	qbl	95
+포장해 주세요	qbwdb	95
+잘 부탁드립니다	qddgz	95
+메뉴판 주세요	qgwcd	95
+용 잡아	qingbl	95
+포장해 주세요	qingbwdb	95
+잘 부탁드립니다	qingddgz	95
+메뉴판 주세요	qinggwcd	95
+천천히 말해 주세요	qingmyds	95
+잠시만 기다려 주세요	qingsdyx	95
+다시 한번 말해 주세요	qingzsyb	95
+한번 불러봐	qingzyx	95
+천천히 말해 주세요	qmyds	95
+잠시만 기다려 주세요	qsdyx	95
+다시 한번 말해 주세요	qzsyb	95
+한번 불러봐	qzyx	95
+트리플킬	sans	95
+아무거나	sb	95
+탑	sd	95
+순풍	sf	95
+탑	shangd	95
+점멸	shanx	95
+승리는 우리 거야	shenglswmd	95
+빡쳤어	shengq	95
+생일축하해	shengrkl	95
+뭐	shenm	95
+시간	shij	95
+시야	shiy	95
+더블킬	shuangs	95
+졌어	shul	95
+순풍	shunf	95
+누구	si	95
+죽었어	sil	95
+시간	sj	95
+졌어	sl	95
+죽었어	sl	95
+승리는 우리 거야	slswmd	95
+뭐	sm	95
+빡쳤어	sq	95
+생일축하해	srkl	95
+더블킬	ss	95
+트리플킬	ss	95
+아무거나	suib	95
+점멸	sx	95
+시야	sy	95
+얘네 바론 해	tamzdl	95
+싫어	taoy	95
+도망쳤어	tatpl	95
+에이스	tm	95
+얘네 바론 해	tmzdl	95
+항복	toux	95
+푸시	tt	95
+도망쳤어	ttpl	95
+에이스	tuanm	95
+한타	tuanz	95
+푸시	tuit	95
+항복	tx	95
+싫어	ty	95
+한타	tz	95
+잘자	wa	95
+사랑해요	wan	95
+잘자	wana	95
+잘 자 친구야	wanapy	95
+끝났어	wanl	95
+오후 내내 했어	wanlyxw	95
+잘 자 친구야	wapy	95
+잘 모르겠어요	wbtd	95
+헐	wc	95
+잘 먹었습니다	wcbl	95
+늦어서 죄송해요	wcdldbq	95
+왜	weism	95
+감기 걸렸어요	wgml	95
+연락할게요	whhnlx	95
+보고 싶어요	whxn	95
+오늘 진짜 피곤해요	wjthl	95
+끝났어	wl	95
+노잼	wl	95
+오후 내내 했어	wlyxw	95
+우리	wm	95
+우리 한타 가자	wmktb	95
+길을 잃었어요	wmll	95
+우리 승리했어	wmsll	95
+언제 만날까요?	wmsmshjm	95
+우리 같이 밥 먹어요	wmyqcfb	95
+같이 밀어붙이자	wmyqt	95
+사랑해요	woan	95
+잘 모르겠어요	wobtd	95
+헐	woc	95
+잘 먹었습니다	wocbl	95
+늦어서 죄송해요	wocdldbq	95
+감기 걸렸어요	wogml	95
+연락할게요	wohhnlx	95
+보고 싶어요	wohxn	95
+오늘 진짜 피곤해요	wojthl	95
+우리	wom	95
+우리 한타 가자	womktb	95
+길을 잃었어요	womll	95
+우리 승리했어	womsll	95
+언제 만날까요?	womsmshjm	95
+우리 같이 밥 먹어요	womyqcfb	95
+같이 밀어붙이자	womyqt	95
+나 갈게	woxhj	95
+지금 갈게	woxzl	95
+라인 먹을게	woycx	95
+몸이 좀 안 좋아요	woydbsf	95
+리콜할게	woyhc	95
+나 정글이야	wozdy	95
+나 서포터야	wozfz	95
+나 탑이야	wozsl	95
+나 봇이야	wozxl	95
+나 미드야	wozzl	95
+왜	wsm	95
+노잼	wul	95
+나 갈게	wxhj	95
+지금 갈게	wxzl	95
+라인 먹을게	wycx	95
+몸이 좀 안 좋아요	wydbsf	95
+리콜할게	wyhc	95
+나 정글이야	wzdy	95
+나 서포터야	wzfz	95
+나 탑이야	wzsl	95
+나 봇이야	wzxl	95
+나 미드야	wzzl	95
+좋아해	xh	95
+다음 판 하자	xiajzl	95
+봇	xial	95
+ㅋㅋㅋ	xiaol	95
+ㅅㅅ	xiaos	95
+조심	xiaox	95
+적 조심해	xiaoxdf	95
+감사합니다	xiex	95
+다들 고마워	xiexdj	95
+고마워	xiexn	95
+도와줘서 고마워요	xiexndbz	95
+좋아해	xih	95
+수고했어요, 푹 쉬어요	xinklhhxx	95
+화장실이 어디예요?	xisjznl	95
+다음 판 하자	xjzl	95
+수고했어요, 푹 쉬어요	xklhhxx	95
+ㅋㅋㅋ	xl	95
+봇	xl	95
+ㅅㅅ	xs	95
+화장실이 어디예요?	xsjznl	95
+학교	xuex	95
+감사합니다	xx	95
+조심	xx	95
+학교	xx	95
+적 조심해	xxdf	95
+다들 고마워	xxdj	95
+고마워	xxn	95
+도와줘서 고마워요	xxndbz	95
+이따가 전화할게요	yhegnddh	95
+이따가 전화할게요	yihegnddh	95
+조심히 가세요	yilpa	95
+이겼어	yingl	95
+같이 가자	yiqs	95
+이겼어	yl	95
+조심히 가세요	ylpa	95
+같이 가자	yqs	95
+좋은아침	za	95
+한판더	zail	95
+있어	zaim	95
+우리 물러나자	zanmtb	95
+좋은아침	zaoa	95
+준비 시작	zbks	95
+미드	zd	95
+진짜	zd	95
+정말 죄송합니다	zddbq	95
+어떻게	zenm	95
+기차역 어떻게 가요?	zenmqhcz	95
+이것	zg	95
+이거 얼마예요?	zgdsq	95
+이거 진짜 맛있어요	zghhc	95
+이 챔피언 센 느껴	zgyxhq	95
+이것	zheg	95
+이거 얼마예요?	zhegdsq	95
+이거 진짜 맛있어요	zheghhc	95
+이 챔피언 센 느껴	zhegyxhq	95
+이번 판 이겼어	zhejwyl	95
+진짜	zhend	95
+정말 죄송합니다	zhenddbq	95
+미드	zhongd	95
+주말에 뭐 해요?	zhoumngsm	95
+준비 시작	zhunbks	95
+생일 축하해요	zhunsrkl	95
+이번 판 이겼어	zjwyl	95
+한판더	zl	95
+어떻게	zm	95
+있어	zm	95
+주말에 뭐 해요?	zmngsm	95
+기차역 어떻게 가요?	zmqhcz	95
+우리 물러나자	zmtb	95
+생일 축하해요	znsrkl	95
+ㄱㄱ	zouq	95
+ㄱㄱ	zq	95
+帮忙	bangm	94
+绷不住	bbz	94
+绷不住	bengbz	94
+帮忙	bm	94
+不行	bux	94
+不行	bx	94
+菜	caij	94
+重开	chongk	94
+传送	chuans	94
+菜	cj	94
+重开	ck	94
+传送	cs	94
+大爆	dab	94
+单杀	dans	94
+大招	daz	94
+大爆	db	94
+ごめんなさい	dbq	94
+等下	dengyx	94
+点火	dh	94
+点火	dianh	94
+敌人来了	dirll	94
+一血	diydx	94
+懂了	dl	94
+懂了	dongl	94
+东西	dongx	94
+敌人来了	drll	94
+单杀	ds	94
+多少	ds	94
+ごめんなさい	duibq	94
+对线	duix	94
+多少	duos	94
+东西	dx	94
+对线	dx	94
+一血	dydx	94
+等下	dyx	94
+大招	dz	94
+饿	el	94
+翻盘	fanp	94
+发育	fay	94
+翻盘	fp	94
+发育	fy	94
+打	ganb	94
+打	gb	94
+恭喜	gongx	94
+恭喜	gx	94
+哈哈	hah	94
+好的	haod	94
+回城	hc	94
+好的	hd	94
+哈哈	hh	94
+回城	huic	94
+集合	jh	94
+加油	jiay	94
+集合	jih	94
+寄了	jil	94
+寄了	jl	94
+绝了	jl	94
+绝了	juel	94
+加油	jy	94
+快点	kd	94
+可以	key	94
+困了	kl	94
+快点	kuaid	94
+困了	kunl	94
+可以	ky	94
+厉害	lh	94
+厉害	lih	94
+麻了	mal	94
+马上	mas	94
+没关系	meigx	94
+没关系	mgx	94
+麻了	ml	94
+马上	ms	94
+哪里	nal	94
+男爵	nanj	94
+牛	nb	94
+こんにちは	nh	94
+こんにちは	nih	94
+牛	niub	94
+男爵	nj	94
+哪里	nl	94
+朋友	pengy	94
+漂亮	piaol	94
+漂亮	pl	94
+朋友	py	94
+三杀	sans	94
+随便	sb	94
+顺风	sf	94
+闪现	shanx	94
+生气	shengq	94
+生日快乐	shengrkl	94
+什么	shenm	94
+时间	shij	94
+视野	shiy	94
+双杀	shuangs	94
+输了	shul	94
+顺风	shunf	94
+谁	si	94
+死了	sil	94
+时间	sj	94
+死了	sl	94
+输了	sl	94
+什么	sm	94
+生气	sq	94
+生日快乐	srkl	94
+三杀	ss	94
+双杀	ss	94
+随便	suib	94
+闪现	sx	94
+视野	sy	94
+讨厌	taoy	94
+团灭	tm	94
+投降	toux	94
+推	tt	94
+团灭	tuanm	94
+团战	tuanz	94
+推	tuit	94
+投降	tx	94
+讨厌	ty	94
+团战	tz	94
+晚安	wa	94
+晚安	wana	94
+完了	wanl	94
+卧槽	wc	94
+为什么	weism	94
+完了	wl	94
+无聊	wl	94
+我们	wm	94
+卧槽	woc	94
+我们	wom	94
+为什么	wsm	94
+无聊	wul	94
+喜欢	xh	94
+笑了	xiaol	94
+小心	xiaox	94
+ありがとう	xiex	94
+喜欢	xih	94
+笑了	xl	94
+学校	xuex	94
+ありがとう	xx	94
+学校	xx	94
+小心	xx	94
+赢了	yingl	94
+赢了	yl	94
+早安	za	94
+再来	zail	94
+在吗	zaim	94
+早安	zaoa	94
+真的	zd	94
+怎么	zenm	94
+这个	zg	94
+这个	zheg	94
+真的	zhend	94
+再来	zl	94
+在吗	zm	94
+怎么	zm	94
+sorry	dbq	93
+sorry	duibq	93
+꽃됐어	jil	93
+꽃됐어	jl	93
+털렸어	mal	93
+털렸어	ml	93
+hello	nh	93
+hello	nih	93
+웃겼어	xiaol	93
+thanks	xiex	93
+웃겼어	xl	93
+thanks	xx	93
+뭐해	zaim	93
+뭐해	zm	93
+对不起	dbq	92
+对不起	duibq	92
+你好	nh	92
+你好	nih	92
+谢谢	xiex	92
+谢谢	xx	92
+아니요	bushi	20
+네	shide	20
+아니요	busi	19
+네	side	19
+아니요	bs	15
+아니요	bus	15
+네	sd	15
+네	shid	15
+나	wo	15
+도와주세요	bangbangwo	14
+얼마예요?	duoshaoqian	14
+배고파요	ele	14
+감사드립니다	feichangganxie	14
+여기요	fuwuyuan	14
+알려주세요	gaosuwo	14
+ㅋㅋ	haha	14
+맛있어요	haochi	14
+ㅎㅎ	hehe	14
+추워요	henleng	14
+더워요	henre	14
+몇 시예요?	jidianle	14
+피곤해요	leile	14
+언제예요?	shenmeshihou	14
+대박	taibangle	14
+사랑해	woaini	14
+이거 주세요	woyaozhege	14
+보고 싶어요	xiangnian	14
+좋아해요	xihuan	14
+수고하셨습니다	xinkule	14
+어디예요?	zainali	14
+어떻게 가요?	zenmezou	14
+진짜요?	zhendema	14
+최고	zuibang	14
+도와주세요	banbangwo	13
+도와주세요	banbanwo	13
+도와주세요	bangbanwo	13
+얼마예요?	duosaoqian	13
+얼마예요?	duosaoqiang	13
+얼마예요?	duoshaoqiang	13
+배고파요	ene	13
+배고파요	ere	13
+ㅋㅋ	fafa	13
+ㅋㅋ	faha	13
+맛있어요	faochi	13
+맛있어요	faoci	13
+ㅎㅎ	fefe	13
+ㅎㅎ	fehe	13
+감사드립니다	feicangangxie	13
+감사드립니다	feicanganxie	13
+감사드립니다	feicanggangxie	13
+감사드립니다	feicangganxie	13
+감사드립니다	feichangangxie	13
+감사드립니다	feichanganxie	13
+감사드립니다	feichanggangxie	13
+더워요	fengle	13
+추워요	fenglen	13
+추워요	fengleng	13
+추워요	fengnen	13
+추워요	fengneng	13
+더워요	fengre	13
+추워요	fengren	13
+추워요	fengreng	13
+더워요	fenle	13
+추워요	fenlen	13
+추워요	fenleng	13
+추워요	fennen	13
+추워요	fenneng	13
+더워요	fenre	13
+추워요	fenren	13
+추워요	fenreng	13
+알려주세요	gaoshuwo	13
+ㅋㅋ	hafa	13
+맛있어요	haoci	13
+ㅎㅎ	hefe	13
+감사드립니다	heicangangxie	13
+감사드립니다	heicanganxie	13
+감사드립니다	heicanggangxie	13
+감사드립니다	heicangganxie	13
+감사드립니다	heichangangxie	13
+감사드립니다	heichanganxie	13
+감사드립니다	heichanggangxie	13
+감사드립니다	heichangganxie	13
+더워요	hengle	13
+추워요	henglen	13
+추워요	hengleng	13
+추워요	hengnen	13
+추워요	hengneng	13
+더워요	hengre	13
+추워요	hengren	13
+추워요	hengreng	13
+더워요	henle	13
+추워요	henlen	13
+추워요	hennen	13
+추워요	henneng	13
+추워요	henren	13
+추워요	henreng	13
+여기요	huwuyuan	13
+몇 시예요?	jidiangle	13
+몇 시예요?	jidiangne	13
+몇 시예요?	jidiangre	13
+몇 시예요?	jidianne	13
+몇 시예요?	jidianre	13
+피곤해요	leine	13
+피곤해요	leire	13
+피곤해요	neile	13
+피곤해요	neine	13
+피곤해요	neire	13
+피곤해요	reile	13
+피곤해요	reine	13
+피곤해요	reire	13
+언제예요?	sengmeshifou	13
+언제예요?	sengmeshihou	13
+언제예요?	sengmesifou	13
+언제예요?	sengmesihou	13
+언제예요?	senmeshifou	13
+언제예요?	senmeshihou	13
+언제예요?	senmesifou	13
+언제예요?	senmesihou	13
+언제예요?	shengmeshifou	13
+언제예요?	shengmeshihou	13
+언제예요?	shengmesifou	13
+언제예요?	shengmesihou	13
+언제예요?	shenmeshifou	13
+언제예요?	shenmesifou	13
+언제예요?	shenmesihou	13
+대박	taibangne	13
+대박	taibangre	13
+대박	taibanle	13
+대박	taibanne	13
+대박	taibanre	13
+사랑해	woaili	13
+이거 주세요	woyaozege	13
+보고 싶어요	xianglian	13
+보고 싶어요	xiangliang	13
+보고 싶어요	xiangniang	13
+보고 싶어요	xianlian	13
+보고 싶어요	xianliang	13
+보고 싶어요	xiannian	13
+보고 싶어요	xianniang	13
+좋아해요	xifuan	13
+좋아해요	xifuang	13
+좋아해요	xihuang	13
+수고하셨습니다	xingkule	13
+수고하셨습니다	xingkune	13
+수고하셨습니다	xingkure	13
+수고하셨습니다	xinkune	13
+수고하셨습니다	xinkure	13
+어디예요?	zailali	13
+어디예요?	zailani	13
+어디예요?	zailari	13
+어디예요?	zainani	13
+어디예요?	zainari	13
+진짜요?	zendema	13
+진짜요?	zengdema	13
+어떻게 가요?	zengmezhou	13
+어떻게 가요?	zengmezou	13
+어떻게 가요?	zenmezhou	13
+어디예요?	zhailali	13
+어디예요?	zhailani	13
+어디예요?	zhailari	13
+어디예요?	zhainali	13
+어디예요?	zhainani	13
+어디예요?	zhainari	13
+진짜요?	zhengdema	13
+어떻게 가요?	zhengmezhou	13
+어떻게 가요?	zhengmezou	13
+어떻게 가요?	zhenmezhou	13
+어떻게 가요?	zhenmezou	13
+최고	zhuiban	13
+최고	zhuibang	13
+최고	zuiban	13
+좀 도와주세요	bangwoyixia	12
+배불러요	baole	12
+맛없어요	buhaochi	12
+몸이 안 좋아요	bushufu	12
+몰라요	buzhidao	12
+메뉴 주세요	caidan	12
+잘 먹었어요	chibaole	12
+늦었어요	chidaole	12
+놀랐어요	chijing	12
+처음 뵙겠습니다	chucijianmian	12
+택시	chuzuche	12
+포장해 주세요	dabao	12
+전화할게요	dadianhua	12
+당연하죠	dangran	12
+걱정돼요	danxin	12
+기다려주세요	dengwoyixia	12
+지하철역	ditiezhan	12
+고맙습니다	duoxie	12
+메시지 보낼게요	faxinxi	12
+감기 걸렸어요	ganmaole	12
+보여주세요	geiwokan	12
+버스	gongjiaoche	12
+무서워요	haipa	12
+좋아요	hao	12
+오랜만이에요	haojiubujian	12
+싸요	henpianyi	12
+멋져요	henshuai	12
+집에 가요	huijia	12
+빌려주세요	jiegeiwo	12
+회의	kaihui	12
+시험	kaoshi	12
+귀여워요	keai	12
+ㅠㅠ	kule	12
+연락해 주세요	lianxiwo	12
+계산서 주세요	maidan	12
+슬퍼요	nanguo	12
+남자친구	nanpengyou	12
+이름이 뭐예요?	nijiaoshenmemingzi	12
+여자친구	nvpengyou	12
+깎아 주세요	pianyiyidian	12
+예뻐요	piaoliang	12
+일어났어요	qichuangle	12
+잘 부탁드립니다	qingduozhijiao	12
+천천히 말해 주세요	qingmanyidian	12
+잠시만요	qingshaodeng	12
+병원 가요	quyiyuan	12
+출근했어요	shangban	12
+화나요	shengqi	12
+생일 축하해요	shengrikuaile	12
+실례합니다	shilile	12
+비싸요	taiguile	12
+대박	taihaole	12
+탱커	tanke	12
+싫어해요	taoyan	12
+날씨	tianqi	12
+날씨 좋아요	tianqihao	12
+안녕히 계세요	woxianzoule	12
+저도요	woyeshi	12
+심심해요	wuliao	12
+ㅠㅠ	wuwu	12
+퇴근했어요	xiaban	12
+비 와요	xiayule	12
+감사합니다	xiexieni	12
+행복해요	xingfu	12
+기분 좋아요	xinqinghao	12
+공부	xuexi	12
+물 주세요	yaoshui	12
+같이 갈래요?	yiqiqu	12
+시간 있어요?	youkongma	12
+다시 말해 주세요	zaishuoyibian	12
+이거 뭐예요?	zhegeshishenme	12
+정말요?	zhendema	12
+숙제	zuoye	12
+좀 도와주세요	banwoyixia	11
+배불러요	baone	11
+배불러요	baore	11
+맛없어요	bufaochi	11
+맛없어요	bufaoci	11
+맛없어요	buhaoci	11
+몸이 안 좋아요	bushuhu	11
+몸이 안 좋아요	busufu	11
+몸이 안 좋아요	busuhu	11
+몰라요	buzidao	11
+메뉴 주세요	caidang	11
+메뉴 주세요	chaidan	11
+메뉴 주세요	chaidang	11
+잘 먹었어요	chibaone	11
+잘 먹었어요	chibaore	11
+늦었어요	chidaone	11
+늦었어요	chidaore	11
+놀랐어요	chijin	11
+처음 뵙겠습니다	chuchijiangmian	11
+처음 뵙겠습니다	chuchijiangmiang	11
+처음 뵙겠습니다	chuchijianmian	11
+처음 뵙겠습니다	chuchijianmiang	11
+처음 뵙겠습니다	chucijiangmian	11
+처음 뵙겠습니다	chucijiangmiang	11
+처음 뵙겠습니다	chucijianmiang	11
+택시	chuzhuce	11
+택시	chuzhuche	11
+택시	chuzuce	11
+잘 먹었어요	cibaole	11
+잘 먹었어요	cibaone	11
+잘 먹었어요	cibaore	11
+늦었어요	cidaole	11
+늦었어요	cidaone	11
+늦었어요	cidaore	11
+놀랐어요	cijin	11
+놀랐어요	cijing	11
+처음 뵙겠습니다	cuchijiangmian	11
+처음 뵙겠습니다	cuchijiangmiang	11
+처음 뵙겠습니다	cuchijianmian	11
+처음 뵙겠습니다	cuchijianmiang	11
+처음 뵙겠습니다	cucijiangmian	11
+처음 뵙겠습니다	cucijiangmiang	11
+처음 뵙겠습니다	cucijianmian	11
+처음 뵙겠습니다	cucijianmiang	11
+택시	cuzhuce	11
+택시	cuzhuche	11
+택시	cuzuce	11
+택시	cuzuche	11
+전화할게요	dadianfua	11
+전화할게요	dadiangfua	11
+전화할게요	dadianghua	11
+당연하죠	danglan	11
+당연하죠	danglang	11
+당연하죠	dangrang	11
+걱정돼요	dangxin	11
+걱정돼요	dangxing	11
+당연하죠	danlan	11
+당연하죠	danlang	11
+당연하죠	danran	11
+당연하죠	danrang	11
+걱정돼요	danxing	11
+기다려주세요	denwoyixia	11
+지하철역	ditiezan	11
+지하철역	ditiezang	11
+지하철역	ditiezhang	11
+무서워요	faipa	11
+좋아요	fao	11
+오랜만이에요	faojiubujian	11
+오랜만이에요	faojiubujiang	11
+메시지 보낼게요	faxingxi	11
+싸요	fengpiangyi	11
+싸요	fengpianyi	11
+멋져요	fengshuai	11
+멋져요	fengsuai	11
+싸요	fenpiangyi	11
+싸요	fenpianyi	11
+멋져요	fenshuai	11
+멋져요	fensuai	11
+집에 가요	fuijia	11
+감기 걸렸어요	gangmaole	11
+감기 걸렸어요	gangmaone	11
+감기 걸렸어요	gangmaore	11
+감기 걸렸어요	ganmaone	11
+감기 걸렸어요	ganmaore	11
+보여주세요	geiwokang	11
+버스	gongjiaoce	11
+버스	gonjiaoce	11
+버스	gonjiaoche	11
+오랜만이에요	haojiubujiang	11
+메시지 보낼게요	haxingxi	11
+메시지 보낼게요	haxinxi	11
+싸요	hengpiangyi	11
+싸요	hengpianyi	11
+멋져요	hengshuai	11
+멋져요	hengsuai	11
+싸요	henpiangyi	11
+멋져요	hensuai	11
+회의	kaifui	11
+시험	kaosi	11
+ㅠㅠ	kune	11
+ㅠㅠ	kure	11
+슬퍼요	langguo	11
+남자친구	langpengyou	11
+남자친구	langpenyou	11
+슬퍼요	languo	11
+남자친구	lanpengyou	11
+남자친구	lanpenyou	11
+연락해 주세요	liangxiwo	11
+이름이 뭐예요?	lijiaosengmemingzhi	11
+이름이 뭐예요?	lijiaosengmemingzi	11
+이름이 뭐예요?	lijiaosengmeminzhi	11
+이름이 뭐예요?	lijiaosengmeminzi	11
+이름이 뭐예요?	lijiaosenmemingzhi	11
+이름이 뭐예요?	lijiaosenmemingzi	11
+이름이 뭐예요?	lijiaosenmeminzhi	11
+이름이 뭐예요?	lijiaosenmeminzi	11
+이름이 뭐예요?	lijiaoshengmemingzhi	11
+이름이 뭐예요?	lijiaoshengmemingzi	11
+이름이 뭐예요?	lijiaoshengmeminzhi	11
+이름이 뭐예요?	lijiaoshengmeminzi	11
+이름이 뭐예요?	lijiaoshenmemingzhi	11
+이름이 뭐예요?	lijiaoshenmemingzi	11
+이름이 뭐예요?	lijiaoshenmeminzhi	11
+이름이 뭐예요?	lijiaoshenmeminzi	11
+여자친구	lvpengyou	11
+여자친구	lvpenyou	11
+계산서 주세요	maidang	11
+슬퍼요	nangguo	11
+남자친구	nangpengyou	11
+남자친구	nangpenyou	11
+남자친구	nanpenyou	11
+연락해 주세요	niangxiwo	11
+연락해 주세요	nianxiwo	11
+이름이 뭐예요?	nijiaosengmemingzhi	11
+이름이 뭐예요?	nijiaosengmemingzi	11
+이름이 뭐예요?	nijiaosengmeminzhi	11
+이름이 뭐예요?	nijiaosengmeminzi	11
+이름이 뭐예요?	nijiaosenmemingzhi	11
+이름이 뭐예요?	nijiaosenmemingzi	11
+이름이 뭐예요?	nijiaosenmeminzhi	11
+이름이 뭐예요?	nijiaosenmeminzi	11
+이름이 뭐예요?	nijiaoshengmemingzhi	11
+이름이 뭐예요?	nijiaoshengmemingzi	11
+이름이 뭐예요?	nijiaoshengmeminzhi	11
+이름이 뭐예요?	nijiaoshengmeminzi	11
+이름이 뭐예요?	nijiaoshenmemingzhi	11
+이름이 뭐예요?	nijiaoshenmeminzhi	11
+이름이 뭐예요?	nijiaoshenmeminzi	11
+여자친구	nvpenyou	11
+깎아 주세요	piangyiyidian	11
+깎아 주세요	piangyiyidiang	11
+깎아 주세요	pianyiyidiang	11
+예뻐요	piaolian	11
+예뻐요	piaonian	11
+예뻐요	piaoniang	11
+예뻐요	piaorian	11
+예뻐요	piaoriang	11
+일어났어요	qichuangne	11
+일어났어요	qichuangre	11
+일어났어요	qichuanle	11
+일어났어요	qichuanne	11
+일어났어요	qichuanre	11
+일어났어요	qicuangle	11
+일어났어요	qicuangne	11
+일어났어요	qicuangre	11
+일어났어요	qicuanle	11
+일어났어요	qicuanne	11
+일어났어요	qicuanre	11
+잘 부탁드립니다	qinduozhijiao	11
+잘 부탁드립니다	qinduozijiao	11
+잘 부탁드립니다	qingduozijiao	11
+천천히 말해 주세요	qingmangyidian	11
+천천히 말해 주세요	qingmangyidiang	11
+천천히 말해 주세요	qingmanyidiang	11
+잠시만요	qingsaoden	11
+잠시만요	qingsaodeng	11
+잠시만요	qingshaoden	11
+천천히 말해 주세요	qinmangyidian	11
+천천히 말해 주세요	qinmangyidiang	11
+천천히 말해 주세요	qinmanyidian	11
+천천히 말해 주세요	qinmanyidiang	11
+잠시만요	qinsaoden	11
+잠시만요	qinsaodeng	11
+잠시만요	qinshaoden	11
+잠시만요	qinshaodeng	11
+연락해 주세요	riangxiwo	11
+연락해 주세요	rianxiwo	11
+출근했어요	sanban	11
+출근했어요	sanbang	11
+출근했어요	sangban	11
+출근했어요	sangbang	11
+생일 축하해요	senglikuaile	11
+생일 축하해요	senglikuaine	11
+생일 축하해요	senglikuaire	11
+화나요	sengqi	11
+생일 축하해요	sengrikuaile	11
+생일 축하해요	sengrikuaine	11
+생일 축하해요	sengrikuaire	11
+생일 축하해요	senlikuaile	11
+생일 축하해요	senlikuaine	11
+생일 축하해요	senlikuaire	11
+화나요	senqi	11
+생일 축하해요	senrikuaile	11
+생일 축하해요	senrikuaine	11
+생일 축하해요	senrikuaire	11
+출근했어요	shanban	11
+출근했어요	shanbang	11
+출근했어요	shangbang	11
+생일 축하해요	shenglikuaile	11
+생일 축하해요	shenglikuaine	11
+생일 축하해요	shenglikuaire	11
+생일 축하해요	shengrikuaine	11
+생일 축하해요	shengrikuaire	11
+생일 축하해요	shenlikuaile	11
+생일 축하해요	shenlikuaine	11
+생일 축하해요	shenlikuaire	11
+화나요	shenqi	11
+생일 축하해요	shenrikuaile	11
+생일 축하해요	shenrikuaine	11
+생일 축하해요	shenrikuaire	11
+실례합니다	shiline	11
+실례합니다	shilire	11
+실례합니다	shinile	11
+실례합니다	shinine	11
+실례합니다	shinire	11
+실례합니다	shirile	11
+실례합니다	shirine	11
+실례합니다	shirire	11
+실례합니다	silile	11
+실례합니다	siline	11
+실례합니다	silire	11
+실례합니다	sinile	11
+실례합니다	sinine	11
+실례합니다	sinire	11
+실례합니다	sirile	11
+실례합니다	sirine	11
+실례합니다	sirire	11
+대박	taifaole	11
+대박	taifaone	11
+대박	taifaore	11
+비싸요	taiguine	11
+비싸요	taiguire	11
+대박	taihaone	11
+대박	taihaore	11
+탱커	tangke	11
+날씨	tiangqi	11
+날씨 좋아요	tiangqifao	11
+날씨 좋아요	tiangqihao	11
+날씨 좋아요	tianqifao	11
+안녕히 계세요	woxiangzhoule	11
+안녕히 계세요	woxiangzhoune	11
+안녕히 계세요	woxiangzhoure	11
+안녕히 계세요	woxiangzoule	11
+안녕히 계세요	woxiangzoune	11
+안녕히 계세요	woxiangzoure	11
+안녕히 계세요	woxianzhoule	11
+안녕히 계세요	woxianzhoune	11
+안녕히 계세요	woxianzhoure	11
+안녕히 계세요	woxianzoune	11
+안녕히 계세요	woxianzoure	11
+저도요	woyesi	11
+심심해요	wuniao	11
+심심해요	wuriao	11
+퇴근했어요	xiabang	11
+비 와요	xiayune	11
+비 와요	xiayure	11
+감사합니다	xiexieli	11
+행복해요	xinfu	11
+행복해요	xinghu	11
+기분 좋아요	xingqinfao	11
+기분 좋아요	xingqingfao	11
+기분 좋아요	xingqinghao	11
+기분 좋아요	xingqinhao	11
+행복해요	xinhu	11
+기분 좋아요	xinqinfao	11
+기분 좋아요	xinqingfao	11
+기분 좋아요	xinqinhao	11
+물 주세요	yaosui	11
+시간 있어요?	youkonma	11
+다시 말해 주세요	zaishuoyibiang	11
+다시 말해 주세요	zaisuoyibian	11
+다시 말해 주세요	zaisuoyibiang	11
+이거 뭐예요?	zegeshisengme	11
+이거 뭐예요?	zegeshisenme	11
+이거 뭐예요?	zegeshishengme	11
+이거 뭐예요?	zegeshishenme	11
+이거 뭐예요?	zegesisengme	11
+이거 뭐예요?	zegesisenme	11
+이거 뭐예요?	zegesishengme	11
+이거 뭐예요?	zegesishenme	11
+정말요?	zendema	11
+정말요?	zengdema	11
+다시 말해 주세요	zhaishuoyibian	11
+다시 말해 주세요	zhaishuoyibiang	11
+다시 말해 주세요	zhaisuoyibian	11
+다시 말해 주세요	zhaisuoyibiang	11
+이거 뭐예요?	zhegeshisengme	11
+이거 뭐예요?	zhegeshisenme	11
+이거 뭐예요?	zhegeshishengme	11
+이거 뭐예요?	zhegesisengme	11
+이거 뭐예요?	zhegesisenme	11
+이거 뭐예요?	zhegesishengme	11
+이거 뭐예요?	zhegesishenme	11
+정말요?	zhengdema	11
+숙제	zhuoye	11
+아이고	aiya	10
+팔	ba	10
+도와줘	bangbangwo	10
+아파요	bushufu	10
+싫어요	buyao	10
+아니에요	buyongxie	10
+완전 귀여워요	chaojikeai	10
+와드	chayan	10
+잘 먹었습니다	chibaole	10
+밥 먹을래요?	chifan	10
+밥 먹었어요?	chifanlema	10
+바론	dalong	10
+그럼요	dangran	10
+집에 왔어요	daojiale	10
+남동생	didi	10
+맞아요	dui	10
+배 아파요	duziteng	10
+이	er	10
+문자할게요	faduanxin	10
+저기요	fuwuyuan	10
+서포터	fuzhu	10
+알려줘	gaosuwo	10
+오빠	gege	10
+일	gongzuo	10
+멋있어요	haokan	10
+ㅋㅋ	hehe	10
+잘생겼어요	henshuai	10
+어서 오세요	huanying	10
+만날래요?	jiangemian	10
+가족	jiaren	10
+공항	jichang	10
+언니	jiejie	10
+가까워요	jinma	10
+긴장돼요	jinzhang	10
+구	jiu	10
+기뻐요	kaixin	10
+귀엽다	keai	10
+좀 도와줄래요?	keyibangwoma	10
+빨리 와요	kuaidianlai	10
+와요	lai	10
+선생님	laoshi	10
+육	liu	10
+여동생	meimei	10
+괜찮습니다	meishi	10
+시간 없어요	meishijian	10
+내일 봐요	mingtianjian	10
+내일 시간 있어요?	mingtianyoukongma	10
+몇 살이에요?	niduodale	10
+네 말이 맞아요	nishuodedui	10
+최고예요	nizuibang	10
+좀 깎아 주세요	pianyiyidian	10
+칠	qi	10
+주세요	qing	10
+잠깐만 기다려 주세요	qingdengyixia	10
+삼	san	10
+탑	shanglu	10
+십	shi	10
+맞아요	shide	10
+카드 돼요?	shuaka	10
+잘 잤어요	shuidehao	10
+사	si	10
+최고예요	taibangle	10
+너무 비싸요	taiguile	10
+잘됐네요	taihaole	10
+못 알아들었어요	tingbudong	10
+머리 아파요	touteng	10
+늦어서 미안해요	wochidaole	10
+저는 중국 사람이에요	woshizhongguoren	10
+나도	woyeshi	10
+오	wu	10
+다음에 봐요	xiacijian	10
+다음 주	xiagexingqi	10
+용	xiaolong	10
+좋아요	xihuan	10
+기분이 안 좋아요	xinqingbuhao	10
+샤워했어요	xizao	10
+선배	xuezhang	10
+일	yi	10
+나중에 연락할게요	yihoulianxi	10
+이따가	yihuier	10
+같이 밥 먹을래요?	yiqichifanba	10
+쭉 가세요	yizhizou	10
+여기서 멀어요?	yuanma	10
+집에 있어요	zaijia	10
+안녕히 가세요	zaijian	10
+좋은 아침이에요	zaoshanghao	10
+왜 그래요?	zenmele	10
+정말 고마워요	zhendeganxieni	10
+미드	zhonglu	10
+주말에	zhoumo	10
+주말에 뭐 해요?	zhoumoganma	10
+갱	zhuaren	10
+짱	zuibang	10
+잘 지냈어요	zuijinzenmeyang	10
+무슨 일 해요?	zuoshenmegongzuo	10
+도와줘	banbangwo	9
+도와줘	banbanwo	9
+도와줘	bangbanwo	9
+도와주세요	bangbw	9
+도와주세요	bbw	9
+아파요	bushuhu	9
+아파요	busufu	9
+아파요	busuhu	9
+완전 귀여워요	caojikeai	9
+와드	cayan	9
+잘 먹었습니다	chibaone	9
+잘 먹었습니다	chibaore	9
+밥 먹을래요?	chifang	9
+밥 먹었어요?	chifanglema	9
+밥 먹었어요?	chifangnema	9
+밥 먹었어요?	chifangrema	9
+밥 먹었어요?	chifannema	9
+밥 먹었어요?	chifanrema	9
+밥 먹을래요?	chihan	9
+밥 먹을래요?	chihang	9
+밥 먹었어요?	chihanglema	9
+밥 먹었어요?	chihangnema	9
+밥 먹었어요?	chihangrema	9
+밥 먹었어요?	chihanlema	9
+밥 먹었어요?	chihannema	9
+밥 먹었어요?	chihanrema	9
+잘 먹었습니다	cibaole	9
+잘 먹었습니다	cibaone	9
+잘 먹었습니다	cibaore	9
+밥 먹을래요?	cifan	9
+밥 먹을래요?	cifang	9
+밥 먹었어요?	cifanglema	9
+밥 먹었어요?	cifangnema	9
+밥 먹었어요?	cifangrema	9
+밥 먹었어요?	cifanlema	9
+밥 먹었어요?	cifannema	9
+밥 먹었어요?	cifanrema	9
+밥 먹을래요?	cihan	9
+밥 먹을래요?	cihang	9
+밥 먹었어요?	cihanglema	9
+밥 먹었어요?	cihangnema	9
+밥 먹었어요?	cihangrema	9
+밥 먹었어요?	cihanlema	9
+밥 먹었어요?	cihannema	9
+밥 먹었어요?	cihanrema	9
+바론	dalon	9
+그럼요	danglan	9
+그럼요	danglang	9
+그럼요	dangrang	9
+그럼요	danlan	9
+그럼요	danlang	9
+바론	danon	9
+바론	danong	9
+그럼요	danran	9
+그럼요	danrang	9
+집에 왔어요	daojiane	9
+집에 왔어요	daojiare	9
+바론	daron	9
+바론	darong	9
+얼마예요?	dsq	9
+얼마예요?	duosq	9
+배 아파요	duzhiten	9
+배 아파요	duzhiteng	9
+배 아파요	duziten	9
+배고파요	el	9
+문자할게요	faduangxin	9
+문자할게요	faduangxing	9
+문자할게요	faduanxing	9
+멋있어요	faokan	9
+멋있어요	faokang	9
+감사드립니다	fcgx	9
+ㅋㅋ	fefe	9
+ㅋㅋ	fehe	9
+감사드립니다	feicgx	9
+잘생겼어요	fengshuai	9
+잘생겼어요	fengsuai	9
+잘생겼어요	fenshuai	9
+잘생겼어요	fensuai	9
+어서 오세요	fuangying	9
+어서 오세요	fuanying	9
+여기요	fuwy	9
+서포터	fuzu	9
+여기요	fwy	9
+알려줘	gaoshuwo	9
+알려주세요	gaosw	9
+일	gongzhuo	9
+일	gonzhuo	9
+일	gonzuo	9
+알려주세요	gsw	9
+문자할게요	haduangxin	9
+문자할게요	haduangxing	9
+문자할게요	haduanxin	9
+문자할게요	haduanxing	9
+ㅋㅋ	hah	9
+맛있어요	haoc	9
+멋있어요	haokang	9
+맛있어요	hc	9
+ㅋㅋ	hefe	9
+ㅎㅎ	heh	9
+잘생겼어요	hengshuai	9
+잘생겼어요	hengsuai	9
+추워요	henl	9
+더워요	henr	9
+잘생겼어요	hensuai	9
+ㅋㅋ	hh	9
+ㅎㅎ	hh	9
+추워요	hl	9
+더워요	hr	9
+어서 오세요	huangying	9
+저기요	huwuyuan	9
+서포터	huzhu	9
+서포터	huzu	9
+몇 시예요?	jdl	9
+가족	jialen	9
+가족	jialeng	9
+만날래요?	jiangemiang	9
+만날래요?	jianggemian	9
+만날래요?	jianggemiang	9
+가족	jiareng	9
+공항	jican	9
+공항	jicang	9
+공항	jichan	9
+몇 시예요?	jidl	9
+가까워요	jingma	9
+긴장돼요	jingzan	9
+긴장돼요	jingzang	9
+긴장돼요	jingzhan	9
+긴장돼요	jingzhang	9
+긴장돼요	jinzan	9
+긴장돼요	jinzang	9
+긴장돼요	jinzhan	9
+기뻐요	kaixing	9
+좀 도와줄래요?	keyibanwoma	9
+빨리 와요	kuaidianglai	9
+빨리 와요	kuaidiangnai	9
+빨리 와요	kuaidiangrai	9
+빨리 와요	kuaidiannai	9
+빨리 와요	kuaidianrai	9
+선생님	laosi	9
+피곤해요	leil	9
+몇 살이에요?	liduodale	9
+몇 살이에요?	liduodane	9
+몇 살이에요?	liduodare	9
+네 말이 맞아요	lishuodedui	9
+네 말이 맞아요	lisuodedui	9
+최고예요	lizhuiban	9
+최고예요	lizhuibang	9
+최고예요	lizuiban	9
+최고예요	lizuibang	9
+피곤해요	ll	9
+시간 없어요	meishijiang	9
+괜찮습니다	meisi	9
+시간 없어요	meisijian	9
+시간 없어요	meisijiang	9
+내일 봐요	mingtiangjian	9
+내일 봐요	mingtiangjiang	9
+내일 시간 있어요?	mingtiangyoukongma	9
+내일 시간 있어요?	mingtiangyoukonma	9
+내일 봐요	mingtianjiang	9
+내일 시간 있어요?	mingtianyoukonma	9
+내일 봐요	mintiangjian	9
+내일 봐요	mintiangjiang	9
+내일 시간 있어요?	mintiangyoukongma	9
+내일 시간 있어요?	mintiangyoukonma	9
+내일 봐요	mintianjian	9
+내일 봐요	mintianjiang	9
+내일 시간 있어요?	mintianyoukongma	9
+내일 시간 있어요?	mintianyoukonma	9
+와요	nai	9
+선생님	naoshi	9
+선생님	naosi	9
+몇 살이에요?	niduodane	9
+몇 살이에요?	niduodare	9
+네 말이 맞아요	nisuodedui	9
+육	niu	9
+최고예요	nizhuiban	9
+최고예요	nizhuibang	9
+최고예요	nizuiban	9
+좀 깎아 주세요	piangyiyidian	9
+좀 깎아 주세요	piangyiyidiang	9
+좀 깎아 주세요	pianyiyidiang	9
+주세요	qin	9
+잠깐만 기다려 주세요	qindengyixia	9
+잠깐만 기다려 주세요	qindenyixia	9
+잠깐만 기다려 주세요	qingdenyixia	9
+와요	rai	9
+선생님	raoshi	9
+선생님	raosi	9
+육	riu	9
+삼	sang	9
+탑	sanglu	9
+탑	sangnu	9
+탑	sangru	9
+탑	sanlu	9
+탑	sannu	9
+탑	sanru	9
+삼	shan	9
+삼	shang	9
+탑	shangnu	9
+탑	shangru	9
+탑	shanlu	9
+탑	shannu	9
+탑	shanru	9
+언제예요?	shenmsh	9
+사	shi	9
+잘 잤어요	shuidefao	9
+십	si	9
+맞아요	side	9
+언제예요?	smsh	9
+카드 돼요?	suaka	9
+잘 잤어요	suidefao	9
+잘 잤어요	suidehao	9
+최고예요	taibangne	9
+최고예요	taibangre	9
+최고예요	taibanle	9
+최고예요	taibanne	9
+최고예요	taibanre	9
+대박	taibl	9
+잘됐네요	taifaole	9
+잘됐네요	taifaone	9
+잘됐네요	taifaore	9
+너무 비싸요	taiguine	9
+너무 비싸요	taiguire	9
+잘됐네요	taihaone	9
+잘됐네요	taihaore	9
+대박	tbl	9
+못 알아들었어요	tinbudon	9
+못 알아들었어요	tinbudong	9
+못 알아들었어요	tingbudon	9
+머리 아파요	touten	9
+사랑해	wan	9
+사랑해	woan	9
+늦어서 미안해요	wochidaone	9
+늦어서 미안해요	wochidaore	9
+늦어서 미안해요	wocidaole	9
+늦어서 미안해요	wocidaone	9
+늦어서 미안해요	wocidaore	9
+저는 중국 사람이에요	woshizhongguolen	9
+저는 중국 사람이에요	woshizhongguoleng	9
+저는 중국 사람이에요	woshizhongguoreng	9
+저는 중국 사람이에요	woshizhonguolen	9
+저는 중국 사람이에요	woshizhonguoleng	9
+저는 중국 사람이에요	woshizhonguoren	9
+저는 중국 사람이에요	woshizhonguoreng	9
+저는 중국 사람이에요	woshizongguolen	9
+저는 중국 사람이에요	woshizongguoleng	9
+저는 중국 사람이에요	woshizongguoren	9
+저는 중국 사람이에요	woshizongguoreng	9
+저는 중국 사람이에요	woshizonguolen	9
+저는 중국 사람이에요	woshizonguoleng	9
+저는 중국 사람이에요	woshizonguoren	9
+저는 중국 사람이에요	woshizonguoreng	9
+저는 중국 사람이에요	wosizhongguolen	9
+저는 중국 사람이에요	wosizhongguoleng	9
+저는 중국 사람이에요	wosizhongguoren	9
+저는 중국 사람이에요	wosizhongguoreng	9
+저는 중국 사람이에요	wosizhonguolen	9
+저는 중국 사람이에요	wosizhonguoleng	9
+저는 중국 사람이에요	wosizhonguoren	9
+저는 중국 사람이에요	wosizhonguoreng	9
+저는 중국 사람이에요	wosizongguolen	9
+저는 중국 사람이에요	wosizongguoleng	9
+저는 중국 사람이에요	wosizongguoren	9
+저는 중국 사람이에요	wosizongguoreng	9
+저는 중국 사람이에요	wosizonguolen	9
+저는 중국 사람이에요	wosizonguoleng	9
+저는 중국 사람이에요	wosizonguoren	9
+저는 중국 사람이에요	wosizonguoreng	9
+나도	woyesi	9
+이거 주세요	woyzg	9
+이거 주세요	wyzg	9
+좋아해요	xh	9
+다음에 봐요	xiachijian	9
+다음에 봐요	xiachijiang	9
+다음에 봐요	xiacijiang	9
+다음 주	xiagexinqi	9
+보고 싶어요	xiangn	9
+용	xiaolon	9
+용	xiaonon	9
+용	xiaonong	9
+용	xiaoron	9
+용	xiaorong	9
+좋아요	xifuan	9
+좋아요	xifuang	9
+좋아해요	xih	9
+좋아요	xihuang	9
+기분이 안 좋아요	xingqinbufao	9
+기분이 안 좋아요	xingqinbuhao	9
+기분이 안 좋아요	xingqingbufao	9
+기분이 안 좋아요	xingqingbuhao	9
+수고하셨습니다	xinkl	9
+기분이 안 좋아요	xinqinbufao	9
+기분이 안 좋아요	xinqinbuhao	9
+기분이 안 좋아요	xinqingbufao	9
+샤워했어요	xizhao	9
+수고하셨습니다	xkl	9
+보고 싶어요	xn	9
+선배	xuezan	9
+선배	xuezang	9
+선배	xuezhan	9
+나중에 연락할게요	yifouliangxi	9
+나중에 연락할게요	yifoulianxi	9
+나중에 연락할게요	yifouniangxi	9
+나중에 연락할게요	yifounianxi	9
+나중에 연락할게요	yifouriangxi	9
+나중에 연락할게요	yifourianxi	9
+이따가	yifuier	9
+나중에 연락할게요	yihouliangxi	9
+나중에 연락할게요	yihouniangxi	9
+나중에 연락할게요	yihounianxi	9
+나중에 연락할게요	yihouriangxi	9
+나중에 연락할게요	yihourianxi	9
+같이 밥 먹을래요?	yiqichifangba	9
+같이 밥 먹을래요?	yiqichihanba	9
+같이 밥 먹을래요?	yiqichihangba	9
+같이 밥 먹을래요?	yiqicifanba	9
+같이 밥 먹을래요?	yiqicifangba	9
+같이 밥 먹을래요?	yiqicihanba	9
+같이 밥 먹을래요?	yiqicihangba	9
+쭉 가세요	yizhizhou	9
+쭉 가세요	yizizhou	9
+쭉 가세요	yizizou	9
+안녕히 가세요	zaijiang	9
+어디예요?	zainl	9
+좋은 아침이에요	zaosanfao	9
+좋은 아침이에요	zaosangfao	9
+좋은 아침이에요	zaosanghao	9
+좋은 아침이에요	zaosanhao	9
+좋은 아침이에요	zaoshanfao	9
+좋은 아침이에요	zaoshangfao	9
+좋은 아침이에요	zaoshanhao	9
+최고	zb	9
+진짜요?	zdm	9
+정말 고마워요	zendegangxieli	9
+정말 고마워요	zendegangxieni	9
+정말 고마워요	zendeganxieli	9
+정말 고마워요	zendeganxieni	9
+정말 고마워요	zengdegangxieli	9
+정말 고마워요	zengdegangxieni	9
+정말 고마워요	zengdeganxieli	9
+정말 고마워요	zengdeganxieni	9
+왜 그래요?	zengmele	9
+왜 그래요?	zengmene	9
+왜 그래요?	zengmere	9
+왜 그래요?	zenmene	9
+왜 그래요?	zenmere	9
+어떻게 가요?	zenmz	9
+집에 있어요	zhaijia	9
+안녕히 가세요	zhaijian	9
+안녕히 가세요	zhaijiang	9
+좋은 아침이에요	zhaosanfao	9
+좋은 아침이에요	zhaosangfao	9
+좋은 아침이에요	zhaosanghao	9
+좋은 아침이에요	zhaosanhao	9
+좋은 아침이에요	zhaoshanfao	9
+좋은 아침이에요	zhaoshangfao	9
+좋은 아침이에요	zhaoshanghao	9
+좋은 아침이에요	zhaoshanhao	9
+정말 고마워요	zhendegangxieli	9
+정말 고마워요	zhendegangxieni	9
+정말 고마워요	zhendeganxieli	9
+진짜요?	zhendm	9
+정말 고마워요	zhengdegangxieli	9
+정말 고마워요	zhengdegangxieni	9
+정말 고마워요	zhengdeganxieli	9
+정말 고마워요	zhengdeganxieni	9
+왜 그래요?	zhengmele	9
+왜 그래요?	zhengmene	9
+왜 그래요?	zhengmere	9
+왜 그래요?	zhenmele	9
+왜 그래요?	zhenmene	9
+왜 그래요?	zhenmere	9
+미드	zhongnu	9
+미드	zhongru	9
+미드	zhonlu	9
+미드	zhonnu	9
+미드	zhonru	9
+주말에 뭐 해요?	zhoumogangma	9
+갱	zhualen	9
+갱	zhualeng	9
+갱	zhuareng	9
+짱	zhuiban	9
+짱	zhuibang	9
+잘 지냈어요	zhuijingzengmeyang	9
+잘 지냈어요	zhuijingzenmeyang	9
+잘 지냈어요	zhuijingzhengmeyang	9
+잘 지냈어요	zhuijingzhenmeyang	9
+잘 지냈어요	zhuijinzengmeyang	9
+잘 지냈어요	zhuijinzenmeyang	9
+잘 지냈어요	zhuijinzhengmeyang	9
+잘 지냈어요	zhuijinzhenmeyang	9
+무슨 일 해요?	zhuosengmegongzhuo	9
+무슨 일 해요?	zhuosengmegongzuo	9
+무슨 일 해요?	zhuosengmegonzhuo	9
+무슨 일 해요?	zhuosengmegonzuo	9
+무슨 일 해요?	zhuosenmegongzhuo	9
+무슨 일 해요?	zhuosenmegongzuo	9
+무슨 일 해요?	zhuosenmegonzhuo	9
+무슨 일 해요?	zhuosenmegonzuo	9
+무슨 일 해요?	zhuoshengmegongzhuo	9
+무슨 일 해요?	zhuoshengmegongzuo	9
+무슨 일 해요?	zhuoshengmegonzhuo	9
+무슨 일 해요?	zhuoshengmegonzuo	9
+무슨 일 해요?	zhuoshenmegongzhuo	9
+무슨 일 해요?	zhuoshenmegongzuo	9
+무슨 일 해요?	zhuoshenmegonzhuo	9
+무슨 일 해요?	zhuoshenmegonzuo	9
+어떻게 가요?	zmz	9
+어디예요?	znl	9
+미드	zonglu	9
+미드	zongnu	9
+미드	zongru	9
+미드	zonlu	9
+미드	zonnu	9
+미드	zonru	9
+주말에	zoumo	9
+주말에 뭐 해요?	zoumogangma	9
+주말에 뭐 해요?	zoumoganma	9
+갱	zualen	9
+갱	zualeng	9
+갱	zuaren	9
+갱	zuareng	9
+최고	zuib	9
+짱	zuiban	9
+잘 지냈어요	zuijingzengmeyang	9
+잘 지냈어요	zuijingzenmeyang	9
+잘 지냈어요	zuijingzhengmeyang	9
+잘 지냈어요	zuijingzhenmeyang	9
+잘 지냈어요	zuijinzengmeyang	9
+잘 지냈어요	zuijinzhengmeyang	9
+잘 지냈어요	zuijinzhenmeyang	9
+무슨 일 해요?	zuosengmegongzhuo	9
+무슨 일 해요?	zuosengmegongzuo	9
+무슨 일 해요?	zuosengmegonzhuo	9
+무슨 일 해요?	zuosengmegonzuo	9
+무슨 일 해요?	zuosenmegongzhuo	9
+무슨 일 해요?	zuosenmegongzuo	9
+무슨 일 해요?	zuosenmegonzhuo	9
+무슨 일 해요?	zuosenmegonzuo	9
+무슨 일 해요?	zuoshengmegongzhuo	9
+무슨 일 해요?	zuoshengmegongzuo	9
+무슨 일 해요?	zuoshengmegonzhuo	9
+무슨 일 해요?	zuoshengmegonzuo	9
+무슨 일 해요?	zuoshenmegongzhuo	9
+무슨 일 해요?	zuoshenmegonzhuo	9
+무슨 일 해요?	zuoshenmegonzuo	9
+어머	aiya	8
+아리	ali	8
+나빠요	buhao	8
+별로예요	buhaokan	8
+천만에요	bukeqi	8
+아니	bushi	8
+안 돼요	buxing	8
+하지 마세요	buyao	8
+진짜 귀여워요	chaojikeai	8
+밥 먹어요	chifan	8
+깜짝 놀랐어요	chijing	8
+약 먹었어요	chiyao	8
+나갈게요	chumen	8
+틀렸어요	cuole	8
+전화해	dadianhua	8
+물론이죠	dangran	8
+걱정이에요	danxin	8
+기다려 주세요	dengdeng	8
+잠깐만요	dengdeng	8
+오래 기다렸어요	denglehenjiu	8
+기다려줘	dengwoyixia	8
+전화번호	dianhuahaoma	8
+티모	dimo	8
+적	diren	8
+팀원	duiyou	8
+얼마야?	duoshaoqian	8
+얼마나 멀어요?	duoyuan	8
+문자 보낼게요	faduanxin	8
+열이 나요	fashao	8
+카톡 보낼게요	faxinxi	8
+정말 감사합니다	feichangganxie	8
+근처에	fujin	8
+형	gege	8
+보여줘	geiwokan	8
+일해요	gongzuo	8
+바람 불어요	guafeng	8
+맛있다	haochi	8
+좀 나아졌어요?	haodianlema	8
+한잔할래요?	hejiu	8
+많이 바빠요	henmang	8
+저렴해요	henpianyi	8
+레드	hongbafu	8
+환영해요	huanying	8
+리콜	huicheng	8
+기차역	huochezhan	8
+가렌	jialun	8
+만나자	jiangemian	8
+지금 몇 시예요?	jidianle	8
+누나	jiejie	8
+징크스	jingkesi	8
+살려줘	jiuming	8
+회의 중이에요	kaihui	8
+한타	kaituan	8
+즐거워요	kaixin	8
+메시지 봤어요?	kandaoxiaoxilema	8
+해 봐도 돼요?	keyishima	8
+빨리 와 주세요	kuaidianlai	8
+도망쳐	kuaipao	8
+블루	lanbafu	8
+남편	laogong	8
+아내	laopo	8
+와이프	laopo	8
+힘들어요	leile	8
+연락해	lianxiwo	8
+계산할게요	maidan	8
+속상해요	nanguo	8
+안녕하세요	nihaoma	8
+이름이 뭐야?	nijiaoshenmemingzi	8
+맞는 말이네요	nishuodedui	8
+짱이에요	nizuibang	8
+예뻐	piaoliang	8
+일어났어	qichuangle	8
+들어오세요	qingjin	8
+잠깐만요	qingshaodeng	8
+용서해 주세요	qingyuanliang	8
+앉으세요	qingzuo	8
+가요	qu	8
+영화 보러 갈래요?	qukandianying	8
+위	shang	8
+지난주	shanggexingqi	8
+수업	shangke	8
+승리	shengli	8
+생일	shengri	8
+생일 축하합니다	shengrikuaile	8
+언제야?	shenmeshihou	8
+패배	shibai	8
+카드로 할게요	shuaka	8
+자요	shuijiao	8
+싫어요	taoyan	8
+날씨 나빠요	tianqibuhao	8
+팀전	tuanzhan	8
+잘 자요	wanan	8
+늦게	wandian	8
+안녕하세요	wanshanghao	8
+위챗	weixin	8
+이해가 안 돼요	wobudong	8
+늦었어 미안	wochidaole	8
+먼저 갈게요	woxianzoule	8
+이걸로 할게요	woyaozhege	8
+아래	xia	8
+또 봐요	xiacijian	8
+다음 달	xiageyue	8
+오른쪽으로 가세요	xiangyouguai	8
+왼쪽으로 가세요	xiangzuoguai	8
+부러워요	xianmu	8
+조심해	xiaoxin	8
+눈 와요	xiaxuele	8
+수고했어요	xinkule	8
+새해 복 많이 받으세요	xinniankuaile	8
+쉬고 싶어요	xiuxi	8
+쉴게요	xiuxi	8
+공부해요	xuexi	8
+야스오	yasuo	8
+나중에 연락해요	yihoulianxi	8
+이따가 봐요	yihuierjian	8
+같이	yiqi	8
+같이 밥 먹어요	yiqichifanba	8
+같이 가요	yiqiqu	8
+오른쪽	youbian	8
+멀어요?	yuanma	8
+데이트	yuehui	8
+어디야?	zainali	8
+앞에 있어요	zaiqianmian	8
+일찍	zaodian	8
+좋은 아침	zaoshanghao	8
+빨리 나으세요	zhunizaorikangfu	8
+도와줘	zhushou	8
+왼쪽	zuobian	8
+지하철 탈게요	zuoditie	8
+요리할게요	zuofan	8
+직업이 뭐예요?	zuoshenmegongzuo	8
+아리	ani	7
+아리	ari	7
+좀 도와주세요	bangwyx	7
+배불러요	baol	7
+맛없어요	bhc	7
+배불러요	bl	7
+몸이 안 좋아요	bsf	7
+나빠요	bufao	7
+별로예요	bufaokan	7
+별로예요	bufaokang	7
+별로예요	buhaokang	7
+맛없어요	buhc	7
+몸이 안 좋아요	busf	7
+아니	busi	7
+안 돼요	buxin	7
+몰라요	buzd	7
+좀 도와주세요	bwyx	7
+몰라요	bzd	7
+메뉴 주세요	caid	7
+진짜 귀여워요	caojikeai	7
+잘 먹었어요	cbl	7
+처음 뵙겠습니다	ccjm	7
+메뉴 주세요	cd	7
+늦었어요	cdl	7
+잘 먹었어요	chibl	7
+늦었어요	chidl	7
+밥 먹어요	chifang	7
+밥 먹어요	chihan	7
+밥 먹어요	chihang	7
+놀랐어요	chij	7
+깜짝 놀랐어요	chijin	7
+처음 뵙겠습니다	chucjm	7
+나갈게요	chumeng	7
+틀렸어요	chuole	7
+틀렸어요	chuone	7
+틀렸어요	chuore	7
+택시	chuzc	7
+밥 먹어요	cifan	7
+밥 먹어요	cifang	7
+밥 먹어요	cihan	7
+밥 먹어요	cihang	7
+깜짝 놀랐어요	cijin	7
+깜짝 놀랐어요	cijing	7
+약 먹었어요	ciyao	7
+놀랐어요	cj	7
+나갈게요	cumen	7
+나갈게요	cumeng	7
+틀렸어요	cuone	7
+틀렸어요	cuore	7
+택시	czc	7
+포장해 주세요	dab	7
+전화할게요	dadh	7
+전화해	dadianfua	7
+전화해	dadiangfua	7
+전화해	dadianghua	7
+물론이죠	danglan	7
+물론이죠	danglang	7
+당연하죠	dangr	7
+물론이죠	dangrang	7
+걱정이에요	dangxin	7
+걱정이에요	dangxing	7
+물론이죠	danlan	7
+물론이죠	danlang	7
+물론이죠	danran	7
+물론이죠	danrang	7
+걱정돼요	danx	7
+걱정이에요	danxing	7
+포장해 주세요	db	7
+전화할게요	ddh	7
+기다려 주세요	denden	7
+잠깐만요	denden	7
+기다려 주세요	dendeng	7
+잠깐만요	dendeng	7
+기다려 주세요	dengden	7
+잠깐만요	dengden	7
+오래 기다렸어요	denglefengjiu	7
+오래 기다렸어요	denglefenjiu	7
+오래 기다렸어요	denglehengjiu	7
+오래 기다렸어요	dengnefengjiu	7
+오래 기다렸어요	dengnefenjiu	7
+오래 기다렸어요	dengnehengjiu	7
+오래 기다렸어요	dengnehenjiu	7
+오래 기다렸어요	dengrefengjiu	7
+오래 기다렸어요	dengrefenjiu	7
+오래 기다렸어요	dengrehengjiu	7
+오래 기다렸어요	dengrehenjiu	7
+기다려주세요	dengwyx	7
+오래 기다렸어요	denlefengjiu	7
+오래 기다렸어요	denlefenjiu	7
+오래 기다렸어요	denlehengjiu	7
+오래 기다렸어요	denlehenjiu	7
+오래 기다렸어요	dennefengjiu	7
+오래 기다렸어요	dennefenjiu	7
+오래 기다렸어요	dennehengjiu	7
+오래 기다렸어요	dennehenjiu	7
+오래 기다렸어요	denrefengjiu	7
+오래 기다렸어요	denrefenjiu	7
+오래 기다렸어요	denrehengjiu	7
+오래 기다렸어요	denrehenjiu	7
+기다려줘	denwoyixia	7
+전화번호	dianfuafaoma	7
+전화번호	dianfuahaoma	7
+전화번호	diangfuafaoma	7
+전화번호	diangfuahaoma	7
+전화번호	dianghuafaoma	7
+전화번호	dianghuahaoma	7
+전화번호	dianhuafaoma	7
+적	dilen	7
+적	dileng	7
+적	direng	7
+지하철역	ditz	7
+당연하죠	dr	7
+지하철역	dtz	7
+얼마야?	duosaoqian	7
+얼마야?	duosaoqiang	7
+얼마야?	duoshaoqiang	7
+고맙습니다	duox	7
+기다려주세요	dwyx	7
+걱정돼요	dx	7
+고맙습니다	dx	7
+문자 보낼게요	faduangxin	7
+문자 보낼게요	faduangxing	7
+문자 보낼게요	faduanxing	7
+맛있다	faochi	7
+맛있다	faoci	7
+좀 나아졌어요?	faodianglema	7
+좀 나아졌어요?	faodiangnema	7
+좀 나아졌어요?	faodiangrema	7
+좀 나아졌어요?	faodianlema	7
+좀 나아졌어요?	faodiannema	7
+좀 나아졌어요?	faodianrema	7
+열이 나요	fasao	7
+카톡 보낼게요	faxingxi	7
+메시지 보낼게요	faxx	7
+정말 감사합니다	feicangangxie	7
+정말 감사합니다	feicanganxie	7
+정말 감사합니다	feicanggangxie	7
+정말 감사합니다	feicangganxie	7
+정말 감사합니다	feichangangxie	7
+정말 감사합니다	feichanganxie	7
+정말 감사합니다	feichanggangxie	7
+한잔할래요?	fejiu	7
+많이 바빠요	fengman	7
+많이 바빠요	fengmang	7
+저렴해요	fengpiangyi	7
+저렴해요	fengpianyi	7
+많이 바빠요	fenman	7
+많이 바빠요	fenmang	7
+저렴해요	fenpiangyi	7
+저렴해요	fenpianyi	7
+레드	fonbafu	7
+레드	fonbahu	7
+레드	fongbafu	7
+레드	fongbahu	7
+환영해요	fuangying	7
+환영해요	fuanying	7
+리콜	fuicen	7
+리콜	fuiceng	7
+리콜	fuichen	7
+리콜	fuicheng	7
+근처에	fujing	7
+기차역	fuocezan	7
+기차역	fuocezang	7
+기차역	fuocezhan	7
+기차역	fuocezhang	7
+기차역	fuochezan	7
+기차역	fuochezang	7
+기차역	fuochezhan	7
+기차역	fuochezhang	7
+메시지 보낼게요	fxx	7
+감기 걸렸어요	ganml	7
+보여주세요	geiwk	7
+보여줘	geiwokang	7
+버스	gjc	7
+감기 걸렸어요	gml	7
+버스	gongjc	7
+일해요	gongzhuo	7
+일해요	gonzhuo	7
+일해요	gonzuo	7
+바람 불어요	guafen	7
+바람 불어요	guahen	7
+바람 불어요	guaheng	7
+보여주세요	gwk	7
+문자 보낼게요	haduangxin	7
+문자 보낼게요	haduangxing	7
+문자 보낼게요	haduanxin	7
+문자 보낼게요	haduanxing	7
+무서워요	haip	7
+맛있다	haoci	7
+좀 나아졌어요?	haodianglema	7
+좀 나아졌어요?	haodiangnema	7
+좀 나아졌어요?	haodiangrema	7
+좀 나아졌어요?	haodiannema	7
+좀 나아졌어요?	haodianrema	7
+오랜만이에요	haojbj	7
+열이 나요	hasao	7
+열이 나요	hashao	7
+카톡 보낼게요	haxingxi	7
+카톡 보낼게요	haxinxi	7
+정말 감사합니다	heicangangxie	7
+정말 감사합니다	heicanganxie	7
+정말 감사합니다	heicanggangxie	7
+정말 감사합니다	heicangganxie	7
+정말 감사합니다	heichangangxie	7
+정말 감사합니다	heichanganxie	7
+정말 감사합니다	heichanggangxie	7
+정말 감사합니다	heichangganxie	7
+많이 바빠요	hengman	7
+많이 바빠요	hengmang	7
+저렴해요	hengpiangyi	7
+저렴해요	hengpianyi	7
+많이 바빠요	henman	7
+저렴해요	henpiangyi	7
+싸요	henpy	7
+멋져요	hens	7
+집에 가요	hj	7
+오랜만이에요	hjbj	7
+레드	honbafu	7
+레드	honbahu	7
+레드	hongbahu	7
+무서워요	hp	7
+싸요	hpy	7
+멋져요	hs	7
+환영해요	huangying	7
+리콜	huicen	7
+리콜	huiceng	7
+리콜	huichen	7
+집에 가요	huij	7
+근처에	hujin	7
+근처에	hujing	7
+기차역	huocezan	7
+기차역	huocezang	7
+기차역	huocezhan	7
+기차역	huocezhang	7
+기차역	huochezan	7
+기차역	huochezang	7
+기차역	huochezhang	7
+빌려주세요	jgw	7
+만나자	jiangemiang	7
+만나자	jianggemian	7
+만나자	jianggemiang	7
+가렌	jianun	7
+가렌	jiarun	7
+지금 몇 시예요?	jidiangle	7
+지금 몇 시예요?	jidiangne	7
+지금 몇 시예요?	jidiangre	7
+지금 몇 시예요?	jidianne	7
+지금 몇 시예요?	jidianre	7
+빌려주세요	jiegw	7
+징크스	jingkeshi	7
+징크스	jinkeshi	7
+징크스	jinkesi	7
+살려줘	jiumin	7
+귀여워요	ka	7
+회의 중이에요	kaifui	7
+회의	kaih	7
+한타	kaituang	7
+즐거워요	kaixing	7
+메시지 봤어요?	kandaoxiaoxinema	7
+메시지 봤어요?	kandaoxiaoxirema	7
+메시지 봤어요?	kangdaoxiaoxilema	7
+메시지 봤어요?	kangdaoxiaoxinema	7
+메시지 봤어요?	kangdaoxiaoxirema	7
+시험	kaos	7
+귀여워요	kea	7
+해 봐도 돼요?	keyisima	7
+회의	kh	7
+ㅠㅠ	kl	7
+시험	ks	7
+빨리 와 주세요	kuaidianglai	7
+빨리 와 주세요	kuaidiangnai	7
+빨리 와 주세요	kuaidiangrai	7
+빨리 와 주세요	kuaidiannai	7
+빨리 와 주세요	kuaidianrai	7
+ㅠㅠ	kul	7
+블루	lanbahu	7
+블루	langbafu	7
+블루	langbahu	7
+속상해요	langguo	7
+속상해요	languo	7
+남편	laogon	7
+힘들어요	leine	7
+힘들어요	leire	7
+연락해	liangxiwo	7
+연락해 주세요	lianxw	7
+안녕하세요	lifaoma	7
+안녕하세요	lihaoma	7
+이름이 뭐야?	lijiaosengmemingzhi	7
+이름이 뭐야?	lijiaosengmemingzi	7
+이름이 뭐야?	lijiaosengmeminzhi	7
+이름이 뭐야?	lijiaosengmeminzi	7
+이름이 뭐야?	lijiaosenmemingzhi	7
+이름이 뭐야?	lijiaosenmemingzi	7
+이름이 뭐야?	lijiaosenmeminzhi	7
+이름이 뭐야?	lijiaosenmeminzi	7
+이름이 뭐야?	lijiaoshengmemingzhi	7
+이름이 뭐야?	lijiaoshengmemingzi	7
+이름이 뭐야?	lijiaoshengmeminzhi	7
+이름이 뭐야?	lijiaoshengmeminzi	7
+이름이 뭐야?	lijiaoshenmemingzhi	7
+이름이 뭐야?	lijiaoshenmemingzi	7
+이름이 뭐야?	lijiaoshenmeminzhi	7
+이름이 뭐야?	lijiaoshenmeminzi	7
+맞는 말이네요	lishuodedui	7
+맞는 말이네요	lisuodedui	7
+짱이에요	lizhuiban	7
+짱이에요	lizhuibang	7
+짱이에요	lizuiban	7
+짱이에요	lizuibang	7
+연락해 주세요	lxw	7
+계산서 주세요	maid	7
+계산할게요	maidang	7
+계산서 주세요	md	7
+블루	nanbafu	7
+블루	nanbahu	7
+슬퍼요	nang	7
+블루	nangbafu	7
+블루	nangbahu	7
+속상해요	nangguo	7
+남자친구	nanpy	7
+남편	naogon	7
+남편	naogong	7
+아내	naopo	7
+와이프	naopo	7
+힘들어요	neile	7
+힘들어요	neine	7
+힘들어요	neire	7
+슬퍼요	ng	7
+연락해	niangxiwo	7
+연락해	nianxiwo	7
+안녕하세요	nifaoma	7
+이름이 뭐야?	nijiaosengmemingzhi	7
+이름이 뭐야?	nijiaosengmemingzi	7
+이름이 뭐야?	nijiaosengmeminzhi	7
+이름이 뭐야?	nijiaosengmeminzi	7
+이름이 뭐야?	nijiaosenmemingzhi	7
+이름이 뭐야?	nijiaosenmemingzi	7
+이름이 뭐야?	nijiaosenmeminzhi	7
+이름이 뭐야?	nijiaosenmeminzi	7
+이름이 뭐야?	nijiaoshengmemingzhi	7
+이름이 뭐야?	nijiaoshengmemingzi	7
+이름이 뭐야?	nijiaoshengmeminzhi	7
+이름이 뭐야?	nijiaoshengmeminzi	7
+이름이 뭐야?	nijiaoshenmemingzhi	7
+이름이 뭐야?	nijiaoshenmeminzhi	7
+이름이 뭐야?	nijiaoshenmeminzi	7
+이름이 뭐예요?	nijsmmz	7
+맞는 말이네요	nisuodedui	7
+짱이에요	nizhuiban	7
+짱이에요	nizhuibang	7
+짱이에요	nizuiban	7
+이름이 뭐예요?	njsmmz	7
+남자친구	npy	7
+여자친구	npy	7
+여자친구	nvpy	7
+깎아 주세요	pianyyd	7
+예뻐요	piaol	7
+예뻐	piaolian	7
+예뻐	piaonian	7
+예뻐	piaoniang	7
+예뻐	piaorian	7
+예뻐	piaoriang	7
+예뻐요	pl	7
+깎아 주세요	pyyd	7
+일어났어요	qcl	7
+잘 부탁드립니다	qdzj	7
+일어났어	qichuangne	7
+일어났어	qichuangre	7
+일어났어	qichuanle	7
+일어났어	qichuanne	7
+일어났어	qichuanre	7
+일어났어요	qicl	7
+일어났어	qicuangle	7
+일어났어	qicuangne	7
+일어났어	qicuangre	7
+일어났어	qicuanle	7
+일어났어	qicuanne	7
+일어났어	qicuanre	7
+잘 부탁드립니다	qingdzj	7
+들어오세요	qingjing	7
+천천히 말해 주세요	qingmyd	7
+잠깐만요	qingsaoden	7
+잠깐만요	qingsaodeng	7
+잠시만요	qingsd	7
+잠깐만요	qingshaoden	7
+용서해 주세요	qingyuanlian	7
+용서해 주세요	qingyuannian	7
+용서해 주세요	qingyuanniang	7
+용서해 주세요	qingyuanrian	7
+용서해 주세요	qingyuanriang	7
+앉으세요	qingzhuo	7
+들어오세요	qinjin	7
+들어오세요	qinjing	7
+잠깐만요	qinsaoden	7
+잠깐만요	qinsaodeng	7
+잠깐만요	qinshaoden	7
+잠깐만요	qinshaodeng	7
+용서해 주세요	qinyuanlian	7
+용서해 주세요	qinyuanliang	7
+용서해 주세요	qinyuannian	7
+용서해 주세요	qinyuanniang	7
+용서해 주세요	qinyuanrian	7
+용서해 주세요	qinyuanriang	7
+앉으세요	qinzhuo	7
+앉으세요	qinzuo	7
+천천히 말해 주세요	qmyd	7
+잠시만요	qsd	7
+영화 보러 갈래요?	qukandiangying	7
+영화 보러 갈래요?	qukangdiangying	7
+영화 보러 갈래요?	qukangdianying	7
+병원 가요	quyy	7
+병원 가요	qyy	7
+블루	ranbafu	7
+블루	ranbahu	7
+블루	rangbafu	7
+블루	rangbahu	7
+남편	raogon	7
+남편	raogong	7
+아내	raopo	7
+와이프	raopo	7
+힘들어요	reile	7
+힘들어요	reine	7
+힘들어요	reire	7
+연락해	riangxiwo	7
+연락해	rianxiwo	7
+위	san	7
+위	sang	7
+지난주	sangexingqi	7
+지난주	sangexinqi	7
+지난주	sanggexingqi	7
+지난주	sanggexinqi	7
+수업	sangke	7
+수업	sanke	7
+출근했어요	sb	7
+생일	sengli	7
+승리	sengli	7
+생일 축하합니다	senglikuaile	7
+생일 축하합니다	senglikuaine	7
+생일 축하합니다	senglikuaire	7
+언제야?	sengmeshifou	7
+언제야?	sengmeshihou	7
+언제야?	sengmesifou	7
+언제야?	sengmesihou	7
+승리	sengni	7
+생일	sengri	7
+승리	sengri	7
+생일 축하합니다	sengrikuaile	7
+생일 축하합니다	sengrikuaine	7
+생일 축하합니다	sengrikuaire	7
+생일	senli	7
+승리	senli	7
+생일 축하합니다	senlikuaile	7
+생일 축하합니다	senlikuaine	7
+생일 축하합니다	senlikuaire	7
+언제야?	senmeshifou	7
+언제야?	senmeshihou	7
+언제야?	senmesifou	7
+언제야?	senmesihou	7
+승리	senni	7
+생일	senri	7
+승리	senri	7
+생일 축하합니다	senrikuaile	7
+생일 축하합니다	senrikuaine	7
+생일 축하합니다	senrikuaire	7
+위	shan	7
+출근했어요	shangb	7
+지난주	shangexingqi	7
+지난주	shangexinqi	7
+지난주	shanggexinqi	7
+수업	shanke	7
+생일	shengli	7
+생일 축하합니다	shenglikuaile	7
+생일 축하합니다	shenglikuaine	7
+생일 축하합니다	shenglikuaire	7
+언제야?	shengmeshifou	7
+언제야?	shengmeshihou	7
+언제야?	shengmesifou	7
+언제야?	shengmesihou	7
+승리	shengni	7
+화나요	shengq	7
+승리	shengri	7
+생일 축하합니다	shengrikuaine	7
+생일 축하합니다	shengrikuaire	7
+생일 축하해요	shengrkl	7
+생일	shenli	7
+승리	shenli	7
+생일 축하합니다	shenlikuaile	7
+생일 축하합니다	shenlikuaine	7
+생일 축하합니다	shenlikuaire	7
+언제야?	shenmeshifou	7
+언제야?	shenmesifou	7
+언제야?	shenmesihou	7
+승리	shenni	7
+생일	shenri	7
+승리	shenri	7
+생일 축하합니다	shenrikuaile	7
+생일 축하합니다	shenrikuaine	7
+생일 축하합니다	shenrikuaire	7
+실례합니다	shill	7
+패배	sibai	7
+실례합니다	sll	7
+화나요	sq	7
+생일 축하해요	srkl	7
+카드로 할게요	suaka	7
+자요	suijiao	7
+비싸요	taigl	7
+대박	taihl	7
+탱커	tank	7
+싫어해요	taoy	7
+비싸요	tgl	7
+대박	thl	7
+날씨 나빠요	tiangqibufao	7
+날씨 나빠요	tiangqibuhao	7
+날씨	tianq	7
+날씨 좋아요	tianqh	7
+날씨 나빠요	tianqibufao	7
+탱커	tk	7
+날씨	tq	7
+날씨 좋아요	tqh	7
+팀전	tuangzan	7
+팀전	tuangzang	7
+팀전	tuangzhan	7
+팀전	tuangzhang	7
+팀전	tuanzan	7
+팀전	tuanzang	7
+팀전	tuanzhang	7
+싫어해요	ty	7
+잘 자요	wanang	7
+늦게	wandiang	7
+안녕하세요	wansanfao	7
+안녕하세요	wansangfao	7
+안녕하세요	wansanghao	7
+안녕하세요	wansanhao	7
+안녕하세요	wanshanfao	7
+안녕하세요	wanshangfao	7
+안녕하세요	wanshanhao	7
+위챗	weixing	7
+심심해요	wl	7
+이해가 안 돼요	wobudon	7
+늦었어 미안	wochidaone	7
+늦었어 미안	wochidaore	7
+늦었어 미안	wocidaole	7
+늦었어 미안	wocidaone	7
+늦었어 미안	wocidaore	7
+먼저 갈게요	woxiangzhoule	7
+먼저 갈게요	woxiangzhoune	7
+먼저 갈게요	woxiangzhoure	7
+먼저 갈게요	woxiangzoule	7
+먼저 갈게요	woxiangzoune	7
+먼저 갈게요	woxiangzoure	7
+먼저 갈게요	woxianzhoule	7
+먼저 갈게요	woxianzhoune	7
+먼저 갈게요	woxianzhoure	7
+먼저 갈게요	woxianzoune	7
+먼저 갈게요	woxianzoure	7
+안녕히 계세요	woxzl	7
+이걸로 할게요	woyaozege	7
+저도요	woys	7
+심심해요	wul	7
+ㅠㅠ	wuw	7
+ㅠㅠ	ww	7
+안녕히 계세요	wxzl	7
+저도요	wys	7
+퇴근했어요	xb	7
+행복해요	xf	7
+퇴근했어요	xiab	7
+또 봐요	xiachijian	7
+또 봐요	xiachijiang	7
+또 봐요	xiacijiang	7
+부러워요	xiangmu	7
+왼쪽으로 가세요	xiangzhuoguai	7
+오른쪽으로 가세요	xianyouguai	7
+왼쪽으로 가세요	xianzhuoguai	7
+왼쪽으로 가세요	xianzuoguai	7
+조심해	xiaoxing	7
+눈 와요	xiaxuene	7
+눈 와요	xiaxuere	7
+비 와요	xiayl	7
+감사합니다	xiexn	7
+행복해요	xingf	7
+수고했어요	xingkule	7
+수고했어요	xingkune	7
+수고했어요	xingkure	7
+새해 복 많이 받으세요	xingliangkuaile	7
+새해 복 많이 받으세요	xingliangkuaine	7
+새해 복 많이 받으세요	xingliangkuaire	7
+새해 복 많이 받으세요	xingliankuaile	7
+새해 복 많이 받으세요	xingliankuaine	7
+새해 복 많이 받으세요	xingliankuaire	7
+새해 복 많이 받으세요	xingniangkuaile	7
+새해 복 많이 받으세요	xingniangkuaine	7
+새해 복 많이 받으세요	xingniangkuaire	7
+새해 복 많이 받으세요	xingniankuaile	7
+새해 복 많이 받으세요	xingniankuaine	7
+새해 복 많이 받으세요	xingniankuaire	7
+수고했어요	xinkune	7
+수고했어요	xinkure	7
+새해 복 많이 받으세요	xinliangkuaile	7
+새해 복 많이 받으세요	xinliangkuaine	7
+새해 복 많이 받으세요	xinliangkuaire	7
+새해 복 많이 받으세요	xinliankuaile	7
+새해 복 많이 받으세요	xinliankuaine	7
+새해 복 많이 받으세요	xinliankuaire	7
+새해 복 많이 받으세요	xinniangkuaile	7
+새해 복 많이 받으세요	xinniangkuaine	7
+새해 복 많이 받으세요	xinniangkuaire	7
+새해 복 많이 받으세요	xinniankuaine	7
+새해 복 많이 받으세요	xinniankuaire	7
+기분 좋아요	xinqh	7
+기분 좋아요	xqh	7
+공부	xuex	7
+공부	xx	7
+감사합니다	xxn	7
+비 와요	xyl	7
+물 주세요	yaos	7
+야스오	yashuo	7
+나중에 연락해요	yifouliangxi	7
+나중에 연락해요	yifoulianxi	7
+나중에 연락해요	yifouniangxi	7
+나중에 연락해요	yifounianxi	7
+나중에 연락해요	yifouriangxi	7
+나중에 연락해요	yifourianxi	7
+이따가 봐요	yifuierjian	7
+이따가 봐요	yifuierjiang	7
+나중에 연락해요	yihouliangxi	7
+나중에 연락해요	yihouniangxi	7
+나중에 연락해요	yihounianxi	7
+나중에 연락해요	yihouriangxi	7
+나중에 연락해요	yihourianxi	7
+이따가 봐요	yihuierjiang	7
+같이 밥 먹어요	yiqichifangba	7
+같이 밥 먹어요	yiqichihanba	7
+같이 밥 먹어요	yiqichihangba	7
+같이 밥 먹어요	yiqicifanba	7
+같이 밥 먹어요	yiqicifangba	7
+같이 밥 먹어요	yiqicihanba	7
+같이 밥 먹어요	yiqicihangba	7
+같이 갈래요?	yiqq	7
+시간 있어요?	ykm	7
+오른쪽	youbiang	7
+시간 있어요?	youkm	7
+같이 갈래요?	yqq	7
+물 주세요	ys	7
+데이트	yuefui	7
+어디야?	zailali	7
+어디야?	zailani	7
+어디야?	zailari	7
+어디야?	zainani	7
+어디야?	zainari	7
+앞에 있어요	zaiqiangmian	7
+앞에 있어요	zaiqiangmiang	7
+앞에 있어요	zaiqianmiang	7
+다시 말해 주세요	zaisyb	7
+일찍	zaodiang	7
+좋은 아침	zaosanfao	7
+좋은 아침	zaosangfao	7
+좋은 아침	zaosanghao	7
+좋은 아침	zaosanhao	7
+좋은 아침	zaoshanfao	7
+좋은 아침	zaoshangfao	7
+좋은 아침	zaoshanhao	7
+정말요?	zdm	7
+이거 뭐예요?	zgssm	7
+어디야?	zhailali	7
+어디야?	zhailani	7
+어디야?	zhailari	7
+어디야?	zhainali	7
+어디야?	zhainani	7
+어디야?	zhainari	7
+앞에 있어요	zhaiqiangmian	7
+앞에 있어요	zhaiqiangmiang	7
+앞에 있어요	zhaiqianmian	7
+앞에 있어요	zhaiqianmiang	7
+일찍	zhaodian	7
+일찍	zhaodiang	7
+좋은 아침	zhaosanfao	7
+좋은 아침	zhaosangfao	7
+좋은 아침	zhaosanghao	7
+좋은 아침	zhaosanhao	7
+좋은 아침	zhaoshanfao	7
+좋은 아침	zhaoshangfao	7
+좋은 아침	zhaoshanghao	7
+좋은 아침	zhaoshanhao	7
+이거 뭐예요?	zhegssm	7
+정말요?	zhendm	7
+빨리 나으세요	zhulizaolikanfu	7
+빨리 나으세요	zhulizaolikangfu	7
+빨리 나으세요	zhulizaolikanghu	7
+빨리 나으세요	zhulizaolikanhu	7
+빨리 나으세요	zhulizaorikanfu	7
+빨리 나으세요	zhulizaorikangfu	7
+빨리 나으세요	zhulizaorikanghu	7
+빨리 나으세요	zhulizaorikanhu	7
+빨리 나으세요	zhulizhaolikanfu	7
+빨리 나으세요	zhulizhaolikangfu	7
+빨리 나으세요	zhulizhaolikanghu	7
+빨리 나으세요	zhulizhaolikanhu	7
+빨리 나으세요	zhulizhaorikanfu	7
+빨리 나으세요	zhulizhaorikangfu	7
+빨리 나으세요	zhulizhaorikanghu	7
+빨리 나으세요	zhulizhaorikanhu	7
+빨리 나으세요	zhunizaolikanfu	7
+빨리 나으세요	zhunizaolikangfu	7
+빨리 나으세요	zhunizaolikanghu	7
+빨리 나으세요	zhunizaolikanhu	7
+빨리 나으세요	zhunizaorikanfu	7
+빨리 나으세요	zhunizaorikanghu	7
+빨리 나으세요	zhunizaorikanhu	7
+빨리 나으세요	zhunizhaolikanfu	7
+빨리 나으세요	zhunizhaolikangfu	7
+빨리 나으세요	zhunizhaolikanghu	7
+빨리 나으세요	zhunizhaolikanhu	7
+빨리 나으세요	zhunizhaorikanfu	7
+빨리 나으세요	zhunizhaorikangfu	7
+빨리 나으세요	zhunizhaorikanghu	7
+빨리 나으세요	zhunizhaorikanhu	7
+왼쪽	zhuobian	7
+왼쪽	zhuobiang	7
+지하철 탈게요	zhuoditie	7
+요리할게요	zhuofan	7
+요리할게요	zhuofang	7
+요리할게요	zhuohan	7
+요리할게요	zhuohang	7
+직업이 뭐예요?	zhuosengmegongzhuo	7
+직업이 뭐예요?	zhuosengmegongzuo	7
+직업이 뭐예요?	zhuosengmegonzhuo	7
+직업이 뭐예요?	zhuosengmegonzuo	7
+직업이 뭐예요?	zhuosenmegongzhuo	7
+직업이 뭐예요?	zhuosenmegongzuo	7
+직업이 뭐예요?	zhuosenmegonzhuo	7
+직업이 뭐예요?	zhuosenmegonzuo	7
+직업이 뭐예요?	zhuoshengmegongzhuo	7
+직업이 뭐예요?	zhuoshengmegongzuo	7
+직업이 뭐예요?	zhuoshengmegonzhuo	7
+직업이 뭐예요?	zhuoshengmegonzuo	7
+직업이 뭐예요?	zhuoshenmegongzhuo	7
+직업이 뭐예요?	zhuoshenmegongzuo	7
+직업이 뭐예요?	zhuoshenmegonzhuo	7
+직업이 뭐예요?	zhuoshenmegonzuo	7
+도와줘	zhusou	7
+다시 말해 주세요	zsyb	7
+빨리 나으세요	zulizaolikanfu	7
+빨리 나으세요	zulizaolikangfu	7
+빨리 나으세요	zulizaolikanghu	7
+빨리 나으세요	zulizaolikanhu	7
+빨리 나으세요	zulizaorikanfu	7
+빨리 나으세요	zulizaorikangfu	7
+빨리 나으세요	zulizaorikanghu	7
+빨리 나으세요	zulizaorikanhu	7
+빨리 나으세요	zulizhaolikanfu	7
+빨리 나으세요	zulizhaolikangfu	7
+빨리 나으세요	zulizhaolikanghu	7
+빨리 나으세요	zulizhaolikanhu	7
+빨리 나으세요	zulizhaorikanfu	7
+빨리 나으세요	zulizhaorikangfu	7
+빨리 나으세요	zulizhaorikanghu	7
+빨리 나으세요	zulizhaorikanhu	7
+빨리 나으세요	zunizaolikanfu	7
+빨리 나으세요	zunizaolikangfu	7
+빨리 나으세요	zunizaolikanghu	7
+빨리 나으세요	zunizaolikanhu	7
+빨리 나으세요	zunizaorikanfu	7
+빨리 나으세요	zunizaorikangfu	7
+빨리 나으세요	zunizaorikanghu	7
+빨리 나으세요	zunizaorikanhu	7
+빨리 나으세요	zunizhaolikanfu	7
+빨리 나으세요	zunizhaolikangfu	7
+빨리 나으세요	zunizhaolikanghu	7
+빨리 나으세요	zunizhaolikanhu	7
+빨리 나으세요	zunizhaorikanfu	7
+빨리 나으세요	zunizhaorikangfu	7
+빨리 나으세요	zunizhaorikanghu	7
+빨리 나으세요	zunizhaorikanhu	7
+왼쪽	zuobiang	7
+요리할게요	zuofang	7
+요리할게요	zuohan	7
+요리할게요	zuohang	7
+직업이 뭐예요?	zuosengmegongzhuo	7
+직업이 뭐예요?	zuosengmegongzuo	7
+직업이 뭐예요?	zuosengmegonzhuo	7
+직업이 뭐예요?	zuosengmegonzuo	7
+직업이 뭐예요?	zuosenmegongzhuo	7
+직업이 뭐예요?	zuosenmegongzuo	7
+직업이 뭐예요?	zuosenmegonzhuo	7
+직업이 뭐예요?	zuosenmegonzuo	7
+직업이 뭐예요?	zuoshengmegongzhuo	7
+직업이 뭐예요?	zuoshengmegongzuo	7
+직업이 뭐예요?	zuoshengmegonzhuo	7
+직업이 뭐예요?	zuoshengmegonzuo	7
+직업이 뭐예요?	zuoshenmegongzhuo	7
+직업이 뭐예요?	zuoshenmegonzhuo	7
+직업이 뭐예요?	zuoshenmegonzuo	7
+숙제	zuoy	7
+도와줘	zushou	7
+도와줘	zusou	7
+숙제	zy	7
+보고서	baogao	6
+배불러	baole	6
+죄송해요	baoqian	6
+핑	biaoji	6
+졸업	biye	6
+맛없다	buhaochi	6
+안 예뻐요	buhaokan	6
+안 돼	buyao	6
+별말씀을요	buyongxie	6
+잘 모르겠어요	buzhidao	6
+메뉴판 주세요	caidan	6
+개귀엽다	chaojikeai	6
+밥 먹자	chifan	6
+포장할게요	dabao	6
+모두	dajia	6
+세일해요	dazhe	6
+할인 중이에요	dazhe	6
+잠깐	dengdeng	6
+나 따라와	genwo	6
+월급	gongzi	6
+직업	gongzuo	6
+겁나요	haipa	6
+오랜만	haojiubujian	6
+예뻐요	haokan	6
+친한 친구	haopengyou	6
+술 마실래요?	hejiu	6
+뒤	hou	6
+야근해요	jiaban	6
+빌려줘	jiegeiwo	6
+공격	jingong	6
+가까이 있어요	jinma	6
+신고	jubao	6
+시작	kaishi	6
+신나요	kaixin	6
+돼요	keyi	6
+입어 봐도 돼요?	keyishima	6
+빨리 와	kuaidianlai	6
+ㅜㅜ	kule	6
+여기로 와	laizheli	6
+쇼핑할래요	maidongxi	6
+천천히	mandian	6
+곧	mashang	6
+아니에요	meishi	6
+알겠어	mingbai	6
+나이가 어떻게 돼요?	niduodale	6
+네 말이 맞아	nishuodedui	6
+대단해	niubi	6
+너 최고야	nizuibang	6
+앞	qian	6
+클리어	qingxian	6
+영화 보러 가요	qukandianying	6
+출근 중이에요	shangban	6
+열받아요	shengqi	6
+그래요	shide	6
+잘 거예요	shuijiao	6
+레전드	taibangle	6
+너무 커요	taidale	6
+너무 작아요	taixiaole	6
+다시 말해 주세요	tingbudong	6
+물러나	tui	6
+좋은 저녁 되세요	wanshanghao	6
+이해 못 했어요	wobudong	6
+지루해요	wuliao	6
+퇴근 중이에요	xiaban	6
+수업 끝났어요	xiake	6
+싶어요	xiang	6
+그리워요	xiangnian	6
+우회전하세요	xiangyouguai	6
+좌회전하세요	xiangzuoguai	6
+지금	xianzai	6
+어디야	xianzaina	6
+수고했어	xinkule	6
+기분 나빠요	xinqingbuhao	6
+씻었어요	xizao	6
+원해요	yao	6
+나중에 연락해	yihoulianxi	6
+잠깐	yihuier	6
+이따 봐요	yihuierjian	6
+같이 밥 먹자	yiqichifanba	6
+만남	yuehui	6
+무슨 일이에요?	zenmele	6
+가는 길 알려주세요	zenmezou	6
+그래요?	zhendema	6
+알겠어요	zhidaole	6
+가운데	zhongjian	6
+준비	zhunbei	6
+어떻게 지내세요	zuijinzenmeyang	6
+밥 할게요	zuofan	6
+에코	aike	5
+아이고	aiy	5
+아무무	amumu	5
+아이고	ay	5
+도와줘	bangbw	5
+배불러	baone	5
+죄송해요	baoqiang	5
+배불러	baore	5
+도와줘	bbw	5
+아파요	bsf	5
+맛없다	bufaochi	5
+맛없다	bufaoci	5
+안 예뻐요	bufaokan	5
+안 예뻐요	bufaokang	5
+맛없다	buhaoci	5
+안 예뻐요	buhaokang	5
+아파요	busf	5
+싫어요	buy	5
+아니에요	buyx	5
+잘 모르겠어요	buzidao	5
+싫어요	by	5
+아니에요	byx	5
+메뉴판 주세요	caidang	5
+개귀엽다	caojikeai	5
+잘 먹었습니다	cbl	5
+밥 먹을래요?	cf	5
+밥 먹었어요?	cflm	5
+메뉴판 주세요	chaidan	5
+메뉴판 주세요	chaidang	5
+완전 귀여워요	chaojka	5
+와드	chay	5
+잘 먹었습니다	chibl	5
+밥 먹을래요?	chif	5
+밥 먹자	chifang	5
+밥 먹었어요?	chiflm	5
+밥 먹자	chihan	5
+밥 먹자	chihang	5
+외출했어요	chumen	5
+밥 먹자	cifan	5
+밥 먹자	cifang	5
+밥 먹자	cihan	5
+밥 먹자	cihang	5
+완전 귀여워요	cjka	5
+와드	cy	5
+바론	dal	5
+그럼요	dangr	5
+집에 왔어요	daojl	5
+세일해요	daze	5
+할인 중이에요	daze	5
+할인돼요?	dazhe	5
+남동생	dd	5
+잠깐	denden	5
+잠깐	dendeng	5
+잠깐	dengden	5
+남동생	did	5
+적	difang	5
+집에 왔어요	djl	5
+바론	dl	5
+그럼요	dr	5
+배 아파요	duzt	5
+배 아파요	dzt	5
+문자할게요	fadx	5
+겁나요	faipa	5
+수비	fangshou	5
+방어탑	fangyuta	5
+오랜만	faojiubujian	5
+오랜만	faojiubujiang	5
+예뻐요	faokan	5
+예뻐요	faokang	5
+친한 친구	faopengyou	5
+친한 친구	faopenyou	5
+베이가	faqiu	5
+문자할게요	fdx	5
+술 마실래요?	fejiu	5
+뒤	fou	5
+저기요	fuwy	5
+서포터	fuz	5
+저기요	fwy	5
+서포터	fz	5
+알려줘	gaosw	5
+오빠	geg	5
+나 따라와	gengwo	5
+오빠	gg	5
+일	gongz	5
+월급	gongzhi	5
+직업	gongzhuo	5
+월급	gonzhi	5
+직업	gonzhuo	5
+월급	gonzi	5
+직업	gonzuo	5
+알려줘	gsw	5
+일	gz	5
+애쉬	hanbing	5
+한판 더	hanyipan	5
+오랜만	haojiubujiang	5
+멋있어요	haok	5
+예뻐요	haokang	5
+친한 친구	haopenyou	5
+ㅋㅋ	heh	5
+잘생겼어요	hens	5
+멋있어요	hk	5
+잘생겼어요	hs	5
+어서 오세요	huany	5
+돌아와요	hui	5
+어서 오세요	hy	5
+공항	jc	5
+만날래요?	jgm	5
+야근해요	jiabang	5
+만날래요?	jiangm	5
+가족	jiar	5
+공항	jic	5
+언니	jiej	5
+끝	jieshu	5
+공격	jinggon	5
+공격	jinggong	5
+가까이 있어요	jingma	5
+공격	jingon	5
+가까워요	jinm	5
+긴장돼요	jinz	5
+언니	jj	5
+가까워요	jm	5
+가족	jr	5
+긴장돼요	jz	5
+귀엽다	ka	5
+시작	kaisi	5
+기뻐요	kaix	5
+신나요	kaixing	5
+봐요	kan	5
+빨리 와요	kdl	5
+귀엽다	kea	5
+좀 도와줄래요?	keybwm	5
+입어 봐도 돼요?	keyisima	5
+빨리 와	kuaidianglai	5
+빨리 와	kuaidiangnai	5
+빨리 와	kuaidiangrai	5
+빨리 와	kuaidiannai	5
+빨리 와	kuaidianrai	5
+빨리 와요	kuaidl	5
+ㅜㅜ	kune	5
+ㅜㅜ	kure	5
+기뻐요	kx	5
+좀 도와줄래요?	kybwm	5
+여기로 와	laizeli	5
+여기로 와	laizeni	5
+여기로 와	laizeri	5
+여기로 와	laizheni	5
+여기로 와	laizheri	5
+선생님	laos	5
+나이가 어떻게 돼요?	liduodale	5
+나이가 어떻게 돼요?	liduodane	5
+나이가 어떻게 돼요?	liduodare	5
+대단해	lihai	5
+안	limian	5
+네 말이 맞아	lishuodedui	5
+네 말이 맞아	lisuodedui	5
+대단해	liubi	5
+너 최고야	lizhuiban	5
+너 최고야	lizhuibang	5
+너 최고야	lizuiban	5
+너 최고야	lizuibang	5
+선생님	ls	5
+쇼핑할래요	maidonxi	5
+천천히	mandiang	5
+천천히	mangdian	5
+천천히	mangdiang	5
+곧	masan	5
+곧	masang	5
+곧	mashan	5
+여동생	meim	5
+괜찮습니다	meis	5
+아니에요	meisi	5
+시간 없어요	meisj	5
+재미없어	meiyisi	5
+알겠어	minbai	5
+내일 봐요	mingtj	5
+내일 시간 있어요?	mingtykm	5
+여동생	mm	5
+괜찮습니다	ms	5
+시간 없어요	msj	5
+내일 봐요	mtj	5
+내일 시간 있어요?	mtykm	5
+여기로 와	naizeli	5
+여기로 와	naizeni	5
+여기로 와	naizeri	5
+여기로 와	naizheli	5
+여기로 와	naizheni	5
+여기로 와	naizheri	5
+몇 살이에요?	nddl	5
+몇 살이에요?	niddl	5
+나이가 어떻게 돼요?	niduodane	5
+나이가 어떻게 돼요?	niduodare	5
+잘 지내세요	nihaoma	5
+네 말이 맞아요	nisdd	5
+네 말이 맞아	nisuodedui	5
+최고예요	nizb	5
+너 최고야	nizhuiban	5
+너 최고야	nizhuibang	5
+너 최고야	nizuiban	5
+네 말이 맞아요	nsdd	5
+다리우스	nuoshou	5
+최고예요	nzb	5
+좀 깎아 주세요	pianyyd	5
+좀 깎아 주세요	pyyd	5
+잠깐만 기다려 주세요	qdyx	5
+앞	qiang	5
+잠깐만 기다려 주세요	qingdyx	5
+클리어	qingxiang	5
+클리어	qinxian	5
+클리어	qinxiang	5
+영화 보러 가요	qukandiangying	5
+영화 보러 가자	qukandianying	5
+영화 보러 가요	qukangdiangying	5
+영화 보러 가요	qukangdianying	5
+여기로 와	raizeli	5
+여기로 와	raizeni	5
+여기로 와	raizeri	5
+여기로 와	raizheli	5
+여기로 와	raizheni	5
+여기로 와	raizheri	5
+출근 중이에요	sanban	5
+출근 중이에요	sanbang	5
+출근 중이에요	sangban	5
+출근 중이에요	sangbang	5
+맞아요	sd	5
+잘 잤어요	sdh	5
+열받아요	sengqi	5
+열받아요	senqi	5
+출근 중이에요	shanban	5
+출근 중이에요	shanbang	5
+출근 중이에요	shangbang	5
+탑	shangl	5
+열받아요	shenqi	5
+맞아요	shid	5
+타워	shouta	5
+카드 돼요?	shuak	5
+잘 잤어요	shuidh	5
+말해요	shuo	5
+그래요	side	5
+카드 돼요?	sk	5
+탑	sl	5
+마음대로	suibian	5
+잘 거예요	suijiao	5
+레전드	taibangne	5
+레전드	taibangre	5
+레전드	taibanle	5
+레전드	taibanne	5
+레전드	taibanre	5
+최고예요	taibl	5
+너무 커요	taidane	5
+너무 커요	taidare	5
+너무 비싸요	taigl	5
+잘됐네요	taihl	5
+너무 작아요	taixiaone	5
+너무 작아요	taixiaore	5
+그들	tamen	5
+못 알아들었어요	tbd	5
+최고예요	tbl	5
+너무 비싸요	tgl	5
+잘됐네요	thl	5
+다시 말해 주세요	tinbudon	5
+다시 말해 주세요	tinbudong	5
+들어요	ting	5
+못 알아들었어요	tingbd	5
+다시 말해 주세요	tingbudon	5
+머리 아파요	tout	5
+머리 아파요	tt	5
+밖	waimian	5
+잊었어	wangle	5
+좋은 저녁 되세요	wansanfao	5
+좋은 저녁 되세요	wansangfao	5
+좋은 저녁 되세요	wansanghao	5
+좋은 저녁 되세요	wansanhao	5
+좋은 저녁 되세요	wanshanfao	5
+좋은 저녁 되세요	wanshangfao	5
+좋은 저녁 되세요	wanshanhao	5
+늦어서 미안해요	wcdl	5
+이해 못 했어요	wobudon	5
+늦어서 미안해요	wocdl	5
+저는 중국 사람이에요	woszgr	5
+나도	woys	5
+저는 중국 사람이에요	wszgr	5
+지루해요	wuniao	5
+지루해요	wuriao	5
+나도	wys	5
+다음에 봐요	xcj	5
+다음 주	xgxq	5
+좋아요	xh	5
+퇴근 중이에요	xiabang	5
+다음에 봐요	xiacj	5
+다음 주	xiagxq	5
+싶어요	xian	5
+그리워요	xianglian	5
+그리워요	xiangliang	5
+그리워요	xiangniang	5
+지금	xiangzai	5
+어디야	xiangzaila	5
+어디야	xiangzaina	5
+지금	xiangzhai	5
+어디야	xiangzhaila	5
+어디야	xiangzhaina	5
+좌회전하세요	xiangzhuoguai	5
+그리워요	xianlian	5
+그리워요	xianliang	5
+그리워요	xiannian	5
+그리워요	xianniang	5
+우회전하세요	xianyouguai	5
+어디야	xianzaila	5
+지금	xianzhai	5
+어디야	xianzhaila	5
+어디야	xianzhaina	5
+좌회전하세요	xianzhuoguai	5
+좌회전하세요	xianzuoguai	5
+용	xiaol	5
+좋아요	xih	5
+수고했어	xingkule	5
+수고했어	xingkune	5
+수고했어	xingkure	5
+기분 나빠요	xingqinbufao	5
+기분 나빠요	xingqinbuhao	5
+기분 나빠요	xingqingbufao	5
+기분 나빠요	xingqingbuhao	5
+수고했어	xinkune	5
+수고했어	xinkure	5
+기분이 안 좋아요	xinqbh	5
+기분 나빠요	xinqinbufao	5
+기분 나빠요	xinqinbuhao	5
+기분 나빠요	xinqingbufao	5
+샤워했어요	xiz	5
+씻었어요	xizhao	5
+용	xl	5
+기분이 안 좋아요	xqbh	5
+선배	xuez	5
+샤워했어요	xz	5
+선배	xz	5
+이따가	yhe	5
+나중에 연락할게요	yhlx	5
+나중에 연락해	yifouliangxi	5
+나중에 연락해	yifoulianxi	5
+나중에 연락해	yifouniangxi	5
+나중에 연락해	yifounianxi	5
+나중에 연락해	yifouriangxi	5
+나중에 연락해	yifourianxi	5
+잠깐	yifuier	5
+이따 봐요	yifuierjian	5
+이따 봐요	yifuierjiang	5
+이따가	yihe	5
+나중에 연락할게요	yihlx	5
+나중에 연락해	yihouliangxi	5
+나중에 연락해	yihouniangxi	5
+나중에 연락해	yihounianxi	5
+나중에 연락해	yihouriangxi	5
+나중에 연락해	yihourianxi	5
+이따 봐요	yihuierjiang	5
+같이 밥 먹을래요?	yiqcfb	5
+같이 밥 먹자	yiqichifangba	5
+같이 밥 먹자	yiqichihanba	5
+같이 밥 먹자	yiqichihangba	5
+같이 밥 먹자	yiqicifanba	5
+같이 밥 먹자	yiqicifangba	5
+같이 밥 먹자	yiqicihanba	5
+같이 밥 먹자	yiqicihangba	5
+같이 올라가자	yiqishang	5
+쭉 가세요	yizz	5
+여기서 멀어요?	ym	5
+재미있어	youyisi	5
+같이 밥 먹을래요?	yqcfb	5
+여기서 멀어요?	yuanm	5
+만남	yuefui	5
+미안해	yulei	5
+쭉 가세요	yzz	5
+안녕히 가세요	zaij	5
+집에 있어요	zaij	5
+좋은 아침이에요	zaosh	5
+짱	zb	5
+정말 고마워요	zdgxn	5
+그래요?	zendema	5
+그래요?	zengdema	5
+무슨 일이에요?	zengmele	5
+무슨 일이에요?	zengmene	5
+무슨 일이에요?	zengmere	5
+가는 길 알려주세요	zengmezhou	5
+가는 길 알려주세요	zengmezou	5
+무슨 일이에요?	zenmene	5
+무슨 일이에요?	zenmere	5
+가는 길 알려주세요	zenmezhou	5
+왜 그래요?	zenml	5
+정말 고마워요	zhendgxn	5
+그래요?	zhengdema	5
+무슨 일이에요?	zhengmele	5
+무슨 일이에요?	zhengmene	5
+무슨 일이에요?	zhengmere	5
+가는 길 알려주세요	zhengmezhou	5
+가는 길 알려주세요	zhengmezou	5
+무슨 일이에요?	zhenmele	5
+무슨 일이에요?	zhenmene	5
+무슨 일이에요?	zhenmere	5
+가는 길 알려주세요	zhenmezhou	5
+가는 길 알려주세요	zhenmezou	5
+알겠어요	zhidaone	5
+알겠어요	zhidaore	5
+가운데	zhongjiang	5
+미드	zhongl	5
+가운데	zhonjian	5
+가운데	zhonjiang	5
+주말에	zhoum	5
+주말에 뭐 해요?	zhoumgm	5
+상태	zhuangtai	5
+갱	zhuar	5
+어떻게 지내세요	zhuijingzengmeyang	5
+어떻게 지내세요	zhuijingzenmeyang	5
+어떻게 지내세요	zhuijingzhengmeyang	5
+어떻게 지내세요	zhuijingzhenmeyang	5
+어떻게 지내세요	zhuijinzengmeyang	5
+어떻게 지내세요	zhuijinzenmeyang	5
+어떻게 지내세요	zhuijinzhengmeyang	5
+어떻게 지내세요	zhuijinzhenmeyang	5
+밥 할게요	zhuofan	5
+밥 할게요	zhuofang	5
+밥 할게요	zhuohan	5
+밥 할게요	zhuohang	5
+알겠어요	zidaole	5
+알겠어요	zidaone	5
+알겠어요	zidaore	5
+안녕히 가세요	zj	5
+집에 있어요	zj	5
+잘 지냈어요	zjzmy	5
+미드	zl	5
+주말에	zm	5
+주말에 뭐 해요?	zmgm	5
+왜 그래요?	zml	5
+가운데	zongjian	5
+가운데	zongjiang	5
+가운데	zonjian	5
+가운데	zonjiang	5
+가요	zou	5
+갱	zr	5
+좋은 아침이에요	zsh	5
+무슨 일 해요?	zsmgz	5
+짱	zuib	5
+어떻게 지내세요	zuijingzengmeyang	5
+어떻게 지내세요	zuijingzenmeyang	5
+어떻게 지내세요	zuijingzhengmeyang	5
+어떻게 지내세요	zuijingzhenmeyang	5
+어떻게 지내세요	zuijinzengmeyang	5
+어떻게 지내세요	zuijinzhengmeyang	5
+어떻게 지내세요	zuijinzhenmeyang	5
+잘 지냈어요	zuijzmy	5
+준비	zunbei	5
+해요	zuo	5
+밥 할게요	zuofang	5
+밥 할게요	zuohan	5
+밥 할게요	zuohang	5
+무슨 일 해요?	zuosmgz	5
+바	ba	4
+비	bi	4
+보	bo	4
+부	bu	4
+차	cha	4
+창	chang	4
+청	cheng	4
+치	chi	4
+충	chong	4
+추	chu	4
+외출했어요	chumeng	4
+외출했어요	cumen	4
+외출했어요	cumeng	4
+다	da	4
+할인돼요?	daze	4
+더	de	4
+디	di	4
+적	difan	4
+적	dihan	4
+적	dihang	4
+동	dong	4
+두	du	4
+얼	er	4
+파	fa	4
+마나	fali	4
+판	fan	4
+애쉬	fanbin	4
+애쉬	fanbing	4
+애쉬	fangbin	4
+애쉬	fangbing	4
+수비	fangsou	4
+한판 더	fangyipan	4
+한판 더	fangyipang	4
+방어	fangyu	4
+수비	fanshou	4
+수비	fansou	4
+한판 더	fanyipan	4
+한판 더	fanyipang	4
+방어탑	fanyuta	4
+펑	feng	4
+푸	fu	4
+돌아와요	fui	4
+거	ge	4
+공	gong	4
+구	gu	4
+한	han	4
+애쉬	hanbin	4
+애쉬	hangbin	4
+애쉬	hangbing	4
+수비	hangshou	4
+수비	hangsou	4
+한판 더	hangyipan	4
+한판 더	hangyipang	4
+방어탑	hangyuta	4
+수비	hanshou	4
+수비	hansou	4
+한판 더	hanyipang	4
+방어탑	hanyuta	4
+베이가	haqiu	4
+허	he	4
+후	hu	4
+지	ji	4
+지에	jie	4
+끝	jiesu	4
+진	jin	4
+스킬	jineng	4
+주	ju	4
+봐요	kang	4
+커	ke	4
+라	la	4
+러	le	4
+리	li	4
+대단해	lifai	4
+잘 지내세요	lifaoma	4
+잘 지내세요	lihaoma	4
+안	limiang	4
+다리우스	luoshou	4
+다리우스	luosou	4
+마	ma	4
+바빠요	mangmang	4
+메이	mei	4
+재미없어	meiyishi	4
+미	mi	4
+킬	mousha	4
+나	na	4
+니	ni	4
+대단해	nifai	4
+잘 지내세요	nifaoma	4
+대단해	nihai	4
+안	nimian	4
+안	nimiang	4
+다리우스	nuosou	4
+파	pa	4
+평딩	pingdi	4
+치	qi	4
+영화 보러 가자	qukandiangying	4
+영화 보러 가자	qukangdiangying	4
+영화 보러 가자	qukangdianying	4
+대단해	rifai	4
+대단해	rihai	4
+안	rimian	4
+안	rimiang	4
+상	shang	4
+성	sheng	4
+시	shi	4
+수	shu	4
+마음대로	shuibian	4
+마음대로	shuibiang	4
+타워	souta	4
+마음대로	suibiang	4
+말해요	suo	4
+그들	tameng	4
+들어요	tin	4
+밖	waimiang	4
+잊었어	wangne	4
+잊었어	wangre	4
+시	xi	4
+체력	xueliang	4
+이	yi	4
+같이 올라가자	yiqisan	4
+같이 올라가자	yiqisang	4
+같이 올라가자	yiqishan	4
+재미있어	youyishi	4
+미안해	yunei	4
+미안해	yurei	4
+한판 더	zailaiyiju	4
+저	zhe	4
+정말	zhende	4
+정	zheng	4
+지	zhi	4
+중	zhong	4
+가요	zhou	4
+주	zhu	4
+템	zhuangbei	4
+상태	zhuantai	4
+해요	zhuo	4
+상태	zuangtai	4
+상태	zuantai	4
+아	a	3
+아이	ai	3
+낮아요	aide	3
+어머	aiy	3
+아리	al	3
+안	an	3
+앙	ang	3
+아오	ao	3
+어머	ay	3
+바이	bai	3
+반	ban	3
+방	bang	3
+바오	bao	3
+베이	bei	3
+번	ben	3
+벵	beng	3
+나빠요	bh	3
+별로예요	bhk	3
+비안	bian	3
+비아오	biao	3
+비에	bie	3
+빈	bin	3
+빙	bing	3
+천만에요	bkq	3
+아니	bs	3
+보상	buchang	3
+나빠요	buh	3
+별로예요	buhk	3
+천만에요	bukq	3
+아니	bus	3
+안 돼요	bux	3
+하지 마세요	buy	3
+달라요	buyiyang	3
+안 돼요	bx	3
+하지 마세요	by	3
+차	ca	3
+차이	cai	3
+찬	can	3
+창	can	3
+창	cang	3
+차오	cao	3
+처	ce	3
+청	cen	3
+츈	cen	3
+청	ceng	3
+층	ceng	3
+밥 먹어요	cf	3
+차이	chai	3
+찬	chan	3
+창	chan	3
+길어요	changde	3
+차오	chao	3
+진짜 귀여워요	chaojka	3
+처	che	3
+천	chen	3
+청	chen	3
+밥 먹어요	chif	3
+깜짝 놀랐어요	chij	3
+라인 먹기	chixian	3
+약 먹었어요	chiy	3
+충	chon	3
+추	chou	3
+추아	chua	3
+추아이	chuai	3
+추안	chuan	3
+추앙	chuang	3
+추이	chui	3
+나갈게요	chum	3
+춘	chun	3
+춰	chuo	3
+쯔	ci	3
+치	ci	3
+깜짝 놀랐어요	cj	3
+진짜 귀여워요	cjka	3
+틀렸어요	cl	3
+나갈게요	cm	3
+충	con	3
+충	cong	3
+콩	cong	3
+추	cou	3
+추	cu	3
+추안	cuan	3
+최	cui	3
+촌	cun	3
+춰	cuo	3
+틀려요	cuode	3
+틀렸어요	cuol	3
+약 먹었어요	cy	3
+답변	daan	3
+커요	dade	3
+전화해	dadh	3
+다이	dai	3
+단	dan	3
+당	dang	3
+물론이죠	dangr	3
+걱정이에요	danx	3
+다오	dao	3
+기다려 주세요	dd	3
+잠깐만요	dd	3
+전화해	ddh	3
+덩	deng	3
+기다려 주세요	dengd	3
+잠깐만요	dengd	3
+오래 기다렸어요	denglhj	3
+기다려줘	dengwyx	3
+전화번호	dhhm	3
+디아	dia	3
+디안	dian	3
+전화번호	dianhhm	3
+디아오	diao	3
+디에	die	3
+티모	dim	3
+딩	ding	3
+적	dir	3
+디우	diu	3
+오래 기다렸어요	dlhj	3
+티모	dm	3
+동	don	3
+도우	dou	3
+물론이죠	dr	3
+적	dr	3
+얼마야?	dsq	3
+두안	duan	3
+짧아요	duande	3
+두이	dui	3
+맞아요	duide	3
+팀원	duiy	3
+둔	dun	3
+둬	duo	3
+많아요	duode	3
+얼마야?	duosq	3
+얼마나 멀어요?	duoy	3
+기다려줘	dwyx	3
+걱정이에요	dx	3
+얼마나 멀어요?	dy	3
+팀원	dy	3
+어	e	3
+에이	ei	3
+언	en	3
+엉	eng	3
+문자 보낼게요	fadx	3
+한	fan	3
+방	fang	3
+판	fang	3
+한	fang	3
+방법	fangfa	3
+마나	fani	3
+방어	fanyu	3
+마나	fari	3
+열이 나요	fas	3
+마법	fashu	3
+카톡 보낼게요	faxx	3
+정말 감사합니다	fcgx	3
+문자 보낼게요	fdx	3
+허	fe	3
+페이	fei	3
+정말 감사합니다	feicgx	3
+펀	fen	3
+펑	fen	3
+근처에	fj	3
+포	fo	3
+포우	fou	3
+열이 나요	fs	3
+후	fu	3
+근처에	fuj	3
+카톡 보낼게요	fxx	3
+가	ga	3
+가이	gai	3
+간	gan	3
+강	gang	3
+아까	gangcai	3
+느낌	ganjue	3
+가오	gao	3
+높아요	gaode	3
+형	geg	3
+게이	gei	3
+보여줘	geiwk	3
+건	gen	3
+겅	geng	3
+바람 불어요	gf	3
+형	gg	3
+공	gon	3
+공격력	gongjili	3
+일해요	gongz	3
+고우	gou	3
+과	gua	3
+바람 불어요	guaf	3
+과이	guai	3
+관	guan	3
+광	guang	3
+구이	gui	3
+군	gun	3
+국	guo	3
+보여줘	gwk	3
+일해요	gz	3
+파	ha	3
+하	ha	3
+하이	hai	3
+마나	hali	3
+판	han	3
+판	hang	3
+한	hang	3
+항	hang	3
+방어	hangyu	3
+마나	hani	3
+방어	hanyu	3
+하오	hao	3
+맛있다	haoc	3
+좀 나아졌어요?	haodlm	3
+마나	hari	3
+레드	hbf	3
+리콜	hc	3
+맛있다	hc	3
+기차역	hcz	3
+좀 나아졌어요?	hdlm	3
+헤이	hei	3
+한잔할래요?	hej	3
+펑	hen	3
+헌	hen	3
+펑	heng	3
+헝	heng	3
+오래전	henjiu	3
+많이 바빠요	henm	3
+저렴해요	henpy	3
+한잔할래요?	hj	3
+많이 바빠요	hm	3
+홍	hong	3
+레드	hongbf	3
+호우	hou	3
+저렴해요	hpy	3
+푸	hu	3
+화	hua	3
+화이	huai	3
+나빠요	huaide	3
+환	huan	3
+황	huang	3
+환영해요	huany	3
+후이	hui	3
+리콜	huic	3
+훈	hun	3
+훠	huo	3
+기차역	huocz	3
+환영해요	hy	3
+지금 몇 시예요?	jdl	3
+만나자	jgm	3
+지아	jia	3
+가짜	jiade	3
+가렌	jial	3
+지안	jian	3
+지앙	jiang	3
+만나자	jiangm	3
+지아오	jiao	3
+지금 몇 시예요?	jidl	3
+결과	jieguo	3
+누나	jiej	3
+스킬	jilen	3
+스킬	jileng	3
+골드	jinbi	3
+스킬	jinen	3
+진	jing	3
+징	jing	3
+징크스	jingks	3
+경험치	jingyan	3
+오늘	jintian	3
+지옹	jiong	3
+지우	jiu	3
+살려줘	jium	3
+누나	jj	3
+징크스	jks	3
+가렌	jl	3
+살려줘	jm	3
+주안	juan	3
+줴	jue	3
+준	jun	3
+카	ka	3
+카이	kai	3
+회의 중이에요	kaih	3
+한타	kait	3
+즐거워요	kaix	3
+칸	kan	3
+메시지 봤어요?	kandxxlm	3
+캉	kang	3
+카오	kao	3
+빨리 와 주세요	kdl	3
+메시지 봤어요?	kdxxlm	3
+컨	ken	3
+컹	keng	3
+해 봐도 돼요?	keysm	3
+회의 중이에요	kh	3
+콩	kong	3
+코우	kou	3
+도망쳐	kp	3
+한타	kt	3
+쿠	ku	3
+쿠아	kua	3
+쿠아이	kuai	3
+빨리 와 주세요	kuaidl	3
+도망쳐	kuaip	3
+쿠안	kuan	3
+쿠앙	kuang	3
+쿠이	kui	3
+쿤	kun	3
+쿠오	kuo	3
+즐거워요	kx	3
+해 봐도 돼요?	kysm	3
+나	la	3
+라이	lai	3
+란	lan	3
+블루	lanbf	3
+랑	lang	3
+라오	lao	3
+남편	laog	3
+아내	laop	3
+와이프	laop	3
+블루	lbf	3
+레이	lei	3
+힘들어요	leil	3
+렁	leng	3
+쿨다운	lengque	3
+남편	lg	3
+니	li	3
+리아	lia	3
+리안	lian	3
+리앙	liang	3
+연락해	lianxw	3
+리아오	liao	3
+례	lie	3
+린	lin	3
+링	ling	3
+류	liu	3
+힘들어요	ll	3
+로	lo	3
+룽	long	3
+루	lou	3
+아내	lp	3
+와이프	lp	3
+루	lu	3
+루안	luan	3
+룬	lun	3
+루오	luo	3
+뤼	lv	3
+뤠	lve	3
+연락해	lxw	3
+마이	mai	3
+계산할게요	maid	3
+만	man	3
+망	mang	3
+바빠요	mangman	3
+바빠요	manman	3
+바빠요	manmang	3
+마오	mao	3
+계산할게요	md	3
+머	me	3
+먼	men	3
+멍	meng	3
+미안	mian	3
+미아오	miao	3
+미에	mie	3
+민	min	3
+밍	ming	3
+내일	mingtian	3
+미우	miu	3
+모	mo	3
+모우	mou	3
+킬	mousa	3
+무	mu	3
+라	na	3
+나이	nai	3
+난	nan	3
+낭	nang	3
+속상해요	nang	3
+나오	nao	3
+너	ne	3
+러	ne	3
+네이	nei	3
+넌	nen	3
+넝	neng	3
+속상해요	ng	3
+응	ng	3
+안녕하세요	nhm	3
+리	ni	3
+니안	nian	3
+니앙	niang	3
+냐오	niao	3
+녜	nie	3
+안녕하세요	nihm	3
+이름이 뭐야?	nijsmmz	3
+닌	nin	3
+닝	ning	3
+맞는 말이네요	nisdd	3
+뉴	niu	3
+짱이에요	nizb	3
+이름이 뭐야?	njsmmz	3
+농	nong	3
+노우	nou	3
+맞는 말이네요	nsdd	3
+누	nu	3
+누안	nuan	3
+눈	nun	3
+누오	nuo	3
+뉘	nv	3
+뉘에	nve	3
+짱이에요	nzb	3
+오	o	3
+오우	ou	3
+파이	pai	3
+판	pan	3
+팡	pang	3
+파오	pao	3
+페이	pei	3
+펀	pen	3
+펑	peng	3
+피	pi	3
+피안	pian	3
+피아오	piao	3
+예뻐	piaol	3
+피에	pie	3
+스킨	pifu	3
+핀	pin	3
+평딩	pindi	3
+핑	ping	3
+예뻐	pl	3
+포	po	3
+포우	pou	3
+푸	pu	3
+일어났어	qcl	3
+치아	qia	3
+치안	qian	3
+치앙	qiang	3
+치아오	qiao	3
+일어났어	qicl	3
+치에	qie	3
+친	qin	3
+칭	qing	3
+들어오세요	qingj	3
+잠깐만요	qingsd	3
+용서해 주세요	qingyl	3
+앉으세요	qingz	3
+치옹	qiong	3
+추	qiu	3
+들어오세요	qj	3
+영화 보러 갈래요?	qkdy	3
+잠깐만요	qsd	3
+츄	qu	3
+촨	quan	3
+쳬	que	3
+영화 보러 갈래요?	qukdy	3
+촌	qun	3
+용서해 주세요	qyl	3
+앉으세요	qz	3
+라	ra	3
+란	ran	3
+랑	rang	3
+라오	rao	3
+러	re	3
+런	ren	3
+렁	reng	3
+리	ri	3
+룽	rong	3
+로우	rou	3
+루	ru	3
+루안	ruan	3
+루이	rui	3
+룬	run	3
+루오	ruo	3
+사	sa	3
+사이	sai	3
+산	san	3
+상	san	3
+상	sang	3
+사오	sao	3
+패배	sb	3
+서	se	3
+성	sen	3
+센	sen	3
+성	seng	3
+썽	seng	3
+지난주	sgxq	3
+샤	sha	3
+샤이	shai	3
+상	shan	3
+샨	shan	3
+성장	shangdan	3
+지난주	shanggxq	3
+수업	shangk	3
+샤오	shao	3
+적어요	shaode	3
+서	she	3
+성	shen	3
+션	shen	3
+승리	shengl	3
+생일	shengr	3
+생일 축하합니다	shengrkl	3
+언제야?	shenmsh	3
+패배	shib	3
+소우	shou	3
+슈아	shua	3
+슈아이	shuai	3
+카드로 할게요	shuak	3
+슈안	shuan	3
+슈앙	shuang	3
+슈이	shui	3
+자요	shuij	3
+순	shun	3
+슈오	shuo	3
+시	si	3
+쓰	si	3
+자요	sj	3
+수업	sk	3
+카드로 할게요	sk	3
+승리	sl	3
+언제야?	smsh	3
+송	song	3
+소우	sou	3
+생일	sr	3
+생일 축하합니다	srkl	3
+수	su	3
+수안	suan	3
+속도	sudu	3
+수이	sui	3
+순	sun	3
+소	suo	3
+타	ta	3
+타이	tai	3
+탄	tan	3
+탕	tang	3
+타오	tao	3
+싫어요	taoy	3
+터	te	3
+텅	teng	3
+티	ti	3
+티안	tian	3
+재능	tianfu	3
+날씨 나빠요	tianqbh	3
+자연	tianran	3
+티아오	tiao	3
+톄	tie	3
+팅	ting	3
+통	tong	3
+토우	tou	3
+날씨 나빠요	tqbh	3
+투	tu	3
+투안	tuan	3
+팀전	tuanz	3
+투이	tui	3
+툰	tun	3
+투오	tuo	3
+싫어요	ty	3
+팀전	tz	3
+와	wa	3
+잘 자요	wa	3
+와이	wai	3
+완	wan	3
+잘 자요	wana	3
+늦게	wand	3
+왕	wang	3
+안녕하세요	wansh	3
+이해가 안 돼요	wbd	3
+늦었어 미안	wcdl	3
+늦게	wd	3
+웨이	wei	3
+미래	weilai	3
+위챗	weix	3
+원	wen	3
+웡	weng	3
+질문	wenti	3
+워	wo	3
+이해가 안 돼요	wobd	3
+늦었어 미안	wocdl	3
+먼저 갈게요	woxzl	3
+이걸로 할게요	woyzg	3
+안녕하세요	wsh	3
+우	wu	3
+위챗	wx	3
+먼저 갈게요	wxzl	3
+이걸로 할게요	wyzg	3
+또 봐요	xcj	3
+다음 달	xgy	3
+시아	xia	3
+또 봐요	xiacj	3
+다음 달	xiagy	3
+시안	xian	3
+시앙	xiang	3
+오른쪽으로 가세요	xiangyg	3
+왼쪽으로 가세요	xiangzg	3
+부러워요	xianm	3
+시아오	xiao	3
+작아요	xiaode	3
+베이가	xiaofa	3
+조심해	xiaox	3
+눈 와요	xiaxl	3
+시에	xie	3
+신	xin	3
+싱	xing	3
+수고했어요	xinkl	3
+새해 복 많이 받으세요	xinnkl	3
+시옹	xiong	3
+슈	xiu	3
+쉬고 싶어요	xiux	3
+쉴게요	xiux	3
+수고했어요	xkl	3
+부러워요	xm	3
+새해 복 많이 받으세요	xnkl	3
+수	xu	3
+수안	xuan	3
+선택	xuanshou	3
+쉐	xue	3
+체력	xuelian	3
+체력	xuenian	3
+체력	xueniang	3
+체력	xuerian	3
+체력	xueriang	3
+공부해요	xuex	3
+순	xun	3
+공부해요	xx	3
+쉬고 싶어요	xx	3
+쉴게요	xx	3
+조심해	xx	3
+눈 와요	xxl	3
+오른쪽으로 가세요	xyg	3
+왼쪽으로 가세요	xzg	3
+야	ya	3
+옌	yan	3
+양	yang	3
+야오	yao	3
+야스오	yas	3
+오른쪽	yb	3
+예	ye	3
+데이트	yh	3
+이따가 봐요	yhej	3
+나중에 연락해요	yhlx	3
+이따가 봐요	yihej	3
+나중에 연락해요	yihlx	3
+나중에	yihou	3
+인	yin	3
+잉	ying	3
+같이	yiq	3
+같이 밥 먹어요	yiqcfb	3
+예전	yiqian	3
+같이 가요	yiqq	3
+뜻	yisi	3
+같아요	yiyang	3
+멀어요?	ym	3
+요	yo	3
+용	yong	3
+유	you	3
+오른쪽	youb	3
+같이	yq	3
+같이 밥 먹어요	yqcfb	3
+같이 가요	yqq	3
+야스오	ys	3
+위	yu	3
+위안	yuan	3
+멀어요?	yuanm	3
+이유	yuanyin	3
+위에	yue	3
+데이트	yueh	3
+윈	yun	3
+자	za	3
+자이	zai	3
+한판 더	zainaiyiju	3
+어디야?	zainl	3
+앞에 있어요	zaiqm	3
+한판 더	zairaiyiju	3
+잔	zan	3
+장	zang	3
+자오	zao	3
+일찍	zaod	3
+좋은 아침	zaosh	3
+왼쪽	zb	3
+일찍	zd	3
+지하철 탈게요	zdt	3
+저	ze	3
+제이	zei	3
+정	zen	3
+젠	zen	3
+정말	zende	3
+정	zeng	3
+정말	zengde	3
+요리할게요	zf	3
+자	zha	3
+자이	zhai	3
+한판 더	zhailaiyiju	3
+한판 더	zhainaiyiju	3
+한판 더	zhairaiyiju	3
+잔	zhan	3
+장	zhang	3
+자오	zhao	3
+소환	zhaohuan	3
+소환사	zhaohuanshi	3
+정	zhen	3
+젠	zhen	3
+정말	zhengde	3
+중	zhon	3
+저우	zhou	3
+주아	zhua	3
+주아이	zhuai	3
+주안	zhuan	3
+템	zhuanbei	3
+좡	zhuang	3
+주이	zhui	3
+준	zhun	3
+빨리 나으세요	zhunzrkf	3
+좨	zhuo	3
+도와줘	zhus	3
+킬	zhusha	3
+지	zi	3
+쯔	zi	3
+어디야?	znl	3
+빨리 나으세요	znzrkf	3
+중	zon	3
+중	zong	3
+쫑	zong	3
+조우	zou	3
+앞에 있어요	zqm	3
+도와줘	zs	3
+좋은 아침	zsh	3
+직업이 뭐예요?	zsmgz	3
+주	zu	3
+주안	zuan	3
+템	zuanbei	3
+템	zuangbei	3
+주이	zui	3
+준	zun	3
+좨	zuo	3
+왼쪽	zuob	3
+지하철 탈게요	zuodt	3
+요리할게요	zuof	3
+직업이 뭐예요?	zuosmgz	3
+어제	zuotian	3
+앙	an	2
+안	ang	2
+방	ban	2
+반	bang	2
+벵	ben	2
+번	beng	2
+비안	biang	2
+빙	bin	2
+빈	bing	2
+보상	bucan	2
+보상	bucang	2
+보상	buchan	2
+길어요	cande	2
+찬	cang	2
+길어요	cangde	2
+천	cen	2
+층	cen	2
+천	ceng	2
+츈	ceng	2
+길어요	chande	2
+찬	chang	2
+츈	chen	2
+층	chen	2
+천	cheng	2
+츈	cheng	2
+층	cheng	2
+쯔	chi	2
+라인 먹기	chixiang	2
+콩	chon	2
+콩	chong	2
+추앙	chuan	2
+추안	chuang	2
+최	chui	2
+촌	chun	2
+틀려요	chuode	2
+라인 먹기	cixian	2
+라인 먹기	cixiang	2
+콩	con	2
+추아	cua	2
+추아이	cuai	2
+추앙	cuan	2
+추안	cuang	2
+추앙	cuang	2
+추이	cui	2
+춘	cun	2
+답변	daang	2
+당	dan	2
+단	dang	2
+덩	den	2
+디안	diang	2
+딩	din	2
+두안	duang	2
+짧아요	duangde	2
+엉	en	2
+언	eng	2
+하	fa	2
+하이	fai	2
+방	fan	2
+항	fan	2
+방법	fanfa	2
+항	fang	2
+방법	fangha	2
+방법	fanha	2
+하오	fao	2
+마법	fasu	2
+헤이	fei	2
+헌	fen	2
+헝	fen	2
+펀	feng	2
+헌	feng	2
+헝	feng	2
+오래전	fengjiu	2
+오래전	fenjiu	2
+홍	fon	2
+홍	fong	2
+호우	fou	2
+화	fua	2
+화이	fuai	2
+나빠요	fuaide	2
+환	fuan	2
+황	fuan	2
+환	fuang	2
+황	fuang	2
+후이	fui	2
+훈	fun	2
+훠	fuo	2
+강	gan	2
+아까	gancai	2
+아까	ganchai	2
+간	gang	2
+아까	gangchai	2
+느낌	gangjue	2
+겅	gen	2
+건	geng	2
+공격력	gongjini	2
+공격력	gongjiri	2
+공격력	gonjili	2
+공격력	gonjini	2
+공격력	gonjiri	2
+광	guan	2
+관	guang	2
+방	han	2
+항	han	2
+방법	hanfa	2
+방	hang	2
+방법	hangfa	2
+방법	hangha	2
+방법	hanha	2
+마법	hashu	2
+마법	hasu	2
+페이	hei	2
+펀	hen	2
+헝	hen	2
+펀	heng	2
+헌	heng	2
+오래전	hengjiu	2
+포	ho	2
+홍	hon	2
+포우	hou	2
+황	huan	2
+환	huang	2
+지앙	jian	2
+지안	jiang	2
+징	jin	2
+골드	jingbi	2
+오늘	jingtian	2
+오늘	jingtiang	2
+오늘	jintiang	2
+경험치	jinyan	2
+주안	juang	2
+캉	kan	2
+칸	kang	2
+컹	ken	2
+컨	keng	2
+콩	kon	2
+쿠앙	kuan	2
+쿠안	kuang	2
+나이	lai	2
+난	lan	2
+낭	lan	2
+랑	lan	2
+난	lang	2
+낭	lang	2
+란	lang	2
+나오	lao	2
+너	le	2
+네이	lei	2
+넌	len	2
+넝	len	2
+런	len	2
+렁	len	2
+넌	leng	2
+넝	leng	2
+런	leng	2
+쿨다운	lenque	2
+응	lg	2
+니안	lian	2
+니앙	lian	2
+리앙	lian	2
+니안	liang	2
+니앙	liang	2
+리안	liang	2
+냐오	liao	2
+녜	lie	2
+닌	lin	2
+닝	lin	2
+링	lin	2
+닌	ling	2
+닝	ling	2
+린	ling	2
+뉴	liu	2
+농	lon	2
+룽	lon	2
+농	long	2
+노우	lou	2
+로우	lou	2
+누	lu	2
+누안	luan	2
+누안	luang	2
+루안	luang	2
+루이	lui	2
+눈	lun	2
+누오	luo	2
+뉘	lv	2
+뉘에	lve	2
+망	man	2
+만	mang	2
+멍	men	2
+먼	meng	2
+미안	miang	2
+밍	min	2
+민	ming	2
+내일	mingtiang	2
+내일	mintian	2
+내일	mintiang	2
+라이	nai	2
+낭	nan	2
+란	nan	2
+랑	nan	2
+난	nang	2
+란	nang	2
+랑	nang	2
+라오	nao	2
+레이	nei	2
+넝	nen	2
+렁	nen	2
+넌	neng	2
+렁	neng	2
+쿨다운	nengque	2
+쿨다운	nenque	2
+리아	nia	2
+니앙	nian	2
+리안	nian	2
+리앙	nian	2
+니안	niang	2
+리안	niang	2
+리앙	niang	2
+리아오	niao	2
+례	nie	2
+닝	nin	2
+린	nin	2
+링	nin	2
+닌	ning	2
+린	ning	2
+링	ning	2
+류	niu	2
+로	no	2
+농	non	2
+룽	non	2
+룽	nong	2
+루	nou	2
+루	nu	2
+루안	nuan	2
+누안	nuang	2
+루안	nuang	2
+룬	nun	2
+루오	nuo	2
+뤼	nv	2
+뤠	nve	2
+팡	pan	2
+판	pang	2
+펑	pen	2
+펀	peng	2
+피안	piang	2
+스킨	pihu	2
+핑	pin	2
+핀	ping	2
+치앙	qian	2
+치안	qiang	2
+칭	qin	2
+친	qing	2
+촨	quang	2
+라이	rai	2
+랑	ran	2
+란	rang	2
+레이	rei	2
+렁	ren	2
+런	reng	2
+쿨다운	rengque	2
+쿨다운	renque	2
+리아	ria	2
+리안	rian	2
+리앙	rian	2
+리안	riang	2
+리앙	riang	2
+리아오	riao	2
+례	rie	2
+린	rin	2
+링	rin	2
+린	ring	2
+링	ring	2
+류	riu	2
+로	ro	2
+룽	ron	2
+루	rou	2
+루안	ruang	2
+뤼	rv	2
+뤠	rve	2
+샤	sa	2
+샤이	sai	2
+샨	san	2
+성장	sandan	2
+성장	sandang	2
+산	sang	2
+샨	sang	2
+성장	sangdan	2
+성장	sangdang	2
+샤오	sao	2
+적어요	saode	2
+션	sen	2
+썽	sen	2
+센	seng	2
+션	seng	2
+사	sha	2
+사이	shai	2
+산	shan	2
+성장	shandan	2
+성장	shandang	2
+산	shang	2
+샨	shang	2
+성장	shangdang	2
+사오	shao	2
+센	shen	2
+썽	shen	2
+센	sheng	2
+션	sheng	2
+썽	sheng	2
+쓰	shi	2
+송	shon	2
+송	shong	2
+수안	shuan	2
+슈앙	shuan	2
+수안	shuang	2
+슈안	shuang	2
+속도	shudu	2
+수이	shui	2
+소	shuo	2
+송	son	2
+슈아	sua	2
+슈아이	suai	2
+슈안	suan	2
+슈앙	suan	2
+수안	suang	2
+슈안	suang	2
+슈앙	suang	2
+슈이	sui	2
+슈오	suo	2
+탕	tan	2
+탄	tang	2
+텅	ten	2
+티안	tiang	2
+재능	tiangfu	2
+재능	tianghu	2
+자연	tianglan	2
+자연	tianglang	2
+자연	tiangran	2
+자연	tiangrang	2
+재능	tianhu	2
+자연	tianlan	2
+자연	tianlang	2
+자연	tianrang	2
+팅	tin	2
+통	ton	2
+투안	tuang	2
+미래	weinai	2
+미래	weirai	2
+시앙	xian	2
+시안	xiang	2
+베이가	xiaoha	2
+싱	xin	2
+신	xing	2
+수안	xuang	2
+선택	xuangshou	2
+선택	xuangsou	2
+선택	xuansou	2
+나중에	yifou	2
+예전	yiqiang	2
+뜻	yishi	2
+장	zan	2
+잔	zang	2
+소환	zaofuan	2
+소환	zaofuang	2
+소환사	zaofuangshi	2
+소환사	zaofuangsi	2
+소환사	zaofuanshi	2
+소환사	zaofuansi	2
+소환	zaohuan	2
+소환	zaohuang	2
+소환사	zaohuangshi	2
+소환사	zaohuangsi	2
+소환사	zaohuanshi	2
+소환사	zaohuansi	2
+젠	zeng	2
+장	zhan	2
+잔	zhang	2
+소환	zhaofuan	2
+소환	zhaofuang	2
+소환사	zhaofuangshi	2
+소환사	zhaofuangsi	2
+소환사	zhaofuanshi	2
+소환사	zhaofuansi	2
+소환	zhaohuang	2
+소환사	zhaohuangshi	2
+소환사	zhaohuangsi	2
+소환사	zhaohuansi	2
+제이	zhei	2
+젠	zheng	2
+쯔	zhi	2
+쫑	zhon	2
+쫑	zhong	2
+조우	zhou	2
+좡	zhuan	2
+주안	zhuang	2
+어제	zhuotian	2
+어제	zhuotiang	2
+킬	zhusa	2
+쫑	zon	2
+저우	zou	2
+주아	zua	2
+주아이	zuai	2
+좡	zuan	2
+좡	zuang	2
+주안	zuang	2
+어제	zuotiang	2
+킬	zusa	2
+킬	zusha	2
+낮아요	ad	1
+낮아요	aid	1
+에코	aik	1
+에코	ak	1
+아무무	amm	1
+보고서	baog	1
+배불러	baol	1
+죄송해요	baoq	1
+보상	bc	1
+보고서	bg	1
+맛없다	bhc	1
+안 예뻐요	bhk	1
+핑	biaoj	1
+졸업	biy	1
+핑	bj	1
+배불러	bl	1
+죄송해요	bq	1
+보상	buc	1
+맛없다	buhc	1
+안 예뻐요	buhk	1
+안 돼	buy	1
+별말씀을요	buyx	1
+달라요	buyy	1
+잘 모르겠어요	buzd	1
+안 돼	by	1
+졸업	by	1
+별말씀을요	byx	1
+달라요	byy	1
+잘 모르겠어요	bzd	1
+메뉴판 주세요	caid	1
+길어요	cd	1
+메뉴판 주세요	cd	1
+틀려요	cd	1
+밥 먹자	cf	1
+길어요	changd	1
+개귀엽다	chaojka	1
+밥 먹자	chif	1
+라인 먹기	chix	1
+외출했어요	chum	1
+개귀엽다	cjka	1
+외출했어요	cm	1
+틀려요	cuod	1
+라인 먹기	cx	1
+답변	da	1
+답변	daa	1
+포장할게요	dab	1
+커요	dad	1
+모두	daj	1
+세일해요	daz	1
+할인 중이에요	daz	1
+할인돼요?	daz	1
+포장할게요	db	1
+많아요	dd	1
+맞아요	dd	1
+잠깐	dd	1
+짧아요	dd	1
+커요	dd	1
+잠깐	dengd	1
+적	df	1
+적	dif	1
+모두	dj	1
+짧아요	duand	1
+맞아요	duid	1
+많아요	duod	1
+세일해요	dz	1
+할인 중이에요	dz	1
+할인돼요?	dz	1
+마나	fal	1
+방법	fangf	1
+수비	fangs	1
+방어	fangy	1
+방어탑	fangyt	1
+베이가	faq	1
+마법	fas	1
+방법	ff	1
+마나	fl	1
+베이가	fq	1
+마법	fs	1
+수비	fs	1
+방어	fy	1
+방어탑	fyt	1
+아까	gangc	1
+느낌	ganj	1
+높아요	gaod	1
+아까	gc	1
+높아요	gd	1
+나 따라와	genw	1
+느낌	gj	1
+공격력	gjl	1
+공격력	gongjl	1
+월급	gongz	1
+직업	gongz	1
+나 따라와	gw	1
+월급	gz	1
+직업	gz	1
+겁나요	haip	1
+애쉬	hanb	1
+한판 더	hanyp	1
+오랜만	haojbj	1
+예뻐요	haok	1
+친한 친구	haopy	1
+애쉬	hb	1
+나빠요	hd	1
+술 마실래요?	hej	1
+오래전	henj	1
+술 마실래요?	hj	1
+오래전	hj	1
+오랜만	hjbj	1
+예뻐요	hk	1
+겁나요	hp	1
+친한 친구	hpy	1
+나빠요	huaid	1
+한판 더	hyp	1
+골드	jb	1
+신고	jb	1
+야근해요	jb	1
+가짜	jd	1
+결과	jg	1
+공격	jg	1
+빌려줘	jgw	1
+야근해요	jiab	1
+가짜	jiad	1
+결과	jieg	1
+빌려줘	jiegw	1
+끝	jies	1
+스킬	jin	1
+골드	jinb	1
+공격	jing	1
+경험치	jingy	1
+가까이 있어요	jinm	1
+오늘	jint	1
+가까이 있어요	jm	1
+스킬	jn	1
+끝	js	1
+오늘	jt	1
+신고	jub	1
+경험치	jy	1
+시작	kais	1
+신나요	kaix	1
+빨리 와	kdl	1
+돼요	key	1
+입어 봐도 돼요?	keysm	1
+ㅜㅜ	kl	1
+시작	ks	1
+빨리 와	kuaidl	1
+ㅜㅜ	kul	1
+신나요	kx	1
+돼요	ky	1
+입어 봐도 돼요?	kysm	1
+여기로 와	laizl	1
+쿨다운	lengq	1
+대단해	lh	1
+대단해	lih	1
+안	lim	1
+안	lm	1
+쿨다운	lq	1
+여기로 와	lzl	1
+쇼핑할래요	maidx	1
+천천히	mand	1
+바빠요	mangm	1
+곧	mas	1
+알겠어	mb	1
+천천히	md	1
+쇼핑할래요	mdx	1
+아니에요	meis	1
+재미없어	meiys	1
+알겠어	mingb	1
+내일	mingt	1
+바빠요	mm	1
+킬	mous	1
+곧	ms	1
+아니에요	ms	1
+킬	ms	1
+내일	mt	1
+재미없어	mys	1
+대단해	nb	1
+나이가 어떻게 돼요?	nddl	1
+잘 지내세요	nhm	1
+나이가 어떻게 돼요?	niddl	1
+잘 지내세요	nihm	1
+네 말이 맞아	nisdd	1
+대단해	niub	1
+너 최고야	nizb	1
+다리우스	ns	1
+네 말이 맞아	nsdd	1
+다리우스	nuos	1
+너 최고야	nzb	1
+평딩	pd	1
+스킨	pf	1
+스킨	pif	1
+평딩	pingd	1
+클리어	qingx	1
+영화 보러 가요	qkdy	1
+영화 보러 가자	qkdy	1
+영화 보러 가요	qukdy	1
+영화 보러 가자	qukdy	1
+클리어	qx	1
+마음대로	sb	1
+출근 중이에요	sb	1
+그래요	sd	1
+성장	sd	1
+속도	sd	1
+적어요	sd	1
+출근 중이에요	shangb	1
+성장	shangd	1
+적어요	shaod	1
+열받아요	shengq	1
+그래요	shid	1
+타워	shout	1
+잘 거예요	shuij	1
+잘 거예요	sj	1
+열받아요	sq	1
+타워	st	1
+속도	sud	1
+마음대로	suib	1
+레전드	taibl	1
+너무 커요	taidl	1
+너무 작아요	taixl	1
+그들	tam	1
+다시 말해 주세요	tbd	1
+레전드	tbl	1
+너무 커요	tdl	1
+재능	tf	1
+재능	tianf	1
+자연	tianr	1
+다시 말해 주세요	tingbd	1
+그들	tm	1
+자연	tr	1
+너무 작아요	txl	1
+밖	waim	1
+잊었어	wangl	1
+좋은 저녁 되세요	wansh	1
+이해 못 했어요	wbd	1
+미래	weil	1
+질문	went	1
+미래	wl	1
+잊었어	wl	1
+지루해요	wl	1
+밖	wm	1
+이해 못 했어요	wobd	1
+좋은 저녁 되세요	wsh	1
+질문	wt	1
+지루해요	wul	1
+퇴근 중이에요	xb	1
+작아요	xd	1
+베이가	xf	1
+퇴근 중이에요	xiab	1
+수업 끝났어요	xiak	1
+그리워요	xiangn	1
+우회전하세요	xiangyg	1
+좌회전하세요	xiangzg	1
+지금	xianz	1
+어디야	xianzn	1
+작아요	xiaod	1
+베이가	xiaof	1
+수고했어	xinkl	1
+기분 나빠요	xinqbh	1
+씻었어요	xiz	1
+수업 끝났어요	xk	1
+수고했어	xkl	1
+체력	xl	1
+그리워요	xn	1
+기분 나빠요	xqbh	1
+선택	xs	1
+선택	xuans	1
+체력	xuel	1
+우회전하세요	xyg	1
+씻었어요	xz	1
+지금	xz	1
+좌회전하세요	xzg	1
+어디야	xzn	1
+나중에	yh	1
+만남	yh	1
+잠깐	yhe	1
+이따 봐요	yhej	1
+나중에 연락해	yhlx	1
+나중에	yih	1
+잠깐	yihe	1
+이따 봐요	yihej	1
+나중에 연락해	yihlx	1
+예전	yiq	1
+같이 밥 먹자	yiqcfb	1
+같이 올라가자	yiqs	1
+뜻	yis	1
+같아요	yiy	1
+미안해	yl	1
+재미있어	youys	1
+예전	yq	1
+같이 밥 먹자	yqcfb	1
+같이 올라가자	yqs	1
+뜻	ys	1
+이유	yuany	1
+만남	yueh	1
+미안해	yul	1
+같아요	yy	1
+이유	yy	1
+재미있어	yys	1
+한판 더	zailyj	1
+준비	zb	1
+템	zb	1
+정말	zd	1
+알겠어요	zdl	1
+그래요?	zdm	1
+무슨 일이에요?	zenml	1
+가는 길 알려주세요	zenmz	1
+밥 할게요	zf	1
+소환	zh	1
+소환	zhaoh	1
+소환사	zhaohs	1
+정말	zhend	1
+그래요?	zhendm	1
+알겠어요	zhidl	1
+가운데	zhongj	1
+소환사	zhs	1
+템	zhuangb	1
+상태	zhuangt	1
+준비	zhunb	1
+킬	zhus	1
+가운데	zj	1
+어떻게 지내세요	zjzmy	1
+한판 더	zlyj	1
+무슨 일이에요?	zml	1
+가는 길 알려주세요	zmz	1
+킬	zs	1
+상태	zt	1
+어제	zt	1
+어떻게 지내세요	zuijzmy	1
+밥 할게요	zuof	1
+어제	zuot	1

@@ -1,0 +1,113 @@
+# HanPinyin —— 拼音输入，候选窗同时给出「中文 + 韩文（及日/英）」
+# 引擎组成：
+#   * translator（默认，table_translator） -> 韩文等自定义词条（sino_mix 词库 / hanpinyin.dict.yaml）
+#   * script_translator@cn -> 中文（来自 luna_pinyin 标准词库，小狼毫自带）
+# 更新词库：改 data/*.json 或 rime/extra_phrases.txt -> 跑 build_dict.py -> 小狼毫「重新部署」
+# 说明：enable_user_dict 设为 false，避免任何「非 CJK 自学习」相关的潜在过滤。
+#
+# 关键排坑（2026-08-31）：小狼毫「部署」只编译【默认 translator 的 dictionary】！
+# 因此韩文词典必须挂在默认 translator 上（translator.dictionary: hanpinyin），
+# 不能只挂在 table_translator@han 这种命名 translator 上，否则部署阶段根本不会编译它
+# （现象：运行时报 "Error loading table for dictionary 'hanpinyin'" 且永远打不出韩文）。
+
+schema:
+  schema_id: sino_mix
+  name: "韩文拼音 HanPinyin"
+  version: "2.2"
+  description: 拼音输入，候选含中文与韩文（及日/英），支持模糊拼音与翻页
+
+switches:
+  - name: ascii_mode
+    states: [中文, 英文]
+    reset: 0
+  - name: full_shape
+    states: [半角, 全角]
+    reset: 0
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator          # 韩文等自定义词条（默认 translator -> 会被部署编译）
+    - script_translator@cn      # 中文（luna_pinyin，复用已编译好的 .bin）
+  filters:
+    - simplifier
+    - uniquifier
+
+# ===== 翻页 / 选词按键（显式绑定，避免默认按键摸不到）=====
+key_binder:
+  bindings:
+    - {when: paging,     accept: minus,     send: Page_Up}      # - 上一页
+    - {when: has_menu,   accept: equal,     send: Page_Down}    # = 下一页
+    - {when: paging,     accept: comma,     send: Page_Up}      # , 上一页
+    - {when: has_menu,   accept: period,    send: Page_Down}    # . 下一页
+    - {when: paging,     accept: bracketleft,  send: Page_Up}    # [ 上一页
+    - {when: has_menu,   accept: bracketright, send: Page_Down}  # ] 下一页
+    - {when: paging,     accept: Page_Up,   send: Page_Up}
+    - {when: paging,     accept: Page_Down, send: Page_Down}
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: "'"
+  # ===== 模糊拼音（常见平翘舌 / 边鼻音 / 前后鼻音混读）=====
+  algebra:
+    - derive/^([zcs])h/$1/            # zh, ch, sh -> z, c, s
+    - derive/^([zcs])([^h])/$1h$2/    # z, c, s -> zh, ch, sh
+    - derive/([aei])ng/$1n/           # ang, eng, ing -> an, en, in
+    - derive/([aei])n/$1ng/           # an, en, in -> ang, eng, ing
+    - derive/^n/l/                    # n -> l
+    - derive/^l/n/                    # l -> n
+    - derive/^r/l/                    # r -> l
+    - derive/^l/r/                    # l -> r
+    - derive/^f/h/                    # f -> h
+    - derive/^h/f/                    # h -> f
+
+# 默认 translator = 韩文等自定义词条（table_translator）
+# 必须挂在默认 translator 上，部署阶段才会编译 hanpinyin 词典
+translator:
+  dictionary: hanpinyin
+  enable_user_dict: false
+  enable_sentence: false
+  enable_completion: false
+  # 抬高自定义词条的起始质量，让韩文候选排到中文前面
+  initial_quality: 1
+
+# 中文 translator（script_translator），复用 luna_pinyin 已编译好的 .bin
+# 这里单独声明 speller（覆盖全局 algebra），加入模糊音 + 简拼/混拼（abbrev），
+# 让中文候选也支持 lihao->你好、nh->你好、nih->你好。
+cn:
+  dictionary: luna_pinyin
+  prism: luna_pinyin
+  enable_user_dict: false
+  enable_sentence: true
+  enable_completion: true
+  max_homographs: 1
+  speller:
+    alphabet: zyxwvutsrqponmlkjihgfedcba
+    delimiter: "'"
+    algebra:
+      - erase/^xx$/
+      - derive/^([zcs])h/$1/            # zh, ch, sh -> z, c, s
+      - derive/^([zcs])([^h])/$1h$2/    # z, c, s -> zh, ch, sh
+      - derive/([aei])ng/$1n/           # ang, eng, ing -> an, en, in
+      - derive/([aei])n/$1ng/           # an, en, in -> ang, eng, ing
+      - derive/^n/l/                    # n -> l
+      - derive/^l/n/                    # l -> n
+      - derive/^r/l/                    # r -> l
+      - derive/^l/r/                    # l -> r
+      - derive/^f/h/                    # f -> h
+      - derive/^h/f/                    # h -> f
+      - abbrev/^([a-z]).+$/$1/          # 简拼（每音节首字母，如 nh）
+      - abbrev/^([zcs]h).+$/$1/         # 简拼（zh/ch/sh 取首字母）
