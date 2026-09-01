@@ -32,7 +32,9 @@ ConfigModel::ConfigModel() {
     fuzzyPairs_ = {
         "zh=z", "ch=c", "sh=s",
         "ang=an", "eng=en", "ing=in",
-        "n=l", "r=l"
+        "iang=ian", "uang=uan",
+        "n=l", "r=l",
+        "f=h", "k=g"
     };
 }
 

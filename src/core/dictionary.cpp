@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <set>
 
 namespace hanpinyin {
 
@@ -50,6 +51,44 @@ std::vector<std::string> Dictionary::abbrevOf(const std::vector<std::string>& sy
     return ab;
 }
 
+void Dictionary::insertAbbrevMasks(const std::vector<std::string>& syllables,
+                                   const std::vector<std::string>& ab,
+                                   const Candidate& base) {
+    const size_t k = syllables.size();
+    if (k == 0) return;
+    // 全缩写键（仅当与全拼不同）
+    if (!ab.empty() && ab != syllables) {
+        Candidate ca = base;
+        ca.matchMode = MatchMode::kAbbrev;
+        trie_.insert(ab, ca);
+    }
+    // 混合简拼：部分音节取首字母，生成所有组合（上限防爆炸）
+    if (k > 6) return;  // 超过 6 音节只保留全拼 + 全缩写
+    const size_t limit = static_cast<size_t>(1) << k;
+    std::set<std::string> seen;
+    for (size_t mask = 1; mask < limit; ++mask) {
+        std::vector<std::string> key;
+        key.reserve(k);
+        bool anyAbbrev = false;
+        for (size_t i = 0; i < k; ++i) {
+            if (mask & (static_cast<size_t>(1) << i)) {
+                key.push_back(syllables[i].substr(0, 1));
+                anyAbbrev = true;
+            } else {
+                key.push_back(syllables[i]);
+            }
+        }
+        if (!anyAbbrev) continue;
+        if (key == ab) continue;  // 全缩写已插入
+        std::string sig;
+        for (const auto& s : key) { sig += s; sig += '\t'; }
+        if (!seen.insert(sig).second) continue;
+        Candidate cm = base;
+        cm.matchMode = MatchMode::kAbbrev;
+        trie_.insert(key, cm);
+    }
+}
+
 void Dictionary::insertMainEntry(const MainEntry& e) {
     std::vector<std::string> syllables = splitPinyin(e.pinyin);
     if (syllables.empty()) return;
@@ -63,12 +102,9 @@ void Dictionary::insertMainEntry(const MainEntry& e) {
         // 全拼键
         c.matchMode = MatchMode::kFull;
         trie_.insert(syllables, c);
-        // 缩写键（仅当缩写与全拼不同，避免无意义重复插入）
-        if (!ab.empty() && ab != syllables) {
-            Candidate ca = c;
-            ca.matchMode = MatchMode::kAbbrev;
-            trie_.insert(ab, ca);
-        }
+        // 缩写 / 混合简拼：逐音节「全拼」或「首字母」组合（如 "ni hao"
+        // → [n,hao]、[ni,h]、[n,h]），让用户无需打全拼也能命中。
+        insertAbbrevMasks(syllables, ab, c);
     }
 }
 
@@ -83,11 +119,7 @@ void Dictionary::insertPhraseEntry(const PhraseEntry& e) {
     c.source = Source::kPhrase;
     c.matchMode = MatchMode::kFull;
     trie_.insert(syllables, c);
-    if (!ab.empty() && ab != syllables) {
-        Candidate ca = c;
-        ca.matchMode = MatchMode::kAbbrev;
-        trie_.insert(ab, ca);
-    }
+    insertAbbrevMasks(syllables, ab, c);
 }
 
 void Dictionary::loadMain(const std::string& path) {

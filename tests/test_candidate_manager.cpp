@@ -86,6 +86,18 @@ int main() {
     }
     CHECK(found, "找到 완료 候选");
 
+    // 5. 混合简拼：输入 "nhao" 应命中 "ni hao"（经由逐音节混合键 [n,hao]）
+    Dictionary dict3;
+    dict3.addMainEntry("ni hao", L"안녕", 10);
+    CandidateManager mgr4;
+    mgr4.setDictionary(&dict3);
+    mgr4.setUserDict(&ud);
+    mgr4.setNormalizer(&fn);
+    CandidateList list4 = mgr4.getCandidates(seg.segment("nhao"));
+    bool hyb = false;
+    for (const auto& c : list4.items) if (c.korean == L"안녕") hyb = true;
+    CHECK(hyb, "混合简拼 nhao 命中 ni hao");
+
     if (g_fail == 0) { std::cout << "\nALL PASSED (candidate_manager)\n"; return 0; }
     std::cout << "\n" << g_fail << " FAILED (candidate_manager)\n";
     return 1;

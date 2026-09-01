@@ -58,6 +58,11 @@ private:
     // 将单条短语插入 Trie
     void insertPhraseEntry(const PhraseEntry& e);
 
+    // 插入缩写 + 混合简拼（逐音节全拼/首字母组合）键
+    void insertAbbrevMasks(const std::vector<std::string>& syllables,
+                          const std::vector<std::string>& ab,
+                          const Candidate& base);
+
     // "wan le" -> ["wan","le"]
     static std::vector<std::string> splitPinyin(const std::string& pinyin);
     // 取每个音节首字母："wan le" -> ["w","l"]

@@ -38,6 +38,16 @@ int main() {
     CHECK(fn.reverse("wan") == "wang", "reverse: wan->wang (双向 an↔ang)");
     CHECK(fn.reverse("zong") == "zhong", "reverse: zong->zhong (双向 z↔zh)");
 
+    // 扩展模糊集（iang/ian, uang/uan, f/h, k/g）
+    CHECK(fn.normalize("xiang") == "xian", "iang->ian: xiang->xian");
+    CHECK(fn.reverse("xian") == "xiang", "reverse: xian->xiang");
+    CHECK(fn.normalize("huang") == "huan", "uang->uan: huang->huan");
+    CHECK(fn.reverse("huan") == "huang", "reverse: huan->huang");
+    CHECK(fn.normalize("fa") == "ha", "f->h: fa->ha");
+    CHECK(fn.reverse("ha") == "fa", "reverse: ha->fa");
+    CHECK(fn.normalize("ka") == "ga", "k->g: ka->ga");
+    CHECK(fn.reverse("ga") == "ka", "reverse: ga->ka");
+
     // 关闭模糊音
     cfg.setFuzzyOn(false);
     fn.setConfig(cfg);
