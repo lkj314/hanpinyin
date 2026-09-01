@@ -1,0 +1,152 @@
+classDiagram
+    namespace Core {
+        class Segment {
+            +std::string raw
+            +std::vector~std::string~ syllables
+            +bool isAbbrev
+            +std::vector~std::string~ normalized
+        }
+        class Candidate {
+            +std::wstring korean
+            +std::string source_pinyin
+            +int freq
+            +Source source
+            +MatchMode matchMode
+        }
+        class CandidateList {
+            +std::vector~Candidate~ items
+            +bool hasMore
+            +int page
+        }
+        class PinyinSegmenter {
+            +segment(raw: std::string): std::vector~Segment~
+        }
+        class FuzzyNormalizer {
+            -bool fuzzyOn
+            -std::unordered_map~std::string,std::string~ fuzzyMap
+            +setConfig(cfg: const ConfigModel&)
+            +normalize(syllable: std::string): std::string
+        }
+        class Trie {
+            -TrieNode* root
+            +insert(syllables: std::vector~std::string~, cand: Candidate)
+            +collect(start: int, syllables: std::vector~std::string~, out: std::vector~Candidate~&): int
+        }
+        class Dictionary {
+            -Trie trie
+            +loadMain(path: std::string)
+            +loadPhrases(path: std::string)
+            +getTrie(): const Trie&
+        }
+        class UserDict {
+            -std::unordered_map~std::string,int~ boosts
+            +load(path: std::string)
+            +save(path: std::string)
+            +record(syllables: std::vector~std::string~, korean: std::wstring)
+            +getBoost(key: std::string): int
+        }
+        class CandidateManager {
+            -Dictionary* dict
+            -UserDict* userDict
+            -FuzzyNormalizer* normalizer
+            +getCandidates(segs: std::vector~Segment~): CandidateList
+            -viterbi(syllables: std::vector~std::string~): std::vector~Candidate~
+            -mergeAndRank(full: CandidateList, abbrev: CandidateList): CandidateList
+        }
+        class ConfigModel {
+            -bool fuzzyOn
+            -std::vector~std::string~ fuzzyPairs
+            -Hotkey hotkey
+            -std::string dictPath
+            +load(path: std::string)
+            +save(path: std::string)
+            +isFuzzyOn(): bool
+            +getHotkey(): Hotkey
+        }
+    }
+
+    namespace Platform {
+        class KeyboardHook {
+            -HHOOK hook
+            +install()
+            +uninstall()
+            +onKey(cb: std::function~void(KeyEvent)~)
+            -proc(code, wparam, lparam): LRESULT
+        }
+        class InputSession {
+            -std::string buffer
+            -int page
+            -CandidateList current
+            -bool committed
+            +pushChar(c: char)
+            +onSpace(): CandidateList
+            +onBackspace()
+            +nextPage(): CandidateList
+            +select(n: int): Candidate
+            +reset()
+            -commitToManager(mgr: CandidateManager&): CandidateList
+        }
+        class FloatingWindow {
+            -HWND hwnd
+            +create()
+            +show()
+            +hide()
+            +setPositionNearCaret()
+            +onRender(cb)
+        }
+        class D2DRenderer {
+            -ID2D1Factory* factory
+            -ID2D1HwndRenderTarget* rt
+            -IDWriteTextFormat* format
+            +init(hwnd: HWND)
+            +render(pinyinLine: std::string, list: const CandidateList&)
+            +destroy()
+        }
+        class TextSender {
+            +send(text: std::wstring): bool
+            -sendViaInput(text: std::wstring): bool
+            -sendViaClipboard(text: std::wstring): bool
+        }
+        class ConfigPanel {
+            -HWND dlg
+            +open()
+            -onSave()
+        }
+        class AppContext {
+            -KeyboardHook hook
+            -InputSession session
+            -FloatingWindow window
+            -D2DRenderer renderer
+            -TextSender sender
+            -ConfigPanel panel
+            -CandidateManager mgr
+            -Dictionary dict
+            -UserDict userDict
+            -ConfigModel config
+            -bool active
+            +run()
+            +toggleActive()
+            +applyConfig()
+        }
+    }
+
+    CandidateManager --> Dictionary : 查询
+    CandidateManager --> UserDict : 频率叠加
+    CandidateManager --> FuzzyNormalizer : 归一化
+    CandidateManager ..> CandidateList : 产出
+    Dictionary --> Trie : 装入
+    ConfigModel ..> FuzzyNormalizer : 驱动配置
+
+    AppContext --> KeyboardHook
+    AppContext --> InputSession
+    AppContext --> CandidateManager
+    AppContext --> FloatingWindow
+    AppContext --> D2DRenderer
+    AppContext --> TextSender
+    AppContext --> ConfigPanel
+    AppContext --> UserDict
+    AppContext --> ConfigModel
+    KeyboardHook ..> InputSession : 投递按键
+    InputSession --> CandidateManager : 提交匹配
+    FloatingWindow --> D2DRenderer : 调用渲染
+    ConfigPanel ..> ConfigModel : 读写

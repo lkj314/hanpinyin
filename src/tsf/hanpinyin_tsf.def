@@ -1,0 +1,10 @@
+; HanPinyin TSF COM DLL 模块定义（替代 ATL 自动导出）
+; 仅需导出 4 个 Dll* 函数，COM 类厂经 DllGetClassObject 暴露。
+
+LIBRARY "hanpinyin_tsf"
+
+EXPORTS
+    DllGetClassObject       PRIVATE
+    DllCanUnloadNow         PRIVATE
+    DllRegisterServer       PRIVATE
+    DllUnregisterServer     PRIVATE

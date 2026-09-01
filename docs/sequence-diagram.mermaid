@@ -1,0 +1,83 @@
+%% ===== 4.1 主链路：按键 → 候选 → 选择 → 发送 =====
+sequenceDiagram
+    participant U as 用户
+    participant KH as KeyboardHook
+    participant IS as InputSession
+    participant PS as PinyinSegmenter
+    participant FN as FuzzyNormalizer
+    participant CM as CandidateManager
+    participant Dic as Dictionary(Trie)
+    participant UD as UserDict
+    participant FW as FloatingWindow
+    participant DR as D2DRenderer
+    participant TS as TextSender
+
+    U->>KH: 输入字母 (w a n l e ...)
+    KH->>IS: pushChar('w') / ('a') ...
+    IS->>FW: render(拼音输入行)
+    FW->>DR: render(line)
+    U->>KH: 按空格（确认当前串）
+    KH->>IS: onSpace()
+    IS->>PS: segment(buffer)  %% 产出 全拼 + 缩写 两套 Segment
+    PS-->>IS: segments
+    IS->>CM: getCandidates(segments)
+    CM->>FN: normalize(每个音节)  %% 应用模糊集
+    CM->>Dic: collect(归一化音节序列)  %% Trie 前缀/多音节查询
+    Dic-->>CM: 候选(全拼)
+    CM->>Dic: collect(缩写音节序列)
+    Dic-->>CM: 候选(缩写)
+    CM->>UD: getBoost(各 key)  %% 用户词频叠加
+    CM->>CM: viterbi(全拼音节)  %% 整句最优组合
+    CM->>CM: mergeAndRank(全拼优先, 缩写次)
+    CM-->>IS: CandidateList(items,hasMore,page)
+    IS->>FW: show(list)
+    FW->>DR: render(line, list)
+    U->>KH: 按数字键 1~5
+    KH->>IS: select(n)
+    IS->>UD: record(音节序列, korean)  %% 词频更新
+    IS->>TS: send(korean)
+    TS->>TS: sendViaInput() 失败?
+    TS->>TS: sendViaClipboard(CF_UNICODETEXT)  %% 后备
+    TS-->>U: 韩语文本进入激活窗口
+    IS->>FW: hide() + reset()
+
+%% ===== 4.2 旁路 A：Ctrl+Space 切换激活/关闭 =====
+sequenceDiagram
+    participant U as 用户
+    participant KH as KeyboardHook
+    participant AC as AppContext
+    participant FW as FloatingWindow
+    participant DR as D2DRenderer
+
+    U->>KH: 按 Ctrl+Space
+    KH->>AC: toggleActive()
+    alt 关闭 → 开启
+        AC->>KH: 设置 active=true（开始拦截字母/数字）
+        AC->>FW: show() 状态图标 🔤
+    else 开启 → 关闭
+        AC->>KH: 设置 active=false（按键全部透传）
+        AC->>FW: show() 状态图标 🈳
+        AC->>FW: 不渲染候选
+    end
+    FW->>DR: render(状态图标)
+
+%% ===== 4.3 旁路 B：配置面板打开 / 保存 =====
+sequenceDiagram
+    participant U as 用户
+    participant CP as ConfigPanel
+    participant CM as ConfigModel
+    participant AC as AppContext
+    participant FN as FuzzyNormalizer
+    participant Dic as Dictionary
+    participant UD as UserDict
+
+    U->>CP: 打开配置面板（托盘菜单/热键）
+    CP->>CM: load() 读当前配置
+    CP->>U: 展示（词条表/模糊音开关/热键）
+    U->>CP: 编辑并点“保存”
+    CP->>CM: save()  %% 写 config.json
+    CP->>AC: onConfigChanged()
+    AC->>FN: setConfig(CM)  %% 模糊集实时生效
+    AC->>Dic: reloadIfEntriesChanged()  %% 词条增删即时重载
+    AC->>UD: reload()  %% 用户词库同步
+    AC->>U: 提示“已保存，配置已生效”

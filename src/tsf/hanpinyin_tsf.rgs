@@ -1,0 +1,21 @@
+# HanPinyin TSF 注册表内容对照文档
+# 实际由 tsf_registry.cpp 代码写入（不使用 ATL .rgs 解析器）。
+# 本文件仅作为内容参考；regsvr32 调用 DllRegisterServer 时写入下列键值。
+#
+# ---------------------------------------------------------------
+# 1) COM 自注册（HKCR，需管理员）
+# ---------------------------------------------------------------
+# HKCR\CLSID\{A1B2C3D4-0001-4a6e-8f2a-1234567890AB} = "HanPinyin Text Service"
+# HKCR\CLSID\{A1B2C3D4-0001-4a6e-8f2a-1234567890AB}\InprocServer32
+#       默认值 = <DLL 绝对路径>
+#       "ThreadingModel" = "Apartment"
+#
+# ---------------------------------------------------------------
+# 2) CTF TIP 注册（HKLM，需管理员）
+# ---------------------------------------------------------------
+# HKLM\SOFTWARE\Microsoft\CTF\TIP\{A1B2C3D4-0001-4a6e-8f2a-1234567890AB}
+#       "Enabled" = dword:00000001
+# HKLM\SOFTWARE\Microsoft\CTF\TIP\{A1B2C3D4-0001-4a6e-8f2a-1234567890AB}\Category
+#       值名 "{GUID_TFCAT_TIP_KEYBOARD}" = "" (空)
+# HKLM\SOFTWARE\Microsoft\CTF\TIP\{A1B2C3D4-0001-4a6e-8f2a-1234567890AB}\LanguageProfile\{0x0804}\{B2C3D4E5-0002-4a6e-8f2a-1234567890AB}
+#       默认值 = "한글 병음"
