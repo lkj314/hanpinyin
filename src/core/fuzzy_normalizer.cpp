@@ -29,12 +29,10 @@ bool endsWith(const std::string& s, const std::string& p) {
     return s.size() >= p.size() && s.compare(s.size() - p.size(), p.size(), p) == 0;
 }
 bool isLongFinal(const std::string& s) {
-    return s == "ang" || s == "eng" || s == "ing" ||
-           s == "iang" || s == "uang";
+    return s == "ang" || s == "eng" || s == "ing";
 }
 bool isShortFinal(const std::string& s) {
-    return s == "an" || s == "en" || s == "in" ||
-           s == "ian" || s == "uan";
+    return s == "an" || s == "en" || s == "in";
 }
 // 是否为「两字母声母」（zh/ch/sh）
 bool isZhInitial(const std::string& s) {
@@ -68,12 +66,6 @@ void FuzzyNormalizer::loadDefaultMap() {
     // 单字母声母：n→l, r→l（前向；反向只取其一避免冲突）
     singles_["n"] = "l";  singlesInv_["l"] = "n";
     singles_["r"] = "l";  // 反向 l→n 已设置，r/l 合并到 n
-    // 介音 + 后鼻音 长→短 / 短→长（双向）
-    finalsL2S_["iang"] = "ian";  finalsS2L_["ian"] = "iang";
-    finalsL2S_["uang"] = "uan";  finalsS2L_["uan"] = "uang";
-    // 声母 f/h、k/g 混淆（前缀替换，双向）
-    singles_["f"] = "h";  singlesInv_["h"] = "f";
-    singles_["k"] = "g";  singlesInv_["g"] = "k";
 }
 
 void FuzzyNormalizer::setConfig(const ConfigModel& cfg) {

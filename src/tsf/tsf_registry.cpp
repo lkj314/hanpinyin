@@ -95,10 +95,9 @@ bool RegisterTSF(const wchar_t* dllPath) {
     if (!SetStr(HKEY_LOCAL_MACHINE, tipKey.c_str(), nullptr, L""))
         return false;
 
-    // 4) Category 子键：Category\Category\{GUID_TFCAT_TIP_KEYBOARD}
-    //    必须以 TIP 的 CLSID 作为「命名值」（值为空）登记，TSF 管理器才会枚举到本 TIP。
+    // 4) Category 子键：Category\Category\{GUID_TFCAT_TIP_KEYBOARD}（默认空）
     std::wstring catKey = tipKey + L"\\Category\\Category\\" + CatKeyboardString();
-    if (!SetStr(HKEY_LOCAL_MACHINE, catKey.c_str(), clsid.c_str(), L""))
+    if (!SetStr(HKEY_LOCAL_MACHINE, catKey.c_str(), nullptr, L""))
         return false;
 
     // 5) LanguageProfile\{0x00000804}\{profile} 必填显示值
@@ -118,11 +117,6 @@ bool RegisterTSF(const wchar_t* dllPath) {
     if (!SetDword(HKEY_LOCAL_MACHINE, lpKey.c_str(), L"HiddenInSettingUI", 0))
         return false;
     if (!SetDword(HKEY_LOCAL_MACHINE, lpKey.c_str(), L"SubItemInSettingUI", 0))
-        return false;
-
-    // 5b) 关联键：把本 TIP 挂到简体中文 locale，否则不会出现在输入法列表
-    std::wstring assocKey = lpKey + L"\\Associations";
-    if (!SetStr(HKEY_LOCAL_MACHINE, assocKey.c_str(), L"00000804", profile.c_str()))
         return false;
 
     return true;
