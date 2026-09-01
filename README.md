@@ -1,71 +1,75 @@
-# HanPinyin · 用汉语拼音打韩文的输入法
+# HanPinyin · 用汉语拼音打韩文的输入法（基于小狼毫 / Rime）
 
-> 一句话：你敲**中文拼音**，它给出**韩文**候选词，选中后一键发到当前窗口（比如韩服游戏聊天框）。
+> 一句话：你敲**中文拼音**，候选窗同时给出**韩文（及日/英/中）**，在任意窗口（韩服游戏聊天框、浏览器、微信…）里像正常输入法一样选词上屏。
+
+> 本输入法**套壳小狼毫（Rime / Weasel）**实现——直接复用成熟、已能在 Windows 注册为系统输入法的小狼毫引擎，只魔改了词库与少量拼音规则。自研的 EXE / TSF 代码（`src/`）只是早期未完成的实验，**并未上线**，请勿依赖。
 
 ---
 
 ## 这是什么
 
-HanPinyin 是一个 **Windows 上的拼音 → 韩文** 输入工具，主要给在**韩服《英雄联盟》等游戏**里玩、但不熟悉韩文键盘布局（두벌식）的中国玩家用。
+HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要给在韩服《英雄联盟》等游戏里玩、但不熟悉韩文键盘布局（두벌식）的中国玩家：不用记键位、不用切到韩文输入法，照常打拼音（`nihao`、`duibuqi`），候选栏就列出对应的韩文（`안녕하세요`、`죄송합니다`），像普通输入法一样选词上屏。
 
-你不用记韩文键位，也不用切到韩文输入法——照常打拼音（例如 `ni hao`、`wan le`），候选栏就会列出对应的韩文（`안녕하세요`、`완료`），用数字键或鼠标选一个，工具自动把它发到当前激活的输入框。
-
-核心资产是**词库**：拼音到韩文的映射表。目前主词库 `data/main_dict.json` 有 **816 条**、整句短语库 `data/phrases.json` 有 **80 条**，覆盖问候、感谢、情绪、餐饮、购物、时间、方位、工作、天气、网络语、亲属、请求、邀约、联络等日常场景，敬语（요/습니다）与平语（반말）双层级都有。
+核心资产是**词库 + 拼音规则**：拼音到韩文 / 中文 / 日 / 英的映射，以及模糊音、简拼等拼音容错规则。
 
 ---
 
-## 两种运行形态（请知悉现状）
-
-这个项目在代码里同时实现了**两条路线**，状态不同：
+## 真实运行形态（请据此理解项目）
 
 | 形态 | 说明 | 现状 |
 |------|------|------|
-| **① 独立程序（EXE）** | 一个常驻小工具：全局键盘钩子捕获拼音 → 悬浮候选窗 → `SendInput`/剪贴板把韩文发到游戏窗口。是 PRD/设计文档定义的 **MVP 主路径**。 | 已构建（`build/Release/hanpinyin.exe`）。文档以此为准。 |
-| **② 系统输入法（TSF DLL）** | 注册成 Windows 自带的文本服务框架（TSF）输入法，出现在系统"添加键盘"列表里，像正常输入法一样用。 | **实验性**。代码与 `hanpinyin_tsf.dll` 已构建，但**注册表结构仍有缺陷**——注册成功却没出现在输入法列表里，这一块还没修完。 |
+| **① 小狼毫 / Rime 方案（本仓库真正在跑的）** | 把 HanPinyin 做成 Rime 的 `sino_mix` 方案：拼音 → 候选窗同时出中文 + 韩文（及日/英）。部署即用，已能在系统输入法列表里出现。 | **可用，主力**。代码在 `rime/`。 |
+| ② 自研程序（EXE / TSF DLL，`src/`） | 早期尝试自己写输入法核心与 Windows TSF 注册。 | **未完工、未上线**。自研 TSF 难以注册进系统输入法列表，已放弃；仅作历史参考。 |
 
-> 简单说：**词库和转换逻辑是真实可用的**，EXE 是能跑起来的主形态；TSF 是更优雅但尚不完整的进阶形态。本仓库的重心是词库与核心逻辑。
+> 简单说：**词库与拼音规则（在 `rime/`）是唯一在用的部分**；`src/` 是自研探索的残留，不要把文档里的 EXE / TSF 当作现状。
 
 ---
 
-## 快速开始（EXE 形态）
+## 快速开始（小狼毫方案）
 
-### 编译（MSVC 14.x / Visual Studio 2022，x64）
+### 1. 安装小狼毫
+下载 Weasel（https://rime.im），安装时自带 `luna_pinyin`（中文拼音词库，本方案的中文候选来自它）。
 
+### 2. 部署本项目
+最简单：
 ```bat
-cd HanPinyin
-cmake -B build -G "Visual Studio 17 2022" -A x64
-cmake --build build --config Release
+cd HanPinyin\rime
+python deploy.py
 ```
+它会把 `sino_mix.schema.yaml` + 生成的 `hanpinyin.dict.yaml` 复制到 `%AppData%\Rime\` 并提示你「重新部署」。
 
-生成物：`build/Release/hanpinyin.exe`（x64）。**零第三方运行时依赖**（不引入 Boost / Qt / nlohmann-json，JSON 解析是自研 header-only）。
+### 3. 重新部署
+右键任务栏小狼毫图标 → **「重新部署」**。
 
-> 纯逻辑核心单测（`src/core` 不含 `windows.h`）可单独用 `cl` 编译，详见 `docs/` 与各 `tests/test_*.cpp`。
+### 4. 使用
+`Win+空格` 切到「韩文拼音 HanPinyin」，记事本里打 `nihao` → 候选窗出现 `안녕하세요` / `你好`，数字键或空格选词。
 
-### 运行
+---
 
-1. 启动 `hanpinyin.exe`（建议管理员权限，全局钩子更稳）。
-2. **Ctrl+Space** 切换激活（图标 🔤 / 关闭）。
-3. 激活后输入拼音（如 `wan le yi xia wu`），**空格**确认并弹候选。
-4. **数字键 1~5** 选择；**Tab** 翻页；**鼠标点击** 直接选；**Enter** 发首个候选；**Esc** 取消。
-5. 选定后韩文自动发到当前激活窗口，按游戏内回车发送。
-6. **Ctrl+Alt+P** 打开配置面板（增删词条 / 模糊音 / 热键）。
+## 输入体验（搜狗式容错）
+
+为更接近搜狗的"流畅输入"，本方案支持：
+
+- **模糊拼音（逐音节）**：`zh↔z`、`ang↔an`、`n↔l`、`f↔h` 等，且对韩文多音节词**每个音节**都生效（由 `build_dict.py` 预先生成模糊码）。例如 `lihao` 也能出 `안녕하세요`。
+- **简拼 / 混拼**：打 `nh` 出 `nihao` → `안녕하세요`，打 `nih` 出 `你好`。中文侧由 `cn.speller` 的 `abbrev` 规则实现，韩文侧由 `build_dict.py` 生成简拼码实现。
 
 ---
 
 ## 词库怎么扩充
 
-词库就是两个 JSON，纯数据、改了即时生效（配置面板也能图形化增删）：
+词库就是数据，改了重跑脚本即可，无需碰 C++：
 
-- `data/main_dict.json` —— 主词库，数组，每项为：
-  ```json
-  { "pinyin": "wan le", "candidates": [["완료", 12], ["완료됐어", 5]] }
-  ```
-  - `pinyin`：拼音键，**空格分隔音节、全小写**（如 `"duo shao qian"`），装载时拆成音节并生成首字母缩写键。
-  - `candidates`：`[韩文字符串, 词频整数]`，**词频越大越靠前**。
-- `data/phrases.json` —— 整句短语库，每项为 `{ "pinyin": "...", "korean": "..." }`（装载时词频强制为 100，整句优先）。
-- 格式细节见 `data/schema.md`。**文件一律 UTF-8 无 BOM、候选按词频降序**。
+- `data/main_dict.json` —— 主词库，拼音**用空格分隔音节**：`{ "pinyin": "ni hao", "candidates": [["안녕하세요", 20]] }`
+- `data/phrases.json` —— 整句短语：`{ "pinyin": "ni hao", "korean": "안녕하세요" }`
+- `rime/extra_phrases.txt` —— 策划的多语言常用词条（韩/日/英/中混排），拼音为连贯码（如 `nihao`）。
 
-> 词库的韩文标注早期由模型生成，建议自行校验并在面板修正/增补。
+改完：
+```bat
+cd HanPinyin\rime
+python build_dict.py     # 重新生成 hanpinyin.dict.yaml
+python deploy.py         # 复制到 %AppData%/Rime/
+```
+再到小狼毫「重新部署」。
 
 ---
 
@@ -73,39 +77,28 @@ cmake --build build --config Release
 
 ```
 HanPinyin/
-├── CMakeLists.txt
 ├── README.md
-├── data/                 # 词库与 schema（UTF-8 无 BOM）—— 项目的核心资产
-│   ├── main_dict.json    # 主词库（816 条）
-│   ├── phrases.json      # 整句短语库（80 条）
-│   ├── schema.md         # 词库格式说明
-│   └── user_dict.json    # 运行时生成，记录你的常用词
-├── src/
-│   ├── core/             # 纯逻辑核心层（严禁 windows.h）：trie / 词典 / 拼音分词 / 模糊音 / 候选管理 / Viterbi / 用户词库
-│   ├── platform/         # Win32 / 悬浮窗 UI（Direct2D+DirectWrite）/ 配置面板
-│   ├── app/main.cpp      # 入口
-│   └── tsf/              # 实验性：TSF 文本服务 DLL（系统输入法形态）
-├── tests/               # 纯逻辑单元测试
-└── docs/                # PRD / DESIGN / ARCHITECTURE / 图示
+├── data/                 # 词库与 schema（核心资产）
+│   ├── main_dict.json    # 主词库（拼音空格分隔音节）
+│   ├── phrases.json      # 整句短语库
+│   └── schema.md
+├── rime/                 # 真正在跑的输入法方案（小狼毫 / Rime）
+│   ├── sino_mix.schema.yaml  # 方案定义（中文 luna_pinyin + 韩文自定义词库 + 模糊音/简拼规则）
+│   ├── build_dict.py         # 数据源 -> hanpinyin.dict.yaml 生成器（含模糊音/简拼码生成）
+│   ├── deploy.py             # 一键部署到 %AppData%/Rime/
+│   ├── validate_rime.py      # 校验 schema/dict 合法性
+│   ├── extra_phrases.txt     # 策划多语言词条
+│   └── hanpinyin.dict.yaml   # 由 build_dict.py 生成的词库（勿手改）
+└── src/                  # 自研实验代码（EXE / TSF），未上线，仅供参考
 ```
-
----
-
-## 设计文档
-
-- `docs/PRD.md` —— 产品需求（目标用户、用户故事、需求池）。
-- `docs/DESIGN.md` —— 原始设计方案（模块、数据结构、算法）。
-- `docs/ARCHITECTURE.md` —— 架构说明。
 
 ---
 
 ## 已知限制 / 诚实说明
 
-- **仅 Windows 10/11 x64**。
-- EXE 形态依赖 `SendInput` + 剪贴板发字，能覆盖绝大多数 DirectInput 游戏窗口；个别游戏若屏蔽钩子/模拟输入，可能需要走剪贴板后备方案。
-- **TSF 形态尚未完工**：注册表写入后未稳定出现在系统输入法列表，相关修复仍在进行。
-- 模糊音（zh/z、ang/an 等）默认开启，可在配置面板关闭。
-- `rime/`、`sogou/` 两个目录是"借其它输入法引擎分发韩文候选"的实验性渠道，**未纳入本仓库**（保持主仓库聚焦于 TSF/EXE 本体与词库）；如需要可单独纳入。
+- 仅 Windows 10/11 x64（依赖小狼毫 Weasel）。
+- 模糊音 / 简拼在韩文侧由预生成码实现，覆盖常用音变；极偏方言音变未全量枚举。
+- `src/` 自研路线未完工，请勿使用。
 
 ---
 

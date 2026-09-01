@@ -25,6 +25,10 @@ data/user_dict.json
 *.log
 *.bak
 
-# 另类分发渠道实验（Rime / 搜狗），保持主仓库聚焦
-rime/
-sogou/
+# 另类分发渠道实验（Rime / 搜狗）
+# 说明：rime/ 是真正在跑的输入法方案（套壳小狼毫/Weasel），sogou/ 是导出渠道，
+# 二者均已纳入主仓库，不再忽略。
+
+# rime 本地部署产物 / 安装包，不入库
+rime/_installers/
+rime/.last_deploy_ts
