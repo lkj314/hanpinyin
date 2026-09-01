@@ -58,20 +58,19 @@ if defined WS (
     echo   WeaselServer restarted, redeploy triggered.
 ) else (
     echo   Weasel not running, trying to start it...
-    set "STARTED=0"
-    for %%d in (
-        "%ProgramFiles(x86)%\Rime\Weasel\WeaselServer.exe"
-        "%ProgramFiles%\Rime\Weasel\WeaselServer.exe"
-        "%LOCALAPPDATA%\Programs\Weasel\WeaselServer.exe"
-        "%LOCALAPPDATA%\Rime\Weasel\WeaselServer.exe"
-    ) do (
-        if exist %%d (
-            start "" %%d
-            set "STARTED=1"
-            echo   started %%d
-        )
-    )
-    if "!STARTED!"=="0" (
+    if exist "%ProgramFiles(x86)%\Rime\Weasel\WeaselServer.exe" (
+        start "" "%ProgramFiles(x86)%\Rime\Weasel\WeaselServer.exe"
+        echo   started WeaselServer
+    ) else if exist "%ProgramFiles%\Rime\Weasel\WeaselServer.exe" (
+        start "" "%ProgramFiles%\Rime\Weasel\WeaselServer.exe"
+        echo   started WeaselServer
+    ) else if exist "%LOCALAPPDATA%\Programs\Weasel\WeaselServer.exe" (
+        start "" "%LOCALAPPDATA%\Programs\Weasel\WeaselServer.exe"
+        echo   started WeaselServer
+    ) else if exist "%LOCALAPPDATA%\Rime\Weasel\WeaselServer.exe" (
+        start "" "%LOCALAPPDATA%\Rime\Weasel\WeaselServer.exe"
+        echo   started WeaselServer
+    ) else (
         echo   [TIP] Could not auto-start Weasel.
         echo   Right-click the Weasel tray icon -> Redeploy.
     )
