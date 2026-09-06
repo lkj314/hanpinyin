@@ -93,5 +93,19 @@
   { "pinyin": "deng wo huo guo lai", "korean": "나 살아나면 가자" },
   { "pinyin": "xia ba zai lai", "korean": "다음 판 또 해요" },
   { "pinyin": "wo kan bu dong han wen", "korean": "한글을 읽을 줄 몰라요" },
-  { "pinyin": "ni jiao shen me ming zi", "korean": "이름이 뭐예요?" }
+  { "pinyin": "ni jiao shen me ming zi", "korean": "이름이 뭐예요?" },
+  { "pinyin": "xian zai ji dian", "korean": "지금 몇 시예요?" },
+  { "pinyin": "jin tian ji hao", "korean": "오늘 며칠이야?" },
+  { "pinyin": "wo zhi chi ni", "korean": "응원해요" },
+  { "pinyin": "xiang xin wo", "korean": "날 믿어요" },
+  { "pinyin": "ni neng xing de", "korean": "할 수 있어" },
+  { "pinyin": "fang song yi dian", "korean": "긴장 풀어요" },
+  { "pinyin": "wo men ying le", "korean": "우리 이겼어" },
+  { "pinyin": "wo xian zou le", "korean": "저 먼저 갈게요" },
+  { "pinyin": "ni zou bu zou", "korean": "너 갈 거야?" },
+  { "pinyin": "gan de piao liang", "korean": "잘했다" },
+  { "pinyin": "zuo de hao", "korean": "잘했어" },
+  { "pinyin": "tai bang le", "korean": "너무 잘한다" },
+  { "pinyin": "ni zhen xing", "korean": "너 대단하다" },
+  { "pinyin": "da jia xin ku le", "korean": "여러분 수고하셨습니다" }
 ]

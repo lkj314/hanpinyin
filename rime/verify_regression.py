@@ -47,6 +47,12 @@ REGRESSION = [
     ("shuijing", "억제기"),             # 水晶
     ("jiawohaoyou", "친추 해 주세요"),  # 新增整句：加我好友
     ("wobuhuihanyu", "한국어 못해요"),  # 新增整句：我不会韩语
+    ("yasuo", "야스오"),                # 2026-09-06 二批：亚索（英雄）
+    ("mangseng", "리 신"),              # 盲僧
+    ("danshi", "하지만"),               # 但是（连接词）
+    ("kuaidiankuaidian", "빨리빨리"),   # 韩式口头禅
+    ("huabanxie", "카리스타"),          # 滑板鞋（英雄）
+    ("chifanqu", "밥 먹으러 가자"),     # 吃饭去
 ]
 
 PY_RE = __import__("re").compile(r"^[a-z]+$")
