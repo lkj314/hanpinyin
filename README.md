@@ -2,9 +2,7 @@
 
 > 一句话：你敲**中文拼音**，候选窗同时给出**韩文（及日/英/中）**，在任意窗口（韩服游戏聊天框、浏览器、微信…）里像正常输入法一样选词上屏。
 
-> 本输入法**套壳小狼毫（Rime / Weasel）**&#x5B9E;现——直接复用成熟、已能在 Windows 注册为系统输入法的小狼毫引擎，只魔改了词库与少量拼音规则。自研的 EXE / TSF 代码（`src/`）只是早期未完成的实验，**并未上线**，请勿依赖。
-
-
+> 本输入法**套壳小狼毫（Rime / Weasel）实现**——直接复用成熟、已能在 Windows 注册为系统输入法的小狼毫引擎，只魔改了词库与少量拼音规则。自研的 EXE / TSF 代码（`src/`）只是早期未完成的实验，**并未上线**，请勿依赖。
 
 ---
 
@@ -29,25 +27,31 @@ HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要�
 
 ## 快速开始（小狼毫方案）
 
-### 1. 安装小狼毫
+### 1. 安装小狼毫（只需一次）
 
-下载 Weasel（<https://rime.im），安装时自带> `luna_pinyin`（中文拼音词库，本方案的中文候选来自它）。
+下载 Weasel：<https://rime.im> ，安装时自带 `luna_pinyin`（中文拼音词库，本方案的中文候选来自它）。
 
-### 2. 部署 / 更新本项目（双击即可，无需 Python）
+### 2. 首次启用（只需一次）
 
-仓库根目录里有 **`一键更新.bat`**。平时更新（拿到新版本词库 / 拼音规则后）只需：
+1. 把 `rime/sino_mix.schema.yaml` 和 `rime/hanpinyin.dict.yaml` 复制到小狼毫用户目录 `%APPDATA%\Rime\`（即 `C:\Users\<你>\AppData\Roaming\Rime\`）。
+2. 右键任务栏小狼毫托盘图标 → **「重新部署」**。
+3. 右键托盘图标 → **「输入法设定」** → 勾选 **「韩文拼音 HanPinyin」**（即 `sino_mix`）。之后 `Win+空格` 就能切到它。
 
-1. 保证 `一键更新.bat` 和 `rime\` 文件夹在一起（即整个仓库一起放着）。
-2. **双击 `一键更新.bat`**。
-3. 它自动把 `sino_mix.schema.yaml` + `hanpinyin.dict.yaml` 复制到小狼毫用户目录，并用小狼毫官方的 **`WeaselDeployer.exe /deploy`** 触发真正的「重新部署」（重新编译词库）。
+### 3. 日常更新（拿到新版本后，GUI 三步）
 
-> 全程**不需要 Python、不需要重装小狼毫**。窗口最后会提示 Done，关掉即可。>   
-> 若候选栏没立刻变化，再右键任务栏小狼毫图标 → **「重新部署」** 一次。
+1. 把新版 `rime/sino_mix.schema.yaml` + `rime/hanpinyin.dict.yaml` 复制到 `%APPDATA%\Rime\`（覆盖同名旧文件）。
+2. 右键小狼毫托盘图标 → **「重新部署」**（等几秒，图标闪一下即完成）。
+3. 打字验证（下方专属码能打出来 = 新版已生效）：
 
-### 3. 首次使用需要做的（只做一次）
+| 敲的字母 | 应出现的候选 | 验证的能力 |
+|---|---|---|
+| `lihao` | 안녕하세요 | 模糊音 n↔l |
+| `nih` / `nh` | 你好 / 안녕하세요 | 混拼 / 全缩简拼 |
+| `dbq` | 죄송합니다 | "对不起"简拼 |
+| `paiwei` | 랭크 | 排位（2026-09 新词） |
+| `jiawohaoyou` | 친추 해 주세요 | 整句短语 |
 
-- 右键任务栏小狼毫图标 → **「输入法设定」** → 在方案列表里勾选 **「韩文拼音 HanPinyin」**（即 `sino_mix`）。之后 `Win+空格` 就能切到它。
-- 这一步只需做一次，之后更新都只双击 `一键更新.bat`。
+> 注意：**重启小狼毫进程 ≠ 重新部署**。运行时只读编译后的 `build\*.bin`，必须走「重新部署」才会重编译。
 
 ### 4. 使用
 
@@ -55,12 +59,14 @@ HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要�
 
 ---
 
-## 输入体验（搜狗式容错）
-
-为更接近搜狗的"流畅输入"，本方案支持：
+## 输入体验（搜狗式容错 + 自学习）
 
 - **模糊拼音（逐音节）**：`zh↔z`、`ang↔an`、`n↔l`、`f↔h` 等，且对韩文多音节词**每个音节**都生效（由 `build_dict.py` 预先生成模糊码）。例如 `lihao` 也能出 `안녕하세요`。
-- **简拼 / 混拼**：打 `nh` 出 `nihao` → `안녕하세요`，打 `nih` 出 `你好`。中文侧由 `cn.speller` 的 `abbrev` 规则实现，韩文侧由 `build_dict.py` 生成简拼码实现。
+- **简拼 / 混拼**：打 `nh` 出 `안녕하세요`，打 `nih` 出 `你好`。中文侧由 `cn.speller` 的 `abbrev` 规则实现，韩文侧由 `build_dict.py` 生成简拼码实现。
+- **前缀补全**：码打一半也能出词（如 `paiw` → 랭크），补全候选排在完整码之后。
+- **自学习**：常选的韩文词和中文词会自动记住、加权上浮（越用越顺手）。用户词典存于 `%APPDATA%\Rime\*.userdb\`，可随时删除重学。
+
+> 以上均已核实 librime 官方源码（`charset_filter.cc` 只滤 CJK 扩展区，不滤韩文谚文），可放心使用。
 
 ---
 
@@ -70,18 +76,17 @@ HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要�
 
 - `data/main_dict.json` —— 主词库，拼音**用空格分隔音节**：`{ "pinyin": "ni hao", "candidates": [["안녕하세요", 20]] }`
 - `data/phrases.json` —— 整句短语：`{ "pinyin": "ni hao", "korean": "안녕하세요" }`
-- `rime/extra_phrases.txt` —— 策划的多语言常用词条（韩/日/英/中混排），拼音为连贯码（如 `nihao`）。
+- `rime/extra_phrases.txt` —— 补充的多语言常用词条（韩/日/英/中混排），拼音为连贯码（如 `nihao`）。
 
-改完数据源后，**需要重新生成词库**（这一步仍用 Python 跑一次 `build_dict.py`，把数据变成 `hanpinyin.dict.yaml`）：
+改完数据源后**重新生成词库并校验**：
 
 ```bat
 cd HanPinyin\rime
-python build_dict.py     # 重新生成 hanpinyin.dict.yaml
+python build_dict.py          # 重新生成 hanpinyin.dict.yaml
+python verify_regression.py   # 数据质量 + 回归点校验（必须 PASS）
 ```
 
-生成之后，**部署还是双击仓库根的 `一键更新.bat`**（它负责复制 + 重新部署，不需要 Python）。
-
-> 一句话区分：日常「拿到新版本」= 双击 `一键更新.bat`；只有**你自己改了词库数据**才需要额外跑一次 `build_dict.py`。
+最后按上面「日常更新」GUI 三步部署到小狼毫。
 
 ---
 
@@ -89,18 +94,18 @@ python build_dict.py     # 重新生成 hanpinyin.dict.yaml
 
 ```
 HanPinyin/
-├── 一键更新.bat          # 双击部署（复制+重新部署，无需 Python）
 ├── README.md
-├── data/                 # 词库与 schema（核心资产）
+├── HANDOVER.md           # 交接文档（铁律、部署链路、事故复盘）——动手前必读
+├── data/                 # 词库数据源（核心资产）
 │   ├── main_dict.json    # 主词库（拼音空格分隔音节）
 │   ├── phrases.json      # 整句短语库
 │   └── schema.md
 ├── rime/                 # 真正在跑的输入法方案（小狼毫 / Rime）
 │   ├── sino_mix.schema.yaml  # 方案定义（中文 luna_pinyin + 韩文自定义词库 + 模糊音/简拼规则）
 │   ├── build_dict.py         # 数据源 -> hanpinyin.dict.yaml 生成器（含模糊音/简拼码生成）
-│   ├── deploy.py             # 一键部署到 %AppData%/Rime/
-│   ├── validate_rime.py      # 校验 schema/dict 合法性
-│   ├── extra_phrases.txt     # 策划多语言词条
+│   ├── verify_regression.py  # 数据质量 + 回归点校验（改词库后必跑）
+│   ├── validate_rime.py      # 方案/词典结构校验
+│   ├── extra_phrases.txt     # 补充多语言词条
 │   └── hanpinyin.dict.yaml   # 由 build_dict.py 生成的词库（勿手改）
 └── src/                  # 自研实验代码（EXE / TSF），未上线，仅供参考
 ```
@@ -112,6 +117,7 @@ HanPinyin/
 - 仅 Windows 10/11 x64（依赖小狼毫 Weasel）。
 - 模糊音 / 简拼在韩文侧由预生成码实现，覆盖常用音变；极偏方言音变未全量枚举。
 - `src/` 自研路线未完工，请勿使用。
+- **不要用任何脚本（.py/.bat/PowerShell）去改输入法或触发部署**——部署一律走小狼毫自己的 GUI（右键 → 重新部署）。
 
 ---
 
