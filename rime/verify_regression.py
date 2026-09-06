@@ -59,6 +59,13 @@ REGRESSION = [
     ("glhf", "gl hf"),
     ("smurf", "smurf"),
     ("middiff", "mid diff"),            # 多词短语连写码
+    ("rending", "ㅇㅈ"),                # 2026-09-06 四批：ㅇㅈ=인정（초성어）
+    ("fengle", "ㅁㅊ"),                 # ㅁㅊ=미쳤어
+    ("baibai", "ㅂㅇ"),                 # ㅂㅇ=바이
+    ("biesong", "던지지 마"),           # 别送
+    ("zhanji", "전적"),                 # 战绩
+    ("zuowanle", "다 했어"),            # 做完了（时态补强）
+    ("zailaiyiba", "한 판 더"),         # 再来一把
 ]
 
 PY_RE = __import__("re").compile(r"^[a-z]+$")
