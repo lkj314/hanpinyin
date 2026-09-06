@@ -1,0 +1,813 @@
+﻿# HanPinyin 释义表：代码<TAB>中文释义（供《HanPinyin 词典》生成器使用）
+# 未列出的单音节键自动标注为"音译字"；新增词条时请同步补一行。
+nihao	你好
+nihaoma	你好吗
+zaoshanghao	早上好
+wanan	晚安
+zaijian	再见
+xiexie	谢谢
+xiexieni	谢谢你
+bukeqi	不客气
+duibuqi	对不起
+baoqian	抱歉
+meiguanxi	没关系
+buhaoyisi	不好意思
+mangmang	忙（很忙）
+tamen	他们
+dajia	大家
+buhao	不好
+cuole	错了
+zhidaole	知道了
+mingbai	明白
+keyi	可以
+buxing	不行
+zuobian	左边
+youbian	右边
+zhongjian	中间
+limian	里面
+waimian	外面
+tanke	坦克（坦克型英雄）
+zhonglu	中路
+shanglu	上路
+daye	打野
+xialu	下路
+fuzhu	辅助
+tuita	推塔
+zhuaren	抓人（Gank）
+chayan	插眼
+xiaolong	小龙
+dalong	大龙
+tuanmie	团灭
+touxiang	投降
+jubao	举报
+biaoji	标记（Ping）
+qingxian	清线
+huicheng	回城
+lanbafu	蓝爸爸（蓝 buff）
+hongbafu	红爸爸（红 buff）
+tuanzhan	团战
+kaituan	开团
+shouta	守塔
+fangyuta	防御塔
+zhuangtai	状态
+jiayou	加油
+niubi	厉害（NB）
+lihai	厉害
+yulei	对不起（抱歉）
+shengli	胜利
+shibai	失败
+shule	输了
+yingle	赢了
+youyisi	有意思
+meiyisi	没意思
+xianzai	现在
+mashang	马上
+dengyixia	等一下
+wangle	忘了
+xianzaina	现在在哪
+laizheli	来这里
+jingong	进攻
+fangshou	防守
+pengyou	朋友
+duiyou	队友
+diren	敌人
+difang	地方（敌方）
+zhushou	助手（帮我一下）
+jiuming	救命
+xiaoxin	小心
+kuaipao	快跑
+genwo	跟我（来）
+yiqi	一起
+kuaidian	快点
+mandian	慢点
+zhunbei	准备
+zhunbeikaishi	准备，开始
+kaishi	开始
+jieshu	结束
+ali	阿狸（英雄 Ahri）
+jingkesi	金克丝（英雄 Jinx）
+dimo	提莫（英雄 Teemo）
+jialun	盖伦（英雄 Garen）
+yasuo	亚索（英雄 Yasuo）
+hanbing	寒冰（英雄 Ashe）
+amumu	阿木木（英雄 Amumu）
+nuoshou	诺手（英雄 Darius）
+aike	艾克（英雄 Ekko）
+faqiu	小法（英雄 Veigar）
+xiaofa	小法（英雄 Veigar）
+nitailihaile	你太厉害了
+zhejuwoyingle	这局我赢了
+xiajuzailai	下局再来
+womenshenglile	我们胜利了
+direnxiaoshile	敌人消失了
+yiqishang	一起上
+woxianzailai	我现在来
+zanmentuiba	咱们撤退
+batadale	（俚语）打爆了
+woyaochixian	我要吃线
+tataopaole	他逃跑了
+qingbalong	打龙（把龙打掉）
+shenglishiwomende	胜利是我们的
+wozaixialu	我在下路
+wozaizhonglu	我在中路
+wozaishanglu	我在上路
+wozaidaye	我在打野
+wozaifuzhu	我在辅助
+geiwoyan	给我眼（守卫）
+hanyipan	再来一盘
+zailaiyiju	再来一句（一盘）
+pingdi	平地（평딩）
+zhuangbei	装备
+xiexiedajia	谢谢大家
+chixian	吃线
+shangdan	成长／发育
+jineng	技能
+zhaohuan	召唤
+jingyan	经验（经验值）
+jinbi	金币
+mousha	击杀
+zhusha	助攻
+buchang	补偿
+tianran	天然（自然）
+gongjili	攻击力
+fashu	法术（法强）
+fangyu	防御
+sudu	速度
+xueliang	血量（生命值）
+fali	法力（蓝量）
+lengque	冷却（CD）
+tianfu	天赋
+zhaohuanshi	召唤师
+pifu	皮肤
+xuanshou	选择
+jintian	今天
+mingtian	明天
+zuotian	昨天
+yiqian	以前
+yihou	以后
+henjiu	很久
+gangcai	刚才
+weilai	未来
+daan	答案
+wenti	问题
+yuanyin	原因
+jieguo	结果
+fangfa	方法
+yisi	意思
+ganjue	感觉
+yiyang	一样
+buyiyang	不一样
+zhende	真的
+jiade	假的
+haode	好的
+huaide	坏的
+duide	对的
+cuode	错的
+dade	大的
+xiaode	小的
+duode	多的
+shaode	少的
+gaode	高的
+aide	矮的（低的）
+changde	长的
+duande	短的
+haojiubujian	好久不见
+haojiubujianle	好久不见了
+zuijinzenmeyang	最近怎么样
+woxianzoule	我先走了
+xiacijian	下次见
+yihuierjian	一会儿见
+mingtianjian	明天见
+shengrikuaile	生日快乐
+xinniankuaile	新年快乐
+chucijianmian	初次见面
+qingduozhijiao	请多指教
+xinkule	辛苦了
+wanshanghao	晚上好
+huanying	欢迎
+qingjin	请进
+qingzuo	请坐
+chifanlema	吃饭了吗
+zenmele	怎么了
+feichangganxie	非常感谢
+duoxie	多谢
+zhendeganxieni	真的感谢你
+buyongxie	不用谢
+qingyuanliang	请原谅
+shilile	失礼了
+qingshaodeng	请稍等
+qingshaodengyixia	请稍等一下
+meishi	没事
+bangwoyixia	帮我一下
+shide	是的
+bushi	不是
+buyao	不要
+dangran	当然
+zhendema	真的吗
+taihaole	太好了
+aiya	哎呀
+hehe	呵呵（ㅎㅎ）
+kule	哭了（ㅠㅠ）
+woyeshi	我也是
+suibian	随便
+buzhidao	不知道
+wobudong	我不懂
+tingbudong	听不懂
+zaishuoyibian	再说一遍
+qingmanyidian	请慢一点（说）
+qingdengyixia	请等一下
+dengdeng	等等
+nishuodedui	你说得对
+kaixin	开心
+nanguo	难过
+shengqi	生气
+leile	累了
+wuliao	无聊
+xingfu	幸福
+danxin	担心
+chijing	吃惊
+haipa	害怕
+xihuan	喜欢
+taoyan	讨厌
+xiangnian	想念
+jinzhang	紧张
+xinqinghao	心情好
+xinqingbuhao	心情不好
+xianmu	羡慕
+qichuangle	起床了
+shuijiao	睡觉
+xizao	洗澡
+chumen	出门
+shangban	上班
+xiaban	下班
+huijia	回家
+daojiale	到家了
+zaijia	在家
+shuidehao	睡得好
+xiuxi	休息
+zuofan	做饭
+haochi	好吃
+buhaochi	不好吃
+ele	饿了
+baole	饱了
+yaoshui	要水
+maidan	买单
+dabao	打包
+fuwuyuan	服务员
+caidan	菜单
+hejiu	喝酒
+chifan	吃饭
+chibaole	吃饱了
+duoshaoqian	多少钱
+taiguile	太贵了
+henpianyi	很便宜
+pianyiyidian	便宜一点
+woyaozhege	我要这个
+shuaka	刷卡
+keyishima	可以试吗
+maidongxi	买东西
+dazhe	打折
+taixiaole	太小了
+taidale	太大了
+shenmeshihou	什么时候
+jidianle	几点了
+zhoumo	周末
+xiagexingqi	下个星期
+shanggexingqi	上个星期
+youkongma	有空吗
+meishijian	没时间
+chidaole	迟到了
+kuaidianlai	快点来
+xiageyue	下个月
+shengri	生日
+zaodian	早点
+wandian	晚点
+denglehenjiu	等了很久
+yihuier	一会儿
+zainali	在哪里
+zenmezou	怎么走
+ditiezhan	地铁站
+gongjiaoche	公交车
+chuzuche	出租车
+yuanma	远吗
+jinma	近吗
+zuoditie	坐地铁
+womilule	我迷路了
+xiangzuoguai	向左拐
+xiangyouguai	向右拐
+yizhizou	一直走
+zaiqianmian	在前面
+fujin	附近
+jichang	机场
+huochezhan	火车站
+duoyuan	多远
+kaihui	开会
+zuoye	作业
+kaoshi	考试
+xuexi	学习
+shangke	上课
+xiake	下课
+xuexiao	学校
+laoshi	老师
+gongzuo	工作
+henmang	很忙
+jiaban	加班
+baogao	报告
+gongzi	工资
+biye	毕业
+tianqi	天气
+tianqihao	天气好
+tianqibuhao	天气不好
+henleng	很冷
+henre	很热
+xiayule	下雨了
+xiaxuele	下雪了
+guafeng	刮风
+bushufu	不舒服
+ganmaole	感冒了
+quyiyuan	去医院
+chiyao	吃药
+fashao	发烧
+touteng	头疼
+duziteng	肚子疼
+haodianlema	好点了吗
+zhunizaorikangfu	祝你早日康复
+haha	哈哈（ㅋㅋ）
+wuwu	呜呜（ㅠㅠ）
+taibangle	太棒了
+zuibang	最棒
+chaojikeai	超级可爱
+keai	可爱
+henshuai	很帅
+piaoliang	漂亮
+haokan	好看
+buhaokan	不好看
+nizuibang	你最棒
+nvpengyou	女朋友
+nanpengyou	男朋友
+xuezhang	学长（前辈）
+didi	弟弟
+meimei	妹妹
+gege	哥哥
+jiejie	姐姐
+woaini	我爱你
+laopo	老婆
+laogong	老公
+jiaren	家人
+haopengyou	好朋友
+bangbangwo	帮帮我
+gaosuwo	告诉我
+geiwokan	给我看
+jiegeiwo	借给我
+dengwoyixia	等我一下
+keyibangwoma	可以帮我吗
+zhegeshishenme	这个是什么
+nijiaoshenmemingzi	你叫什么名字
+woshizhongguoren	我是中国人
+niduodale	你多大了
+zuoshenmegongzuo	做什么工作
+jiangemian	见个面
+yiqiqu	一起去
+yuehui	约会
+wochidaole	我迟到了
+yiqichifanba	一起吃饭吧
+qukandianying	去看电影
+mingtianyoukongma	明天有空吗
+zhoumoganma	周末干嘛
+dadianhua	打电话
+faduanxin	发短信
+faxinxi	发信息
+lianxiwo	联系我
+yihoulianxi	以后联系
+dianhuahaoma	电话号码
+weixin	微信
+kandaoxiaoxilema	看到消息了吗
+paiwei	排位
+shenglv	胜率
+duanwei	段位
+shuangpai	双排
+fuhuo	复活
+chaita	拆塔
+xiaguxianfeng	峡谷先锋
+shuijing	水晶
+xiaobing	小兵
+jinyong	禁用（Ban）
+fengjin	封禁
+renji	人机
+waigua	外挂
+daiji	待机
+bisai	比赛
+qianqi	前期
+zhongqi	中期
+houqi	后期
+nibuyaolai	你不要来
+wolai	我来
+nikuaizou	你快走
+biepa	别怕
+pashenme	怕什么
+xinhao	信号
+dengji	等级
+fuwuqi	服务器
+lurenju	路人局
+xiangni	想你
+nishuoshenme	你说什么
+buqingchu	不清楚
+haoyou	好友
+jiahaoyou	加好友
+hanyu	韩语
+zhongwen	中文
+yingyu	英语
+kaiwanxiao	开玩笑
+dacuole	打错了
+facuole	发错了
+duoguanzhao	多关照
+zhunihaoyun	祝你好运
+zhenbucuo	真不错
+mangseng	盲僧（英雄 Lee Sin）
+jinkesi	金克丝（英雄 Jinx）
+timo	提莫（英雄 Teemo）
+lakesi	拉克丝（英雄 Lux）
+weien	薇恩（英雄 Vayne）
+kasha	卡莎（英雄 Kai'Sa）
+akali	阿卡丽（英雄 Akali）
+jianji	剑姬（英雄 Fiora）
+jiansheng	剑圣（英雄 Master Yi）
+shitouren	石头人（英雄 Malphite）
+xiaoyuren	小鱼人（英雄 Fizz）
+youmi	悠米（英雄 Yuumi）
+paike	派克（英雄 Pyke）
+chuishi	锤石（英雄 Thresh）
+jiqiren	机器人（英雄 Blitzcrank）
+laoshu	老鼠（英雄 Twitch）
+tanglang	螳螂（英雄 Kha'Zix）
+shizigou	狮子狗（英雄 Rek'Sai）
+baonv	豹女（英雄 Nidalee）
+jiaoyue	皎月（英雄 Diana）
+yaoji	妖姬（英雄 LeBlanc）
+nandao	男刀（英雄 Talon）
+daomei	刀妹（英雄 Irelia）
+longgui	龙龟（英雄 Rammus）
+longnv	龙女（英雄 Shyvana）
+dachongzi	大虫子（英雄 Cho'Gath）
+dazui	大嘴（英雄 Kog'Maw）
+jianmo	剑魔（英雄 Aatrox）
+wuqidashi	武器大师（英雄 Jax）
+nanqiang	男枪（英雄 Graves）
+manwang	蛮王（英雄 Tryndamere）
+huonan	火男（英雄 Brand）
+huonv	火女（英雄 Annie）
+kate	卡特（英雄 Katarina）
+jiesi	杰斯（英雄 Jayce）
+delaiwen	德莱文（英雄 Draven）
+nunu	努努（英雄 Nunu）
+jiela	婕拉（英雄 Zyra）
+shenv	蛇女（英雄 Cassiopeia）
+kapai	卡牌（英雄 Twisted Fate）
+huabanxie	滑板鞋（英雄 Kalista）
+lianmeng	联盟（英雄联盟）
+hanfu	韩服
+zouba	走吧
+laiba	来吧
+kuaidiankuaidian	快点快点（빨리빨리）
+yiqizou	一起走
+genwolai	跟我来
+tingwode	听我的
+anwoshuodezuo	按我说的做
+nixianzou	你先走
+woduanhou	我断后
+suoyi	所以
+danshi	但是
+ranhou	然后
+ruguo	如果
+keneng	可能
+yiding	一定
+chabuduo	差不多
+nanchi	难吃
+pianyi	便宜
+pile	疲了（累了）
+bingle	病了
+gaoxing	高兴
+meicuo	没错
+zuiai	最爱（최애）
+chifanqu	吃饭去
+qushuijiao	去睡觉
+gaishuijiaole	该睡觉了
+zhoumokuaile	周末快乐
+zhuyishenti	注意身体
+kaichexiaoxin	开车小心
+nizaimangma	你在忙吗
+youkongdehua	有空的话
+gaizoule	该走了
+daihuierjian	待会儿见
+xiuxiba	休息吧
+bieshengqi	别生气
+wocuole	我错了
+qingnichifan	请你吃饭
+zuijinhaoma	最近好吗
+zhidaoma	知道吗
+nidonglema	你懂了吗
+wenle	稳了
+shudingle	输定了
+songle	送了（扔了）
+nengying	能赢
+daifei	带飞
+qisile	气死了
+xiaosile	笑死了
+nizaiganma	你在干嘛
+zhendeya	真的呀（ㄹㅇ）
+rending	认定（ㅇㅈ 认了）
+fengle	疯了（ㅁㅊ）
+kepa	可怕（ㄷㄷ）
+gongxia	恭喜呀（ㅊㅋ）
+oukei	欧克（ㅇㅋ）
+baibai	拜拜（ㅂㅇ）
+wananya	晚安呀（ㅈㅈ）
+xiele	谢了（ㄱㅅ）
+xinkula	辛苦啦（ㅅㄱ）
+enen	嗯嗯（ㅇㅇ）
+buzhidaoa	不知道呀（ㅁㄹ）
+meishila	没事啦（ㄱㅊ）
+zaina	在哪（ㅇㄷ）
+nihaoa	你好呀（ㅎㅇ）
+weia	喂啊（야）
+qua	去啊（가라）
+niqu	你去（니가 가）
+shulea	输了啊（졌잖아）
+guolaia	过来啊（와라）
+genshang	跟上
+kuailai	快来
+jubaole	举报了
+fenghao	封号
+zhanji	战绩
+huifang	回放
+biesong	别送（别扔）
+tingyixia	停一下
+dabalong	打大龙
+tuizhonglu	推中路
+shoujia	守家
+zuowanle	做完了
+yijingzoule	已经走了
+mashangjiulai	马上就来
+haolema	好了吗
+haimei	还没
+kaishiba	开始吧
+zailaiyiba	再来一把
+zailai	再来
+zhongyuyingle	终于赢了
+shaleta	杀了他（抓住他）
+kandaole	看到了
+meikanjian	没看见
+nengxingma	能行吗
+qing	请
+wo	我
+ni	你
+ta	他／她
+hao	好
+dui	对
+yao	要
+xiang	想
+lai	来
+qu	去
+hui	回（回来）
+zou	走
+ting	听
+kan	看
+shuo	说
+zuo	做
+shang	上
+xia	下
+qian	前
+hou	后
+yi	一（数字）
+er	二（数字）
+san	三（数字）
+si	四（数字）
+wu	五（数字）
+liu	六（数字）
+qi	七（数字）
+ba	八（数字，亦作音译字）
+jiu	九（数字）
+shi	十（数字，亦作音译字）
+tui	推（撤退）
+na	我（나）／音译字
+ne	你（너）／音译字
+an	安（前缀"不"）／音译字
+mian	面（音译；미안 恰为"对不起"）
+ng	嗯（응）／音译字
+gg	Good game（这局打得漂亮）
+wp	Well played（打得不错）
+glhf	Good luck, have fun（祝好运，玩得开心）
+gl	Good luck（祝好运）
+ez	Easy（轻松赢了）
+gj	Good job（干得好）
+nice	Nice（漂亮）
+ty	Thank you（谢谢）
+thx	Thanks（谢了）
+np	No problem（没关系）
+sry	Sorry（抱歉）
+nvm	Never mind（算了，没事）
+omw	On my way（在路上）
+omg	Oh my god（我的天）
+wtf	（感叹）搞什么
+bg	Bad game（糟糕的一局）
+lol	Laugh out loud（笑）
+ok	OK（好的）
+hello	Hello（你好）
+brb	Be right back（马上回来）
+plz	Please（拜托）
+pls	Please（拜托）
+dc	Disconnected（掉线）
+afk	Away from keyboard（挂机，离开）
+lag	Lag（卡顿）
+int	Intentional feeding（故意送人头）
+troll	Troll（捣乱）
+smurf	Smurf（小号高手）
+toxic	Toxic（嘴臭，有毒）
+feeder	Feeder（送人头）
+ks	Kill steal（抢人头）
+mvp	MVP（本场最佳）
+ff	Surrender（发起投降；ff15=15 分钟投）
+mia	Missing（对线的人不见了）
+mid	Mid（中路）
+top	Top（上路）
+bot	Bot（下路）
+jung	Jungle（打野位）
+jungle	Jungle（打野位）
+adc	ADC（射手位）
+sup	Support（辅助位）
+ap	AP（法术伤害）
+ad	AD（物理伤害）
+baron	Baron（纳什男爵）
+dragon	Dragon（小龙）
+herald	Herald（峡谷先锋）
+elder	Elder（远古龙）
+soul	Soul（龙魂）
+ward	Ward（守卫，眼）
+cs	CS（补刀数）
+farm	Farm（补刀发育）
+ult	Ult（终极技能，大招）
+cd	Cooldown（冷却时间）
+gank	Gank（游走抓人）
+push	Push（推线推进）
+back	Back（撤退回城）
+def	Defend（防守）
+care	Care（小心）
+danger	Danger（危险）
+help	Help（救命，帮我）
+save me	Save me（救我）
+wait	Wait（等等）
+follow me	Follow me（跟我来）
+group	Group（集合）
+bait	Bait（引诱，钓鱼）
+poke	Poke（消耗）
+kite	Kite（拉扯放风筝）
+peel	Peel（保护后排）
+roam	Roam（游走）
+invade	Invade（入侵野区）
+counter	Counter（counter pick，针对选择）
+focus	Focus（集火）
+engage	Engage（开团）
+remake	Remake（重开）
+go next	Go next（下一把）
+split push	Split push（分推）
+late game	Late game（大后期）
+mid diff	Mid diff（中路差距）
+top diff	Top diff（上路差距）
+bot diff	Bot diff（下路差距）
+jung diff	Jung diff（打野差距）
+wanleyixiawu	玩了一下午
+xiexieni	谢谢你（整句）
+womenyiqitui	我们一起推
+xiaoxindifang	小心敌方
+woyaohuicheng	我要回城
+kuailaizhuwo	快来助我
+tamenzaidalong	他们在打大龙
+womenkaituanba	我们开团吧
+duiyouxiaoxin	队友小心
+qingzhuyixia	请注意一下（叫他一声）
+jiayouwomen	加油（我们冲）
+nihaopengyou	你好啊，朋友
+woxianghuijia	我想回家
+wananpengyou	晚安，朋友
+zhunbeikaishi	准备，开始
+niquna	你去哪
+zhegeyingxionghenqiang	这个英雄很强
+wohaoxiangni	我好想你
+nizuijinguodezenmeyang	你最近过得怎么样
+xiexienidebangzhu	谢谢你的帮助
+zhendeduibuqi	真的对不起
+qingshaodengyixia	请稍等一下
+wobutaidong	我不太懂
+qingzaishuoyibian	请再说一遍
+qingmanyidianshuo	请慢一点说
+zhegeduoshaoqian	这个多少钱
+qinggeiwocaidan	请给我菜单
+zhegehenhaochi	这个真好吃
+wochibaole	我吃饱了
+qingbangwodabao	请帮我打包
+xishoujianzainali	洗手间在哪里
+zenmequhuochezhan	怎么去火车站
+lizheliyuanma	离这里远吗
+jintiantianqizhenhao	今天天气真好
+woyoudianbushufu	我有点不舒服
+woganmaole	我感冒了
+mingtianyoushijianma	明天有时间吗
+womenyiqichifanba	我们一起吃饭吧
+zhoumoniganshenme	周末你干什么
+womenshenmeshihoujianmian	我们什么时候见面
+wochidaoleduibuqi	我迟到了，对不起
+yihuiergeinidadianhua	一会儿给你打电话
+wohuihenilianxi	我会和你联系
+kandaoxiaoxiqinghuifu	看到消息请回复
+nidedianhuahaomashiduoshao	你的电话号码是多少
+hengaoxingrenshini	很高兴认识你
+qingduoduoguanzhao	请多多关照
+zhunishengrikuaile	祝你生日快乐
+xinkulehaohaoxiuxi	辛苦了，好好休息
+mingtianjianba	明天见吧
+yilupingan	一路平安
+wohaoxiangni	我好想你
+wojintianhenlei	我今天很累
+geiwoyibeishui	给我一杯水
+nihuishuohanyuma	你会说韩语吗
+wohuiyidianhanyu	我会一点韩语
+nizainagefuwuqi	你在哪个服务器
+mingtianzaiyiqiwan	明天再一起玩
+jintianzhuangtaibuhao	今天状态不好
+ganggangshiwodecuo	刚才是我的错
+nidadezhenhao	你打得真好
+wokaituanle	我开团了
+womashanghuilai	我马上回来
+dengwohuoguolai	等我活过来（复活后再打）
+xiabazailai	下把再来
+wokanbudonghanwen	我看不懂韩文
+xianzaijidian	现在几点
+jintianjihao	今天几号
+wozhichini	我支持你
+xiangxinwo	相信我
+ninengxingde	你能行的
+fangsongyidian	放松一点
+womenyingle	我们赢了
+woxianzoule	我先走了
+nizoubuzou	你走不走
+gandepiaoliang	干得漂亮
+zuodehao	做得好
+nizhenxing	你真行
+dajiaxinkule	大家辛苦了
+bangmang	帮忙
+baoyi	对不起（ㅈㅅ，죄송 缩写）
+bengbuzhu	绷不住
+caiji	菜鸡（不行的）
+chongkai	重开（리메이크）
+chuansong	传送（TP）
+dansha	单杀
+dazhao	大招（궁）
+dianhuo	点火（点燃）
+direnlaile	敌人来了
+diyidixue	一血（First Blood）
+dongle	懂了
+dongxi	东西
+duixian	对线
+duoshao	多少
+fanpan	翻盘（逆转）
+fayu	发育（파밍）
+ganba	干吧（치자，打他）
+gongxi	恭喜
+jiawohaoyou	加我好友
+jihe	集合
+jile	寄了（完了）
+juele	绝了
+kali	Carry（캐리，带飞）
+keyiyongkama	可以用卡吗
+kunle	困了
+male	麻了
+nali	哪里
+nanjue	男爵（大龙）
+sansha	三杀
+shanxian	闪现
+shei	谁
+shenme	什么
+shijian	时间
+shiye	视野
+shuangsha	双杀
+shunfeng	顺风
+sile	死了
+wanle	完了
+weishenme	为什么
+wobuhuihanyu	我不会韩语
+wocao	卧槽（헐，惊叹）
+women	我们
+xiaole	笑了（ㅋㅋㅋ）
+xiaoshi	ㅅㅅ（수고，辛苦／打得不错）
+zaima	在吗（在干嘛）
+zaoan	早安
+zenme	怎么
+zhege	这个
+zhongdan	中单
+zouqi	走起（ㄱㄱ，GoGo）
+long	龙（용）
+chong	冲（가자，上啊）
+ku	哭（웁）
+shuai	帅（잘생겼다）
+keng	坑（트롤）
+yan	眼（와드）
