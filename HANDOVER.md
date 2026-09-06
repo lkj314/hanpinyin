@@ -63,8 +63,8 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 - 输入法是 Windows **系统层**软件，外部脚本既无法可靠地改变它，也**无法判断它是否真的更新成功**（进程活着 ≠ 新版生效）。
 - 最终用户**不使用终端**。任何"请运行 xxx.py / xxx.bat"的交付方式都等于没有交付——点了没反应，用户只会更愤怒。
-- 允许存在的脚本只有**开发期构建工具**（`build_dict.py` 生成词典、`validate_rime.py` 校验），它们不触碰输入法系统状态。
-- 仓库里的 `一键更新.bat` 与 `rime/deploy.py` 是**违规历史产物**（见第 8 节遗留事项），**不要使用、不要模仿、不要"修好它"**——正确的方向是删掉它们、走 GUI 手动流程。
+- 允许存在的脚本只有**开发期构建工具**（`build_dict.py` 生成词典、`verify_regression.py`/`validate_rime.py` 校验），它们不触碰输入法系统状态。
+- 历史违规产物 `一键更新.bat` 与 `rime/deploy.py` **已于 2026-09-06 从仓库删除**（见第 8 节事故复盘），不要试图恢复或重写类似脚本。
 
 ### ⛔ 铁律 2：先研究官方机制，再动手
 
@@ -92,8 +92,9 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
    ```
    cd rime && python build_dict.py
    ```
-   产出 `hanpinyin.dict.yaml`（当前约 6501 条，含模糊音/简拼展开码）。
-3. 可选校验：`python validate_rime.py`（校验词典头部格式与 schema 一致性）。
+   产出 `hanpinyin.dict.yaml`（当前约 7088 条，含模糊音/简拼展开码）。
+3. 必跑校验：`python verify_regression.py`（数据质量 + 构建覆盖 + 回归点，必须 PASS）；
+   可选 `python validate_rime.py`（方案结构校验，需 PyYAML）。
 
 ### 3.2 部署到本机（用户手动，双击/GUI，无命令行）
 
@@ -115,6 +116,8 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | `nh` | 你好 / 안녕하세요 | **全缩**简拼 |
 | `dbq` | 죄송합니다 / 미안해요 | "对不起"简拼 |
 | `xx` | 감사합니다 | "谢谢"简拼 |
+| `paiwei` | 랭크 | 排位（2026-09-06 新增批次抽样） |
+| `jiawohaoyou` | 친추 해 주세요 | 整句短语（同批新增） |
 
 **判定**：`lihao` 能出 안녕하세요、`dbq` 能出 죄송합니다 ⇒ 新版已生效。
 （2026-09-02 用户已实测通过：`안녕하세요`、`쩐다` 均正常出候选。）
@@ -142,17 +145,15 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 | 路径 | 状态 | 职责 |
 |---|---|---|
-| `rime/sino_mix.schema.yaml` | ✅ 在用 | 方案配置：translator 挂载、模糊音、简拼规则 |
-| `rime/hanpinyin.dict.yaml` | ✅ 在用 | 生成的多语词典（6501 条），**构建产物但已入库** |
+| `rime/sino_mix.schema.yaml` | ✅ 在用 | 方案配置：translator 挂载、模糊音、简拼规则、自学习/补全开关 |
+| `rime/hanpinyin.dict.yaml` | ✅ 在用 | 生成的多语词典（约 7088 码），**构建产物但已入库** |
 | `rime/build_dict.py` | ✅ 开发工具 | 数据源 → 词典生成（含模糊/简拼展开） |
-| `rime/validate_rime.py` | ✅ 开发工具 | 词典/schema 校验 |
+| `rime/verify_regression.py` | ✅ 开发工具 | 数据质量 + 构建覆盖 + 回归点校验（改词库后必跑） |
+| `rime/validate_rime.py` | ✅ 开发工具 | 方案/词典结构校验（需 PyYAML） |
 | `data/main_dict.json`、`data/phrases.json`、`rime/extra_phrases.txt` | ✅ 数据源 | 词库源头（改这里，不要直接改 dict.yaml） |
-| `rime/sino_mix.dict.yaml` | ⚠️ 孤儿 | 旧词典，现方案**不使用**（untracked，勿提交） |
-| `rime/deploy.py` | ⛔ 违规产物 | 自动复制到 %APPDATA%\Rime（不触发部署）。被铁律 1 禁止 |
-| `一键更新.bat` | ⛔ 违规产物 | 复制+杀进程+`/deploy`+重启。被铁律 1 禁止，待删除 |
-| `rime/_installers/`（12MB weasel.exe）、`build/`、`user_dict.json` | 🚫 gitignored | 本地文件，不入库 |
 | `src/`、`CMakeLists.txt`、`tests/`、`docs/` | 🗄️ 历史存档 | 自研 TSF/EXE 死路，仅供考古（见 6.4） |
-| `installer/`、`sogou/` | ⚠️ untracked | 搜狗自定义短语分发渠道等实验材料，未提交 |
+| ~~`一键更新.bat`、`rime/deploy.py`、`rime/sino_mix.dict.yaml`、`installer/`、`sogou/`~~ | 🗑️ 已删除（2026-09-06） | 违规自动化产物与实验残留，勿恢复 |
+| `rime/_installers/`（12MB weasel.exe）、`build/`、`data/user_dict.json` | 🚫 gitignored | 本地文件，不入库 |
 
 ---
 
@@ -197,6 +198,7 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
   - 沙箱安全策略禁止 Bash→PowerShell、PowerShell→cmd.exe 互相调用 → **.bat 在开发环境里根本无法实测**，只能静态审查；
   - 脚本"跑完了"≠"输入法更新了"，无法闭环验证。
 - **教训**：**给非技术用户的交付物必须是双击/GUI 可用的完整品**；对系统级软件，自动化脚本既不可靠也不可验证。
+- **后续（2026-09-06）**：三版 `.bat` 与 `deploy.py` 已全部从仓库删除，此路线正式关闭。
 - **对应铁律**：1、3。
 
 ### 6.4 存档：`src/` 自研路线的死因（防止有人想复活它）
@@ -248,18 +250,29 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | `6f39749` | revert 77878f9 |
 | `8ef06de` | 解除 rime/ 忽略 + README 重写（明示 Rime 是真实方案） |
 | `ae05f20` | **核心功能**：模糊音逐音节 + 简拼/混拼（搜狗式）+ 中文侧 abbrev |
-| `4dad85f`/`ab28064`/`4a6020d` | ⛔ 一键更新.bat 三连（违规产物，待删除） |
+| `4dad85f`/`ab28064`/`4a6020d` | ⛔ 一键更新.bat 三连（违规产物，已于 2026-09-06 删除） |
+| `304e698` | chore: 删除违规自动化产物与实验残留 |
+| `462fd90` | feat(data): 词库扩充（+41/+15）+ verify_regression.py 回归工具，词典 7088 码 |
+| `959fe8d` | feat(rime): 开启自学习与前缀补全（schema v2.3）+ README 纯 GUI 化 |
 
 ---
 
-## 9. 当前遗留事项
+## 9. 当前遗留事项（2026-09-06 更新）
 
-1. **删除 `一键更新.bat`**（根目录）——用户已判定违规，等用户点头后从仓库移除；
-2. **`rime/deploy.py`** 同属违规产物，与 bat 一并处理（或移入 `attic/` 仅作存档）；
-3. `rime/sino_mix.dict.yaml` 孤儿文件——现方案不使用，保持 untracked 或删除；
-4. `installer/`、`sogou/` 未跟踪——搜狗自定义短语分发渠道等实验材料，用户决定去留；
-5. `README.md` 第 44 行附近有一处 blockquote 换行小瑕疵（纯排版，不影响内容）；
-6. 若要给最终用户做"一键体验"，**正确方向**是研究 Rime 官方的**安装器/plum（东风破）配方分发**等官方 GUI 机制——但必须先调研再动手，且最终交付物不能是命令行脚本（铁律 1）。
+**已完成（2026-09-06，P0+P1+P2 一批）**：
+
+1. ✅ 删除 `一键更新.bat` 与 `rime/deploy.py`（违规产物正式清出仓库）；
+2. ✅ 删除 `rime/sino_mix.dict.yaml` 孤儿词典；
+3. ✅ 删除 `installer/`、`sogou/` 实验残留（搜狗渠道材料未再使用）；
+4. ✅ README 排版瑕疵修复（HTML 实体、坏链接）+ 部署章节改为纯 GUI 三步；
+5. ✅ 词库扩充：main_dict 816→857 条 / phrases 80→95 条（LoL 对局用语 + 日常交流双线），新增 `verify_regression.py` 回归工具；
+6. ✅ 输入体验：韩文/中文两侧开启用户词典自学习（已核实 librime `charset_filter` 不滤谚文）、韩文侧开启前缀补全。
+
+**待办**：
+
+1. 若要给最终用户做"一键体验"，**正确方向**是研究 Rime 官方的**安装器/plum（东风破）配方分发**等官方 GUI 机制——必须先调研再动手，且最终交付物不能是命令行脚本（铁律 1）；
+2. 自学习与补全（schema v2.3）需用户「重新部署」后手动打字验证（见 3.3 专属码表）；
+3. 远期可选：同一词典移植 Android Trime。
 
 ---
 
