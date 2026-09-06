@@ -53,6 +53,12 @@ REGRESSION = [
     ("kuaidiankuaidian", "빨리빨리"),   # 韩式口头禅
     ("huabanxie", "카리스타"),          # 滑板鞋（英雄）
     ("chifanqu", "밥 먹으러 가자"),     # 吃饭去
+    ("gg", "gg"),                       # 2026-09-06 三批：英文短句（键=英文本身）
+    ("gank", "gank"),
+    ("ez", "ez"),
+    ("glhf", "gl hf"),
+    ("smurf", "smurf"),
+    ("middiff", "mid diff"),            # 多词短语连写码
 ]
 
 PY_RE = __import__("re").compile(r"^[a-z]+$")
