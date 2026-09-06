@@ -3,7 +3,7 @@
 # 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码
 ---
 name: hanpinyin
-version: "2.3"
+version: "2.4"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -27,6 +27,7 @@ max_phrase_length: 20
 솔로킬	dansha	100
 정글	daye	100
 궁	dazhao	100
+나 살아나면 가자	dengwohuoguolai	100
 잠깐만	dengyixia	100
 점화	dianhuo	100
 적왔어	direnlaile	100
@@ -44,6 +45,7 @@ max_phrase_length: 20
 파밍	fayu	100
 서폿	fuzhu	100
 치자	ganba	100
+아까는 제 잘못이에요	ganggangshiwodecuo	100
 와드 줘	geiwoyan	100
 물 한 잔 주세요	geiwoyibeishui	100
 축하해	gongxi	100
@@ -52,11 +54,13 @@ max_phrase_length: 20
 오랜만이에요	haojiubujianle	100
 만나서 반가워요	hengaoxingrenshini	100
 귀환	huicheng	100
+친추 해 주세요	jiawohaoyou	100
 화이팅	jiayou	100
 화이팅 우리	jiayouwomen	100
 모여	jihe	100
 망했어	jile	100
 오늘 날씨 진짜 좋아요	jintiantianqizhenhao	100
+오늘 컨디션이 안 좋아요	jintianzhuangtaibuhao	100
 쩐다	juele	100
 캐리	kali	100
 보다	kan	100
@@ -77,15 +81,20 @@ max_phrase_length: 20
 괜찮아요	meiguanxi	100
 내일 봐요	mingtianjianba	100
 내일 시간 있어요?	mingtianyoushijianma	100
+내일 또 같이 해요	mingtianzaiyiqiwan	100
 어디	nali	100
 바론	nanjue	100
 너	ni	100
+실력이 좋으시네요	nidadezhenhao	100
 전화번호가 몇 번이에요?	nidedianhuahaomashiduoshao	100
 안녕하세요	nihao	100
 안녕 친구야	nihaopengyou	100
+한국어 할 줄 알아요?	nihuishuohanyuma	100
+이름이 뭐예요?	nijiaoshenmemingzi	100
 어디 가	niquna	100
 너 진짜 대단하다	nitailihaile	100
 개쩔	niubi	100
+어느 서버에서 해요?	nizainagefuwuqi	100
 요즘 어떻게 지내세요?	nizuijinguodezenmeyang	100
 친구	pengyou	100
 예쁘다	piaoliang	100
@@ -130,6 +139,7 @@ max_phrase_length: 20
 왜	weishenme	100
 저	wo	100
 사랑해요	woaini	100
+한국어 못해요	wobuhuihanyu	100
 잘 모르겠어요	wobutaidong	100
 헐	wocao	100
 잘 먹었습니다	wochibaole	100
@@ -137,7 +147,11 @@ max_phrase_length: 20
 감기 걸렸어요	woganmaole	100
 보고 싶어요	wohaoxiangni	100
 연락할게요	wohuihenilianxi	100
+한국어 조금 할 수 있어요	wohuiyidianhanyu	100
 오늘 진짜 피곤해요	wojintianhenlei	100
+한타 열게요	wokaituanle	100
+한글을 읽을 줄 몰라요	wokanbudonghanwen	100
+금방 돌아올게요	womashanghuilai	100
 우리	women	100
 우리 한타 가자	womenkaituanba	100
 우리 승리했어	womenshenglile	100
@@ -156,6 +170,7 @@ max_phrase_length: 20
 나 봇이야	wozaixialu	100
 나 미드야	wozaizhonglu	100
 노잼	wuliao	100
+다음 판 또 해요	xiabazailai	100
 다음 판 하자	xiajuzailai	100
 봇	xialu	100
 ㅋㅋㅋ	xiaole	100
@@ -241,7 +256,18 @@ max_phrase_length: 20
 单杀	dansha	99
 궁	dazao	99
 大招	dazhao	99
+나 살아나면 가자	dengwofuoguolai	99
+나 살아나면 가자	dengwofuoguonai	99
+나 살아나면 가자	dengwofuoguorai	99
+나 살아나면 가자	dengwohuoguonai	99
+나 살아나면 가자	dengwohuoguorai	99
 等下	dengyixia	99
+나 살아나면 가자	denwofuoguolai	99
+나 살아나면 가자	denwofuoguonai	99
+나 살아나면 가자	denwofuoguorai	99
+나 살아나면 가자	denwohuoguolai	99
+나 살아나면 가자	denwohuoguonai	99
+나 살아나면 가자	denwohuoguorai	99
 잠깐만	denyixia	99
 점화	dianfuo	99
 점화	diangfuo	99
@@ -344,7 +370,22 @@ max_phrase_length: 20
 귀환	fuicheng	99
 서폿	fuzu	99
 打	ganba	99
+아까는 제 잘못이에요	gangangshiwodechuo	99
+아까는 제 잘못이에요	gangangshiwodecuo	99
+아까는 제 잘못이에요	gangangsiwodechuo	99
+아까는 제 잘못이에요	gangangsiwodecuo	99
+아까는 제 잘못이에요	ganganshiwodechuo	99
+아까는 제 잘못이에요	ganganshiwodecuo	99
+아까는 제 잘못이에요	gangansiwodechuo	99
+아까는 제 잘못이에요	gangansiwodecuo	99
 치자	gangba	99
+아까는 제 잘못이에요	ganggangshiwodechuo	99
+아까는 제 잘못이에요	ganggangsiwodechuo	99
+아까는 제 잘못이에요	ganggangsiwodecuo	99
+아까는 제 잘못이에요	gangganshiwodechuo	99
+아까는 제 잘못이에요	gangganshiwodecuo	99
+아까는 제 잘못이에요	ganggansiwodechuo	99
+아까는 제 잘못이에요	ganggansiwodecuo	99
 물 한 잔 주세요	geiwoyibeisui	99
 恭喜	gongxi	99
 축하해	gonxi	99
@@ -367,6 +408,7 @@ max_phrase_length: 20
 回城	huicheng	99
 서폿	huzhu	99
 서폿	huzu	99
+친추 해 주세요	jiawofaoyou	99
 加油	jiayou	99
 화이팅 우리	jiayouwomeng	99
 모여	jife	99
@@ -389,6 +431,14 @@ max_phrase_length: 20
 오늘 날씨 진짜 좋아요	jingtiangtianqizhengfao	99
 오늘 날씨 진짜 좋아요	jingtiangtianqizhenghao	99
 오늘 날씨 진짜 좋아요	jingtiangtianqizhenhao	99
+오늘 컨디션이 안 좋아요	jingtiangzhuangtaibufao	99
+오늘 컨디션이 안 좋아요	jingtiangzhuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jingtiangzhuantaibufao	99
+오늘 컨디션이 안 좋아요	jingtiangzhuantaibuhao	99
+오늘 컨디션이 안 좋아요	jingtiangzuangtaibufao	99
+오늘 컨디션이 안 좋아요	jingtiangzuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jingtiangzuantaibufao	99
+오늘 컨디션이 안 좋아요	jingtiangzuantaibuhao	99
 오늘 날씨 진짜 좋아요	jingtiantiangqizenfao	99
 오늘 날씨 진짜 좋아요	jingtiantiangqizengfao	99
 오늘 날씨 진짜 좋아요	jingtiantiangqizenghao	99
@@ -405,6 +455,14 @@ max_phrase_length: 20
 오늘 날씨 진짜 좋아요	jingtiantianqizhengfao	99
 오늘 날씨 진짜 좋아요	jingtiantianqizhenghao	99
 오늘 날씨 진짜 좋아요	jingtiantianqizhenhao	99
+오늘 컨디션이 안 좋아요	jingtianzhuangtaibufao	99
+오늘 컨디션이 안 좋아요	jingtianzhuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jingtianzhuantaibufao	99
+오늘 컨디션이 안 좋아요	jingtianzhuantaibuhao	99
+오늘 컨디션이 안 좋아요	jingtianzuangtaibufao	99
+오늘 컨디션이 안 좋아요	jingtianzuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jingtianzuantaibufao	99
+오늘 컨디션이 안 좋아요	jingtianzuantaibuhao	99
 오늘 날씨 진짜 좋아요	jintiangtiangqizenfao	99
 오늘 날씨 진짜 좋아요	jintiangtiangqizengfao	99
 오늘 날씨 진짜 좋아요	jintiangtiangqizenghao	99
@@ -421,6 +479,14 @@ max_phrase_length: 20
 오늘 날씨 진짜 좋아요	jintiangtianqizhengfao	99
 오늘 날씨 진짜 좋아요	jintiangtianqizhenghao	99
 오늘 날씨 진짜 좋아요	jintiangtianqizhenhao	99
+오늘 컨디션이 안 좋아요	jintiangzhuangtaibufao	99
+오늘 컨디션이 안 좋아요	jintiangzhuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jintiangzhuantaibufao	99
+오늘 컨디션이 안 좋아요	jintiangzhuantaibuhao	99
+오늘 컨디션이 안 좋아요	jintiangzuangtaibufao	99
+오늘 컨디션이 안 좋아요	jintiangzuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jintiangzuantaibufao	99
+오늘 컨디션이 안 좋아요	jintiangzuantaibuhao	99
 오늘 날씨 진짜 좋아요	jintiantiangqizenfao	99
 오늘 날씨 진짜 좋아요	jintiantiangqizengfao	99
 오늘 날씨 진짜 좋아요	jintiantiangqizenghao	99
@@ -436,6 +502,13 @@ max_phrase_length: 20
 오늘 날씨 진짜 좋아요	jintiantianqizhenfao	99
 오늘 날씨 진짜 좋아요	jintiantianqizhengfao	99
 오늘 날씨 진짜 좋아요	jintiantianqizhenghao	99
+오늘 컨디션이 안 좋아요	jintianzhuangtaibufao	99
+오늘 컨디션이 안 좋아요	jintianzhuantaibufao	99
+오늘 컨디션이 안 좋아요	jintianzhuantaibuhao	99
+오늘 컨디션이 안 좋아요	jintianzuangtaibufao	99
+오늘 컨디션이 안 좋아요	jintianzuangtaibuhao	99
+오늘 컨디션이 안 좋아요	jintianzuantaibufao	99
+오늘 컨디션이 안 좋아요	jintianzuantaibuhao	99
 망했어	jire	99
 绝了	juele	99
 쩐다	juene	99
@@ -482,6 +555,14 @@ max_phrase_length: 20
 사람	len	99
 사람	leng	99
 너	li	99
+실력이 좋으시네요	lidadezenfao	99
+실력이 좋으시네요	lidadezengfao	99
+실력이 좋으시네요	lidadezenghao	99
+실력이 좋으시네요	lidadezenhao	99
+실력이 좋으시네요	lidadezhenfao	99
+실력이 좋으시네요	lidadezhengfao	99
+실력이 좋으시네요	lidadezhenghao	99
+실력이 좋으시네요	lidadezhenhao	99
 전화번호가 몇 번이에요?	lidedianfuafaomashiduosao	99
 전화번호가 몇 번이에요?	lidedianfuafaomashiduoshao	99
 전화번호가 몇 번이에요?	lidedianfuafaomasiduosao	99
@@ -518,10 +599,42 @@ max_phrase_length: 20
 안녕하세요	lifao	99
 안녕 친구야	lifaopengyou	99
 안녕 친구야	lifaopenyou	99
+한국어 할 줄 알아요?	lifuishuofangyuma	99
+한국어 할 줄 알아요?	lifuishuofanyuma	99
+한국어 할 줄 알아요?	lifuishuohangyuma	99
+한국어 할 줄 알아요?	lifuishuohanyuma	99
+한국어 할 줄 알아요?	lifuisuofangyuma	99
+한국어 할 줄 알아요?	lifuisuofanyuma	99
+한국어 할 줄 알아요?	lifuisuohangyuma	99
+한국어 할 줄 알아요?	lifuisuohanyuma	99
 厉害	lihai	99
 안녕하세요	lihao	99
 안녕 친구야	lihaopengyou	99
 안녕 친구야	lihaopenyou	99
+한국어 할 줄 알아요?	lihuishuofangyuma	99
+한국어 할 줄 알아요?	lihuishuofanyuma	99
+한국어 할 줄 알아요?	lihuishuohangyuma	99
+한국어 할 줄 알아요?	lihuishuohanyuma	99
+한국어 할 줄 알아요?	lihuisuofangyuma	99
+한국어 할 줄 알아요?	lihuisuofanyuma	99
+한국어 할 줄 알아요?	lihuisuohangyuma	99
+한국어 할 줄 알아요?	lihuisuohanyuma	99
+이름이 뭐예요?	lijiaosengmemingzhi	99
+이름이 뭐예요?	lijiaosengmemingzi	99
+이름이 뭐예요?	lijiaosengmeminzhi	99
+이름이 뭐예요?	lijiaosengmeminzi	99
+이름이 뭐예요?	lijiaosenmemingzhi	99
+이름이 뭐예요?	lijiaosenmemingzi	99
+이름이 뭐예요?	lijiaosenmeminzhi	99
+이름이 뭐예요?	lijiaosenmeminzi	99
+이름이 뭐예요?	lijiaoshengmemingzhi	99
+이름이 뭐예요?	lijiaoshengmemingzi	99
+이름이 뭐예요?	lijiaoshengmeminzhi	99
+이름이 뭐예요?	lijiaoshengmeminzi	99
+이름이 뭐예요?	lijiaoshenmemingzhi	99
+이름이 뭐예요?	lijiaoshenmemingzi	99
+이름이 뭐예요?	lijiaoshenmeminzhi	99
+이름이 뭐예요?	lijiaoshenmeminzi	99
 어디 가	liqula	99
 어디 가	liquna	99
 너 진짜 대단하다	litailifaile	99
@@ -543,9 +656,17 @@ max_phrase_length: 20
 너 진짜 대단하다	litairihaine	99
 너 진짜 대단하다	litairihaire	99
 개쩔	liubi	99
+어느 서버에서 해요?	lizailagefuwuqi	99
+어느 서버에서 해요?	lizailagehuwuqi	99
+어느 서버에서 해요?	lizainagefuwuqi	99
+어느 서버에서 해요?	lizainagehuwuqi	99
 여기서 멀어요?	lizeliyuanma	99
 여기서 멀어요?	lizeniyuanma	99
 여기서 멀어요?	lizeriyuanma	99
+어느 서버에서 해요?	lizhailagefuwuqi	99
+어느 서버에서 해요?	lizhailagehuwuqi	99
+어느 서버에서 해요?	lizhainagefuwuqi	99
+어느 서버에서 해요?	lizhainagehuwuqi	99
 여기서 멀어요?	lizheniyuanma	99
 여기서 멀어요?	lizheriyuanma	99
 요즘 어떻게 지내세요?	lizhuijingguodezengmeyang	99
@@ -581,22 +702,29 @@ max_phrase_length: 20
 내일 시간 있어요?	mingtiangyoushijianma	99
 내일 시간 있어요?	mingtiangyousijiangma	99
 내일 시간 있어요?	mingtiangyousijianma	99
+내일 또 같이 해요	mingtiangzaiyiqiwan	99
+내일 또 같이 해요	mingtiangzhaiyiqiwan	99
 내일 봐요	mingtianjiangba	99
 내일 시간 있어요?	mingtianyoushijiangma	99
 내일 시간 있어요?	mingtianyousijiangma	99
 내일 시간 있어요?	mingtianyousijianma	99
+내일 또 같이 해요	mingtianzhaiyiqiwan	99
 내일 봐요	mintiangjianba	99
 내일 봐요	mintiangjiangba	99
 내일 시간 있어요?	mintiangyoushijiangma	99
 내일 시간 있어요?	mintiangyoushijianma	99
 내일 시간 있어요?	mintiangyousijiangma	99
 내일 시간 있어요?	mintiangyousijianma	99
+내일 또 같이 해요	mintiangzaiyiqiwan	99
+내일 또 같이 해요	mintiangzhaiyiqiwan	99
 내일 봐요	mintianjianba	99
 내일 봐요	mintianjiangba	99
 내일 시간 있어요?	mintianyoushijiangma	99
 내일 시간 있어요?	mintianyoushijianma	99
 내일 시간 있어요?	mintianyousijiangma	99
 내일 시간 있어요?	mintianyousijianma	99
+내일 또 같이 해요	mintianzaiyiqiwan	99
+내일 또 같이 해요	mintianzhaiyiqiwan	99
 오다	nai	99
 哪里	nali	99
 바론	nangjue	99
@@ -604,6 +732,13 @@ max_phrase_length: 20
 男爵	nanjue	99
 어디	nari	99
 你	ni	99
+실력이 좋으시네요	nidadezenfao	99
+실력이 좋으시네요	nidadezengfao	99
+실력이 좋으시네요	nidadezenghao	99
+실력이 좋으시네요	nidadezenhao	99
+실력이 좋으시네요	nidadezhenfao	99
+실력이 좋으시네요	nidadezhengfao	99
+실력이 좋으시네요	nidadezhenghao	99
 전화번호가 몇 번이에요?	nidedianfuafaomashiduosao	99
 전화번호가 몇 번이에요?	nidedianfuafaomashiduoshao	99
 전화번호가 몇 번이에요?	nidedianfuafaomasiduosao	99
@@ -639,9 +774,39 @@ max_phrase_length: 20
 안녕하세요	nifao	99
 안녕 친구야	nifaopengyou	99
 안녕 친구야	nifaopenyou	99
+한국어 할 줄 알아요?	nifuishuofangyuma	99
+한국어 할 줄 알아요?	nifuishuofanyuma	99
+한국어 할 줄 알아요?	nifuishuohangyuma	99
+한국어 할 줄 알아요?	nifuishuohanyuma	99
+한국어 할 줄 알아요?	nifuisuofangyuma	99
+한국어 할 줄 알아요?	nifuisuofanyuma	99
+한국어 할 줄 알아요?	nifuisuohangyuma	99
+한국어 할 줄 알아요?	nifuisuohanyuma	99
 쩐다	nihai	99
 こんにちは	nihao	99
 안녕 친구야	nihaopenyou	99
+한국어 할 줄 알아요?	nihuishuofangyuma	99
+한국어 할 줄 알아요?	nihuishuofanyuma	99
+한국어 할 줄 알아요?	nihuishuohangyuma	99
+한국어 할 줄 알아요?	nihuisuofangyuma	99
+한국어 할 줄 알아요?	nihuisuofanyuma	99
+한국어 할 줄 알아요?	nihuisuohangyuma	99
+한국어 할 줄 알아요?	nihuisuohanyuma	99
+이름이 뭐예요?	nijiaosengmemingzhi	99
+이름이 뭐예요?	nijiaosengmemingzi	99
+이름이 뭐예요?	nijiaosengmeminzhi	99
+이름이 뭐예요?	nijiaosengmeminzi	99
+이름이 뭐예요?	nijiaosenmemingzhi	99
+이름이 뭐예요?	nijiaosenmemingzi	99
+이름이 뭐예요?	nijiaosenmeminzhi	99
+이름이 뭐예요?	nijiaosenmeminzi	99
+이름이 뭐예요?	nijiaoshengmemingzhi	99
+이름이 뭐예요?	nijiaoshengmemingzi	99
+이름이 뭐예요?	nijiaoshengmeminzhi	99
+이름이 뭐예요?	nijiaoshengmeminzi	99
+이름이 뭐예요?	nijiaoshenmemingzhi	99
+이름이 뭐예요?	nijiaoshenmeminzhi	99
+이름이 뭐예요?	nijiaoshenmeminzi	99
 어디 가	niqula	99
 너 진짜 대단하다	nitailifaile	99
 너 진짜 대단하다	nitailifaine	99
@@ -661,9 +826,16 @@ max_phrase_length: 20
 너 진짜 대단하다	nitairihaine	99
 너 진짜 대단하다	nitairihaire	99
 牛	niubi	99
+어느 서버에서 해요?	nizailagefuwuqi	99
+어느 서버에서 해요?	nizailagehuwuqi	99
+어느 서버에서 해요?	nizainagehuwuqi	99
 여기서 멀어요?	nizeliyuanma	99
 여기서 멀어요?	nizeniyuanma	99
 여기서 멀어요?	nizeriyuanma	99
+어느 서버에서 해요?	nizhailagefuwuqi	99
+어느 서버에서 해요?	nizhailagehuwuqi	99
+어느 서버에서 해요?	nizhainagefuwuqi	99
+어느 서버에서 해요?	nizhainagehuwuqi	99
 여기서 멀어요?	nizheliyuanma	99
 여기서 멀어요?	nizheniyuanma	99
 여기서 멀어요?	nizheriyuanma	99
@@ -974,6 +1146,13 @@ max_phrase_length: 20
 为什么	weishenme	99
 我	wo	99
 사랑해요	woaili	99
+한국어 못해요	wobufuifangyu	99
+한국어 못해요	wobufuifanyu	99
+한국어 못해요	wobufuihangyu	99
+한국어 못해요	wobufuihanyu	99
+한국어 못해요	wobuhuifangyu	99
+한국어 못해요	wobuhuifanyu	99
+한국어 못해요	wobuhuihangyu	99
 잘 모르겠어요	wobutaidon	99
 卧槽	wocao	99
 헐	wochao	99
@@ -1015,6 +1194,14 @@ max_phrase_length: 20
 연락할게요	wofuiheninianxi	99
 연락할게요	wofuiheniriangxi	99
 연락할게요	wofuihenirianxi	99
+한국어 조금 할 수 있어요	wofuiyidianfangyu	99
+한국어 조금 할 수 있어요	wofuiyidianfanyu	99
+한국어 조금 할 수 있어요	wofuiyidiangfangyu	99
+한국어 조금 할 수 있어요	wofuiyidiangfanyu	99
+한국어 조금 할 수 있어요	wofuiyidianghangyu	99
+한국어 조금 할 수 있어요	wofuiyidianghanyu	99
+한국어 조금 할 수 있어요	wofuiyidianhangyu	99
+한국어 조금 할 수 있어요	wofuiyidianhanyu	99
 감기 걸렸어요	wogangmaole	99
 감기 걸렸어요	wogangmaone	99
 감기 걸렸어요	wogangmaore	99
@@ -1046,6 +1233,13 @@ max_phrase_length: 20
 연락할게요	wohuiheninianxi	99
 연락할게요	wohuiheniriangxi	99
 연락할게요	wohuihenirianxi	99
+한국어 조금 할 수 있어요	wohuiyidianfangyu	99
+한국어 조금 할 수 있어요	wohuiyidianfanyu	99
+한국어 조금 할 수 있어요	wohuiyidiangfangyu	99
+한국어 조금 할 수 있어요	wohuiyidiangfanyu	99
+한국어 조금 할 수 있어요	wohuiyidianghangyu	99
+한국어 조금 할 수 있어요	wohuiyidianghanyu	99
+한국어 조금 할 수 있어요	wohuiyidianhangyu	99
 오늘 진짜 피곤해요	wojingtianfenglei	99
 오늘 진짜 피곤해요	wojingtianfengnei	99
 오늘 진짜 피곤해요	wojingtianfengrei	99
@@ -1093,6 +1287,49 @@ max_phrase_length: 20
 오늘 진짜 피곤해요	wojintianhengrei	99
 오늘 진짜 피곤해요	wojintianhennei	99
 오늘 진짜 피곤해요	wojintianhenrei	99
+한타 열게요	wokaituangle	99
+한타 열게요	wokaituangne	99
+한타 열게요	wokaituangre	99
+한타 열게요	wokaituanne	99
+한타 열게요	wokaituanre	99
+한글을 읽을 줄 몰라요	wokanbudonfangwen	99
+한글을 읽을 줄 몰라요	wokanbudonfanwen	99
+한글을 읽을 줄 몰라요	wokanbudongfangwen	99
+한글을 읽을 줄 몰라요	wokanbudongfanwen	99
+한글을 읽을 줄 몰라요	wokanbudonghangwen	99
+한글을 읽을 줄 몰라요	wokanbudonhangwen	99
+한글을 읽을 줄 몰라요	wokanbudonhanwen	99
+한글을 읽을 줄 몰라요	wokangbudonfangwen	99
+한글을 읽을 줄 몰라요	wokangbudonfanwen	99
+한글을 읽을 줄 몰라요	wokangbudongfangwen	99
+한글을 읽을 줄 몰라요	wokangbudongfanwen	99
+한글을 읽을 줄 몰라요	wokangbudonghangwen	99
+한글을 읽을 줄 몰라요	wokangbudonghanwen	99
+한글을 읽을 줄 몰라요	wokangbudonhangwen	99
+한글을 읽을 줄 몰라요	wokangbudonhanwen	99
+금방 돌아올게요	womasanfuilai	99
+금방 돌아올게요	womasanfuinai	99
+금방 돌아올게요	womasanfuirai	99
+금방 돌아올게요	womasangfuilai	99
+금방 돌아올게요	womasangfuinai	99
+금방 돌아올게요	womasangfuirai	99
+금방 돌아올게요	womasanghuilai	99
+금방 돌아올게요	womasanghuinai	99
+금방 돌아올게요	womasanghuirai	99
+금방 돌아올게요	womasanhuilai	99
+금방 돌아올게요	womasanhuinai	99
+금방 돌아올게요	womasanhuirai	99
+금방 돌아올게요	womashanfuilai	99
+금방 돌아올게요	womashanfuinai	99
+금방 돌아올게요	womashanfuirai	99
+금방 돌아올게요	womashangfuilai	99
+금방 돌아올게요	womashangfuinai	99
+금방 돌아올게요	womashangfuirai	99
+금방 돌아올게요	womashanghuinai	99
+금방 돌아올게요	womashanghuirai	99
+금방 돌아올게요	womashanhuilai	99
+금방 돌아올게요	womashanhuinai	99
+금방 돌아올게요	womashanhuirai	99
 我们	women	99
 우리	womeng	99
 우리 한타 가자	womengkaituanba	99
@@ -1215,6 +1452,11 @@ max_phrase_length: 20
 无聊	wuliao	99
 노잼	wuniao	99
 노잼	wuriao	99
+다음 판 또 해요	xiabazainai	99
+다음 판 또 해요	xiabazairai	99
+다음 판 또 해요	xiabazhailai	99
+다음 판 또 해요	xiabazhainai	99
+다음 판 또 해요	xiabazhairai	99
 다음 판 하자	xiajuzainai	99
 다음 판 하자	xiajuzairai	99
 다음 판 하자	xiajuzhailai	99
@@ -1869,6 +2111,7 @@ hello	nifao	97
 대박	db	95
 미안해요	dbq	95
 죄송합니다	dbq	95
+나 살아나면 가자	dengwhgl	95
 잠깐만	dengyx	95
 점화	dh	95
 점화	dianh	95
@@ -1887,6 +2130,7 @@ hello	nifao	97
 라인전	duix	95
 팀원 조심해	duiyxx	95
 얼마	duos	95
+나 살아나면 가자	dwhgl	95
 라인전	dx	95
 물건	dx	95
 정글	dy	95
@@ -1902,9 +2146,11 @@ hello	nifao	97
 파밍	fy	95
 서폿	fz	95
 치자	ganb	95
+아까는 제 잘못이에요	ganggswdc	95
 치자	gb	95
 와드 줘	geiwy	95
 물 한 잔 주세요	geiwybs	95
+아까는 제 잘못이에요	ggswdc	95
 축하해	gongx	95
 와드 줘	gwy	95
 물 한 잔 주세요	gwybs	95
@@ -1920,15 +2166,19 @@ hello	nifao	97
 오랜만이에요	hjbjl	95
 귀환	huic	95
 모여	jh	95
+친추 해 주세요	jiawhy	95
 화이팅	jiay	95
 화이팅 우리	jiaywm	95
 모여	jih	95
 망했어	jil	95
 오늘 날씨 진짜 좋아요	jinttqzh	95
+오늘 컨디션이 안 좋아요	jintztbh	95
 망했어	jl	95
 쩐다	jl	95
 오늘 날씨 진짜 좋아요	jttqzh	95
+오늘 컨디션이 안 좋아요	jtztbh	95
 쩐다	juel	95
+친추 해 주세요	jwhy	95
 화이팅	jy	95
 화이팅 우리	jywm	95
 캐리	kal	95
@@ -1955,28 +2205,38 @@ hello	nifao	97
 괜찮아요	mgx	95
 내일 봐요	mingtjb	95
 내일 시간 있어요?	mingtysjm	95
+내일 또 같이 해요	mingtzyqw	95
 지쳤어	ml	95
 금방	ms	95
 내일 봐요	mtjb	95
 내일 시간 있어요?	mtysjm	95
+내일 또 같이 해요	mtzyqw	95
 어디	nal	95
 바론	nanj	95
 개쩔	nb	95
 전화번호가 몇 번이에요?	nddhhmsds	95
+실력이 좋으시네요	nddzh	95
 안녕하세요	nh	95
 안녕 친구야	nhpy	95
+한국어 할 줄 알아요?	nhshym	95
 전화번호가 몇 번이에요?	niddhhmsds	95
+실력이 좋으시네요	niddzh	95
 안녕하세요	nih	95
 안녕 친구야	nihpy	95
+한국어 할 줄 알아요?	nihshym	95
+이름이 뭐예요?	nijsmmz	95
 어디 가	niqn	95
 너 진짜 대단하다	nitlhl	95
 개쩔	niub	95
 요즘 어떻게 지내세요?	nizjgdzmy	95
+어느 서버에서 해요?	nizngfwq	95
 바론	nj	95
+이름이 뭐예요?	njsmmz	95
 어디	nl	95
 어디 가	nqn	95
 너 진짜 대단하다	ntlhl	95
 요즘 어떻게 지내세요?	nzjgdzmy	95
+어느 서버에서 해요?	nzngfwq	95
 친구	pengy	95
 예쁘다	piaol	95
 예쁘다	pl	95
@@ -2047,6 +2307,7 @@ hello	nifao	97
 끝났어	wanl	95
 오후 내내 했어	wanlyxw	95
 잘 자 친구야	wapy	95
+한국어 못해요	wbhhy	95
 잘 모르겠어요	wbtd	95
 헐	wc	95
 잘 먹었습니다	wcbl	95
@@ -2055,18 +2316,23 @@ hello	nifao	97
 감기 걸렸어요	wgml	95
 연락할게요	whhnlx	95
 보고 싶어요	whxn	95
+한국어 조금 할 수 있어요	whydhy	95
 오늘 진짜 피곤해요	wjthl	95
+한글을 읽을 줄 몰라요	wkbdhw	95
+한타 열게요	wktl	95
 끝났어	wl	95
 노잼	wl	95
 오후 내내 했어	wlyxw	95
 우리	wm	95
 우리 한타 가자	wmktb	95
 길을 잃었어요	wmll	95
+금방 돌아올게요	wmshl	95
 우리 승리했어	wmsll	95
 언제 만날까요?	wmsmshjm	95
 우리 같이 밥 먹어요	wmyqcfb	95
 같이 밀어붙이자	wmyqt	95
 사랑해요	woan	95
+한국어 못해요	wobhhy	95
 잘 모르겠어요	wobtd	95
 헐	woc	95
 잘 먹었습니다	wocbl	95
@@ -2074,10 +2340,14 @@ hello	nifao	97
 감기 걸렸어요	wogml	95
 연락할게요	wohhnlx	95
 보고 싶어요	wohxn	95
+한국어 조금 할 수 있어요	wohydhy	95
 오늘 진짜 피곤해요	wojthl	95
+한글을 읽을 줄 몰라요	wokbdhw	95
+한타 열게요	woktl	95
 우리	wom	95
 우리 한타 가자	womktb	95
 길을 잃었어요	womll	95
+금방 돌아올게요	womshl	95
 우리 승리했어	womsll	95
 언제 만날까요?	womsmshjm	95
 우리 같이 밥 먹어요	womyqcfb	95
@@ -2104,7 +2374,9 @@ hello	nifao	97
 나 탑이야	wzsl	95
 나 봇이야	wzxl	95
 나 미드야	wzzl	95
+다음 판 또 해요	xbzl	95
 좋아해	xh	95
+다음 판 또 해요	xiabzl	95
 다음 판 하자	xiajzl	95
 봇	xial	95
 ㅋㅋㅋ	xiaol	95
@@ -2536,22 +2808,30 @@ thanks	xx	93
 택시	chuzuche	12
 포장해 주세요	dabao	12
 전화할게요	dadianhua	12
+기다려	daiji	12
 당연하죠	dangran	12
 걱정돼요	danxin	12
+레벨	dengji	12
 기다려주세요	dengwoyixia	12
 지하철역	ditiezhan	12
+티어	duanwei	12
 고맙습니다	duoxie	12
 메시지 보낼게요	faxinxi	12
+서버	fuwuqi	12
 감기 걸렸어요	ganmaole	12
 보여주세요	geiwokan	12
 버스	gongjiaoche	12
 무서워요	haipa	12
+한국어	hanyu	12
 좋아요	hao	12
 오랜만이에요	haojiubujian	12
 싸요	henpianyi	12
 멋져요	henshuai	12
+후반	houqi	12
 집에 가요	huijia	12
+친추	jiahaoyou	12
 빌려주세요	jiegeiwo	12
+밴	jinyong	12
 회의	kaihui	12
 시험	kaoshi	12
 귀여워요	keai	12
@@ -2560,41 +2840,52 @@ thanks	xx	93
 계산서 주세요	maidan	12
 슬퍼요	nanguo	12
 남자친구	nanpengyou	12
-이름이 뭐예요?	nijiaoshenmemingzi	12
 여자친구	nvpengyou	12
+랭크	paiwei	12
 깎아 주세요	pianyiyidian	12
 예뻐요	piaoliang	12
+초반	qianqi	12
 일어났어요	qichuangle	12
 잘 부탁드립니다	qingduozhijiao	12
 천천히 말해 주세요	qingmanyidian	12
 잠시만요	qingshaodeng	12
 병원 가요	quyiyuan	12
+봇	renji	12
 출근했어요	shangban	12
+승률	shenglv	12
 화나요	shengqi	12
 생일 축하해요	shengrikuaile	12
 실례합니다	shilile	12
+듀오	shuangpai	12
+억제기	shuijing	12
 비싸요	taiguile	12
 대박	taihaole	12
 탱커	tanke	12
 싫어해요	taoyan	12
 날씨	tianqi	12
 날씨 좋아요	tianqihao	12
+핵	waigua	12
 안녕히 계세요	woxianzoule	12
 저도요	woyeshi	12
 심심해요	wuliao	12
 ㅠㅠ	wuwu	12
 퇴근했어요	xiaban	12
+전령	xiaguxianfeng	12
+미니언	xiaobing	12
 비 와요	xiayule	12
 감사합니다	xiexieni	12
 행복해요	xingfu	12
 기분 좋아요	xinqinghao	12
 공부	xuexi	12
 물 주세요	yaoshui	12
+영어	yingyu	12
 같이 갈래요?	yiqiqu	12
 시간 있어요?	youkongma	12
 다시 말해 주세요	zaishuoyibian	12
 이거 뭐예요?	zhegeshishenme	12
 정말요?	zhendema	12
+중반	zhongqi	12
+중국어	zhongwen	12
 숙제	zuoye	12
 좀 도와주세요	banwoyixia	11
 배불러요	baone	11
@@ -2657,11 +2948,15 @@ thanks	xx	93
 당연하죠	danran	11
 당연하죠	danrang	11
 걱정돼요	danxing	11
+레벨	denji	11
 기다려주세요	denwoyixia	11
 지하철역	ditiezan	11
 지하철역	ditiezang	11
 지하철역	ditiezhang	11
+티어	duangwei	11
 무서워요	faipa	11
+한국어	fangyu	11
+한국어	fanyu	11
 좋아요	fao	11
 오랜만이에요	faojiubujian	11
 오랜만이에요	faojiubujiang	11
@@ -2674,6 +2969,7 @@ thanks	xx	93
 싸요	fenpianyi	11
 멋져요	fenshuai	11
 멋져요	fensuai	11
+후반	fouqi	11
 집에 가요	fuijia	11
 감기 걸렸어요	gangmaole	11
 감기 걸렸어요	gangmaone	11
@@ -2684,6 +2980,7 @@ thanks	xx	93
 버스	gongjiaoce	11
 버스	gonjiaoce	11
 버스	gonjiaoche	11
+한국어	hangyu	11
 오랜만이에요	haojiubujiang	11
 메시지 보낼게요	haxingxi	11
 메시지 보낼게요	haxinxi	11
@@ -2693,6 +2990,9 @@ thanks	xx	93
 멋져요	hengsuai	11
 싸요	henpiangyi	11
 멋져요	hensuai	11
+서버	huwuqi	11
+친추	jiafaoyou	11
+밴	jingyong	11
 회의	kaifui	11
 시험	kaosi	11
 ㅠㅠ	kune	11
@@ -2703,23 +3003,9 @@ thanks	xx	93
 슬퍼요	languo	11
 남자친구	lanpengyou	11
 남자친구	lanpenyou	11
+봇	lengji	11
+봇	lenji	11
 연락해 주세요	liangxiwo	11
-이름이 뭐예요?	lijiaosengmemingzhi	11
-이름이 뭐예요?	lijiaosengmemingzi	11
-이름이 뭐예요?	lijiaosengmeminzhi	11
-이름이 뭐예요?	lijiaosengmeminzi	11
-이름이 뭐예요?	lijiaosenmemingzhi	11
-이름이 뭐예요?	lijiaosenmemingzi	11
-이름이 뭐예요?	lijiaosenmeminzhi	11
-이름이 뭐예요?	lijiaosenmeminzi	11
-이름이 뭐예요?	lijiaoshengmemingzhi	11
-이름이 뭐예요?	lijiaoshengmemingzi	11
-이름이 뭐예요?	lijiaoshengmeminzhi	11
-이름이 뭐예요?	lijiaoshengmeminzi	11
-이름이 뭐예요?	lijiaoshenmemingzhi	11
-이름이 뭐예요?	lijiaoshenmemingzi	11
-이름이 뭐예요?	lijiaoshenmeminzhi	11
-이름이 뭐예요?	lijiaoshenmeminzi	11
 여자친구	lvpengyou	11
 여자친구	lvpenyou	11
 계산서 주세요	maidang	11
@@ -2729,21 +3015,6 @@ thanks	xx	93
 남자친구	nanpenyou	11
 연락해 주세요	niangxiwo	11
 연락해 주세요	nianxiwo	11
-이름이 뭐예요?	nijiaosengmemingzhi	11
-이름이 뭐예요?	nijiaosengmemingzi	11
-이름이 뭐예요?	nijiaosengmeminzhi	11
-이름이 뭐예요?	nijiaosengmeminzi	11
-이름이 뭐예요?	nijiaosenmemingzhi	11
-이름이 뭐예요?	nijiaosenmemingzi	11
-이름이 뭐예요?	nijiaosenmeminzhi	11
-이름이 뭐예요?	nijiaosenmeminzi	11
-이름이 뭐예요?	nijiaoshengmemingzhi	11
-이름이 뭐예요?	nijiaoshengmemingzi	11
-이름이 뭐예요?	nijiaoshengmeminzhi	11
-이름이 뭐예요?	nijiaoshengmeminzi	11
-이름이 뭐예요?	nijiaoshenmemingzhi	11
-이름이 뭐예요?	nijiaoshenmeminzhi	11
-이름이 뭐예요?	nijiaoshenmeminzi	11
 여자친구	nvpenyou	11
 깎아 주세요	piangyiyidian	11
 깎아 주세요	piangyiyidiang	11
@@ -2753,6 +3024,7 @@ thanks	xx	93
 예뻐요	piaoniang	11
 예뻐요	piaorian	11
 예뻐요	piaoriang	11
+초반	qiangqi	11
 일어났어요	qichuangne	11
 일어났어요	qichuangre	11
 일어났어요	qichuanle	11
@@ -2781,6 +3053,7 @@ thanks	xx	93
 잠시만요	qinsaodeng	11
 잠시만요	qinshaoden	11
 잠시만요	qinshaodeng	11
+봇	rengji	11
 연락해 주세요	riangxiwo	11
 연락해 주세요	rianxiwo	11
 출근했어요	sanban	11
@@ -2790,32 +3063,43 @@ thanks	xx	93
 생일 축하해요	senglikuaile	11
 생일 축하해요	senglikuaine	11
 생일 축하해요	senglikuaire	11
+승률	senglv	11
+승률	sengnv	11
 화나요	sengqi	11
 생일 축하해요	sengrikuaile	11
 생일 축하해요	sengrikuaine	11
 생일 축하해요	sengrikuaire	11
+승률	sengrv	11
 생일 축하해요	senlikuaile	11
 생일 축하해요	senlikuaine	11
 생일 축하해요	senlikuaire	11
+승률	senlv	11
+승률	sennv	11
 화나요	senqi	11
 생일 축하해요	senrikuaile	11
 생일 축하해요	senrikuaine	11
 생일 축하해요	senrikuaire	11
+승률	senrv	11
 출근했어요	shanban	11
 출근했어요	shanbang	11
 출근했어요	shangbang	11
 생일 축하해요	shenglikuaile	11
 생일 축하해요	shenglikuaine	11
 생일 축하해요	shenglikuaire	11
+승률	shengnv	11
 생일 축하해요	shengrikuaine	11
 생일 축하해요	shengrikuaire	11
+승률	shengrv	11
 생일 축하해요	shenlikuaile	11
 생일 축하해요	shenlikuaine	11
 생일 축하해요	shenlikuaire	11
+승률	shenlv	11
+승률	shennv	11
 화나요	shenqi	11
 생일 축하해요	shenrikuaile	11
 생일 축하해요	shenrikuaine	11
 생일 축하해요	shenrikuaire	11
+승률	shenrv	11
 실례합니다	shiline	11
 실례합니다	shilire	11
 실례합니다	shinile	11
@@ -2824,6 +3108,8 @@ thanks	xx	93
 실례합니다	shirile	11
 실례합니다	shirine	11
 실례합니다	shirire	11
+듀오	shuanpai	11
+억제기	shuijin	11
 실례합니다	silile	11
 실례합니다	siline	11
 실례합니다	silire	11
@@ -2833,6 +3119,10 @@ thanks	xx	93
 실례합니다	sirile	11
 실례합니다	sirine	11
 실례합니다	sirire	11
+듀오	suangpai	11
+듀오	suanpai	11
+억제기	suijin	11
+억제기	suijing	11
 대박	taifaole	11
 대박	taifaone	11
 대박	taifaore	11
@@ -2860,6 +3150,14 @@ thanks	xx	93
 심심해요	wuniao	11
 심심해요	wuriao	11
 퇴근했어요	xiabang	11
+전령	xiaguxianfen	11
+전령	xiaguxiangfen	11
+전령	xiaguxiangfeng	11
+전령	xiaguxianghen	11
+전령	xiaguxiangheng	11
+전령	xiaguxianhen	11
+전령	xiaguxianheng	11
+미니언	xiaobin	11
 비 와요	xiayune	11
 비 와요	xiayure	11
 감사합니다	xiexieli	11
@@ -2900,42 +3198,62 @@ thanks	xx	93
 이거 뭐예요?	zhegesishengme	11
 이거 뭐예요?	zhegesishenme	11
 정말요?	zhengdema	11
+중반	zhonqi	11
+중국어	zhonwen	11
 숙제	zhuoye	11
+중반	zongqi	11
+중국어	zongwen	11
+중반	zonqi	11
+중국어	zonwen	11
 아이고	aiya	10
 팔	ba	10
 도와줘	bangbangwo	10
+겁내지 마	biepa	10
+경기	bisai	10
+모르겠어요	buqingchu	10
 아파요	bushufu	10
 싫어요	buyao	10
 아니에요	buyongxie	10
+타 부수자	chaita	10
 완전 귀여워요	chaojikeai	10
 와드	chayan	10
 잘 먹었습니다	chibaole	10
 밥 먹을래요?	chifan	10
 밥 먹었어요?	chifanlema	10
+잘못 눌렀어	dacuole	10
+대기	daiji	10
 바론	dalong	10
 그럼요	dangran	10
 집에 왔어요	daojiale	10
 남동생	didi	10
 맞아요	dui	10
+잘 부탁해	duoguanzhao	10
 배 아파요	duziteng	10
 이	er	10
+잘못 보냈어	facuole	10
 문자할게요	faduanxin	10
+차단	fengjin	10
+부활	fuhuo	10
 저기요	fuwuyuan	10
 서포터	fuzhu	10
 알려줘	gaosuwo	10
 오빠	gege	10
 일	gongzuo	10
+한국말	hanyu	10
 멋있어요	haokan	10
 ㅋㅋ	hehe	10
 잘생겼어요	henshuai	10
 어서 오세요	huanying	10
+친구 신청	jiahaoyou	10
 만날래요?	jiangemian	10
 가족	jiaren	10
 공항	jichang	10
 언니	jiejie	10
 가까워요	jinma	10
+금지	jinyong	10
 긴장돼요	jinzhang	10
 구	jiu	10
+농담이야	kaiwanxiao	10
 기뻐요	kaixin	10
 귀엽다	keai	10
 좀 도와줄래요?	keyibangwoma	10
@@ -2943,14 +3261,19 @@ thanks	xx	93
 와요	lai	10
 선생님	laoshi	10
 육	liu	10
+일반 게임	lurenju	10
 여동생	meimei	10
 괜찮습니다	meishi	10
 시간 없어요	meishijian	10
 내일 봐요	mingtianjian	10
 내일 시간 있어요?	mingtianyoukongma	10
+오지 마	nibuyaolai	10
 몇 살이에요?	niduodale	10
+빨리 가	nikuaizou	10
 네 말이 맞아요	nishuodedui	10
+뭐라고요	nishuoshenme	10
 최고예요	nizuibang	10
+뭘 겁내	pashenme	10
 좀 깎아 주세요	pianyiyidian	10
 칠	qi	10
 주세요	qing	10
@@ -2968,13 +3291,16 @@ thanks	xx	93
 못 알아들었어요	tingbudong	10
 머리 아파요	touteng	10
 늦어서 미안해요	wochidaole	10
+내가 갈게	wolai	10
 저는 중국 사람이에요	woshizhongguoren	10
 나도	woyeshi	10
 오	wu	10
 다음에 봐요	xiacijian	10
 다음 주	xiagexingqi	10
+보고 싶어	xiangni	10
 용	xiaolong	10
 좋아요	xihuan	10
+신호	xinhao	10
 기분이 안 좋아요	xinqingbuhao	10
 샤워했어요	xizao	10
 선배	xuezhang	10
@@ -2988,11 +3314,13 @@ thanks	xx	93
 안녕히 가세요	zaijian	10
 좋은 아침이에요	zaoshanghao	10
 왜 그래요?	zenmele	10
+나쁘지 않네	zhenbucuo	10
 정말 고마워요	zhendeganxieni	10
 미드	zhonglu	10
 주말에	zhoumo	10
 주말에 뭐 해요?	zhoumoganma	10
 갱	zhuaren	10
+행운을 빌어	zhunihaoyun	10
 짱	zuibang	10
 잘 지냈어요	zuijinzenmeyang	10
 무슨 일 해요?	zuoshenmegongzuo	10
@@ -3001,9 +3329,15 @@ thanks	xx	93
 도와줘	bangbanwo	9
 도와주세요	bangbw	9
 도와주세요	bbw	9
+경기	bishai	9
+모르겠어요	buqinchu	9
+모르겠어요	buqincu	9
+잘 모르겠어	buqingchu	9
+모르겠어요	buqingcu	9
 아파요	bushuhu	9
 아파요	busufu	9
 아파요	busuhu	9
+타 부수자	caita	9
 완전 귀여워요	caojikeai	9
 와드	cayan	9
 잘 먹었습니다	chibaone	9
@@ -3041,6 +3375,11 @@ thanks	xx	93
 밥 먹었어요?	cihanlema	9
 밥 먹었어요?	cihannema	9
 밥 먹었어요?	cihanrema	9
+잘못 눌렀어	dachuole	9
+잘못 눌렀어	dachuone	9
+잘못 눌렀어	dachuore	9
+잘못 눌렀어	dacuone	9
+잘못 눌렀어	dacuore	9
 바론	dalon	9
 그럼요	danglan	9
 그럼요	danglang	9
@@ -3056,26 +3395,40 @@ thanks	xx	93
 바론	daron	9
 바론	darong	9
 얼마예요?	dsq	9
+잘 부탁해	duoguangzao	9
+잘 부탁해	duoguangzhao	9
+잘 부탁해	duoguanzao	9
 얼마예요?	duosq	9
 배 아파요	duzhiten	9
 배 아파요	duzhiteng	9
 배 아파요	duziten	9
 배고파요	el	9
+잘못 보냈어	fachuole	9
+잘못 보냈어	fachuone	9
+잘못 보냈어	fachuore	9
+잘못 보냈어	facuone	9
+잘못 보냈어	facuore	9
 문자할게요	faduangxin	9
 문자할게요	faduangxing	9
 문자할게요	faduanxing	9
+한국말	fangyu	9
+한국말	fanyu	9
 멋있어요	faokan	9
 멋있어요	faokang	9
 감사드립니다	fcgx	9
 ㅋㅋ	fefe	9
 ㅋㅋ	fehe	9
 감사드립니다	feicgx	9
+차단	fengjing	9
 잘생겼어요	fengshuai	9
 잘생겼어요	fengsuai	9
+차단	fenjin	9
+차단	fenjing	9
 잘생겼어요	fenshuai	9
 잘생겼어요	fensuai	9
 어서 오세요	fuangying	9
 어서 오세요	fuanying	9
+부활	fufuo	9
 여기요	fuwy	9
 서포터	fuzu	9
 여기요	fwy	9
@@ -3085,18 +3438,30 @@ thanks	xx	93
 일	gonzhuo	9
 일	gonzuo	9
 알려주세요	gsw	9
+잘못 보냈어	hachuole	9
+잘못 보냈어	hachuone	9
+잘못 보냈어	hachuore	9
+잘못 보냈어	hacuole	9
+잘못 보냈어	hacuone	9
+잘못 보냈어	hacuore	9
 문자할게요	haduangxin	9
 문자할게요	haduangxing	9
 문자할게요	haduanxin	9
 문자할게요	haduanxing	9
 ㅋㅋ	hah	9
+한국말	hangyu	9
 맛있어요	haoc	9
 멋있어요	haokang	9
+친구	haoyou	9
 맛있어요	hc	9
 ㅋㅋ	hefe	9
 ㅎㅎ	heh	9
+차단	hengjin	9
+차단	hengjing	9
 잘생겼어요	hengshuai	9
 잘생겼어요	hengsuai	9
+차단	henjin	9
+차단	henjing	9
 추워요	henl	9
 더워요	henr	9
 잘생겼어요	hensuai	9
@@ -3105,10 +3470,13 @@ thanks	xx	93
 추워요	hl	9
 더워요	hr	9
 어서 오세요	huangying	9
+부활	hufuo	9
+부활	huhuo	9
 저기요	huwuyuan	9
 서포터	huzhu	9
 서포터	huzu	9
 몇 시예요?	jdl	9
+친구 신청	jiafaoyou	9
 가족	jialen	9
 가족	jialeng	9
 만날래요?	jiangemiang	9
@@ -3120,6 +3488,7 @@ thanks	xx	93
 공항	jichan	9
 몇 시예요?	jidl	9
 가까워요	jingma	9
+금지	jingyong	9
 긴장돼요	jingzan	9
 긴장돼요	jingzang	9
 긴장돼요	jingzhan	9
@@ -3136,16 +3505,32 @@ thanks	xx	93
 빨리 와요	kuaidianrai	9
 선생님	laosi	9
 피곤해요	leil	9
+오지 마	libuyaolai	9
+오지 마	libuyaonai	9
+오지 마	libuyaorai	9
 몇 살이에요?	liduodale	9
 몇 살이에요?	liduodane	9
 몇 살이에요?	liduodare	9
+빨리 가	likuaizhou	9
+빨리 가	likuaizou	9
 네 말이 맞아요	lishuodedui	9
+뭐라고요	lishuosengme	9
+뭐라고요	lishuosenme	9
+뭐라고요	lishuoshengme	9
+뭐라고요	lishuoshenme	9
 네 말이 맞아요	lisuodedui	9
+뭐라고요	lisuosengme	9
+뭐라고요	lisuosenme	9
+뭐라고요	lisuoshengme	9
+뭐라고요	lisuoshenme	9
 최고예요	lizhuiban	9
 최고예요	lizhuibang	9
 최고예요	lizuiban	9
 최고예요	lizuibang	9
 피곤해요	ll	9
+일반 게임	lulengju	9
+일반 게임	lulenju	9
+일반 게임	lurengju	9
 시간 없어요	meishijiang	9
 괜찮습니다	meisi	9
 시간 없어요	meisijian	9
@@ -3167,13 +3552,32 @@ thanks	xx	93
 와요	nai	9
 선생님	naoshi	9
 선생님	naosi	9
+오지 마	nibuyaonai	9
+오지 마	nibuyaorai	9
 몇 살이에요?	niduodane	9
 몇 살이에요?	niduodare	9
+빨리 가	nikuaizhou	9
+뭐라고요	nishuosengme	9
+뭐라고요	nishuosenme	9
+뭐라고요	nishuoshengme	9
+뭐라고	nishuoshenme	9
 네 말이 맞아요	nisuodedui	9
+뭐라고요	nisuosengme	9
+뭐라고요	nisuosenme	9
+뭐라고요	nisuoshengme	9
+뭐라고요	nisuoshenme	9
 육	niu	9
 최고예요	nizhuiban	9
 최고예요	nizhuibang	9
 최고예요	nizuiban	9
+일반 게임	nulengju	9
+일반 게임	nulenju	9
+일반 게임	nurengju	9
+일반 게임	nurenju	9
+래더	paiwei	9
+뭘 겁내	pasengme	9
+뭘 겁내	pasenme	9
+뭘 겁내	pashengme	9
 좀 깎아 주세요	piangyiyidian	9
 좀 깎아 주세요	piangyiyidiang	9
 좀 깎아 주세요	pianyiyidiang	9
@@ -3185,6 +3589,10 @@ thanks	xx	93
 선생님	raoshi	9
 선생님	raosi	9
 육	riu	9
+일반 게임	rulengju	9
+일반 게임	rulenju	9
+일반 게임	rurengju	9
+일반 게임	rurenju	9
 삼	sang	9
 탑	sanglu	9
 탑	sangnu	9
@@ -3233,8 +3641,11 @@ thanks	xx	93
 늦어서 미안해요	wocidaole	9
 늦어서 미안해요	wocidaone	9
 늦어서 미안해요	wocidaore	9
+내가 갈게	wonai	9
+내가 갈게	worai	9
 저는 중국 사람이에요	woshizhongguolen	9
 저는 중국 사람이에요	woshizhongguoleng	9
+중국인이에요	woshizhongguoren	9
 저는 중국 사람이에요	woshizhongguoreng	9
 저는 중국 사람이에요	woshizhonguolen	9
 저는 중국 사람이에요	woshizhonguoleng	9
@@ -3272,7 +3683,10 @@ thanks	xx	93
 다음에 봐요	xiachijiang	9
 다음에 봐요	xiacijiang	9
 다음 주	xiagexinqi	9
+보고 싶어	xiangli	9
 보고 싶어요	xiangn	9
+보고 싶어	xianli	9
+보고 싶어	xianni	9
 용	xiaolon	9
 용	xiaonon	9
 용	xiaonong	9
@@ -3282,6 +3696,9 @@ thanks	xx	93
 좋아요	xifuang	9
 좋아해요	xih	9
 좋아요	xihuang	9
+신호	xinfao	9
+신호	xingfao	9
+신호	xinghao	9
 기분이 안 좋아요	xingqinbufao	9
 기분이 안 좋아요	xingqinbuhao	9
 기분이 안 좋아요	xingqingbufao	9
@@ -3329,10 +3746,14 @@ thanks	xx	93
 좋은 아침이에요	zaoshanhao	9
 최고	zb	9
 진짜요?	zdm	9
+나쁘지 않네	zenbuchuo	9
+나쁘지 않네	zenbucuo	9
 정말 고마워요	zendegangxieli	9
 정말 고마워요	zendegangxieni	9
 정말 고마워요	zendeganxieli	9
 정말 고마워요	zendeganxieni	9
+나쁘지 않네	zengbuchuo	9
+나쁘지 않네	zengbucuo	9
 정말 고마워요	zengdegangxieli	9
 정말 고마워요	zengdegangxieni	9
 정말 고마워요	zengdeganxieli	9
@@ -3354,10 +3775,14 @@ thanks	xx	93
 좋은 아침이에요	zhaoshangfao	9
 좋은 아침이에요	zhaoshanghao	9
 좋은 아침이에요	zhaoshanhao	9
+나쁘지 않네	zhenbuchuo	9
+괜찮네	zhenbucuo	9
 정말 고마워요	zhendegangxieli	9
 정말 고마워요	zhendegangxieni	9
 정말 고마워요	zhendeganxieli	9
 진짜요?	zhendm	9
+나쁘지 않네	zhengbuchuo	9
+나쁘지 않네	zhengbucuo	9
 정말 고마워요	zhengdegangxieli	9
 정말 고마워요	zhengdegangxieni	9
 정말 고마워요	zhengdeganxieli	9
@@ -3387,6 +3812,9 @@ thanks	xx	93
 잘 지냈어요	zhuijinzenmeyang	9
 잘 지냈어요	zhuijinzhengmeyang	9
 잘 지냈어요	zhuijinzhenmeyang	9
+행운을 빌어	zhulifaoyun	9
+행운을 빌어	zhulihaoyun	9
+행운을 빌어	zhunifaoyun	9
 무슨 일 해요?	zhuosengmegongzhuo	9
 무슨 일 해요?	zhuosengmegongzuo	9
 무슨 일 해요?	zhuosengmegonzhuo	9
@@ -3427,6 +3855,10 @@ thanks	xx	93
 잘 지냈어요	zuijinzengmeyang	9
 잘 지냈어요	zuijinzhengmeyang	9
 잘 지냈어요	zuijinzhenmeyang	9
+행운을 빌어	zulifaoyun	9
+행운을 빌어	zulihaoyun	9
+행운을 빌어	zunifaoyun	9
+행운을 빌어	zunihaoyun	9
 무슨 일 해요?	zuosengmegongzhuo	9
 무슨 일 해요?	zuosengmegongzuo	9
 무슨 일 해요?	zuosengmegonzhuo	9
@@ -3447,6 +3879,9 @@ thanks	xx	93
 나빠요	buhao	8
 별로예요	buhaokan	8
 천만에요	bukeqi	8
+잘 모르겠어	buqinchu	8
+잘 모르겠어	buqincu	8
+잘 모르겠어	buqingcu	8
 아니	bushi	8
 안 돼요	buxing	8
 하지 마세요	buyao	8
@@ -3470,6 +3905,7 @@ thanks	xx	93
 얼마야?	duoshaoqian	8
 얼마나 멀어요?	duoyuan	8
 문자 보낼게요	faduanxin	8
+친구	faoyou	8
 열이 나요	fashao	8
 카톡 보낼게요	faxinxi	8
 정말 감사합니다	feichangganxie	8
@@ -3506,11 +3942,26 @@ thanks	xx	93
 와이프	laopo	8
 힘들어요	leile	8
 연락해	lianxiwo	8
+뭐라고	lishuosengme	8
+뭐라고	lishuosenme	8
+뭐라고	lishuoshengme	8
+뭐라고	lishuoshenme	8
+뭐라고	lisuosengme	8
+뭐라고	lisuosenme	8
+뭐라고	lisuoshengme	8
+뭐라고	lisuoshenme	8
 계산할게요	maidan	8
 속상해요	nanguo	8
 안녕하세요	nihaoma	8
 이름이 뭐야?	nijiaoshenmemingzi	8
 맞는 말이네요	nishuodedui	8
+뭐라고	nishuosengme	8
+뭐라고	nishuosenme	8
+뭐라고	nishuoshengme	8
+뭐라고	nisuosengme	8
+뭐라고	nisuosenme	8
+뭐라고	nisuoshengme	8
+뭐라고	nisuoshenme	8
 짱이에요	nizuibang	8
 예뻐	piaoliang	8
 일어났어	qichuangle	8
@@ -3539,6 +3990,37 @@ thanks	xx	93
 위챗	weixin	8
 이해가 안 돼요	wobudong	8
 늦었어 미안	wochidaole	8
+중국인이에요	woshizhongguolen	8
+중국인이에요	woshizhongguoleng	8
+중국인이에요	woshizhongguoreng	8
+중국인이에요	woshizhonguolen	8
+중국인이에요	woshizhonguoleng	8
+중국인이에요	woshizhonguoren	8
+중국인이에요	woshizhonguoreng	8
+중국인이에요	woshizongguolen	8
+중국인이에요	woshizongguoleng	8
+중국인이에요	woshizongguoren	8
+중국인이에요	woshizongguoreng	8
+중국인이에요	woshizonguolen	8
+중국인이에요	woshizonguoleng	8
+중국인이에요	woshizonguoren	8
+중국인이에요	woshizonguoreng	8
+중국인이에요	wosizhongguolen	8
+중국인이에요	wosizhongguoleng	8
+중국인이에요	wosizhongguoren	8
+중국인이에요	wosizhongguoreng	8
+중국인이에요	wosizhonguolen	8
+중국인이에요	wosizhonguoleng	8
+중국인이에요	wosizhonguoren	8
+중국인이에요	wosizhonguoreng	8
+중국인이에요	wosizongguolen	8
+중국인이에요	wosizongguoleng	8
+중국인이에요	wosizongguoren	8
+중국인이에요	wosizongguoreng	8
+중국인이에요	wosizonguolen	8
+중국인이에요	wosizonguoleng	8
+중국인이에요	wosizonguoren	8
+중국인이에요	wosizonguoreng	8
 먼저 갈게요	woxianzoule	8
 이걸로 할게요	woyaozhege	8
 아래	xia	8
@@ -3567,6 +4049,13 @@ thanks	xx	93
 앞에 있어요	zaiqianmian	8
 일찍	zaodian	8
 좋은 아침	zaoshanghao	8
+괜찮네	zenbuchuo	8
+괜찮네	zenbucuo	8
+괜찮네	zengbuchuo	8
+괜찮네	zengbucuo	8
+괜찮네	zhenbuchuo	8
+괜찮네	zhengbuchuo	8
+괜찮네	zhengbucuo	8
 빨리 나으세요	zhunizaorikangfu	8
 도와줘	zhushou	8
 왼쪽	zuobian	8
@@ -3628,6 +4117,7 @@ thanks	xx	93
 전화해	dadianfua	7
 전화해	dadiangfua	7
 전화해	dadianghua	7
+기다려	daij	7
 물론이죠	danglan	7
 물론이죠	danglang	7
 당연하죠	dangr	7
@@ -3648,6 +4138,7 @@ thanks	xx	93
 잠깐만요	dendeng	7
 기다려 주세요	dengden	7
 잠깐만요	dengden	7
+레벨	dengj	7
 오래 기다렸어요	denglefengjiu	7
 오래 기다렸어요	denglefenjiu	7
 오래 기다렸어요	denglehengjiu	7
@@ -3684,12 +4175,16 @@ thanks	xx	93
 적	dileng	7
 적	direng	7
 지하철역	ditz	7
+기다려	dj	7
+레벨	dj	7
 당연하죠	dr	7
 지하철역	dtz	7
+티어	duanw	7
 얼마야?	duosaoqian	7
 얼마야?	duosaoqiang	7
 얼마야?	duoshaoqiang	7
 고맙습니다	duox	7
+티어	dw	7
 기다려주세요	dwyx	7
 걱정돼요	dx	7
 고맙습니다	dx	7
@@ -3742,6 +4237,8 @@ thanks	xx	93
 기차역	fuochezang	7
 기차역	fuochezhan	7
 기차역	fuochezhang	7
+서버	fuwq	7
+서버	fwq	7
 메시지 보낼게요	fxx	7
 감기 걸렸어요	ganml	7
 보여주세요	geiwk	7
@@ -3761,6 +4258,7 @@ thanks	xx	93
 문자 보낼게요	haduanxin	7
 문자 보낼게요	haduanxing	7
 무서워요	haip	7
+한국어	hany	7
 맛있다	haoci	7
 좀 나아졌어요?	haodianglema	7
 좀 나아졌어요?	haodiangnema	7
@@ -3793,8 +4291,10 @@ thanks	xx	93
 레드	honbafu	7
 레드	honbahu	7
 레드	hongbahu	7
+후반	houq	7
 무서워요	hp	7
 싸요	hpy	7
+후반	hq	7
 멋져요	hs	7
 환영해요	huangying	7
 리콜	huicen	7
@@ -3810,7 +4310,10 @@ thanks	xx	93
 기차역	huochezan	7
 기차역	huochezang	7
 기차역	huochezhang	7
+한국어	hy	7
 빌려주세요	jgw	7
+친추	jhy	7
+친추	jiahy	7
 만나자	jiangemiang	7
 만나자	jianggemian	7
 만나자	jianggemiang	7
@@ -3825,7 +4328,9 @@ thanks	xx	93
 징크스	jingkeshi	7
 징크스	jinkeshi	7
 징크스	jinkesi	7
+밴	jiny	7
 살려줘	jiumin	7
+밴	jy	7
 귀여워요	ka	7
 회의 중이에요	kaifui	7
 회의	kaih	7
@@ -3919,15 +4424,14 @@ thanks	xx	93
 이름이 뭐야?	nijiaoshenmemingzhi	7
 이름이 뭐야?	nijiaoshenmeminzhi	7
 이름이 뭐야?	nijiaoshenmeminzi	7
-이름이 뭐예요?	nijsmmz	7
 맞는 말이네요	nisuodedui	7
 짱이에요	nizhuiban	7
 짱이에요	nizhuibang	7
 짱이에요	nizuiban	7
-이름이 뭐예요?	njsmmz	7
 남자친구	npy	7
 여자친구	npy	7
 여자친구	nvpy	7
+랭크	paiw	7
 깎아 주세요	pianyyd	7
 예뻐요	piaol	7
 예뻐	piaolian	7
@@ -3936,9 +4440,11 @@ thanks	xx	93
 예뻐	piaorian	7
 예뻐	piaoriang	7
 예뻐요	pl	7
+랭크	pw	7
 깎아 주세요	pyyd	7
 일어났어요	qcl	7
 잘 부탁드립니다	qdzj	7
+초반	qianq	7
 일어났어	qichuangne	7
 일어났어	qichuangre	7
 일어났어	qichuanle	7
@@ -3979,6 +4485,7 @@ thanks	xx	93
 앉으세요	qinzhuo	7
 앉으세요	qinzuo	7
 천천히 말해 주세요	qmyd	7
+초반	qq	7
 잠시만요	qsd	7
 영화 보러 갈래요?	qukandiangying	7
 영화 보러 갈래요?	qukangdiangying	7
@@ -3996,8 +4503,10 @@ thanks	xx	93
 힘들어요	reile	7
 힘들어요	reine	7
 힘들어요	reire	7
+봇	renj	7
 연락해	riangxiwo	7
 연락해	rianxiwo	7
+봇	rj	7
 위	san	7
 위	sang	7
 지난주	sangexingqi	7
@@ -4043,6 +4552,7 @@ thanks	xx	93
 지난주	shangexinqi	7
 지난주	shanggexinqi	7
 수업	shanke	7
+승률	shengl	7
 생일	shengli	7
 생일 축하합니다	shenglikuaile	7
 생일 축하합니다	shenglikuaine	7
@@ -4072,8 +4582,13 @@ thanks	xx	93
 생일 축하합니다	shenrikuaine	7
 생일 축하합니다	shenrikuaire	7
 실례합니다	shill	7
+듀오	shuangp	7
+억제기	shuij	7
 패배	sibai	7
+억제기	sj	7
+승률	sl	7
 실례합니다	sll	7
+듀오	sp	7
 화나요	sq	7
 생일 축하해요	srkl	7
 카드로 할게요	suaka	7
@@ -4100,6 +4615,7 @@ thanks	xx	93
 팀전	tuanzang	7
 팀전	tuanzhang	7
 싫어해요	ty	7
+핵	waig	7
 잘 자요	wanang	7
 늦게	wandiang	7
 안녕하세요	wansanfao	7
@@ -4110,6 +4626,7 @@ thanks	xx	93
 안녕하세요	wanshangfao	7
 안녕하세요	wanshanhao	7
 위챗	weixing	7
+핵	wg	7
 심심해요	wl	7
 이해가 안 돼요	wobudon	7
 늦었어 미안	wochidaone	7
@@ -4136,17 +4653,21 @@ thanks	xx	93
 ㅠㅠ	ww	7
 안녕히 계세요	wxzl	7
 저도요	wys	7
+미니언	xb	7
 퇴근했어요	xb	7
 행복해요	xf	7
+전령	xgxf	7
 퇴근했어요	xiab	7
 또 봐요	xiachijian	7
 또 봐요	xiachijiang	7
 또 봐요	xiacijiang	7
+전령	xiagxf	7
 부러워요	xiangmu	7
 왼쪽으로 가세요	xiangzhuoguai	7
 오른쪽으로 가세요	xianyouguai	7
 왼쪽으로 가세요	xianzhuoguai	7
 왼쪽으로 가세요	xianzuoguai	7
+미니언	xiaob	7
 조심해	xiaoxing	7
 눈 와요	xiaxuene	7
 눈 와요	xiaxuere	7
@@ -4203,6 +4724,7 @@ thanks	xx	93
 나중에 연락해요	yihouriangxi	7
 나중에 연락해요	yihourianxi	7
 이따가 봐요	yihuierjiang	7
+영어	yingy	7
 같이 밥 먹어요	yiqichifangba	7
 같이 밥 먹어요	yiqichihanba	7
 같이 밥 먹어요	yiqichihangba	7
@@ -4217,6 +4739,7 @@ thanks	xx	93
 같이 갈래요?	yqq	7
 물 주세요	ys	7
 데이트	yuefui	7
+영어	yy	7
 어디야?	zailali	7
 어디야?	zailani	7
 어디야?	zailari	7
@@ -4258,6 +4781,8 @@ thanks	xx	93
 좋은 아침	zhaoshanhao	7
 이거 뭐예요?	zhegssm	7
 정말요?	zhendm	7
+중반	zhongq	7
+중국어	zhongw	7
 빨리 나으세요	zhulizaolikanfu	7
 빨리 나으세요	zhulizaolikangfu	7
 빨리 나으세요	zhulizaolikanghu	7
@@ -4313,6 +4838,7 @@ thanks	xx	93
 직업이 뭐예요?	zhuoshenmegonzhuo	7
 직업이 뭐예요?	zhuoshenmegonzuo	7
 도와줘	zhusou	7
+중반	zq	7
 다시 말해 주세요	zsyb	7
 빨리 나으세요	zulizaolikanfu	7
 빨리 나으세요	zulizaolikangfu	7
@@ -4368,6 +4894,7 @@ thanks	xx	93
 숙제	zuoy	7
 도와줘	zushou	7
 도와줘	zusou	7
+중국어	zw	7
 숙제	zy	7
 보고서	baogao	6
 배불러	baole	6
@@ -4466,6 +4993,11 @@ thanks	xx	93
 죄송해요	baoqiang	5
 배불러	baore	5
 도와줘	bbw	5
+겁내지 마	biep	5
+경기	bis	5
+겁내지 마	bp	5
+모르겠어요	bqc	5
+경기	bs	5
 아파요	bsf	5
 맛없다	bufaochi	5
 맛없다	bufaoci	5
@@ -4473,6 +5005,7 @@ thanks	xx	93
 안 예뻐요	bufaokang	5
 맛없다	buhaoci	5
 안 예뻐요	buhaokang	5
+모르겠어요	buqc	5
 아파요	busf	5
 싫어요	buy	5
 아니에요	buyx	5
@@ -4486,6 +5019,7 @@ thanks	xx	93
 밥 먹었어요?	cflm	5
 메뉴판 주세요	chaidan	5
 메뉴판 주세요	chaidang	5
+타 부수자	chait	5
 완전 귀여워요	chaojka	5
 와드	chay	5
 잘 먹었습니다	chibl	5
@@ -4500,24 +5034,32 @@ thanks	xx	93
 밥 먹자	cihan	5
 밥 먹자	cihang	5
 완전 귀여워요	cjka	5
+타 부수자	ct	5
 와드	cy	5
+잘못 눌렀어	dacl	5
+대기	daij	5
 바론	dal	5
 그럼요	dangr	5
 집에 왔어요	daojl	5
 세일해요	daze	5
 할인 중이에요	daze	5
 할인돼요?	dazhe	5
+잘못 눌렀어	dcl	5
 남동생	dd	5
 잠깐	denden	5
 잠깐	dendeng	5
 잠깐	dengden	5
+잘 부탁해	dgz	5
 남동생	did	5
 적	difang	5
+대기	dj	5
 집에 왔어요	djl	5
 바론	dl	5
 그럼요	dr	5
+잘 부탁해	duogz	5
 배 아파요	duzt	5
 배 아파요	dzt	5
+잘못 보냈어	facl	5
 문자할게요	fadx	5
 겁나요	faipa	5
 수비	fangshou	5
@@ -4529,9 +5071,14 @@ thanks	xx	93
 친한 친구	faopengyou	5
 친한 친구	faopenyou	5
 베이가	faqiu	5
+잘못 보냈어	fcl	5
 문자할게요	fdx	5
 술 마실래요?	fejiu	5
+차단	fengj	5
+부활	fh	5
+차단	fj	5
 뒤	fou	5
+부활	fuh	5
 저기요	fuwy	5
 서포터	fuz	5
 저기요	fwy	5
@@ -4550,6 +5097,7 @@ thanks	xx	93
 알려줘	gsw	5
 일	gz	5
 애쉬	hanbing	5
+한국말	hany	5
 한판 더	hanyipan	5
 오랜만	haojiubujiang	5
 멋있어요	haok	5
@@ -4562,9 +5110,12 @@ thanks	xx	93
 어서 오세요	huany	5
 돌아와요	hui	5
 어서 오세요	hy	5
+한국말	hy	5
 공항	jc	5
 만날래요?	jgm	5
+친구 신청	jhy	5
 야근해요	jiabang	5
+친구 신청	jiahy	5
 만날래요?	jiangm	5
 가족	jiar	5
 공항	jic	5
@@ -4575,13 +5126,16 @@ thanks	xx	93
 가까이 있어요	jingma	5
 공격	jingon	5
 가까워요	jinm	5
+금지	jiny	5
 긴장돼요	jinz	5
 언니	jj	5
 가까워요	jm	5
 가족	jr	5
+금지	jy	5
 긴장돼요	jz	5
 귀엽다	ka	5
 시작	kaisi	5
+농담이야	kaiwx	5
 기뻐요	kaix	5
 신나요	kaixing	5
 봐요	kan	5
@@ -4597,6 +5151,7 @@ thanks	xx	93
 빨리 와요	kuaidl	5
 ㅜㅜ	kune	5
 ㅜㅜ	kure	5
+농담이야	kwx	5
 기뻐요	kx	5
 좀 도와줄래요?	kybwm	5
 여기로 와	laizeli	5
@@ -4617,7 +5172,9 @@ thanks	xx	93
 너 최고야	lizhuibang	5
 너 최고야	lizuiban	5
 너 최고야	lizuibang	5
+일반 게임	lrj	5
 선생님	ls	5
+일반 게임	lurj	5
 쇼핑할래요	maidonxi	5
 천천히	mandiang	5
 천천히	mangdian	5
@@ -4644,21 +5201,29 @@ thanks	xx	93
 여기로 와	naizheli	5
 여기로 와	naizheni	5
 여기로 와	naizheri	5
+오지 마	nbyl	5
 몇 살이에요?	nddl	5
+오지 마	nibyl	5
 몇 살이에요?	niddl	5
 나이가 어떻게 돼요?	niduodane	5
 나이가 어떻게 돼요?	niduodare	5
 잘 지내세요	nihaoma	5
+빨리 가	nikz	5
 네 말이 맞아요	nisdd	5
+뭐라고요	nissm	5
 네 말이 맞아	nisuodedui	5
 최고예요	nizb	5
 너 최고야	nizhuiban	5
 너 최고야	nizhuibang	5
 너 최고야	nizuiban	5
+빨리 가	nkz	5
 네 말이 맞아요	nsdd	5
+뭐라고요	nssm	5
 다리우스	nuoshou	5
 최고예요	nzb	5
+뭘 겁내	pasm	5
 좀 깎아 주세요	pianyyd	5
+뭘 겁내	psm	5
 좀 깎아 주세요	pyyd	5
 잠깐만 기다려 주세요	qdyx	5
 앞	qiang	5
@@ -4733,8 +5298,10 @@ thanks	xx	93
 좋은 저녁 되세요	wanshangfao	5
 좋은 저녁 되세요	wanshanhao	5
 늦어서 미안해요	wcdl	5
+내가 갈게	wl	5
 이해 못 했어요	wobudon	5
 늦어서 미안해요	wocdl	5
+내가 갈게	wol	5
 저는 중국 사람이에요	woszgr	5
 나도	woys	5
 저는 중국 사람이에요	wszgr	5
@@ -4743,6 +5310,7 @@ thanks	xx	93
 나도	wys	5
 다음에 봐요	xcj	5
 다음 주	xgxq	5
+신호	xh	5
 좋아요	xh	5
 퇴근 중이에요	xiabang	5
 다음에 봐요	xiacj	5
@@ -4750,6 +5318,7 @@ thanks	xx	93
 싶어요	xian	5
 그리워요	xianglian	5
 그리워요	xiangliang	5
+보고 싶어	xiangn	5
 그리워요	xiangniang	5
 지금	xiangzai	5
 어디야	xiangzaila	5
@@ -4778,6 +5347,7 @@ thanks	xx	93
 기분 나빠요	xingqinbuhao	5
 기분 나빠요	xingqingbufao	5
 기분 나빠요	xingqingbuhao	5
+신호	xinh	5
 수고했어	xinkune	5
 수고했어	xinkure	5
 기분이 안 좋아요	xinqbh	5
@@ -4787,6 +5357,7 @@ thanks	xx	93
 샤워했어요	xiz	5
 씻었어요	xizhao	5
 용	xl	5
+보고 싶어	xn	5
 기분이 안 좋아요	xqbh	5
 선배	xuez	5
 샤워했어요	xz	5
@@ -4831,6 +5402,7 @@ thanks	xx	93
 집에 있어요	zaij	5
 좋은 아침이에요	zaosh	5
 짱	zb	5
+나쁘지 않네	zbc	5
 정말 고마워요	zdgxn	5
 그래요?	zendema	5
 그래요?	zengdema	5
@@ -4843,6 +5415,7 @@ thanks	xx	93
 무슨 일이에요?	zenmere	5
 가는 길 알려주세요	zenmezhou	5
 왜 그래요?	zenml	5
+나쁘지 않네	zhenbc	5
 정말 고마워요	zhendgxn	5
 그래요?	zhengdema	5
 무슨 일이에요?	zhengmele	5
@@ -4873,6 +5446,7 @@ thanks	xx	93
 어떻게 지내세요	zhuijinzenmeyang	5
 어떻게 지내세요	zhuijinzhengmeyang	5
 어떻게 지내세요	zhuijinzhenmeyang	5
+행운을 빌어	zhunhy	5
 밥 할게요	zhuofan	5
 밥 할게요	zhuofang	5
 밥 할게요	zhuohan	5
@@ -4887,6 +5461,7 @@ thanks	xx	93
 주말에	zm	5
 주말에 뭐 해요?	zmgm	5
 왜 그래요?	zml	5
+행운을 빌어	znhy	5
 가운데	zongjian	5
 가운데	zongjiang	5
 가운데	zonjian	5
@@ -4913,7 +5488,9 @@ thanks	xx	93
 바	ba	4
 비	bi	4
 보	bo	4
+잘 모르겠어	bqc	4
 부	bu	4
+잘 모르겠어	buqc	4
 차	cha	4
 창	chang	4
 청	cheng	4
@@ -4968,9 +5545,11 @@ thanks	xx	93
 수비	hansou	4
 한판 더	hanyipang	4
 방어탑	hanyuta	4
+친구	haoy	4
 베이가	haqiu	4
 허	he	4
 후	hu	4
+친구	hy	4
 지	ji	4
 지에	jie	4
 끝	jiesu	4
@@ -5001,9 +5580,13 @@ thanks	xx	93
 대단해	nihai	4
 안	nimian	4
 안	nimiang	4
+뭐라고	nissm	4
+뭐라고	nssm	4
 다리우스	nuosou	4
 파	pa	4
+래더	paiw	4
 평딩	pingdi	4
+래더	pw	4
 치	qi	4
 영화 보러 가자	qukandiangying	4
 영화 보러 가자	qukangdiangying	4
@@ -5026,6 +5609,8 @@ thanks	xx	93
 밖	waimiang	4
 잊었어	wangne	4
 잊었어	wangre	4
+중국인이에요	woszgr	4
+중국인이에요	wszgr	4
 시	xi	4
 체력	xueliang	4
 이	yi	4
@@ -5036,7 +5621,9 @@ thanks	xx	93
 미안해	yunei	4
 미안해	yurei	4
 한판 더	zailaiyiju	4
+괜찮네	zbc	4
 저	zhe	4
+괜찮네	zhenbc	4
 정말	zhende	4
 정	zheng	4
 지	zhi	4
