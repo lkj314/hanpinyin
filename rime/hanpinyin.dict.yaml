@@ -3,7 +3,7 @@
 # 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码
 ---
 name: hanpinyin
-version: "2.11"
+version: "2.12"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -4520,7 +4520,6 @@ roam	roam	10
 십	shi	10
 맞아요	shide	10
 말파이트	shitouren	10
-렉사이	shizigou	10
 집 지켜	shoujia	10
 카드 돼요?	shuaka	10
 이건 진다	shudingle	10
@@ -5481,7 +5480,6 @@ late game	rategame	9
 말파이트	shitoulen	9
 말파이트	shitouleng	9
 말파이트	shitoureng	9
-렉사이	shizhigou	9
 던졌어	shongle	9
 던졌어	shongne	9
 던졌어	shongre	9
@@ -5508,8 +5506,6 @@ sorry	shry	9
 말파이트	sitouleng	9
 말파이트	sitouren	9
 말파이트	sitoureng	9
-렉사이	sizhigou	9
-렉사이	sizigou	9
 언제예요?	smsh	9
 던졌어	songne	9
 던졌어	songre	9
@@ -8013,7 +8009,6 @@ late game	lg	5
 열받아요	shenqi	5
 맞아요	shid	5
 말파이트	shitr	5
-렉사이	shizg	5
 집 지켜	shouj	5
 타워	shouta	5
 노틸러스	shtt	5
@@ -8039,7 +8034,6 @@ split push	splitp	5
 마음대로	suibian	5
 잘 거예요	suijiao	5
 소라카	suolk	5
-렉사이	szg	5
 빅토르	szs	5
 레전드	taibangne	5
 레전드	taibangre	5

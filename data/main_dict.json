@@ -870,7 +870,7 @@
   { "pinyin": "ji qi ren", "candidates": [["블리츠크랭크", 10]] },
   { "pinyin": "lao shu", "candidates": [["트위치", 10]] },
   { "pinyin": "tang lang", "candidates": [["카직스", 10]] },
-  { "pinyin": "shi zi gou", "candidates": [["렌가", 12], ["렉사이", 10]] },
+  { "pinyin": "shi zi gou", "candidates": [["렌가", 12]] },
   { "pinyin": "bao nv", "candidates": [["니달리", 10]] },
   { "pinyin": "jiao yue", "candidates": [["다이애나", 10]] },
   { "pinyin": "yao ji", "candidates": [["르블랑", 10]] },
