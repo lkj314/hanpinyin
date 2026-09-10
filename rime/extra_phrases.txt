@@ -139,8 +139,8 @@ sorry	duibuqi	98
 화이팅	jiayou	100
 加油	jiayou	99
 ㄱㄱ	zouqi	100
-ㅈㅅ	baoyi	100
-ㅅㅅ	xiaoshi	100
+ㅈㅅ	duibuqi	100
+ㅅㅅ	xinku	100
 ㅂㅂ	baibai	100
 # ===== 自然聊天反应词（像【麻了】【寄了】【笑了】这种通用词）=====
 지쳤어	male	100
@@ -156,8 +156,6 @@ sorry	duibuqi	98
 绷不住	bengbuzhu	99
 쩐다	juele	100
 绝了	juele	99
-대박	dabao	100
-大爆	dabao	99
 헐	wocao	100
 卧槽	wocao	99
 끝났어	wanle	100

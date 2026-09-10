@@ -74,6 +74,39 @@ REGRESSION = [
     ("guoran", "역시"),                 # 果然
     ("youyujianle", "또 만났네"),     # 又遇见了
     ("taijiannanle", "너무 힘들어"),    # 太艰难了
+    # 2026-09-11 按《词典诊断报告》修正后的回归点
+    ("dabao", "포장해 주세요"),         # 打包（대박 已移除）
+    ("shangdan", "탑"),                 # 上单（성장 已移到 chengzhang）
+    ("chengzhang", "성장"),             # 成长／发育
+    ("dalong", "바론"),                 # 大龙（용 먹자 已移到 daxiaolong）
+    ("daxiaolong", "용 먹자"),          # 打小龙
+    ("shizigou", "렌가"),               # 狮子狗 = Rengar
+    ("wajueji", "렉사이"),              # 挖掘机 = Rek'Sai
+    ("xuanshou", "선수"),               # 选手
+    ("xuanze", "선택"),                 # 选择
+    ("zhugong", "어시스트"),            # 助攻
+    ("zhushou", "도우미"),              # 助手
+    ("tui", "밀어"),                    # 推（推进）
+    ("chetui", "물러나"),               # 撤退
+    ("xinku", "ㅅㅅ"),                  # ㅅㅅ = 수고
+    ("dabaole", "턴 터졌어"),           # 打爆了
+    ("gailun", "가렌"),                 # 盖伦
+    ("dadalong", "바론 먹자"),          # 打大龙
+    ("duibuqi", "미안해"),              # 对不起（补 casual）
+    ("yuandi", "원딜"),                 # ADC／射手
+    ("si", "사"),                       # 数字区：四
+]
+
+# 禁止项：这些「错误义项」曾经被挂错过，回归时断言它们不再同时出现
+FORBIDDEN = [
+    ("dabao", "대박", "打包≠대박（大发）"),
+    ("shangdan", "성장", "上单≠成长（成长应挂 chengzhang）"),
+    ("dalong", "용 먹자", "大龙≠용 먹자（용=小龙）"),
+    ("zhusha", "킬", "助杀≠킬（킬=击杀）"),
+    ("zhushou", "도와줘", "助手≠도와줘（=帮帮我）"),
+    ("xuanshou", "선택", "选手≠선택（=选择）"),
+    ("tui", "물러나", "推≠물러나（=撤退）"),
+    ("yi", "이", "一≠이（이=二）"),
 ]
 
 PY_RE = __import__("re").compile(r"^[a-z]+$")
@@ -182,6 +215,13 @@ def main():
             print("  回归 %s -> 期望 %s，实际 %s ✘" % (code, expect, sorted(got)[:4]))
             fails.append("回归点失败: %s -> %s" % (code, expect))
             reg_bad += 1
+
+    # D. 禁止项（防止错误义项被重新挂回）
+    for code, text, why in FORBIDDEN:
+        if text in bycode.get(code, set()):
+            fails.append("禁止项重现: %s 下又出现 %s（%s）" % (code, text, why))
+        else:
+            print("  禁止项 %s 不含 %s ✔" % (code, text))
 
     for w in warns:
         print("  [WARN]", w)

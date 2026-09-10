@@ -37,6 +37,7 @@ zhuaren	抓人（Gank）
 chayan	插眼
 xiaolong	小龙
 dalong	大龙
+daxiaolong	打小龙
 tuanmie	团灭
 touxiang	投降
 jubao	举报
@@ -53,7 +54,6 @@ zhuangtai	状态
 jiayou	加油
 niubi	厉害（NB）
 lihai	厉害
-yulei	对不起（抱歉）
 shengli	胜利
 shibai	失败
 shule	输了
@@ -87,7 +87,6 @@ jieshu	结束
 ali	阿狸（英雄 Ahri）
 jingkesi	金克丝（英雄 Jinx）
 dimo	提莫（英雄 Teemo）
-jialun	盖伦（英雄 Garen）
 yasuo	亚索（英雄 Yasuo）
 hanbing	寒冰（英雄 Ashe）
 amumu	阿木木（英雄 Amumu）
@@ -103,7 +102,6 @@ direnxiaoshile	敌人消失了
 yiqishang	一起上
 woxianzailai	我现在来
 zanmentuiba	咱们撤退
-batadale	（俚语）打爆了
 woyaochixian	我要吃线
 tataopaole	他逃跑了
 qingbalong	打龙（把龙打掉）
@@ -115,12 +113,11 @@ wozaidaye	我在打野
 wozaifuzhu	我在辅助
 geiwoyan	给我眼（守卫）
 hanyipan	再来一盘
-zailaiyiju	再来一句（一盘）
+zailaiyiju	再来一局（一盘）
 pingdi	平地（평딩）
 zhuangbei	装备
 xiexiedajia	谢谢大家
 chixian	吃线
-shangdan	成长／发育
 jineng	技能
 zhaohuan	召唤
 jingyan	经验（经验值）
@@ -139,7 +136,6 @@ lengque	冷却（CD）
 tianfu	天赋
 zhaohuanshi	召唤师
 pifu	皮肤
-xuanshou	选择
 jintian	今天
 mingtian	明天
 zuotian	昨天
@@ -542,7 +538,6 @@ zhanji	战绩
 huifang	回放
 biesong	别送（别扔）
 tingyixia	停一下
-dabalong	打大龙
 tuizhonglu	推中路
 shoujia	守家
 zuowanle	做完了
@@ -588,7 +583,8 @@ qi	七（数字）
 ba	八（数字，亦作音译字）
 jiu	九（数字）
 shi	十（数字，亦作音译字）
-tui	推（撤退）
+tui	推（推进）
+chetui	撤退
 na	我（나）／音译字
 ne	你（너）／音译字
 an	安（前缀"不"）／音译字
@@ -755,7 +751,6 @@ zuodehao	做得好
 nizhenxing	你真行
 dajiaxinkule	大家辛苦了
 bangmang	帮忙
-baoyi	对不起（ㅈㅅ，죄송 缩写）
 bengbuzhu	绷不住
 caiji	菜鸡（不行的）
 chongkai	重开（리메이크）
@@ -798,7 +793,6 @@ wobuhuihanyu	我不会韩语
 wocao	卧槽（헐，惊叹）
 women	我们
 xiaole	笑了（ㅋㅋㅋ）
-xiaoshi	ㅅㅅ（수고，辛苦／打得不错）
 zaima	在吗（在干嘛）
 zaoan	早安
 zenme	怎么
@@ -881,3 +875,21 @@ yousile	又死了
 taicijile	太刺激了
 taishuangle	太爽了
 gandong	感动
+
+wajueji	挖掘机（英雄 Rek'Sai）
+xuanze	选择
+xuanshou	选手
+zhugong	助攻
+yuandi	ADC／射手
+xinku	ㅅㅅ（수고，辛苦／打得不错）
+yixue	一血（First Blood）
+hongbaba	红 buff
+lanbaba	蓝 buff
+hongbuff	红 buff
+lanbuff	蓝 buff
+chengzhang	成长／发育
+gailun	盖伦（英雄 Garen）
+dadalong	打大龙
+dabaole	打爆了
+batadale	（俚语）打爆了
+shangdan	上单
