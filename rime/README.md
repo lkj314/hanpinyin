@@ -72,6 +72,10 @@ rime/
   verify_regression.py  # 数据质量 + 构建覆盖 + 回归点校验（改词库后必跑）
   validate_rime.py      # 方案/词典结构校验（需 PyYAML）
   _verify_ctx.py        # 用 rime.dll 直连引擎做端到端候选验证（开发期工具）
+  _diag_select.py       # 端到端「能否选中上屏」诊断：临时目录隔离，绝不碰用户输入法数据
+                        #   用法：python _diag_select.py zmb kanlai
+                        #        python _diag_select.py --fresh kanlai   # 用仓库最新词典重编译再测
+                        #   判据：按 1 选词后读 RimeGetCommit，看是否真的上屏
   extra_phrases.txt     # 补充多语言词条（策划手编）
 ```
 

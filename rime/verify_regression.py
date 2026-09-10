@@ -70,6 +70,10 @@ REGRESSION = [
     ("wandanle", "망했다"),             # 完蛋了
     ("wenzhu", "침착하게"),             # 稳住
     ("bietouxiang", "항복하지 마"),     # 别投降
+    ("kanlai", "보니까"),               # 2026-09-11 感叹词批次：看来
+    ("guoran", "역시"),                 # 果然
+    ("youyujianle", "또 만났네"),     # 又遇见了
+    ("taijiannanle", "너무 힘들어"),    # 太艰难了
 ]
 
 PY_RE = __import__("re").compile(r"^[a-z]+$")
