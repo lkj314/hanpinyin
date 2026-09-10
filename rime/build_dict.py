@@ -272,7 +272,7 @@ def main():
         "# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码",
         "---",
         "name: hanpinyin",
-        'version: "2.10"',
+        'version: "2.11"',
         "sort: by_weight",
         "use_preset_vocabulary: false",
         "columns:",
