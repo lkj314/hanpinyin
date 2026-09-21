@@ -1,5 +1,5 @@
 # 词典元数据：键<TAB>分类<TAB>语体<TAB>全称<TAB>备注
-# 键可为 code 或 code|韩文；分类：英雄/战术/报点/缩写/英文/日常/音译/整句
+# 键可为 code 或 code|韩文；分类：英雄/战术/报点/缩写/英文/日常/情绪/音译/整句
 aide|낮아요	日常	敬语·해요		
 aike|에코	英雄			
 aiya|아이고	日常			哎呀（感叹）
@@ -10,6 +10,8 @@ akeshang|아크샨	英雄
 ali|아리	英雄			
 amumu|아무무	英雄			
 ang|앙	音译			
+anjingdian|조용히 해	情绪	半语		
+anweiwo|위로해 줘	情绪	半语		
 anwoshuodezuo|내 말대로 해	日常	半语		
 an|안	音译			
 aoen|오른	英雄			
@@ -35,24 +37,39 @@ bao|바오	音译
 batadale|턴 터졌어	整句			
 ba|바	音译			
 ba|팔	音译			
+beiyuanwang|억울하게 죽었어	情绪	半语		
+beizhendui|나만 노려	情绪			
+beizhendui|자꾸 나만 노려	情绪			
 bei|베이	音译			
 bengbuzhu|터졌어	日常	半语		
+bengkui|멘탈 터졌어	情绪	半语		
 bengle|터졌어	日常	半语		
 beng|벵	音译			
 ben|번	音译			
 bian|비안	音译			
 biaoji|핑	日常			信号（Ping，打标记）
 biao|비아오	音译			
+biechaole|시끄러워	情绪	半语		
+biedawo|때리지 마	情绪			
+biefanwo|귀찮게 하지 마	情绪			
+bieguaidaye|정글 탓하지 마	日常			
+bieguaiduiyou|팀원 탓하지 마	情绪			
+bieguaiwo|내 탓하지 마	情绪			
+bieguanwo|신경 쓰지 마	情绪			
 biejinchang|진입하지 마	战术			
 bieji|급하지 마	日常			
 biepao|도망치지 마	日常			
 biepa|겁내지 마	日常			
+bieqifuren|화나게 하지 마	情绪			
+bieqifuwo|열 받게 하지 마	情绪			
 bieshang|들어가지 마	战术			
 bieshengqi|화내지 마	日常			
+bieshuaiguo|남 탓하지 마	情绪			
 biesong|던지지 마	日常			别送／别扔（＝别故意输）
 bietouxiang|항복하지 마	日常			
 biezhaoji|급하지 마	日常			
 biezhaoji|서두르지 마	日常			
+biezhuawo|잡지 마	情绪			
 biezou|가지 마	日常			
 bie|비에	音译			
 bingle|아파	日常			
@@ -66,6 +83,7 @@ bo|보	音译
 buchang|보상	日常			
 budao|CS 먹어	战术	半语		
 bufangqi|포기하지 마	日常			
+buguanle|몰라	情绪			
 buhaochi|맛없다	日常	半语		
 buhaochi|맛없어요	日常	敬语·해요		
 buhaokan|별로예요	日常	敬语·해요		
@@ -81,6 +99,7 @@ bushi|아니	日常
 bushi|아니요	日常	敬语·해요		
 bushufu|몸이 안 좋아요	日常	敬语·해요		
 bushufu|아파요	日常	敬语·해요		
+buxiangwanle|하기 싫어	情绪	半语		
 buxing|안 돼요	日常	敬语·해요		
 buxing|안돼	日常	半语		
 buyao|싫어요	日常	敬语·해요		
@@ -264,6 +283,7 @@ duibuqi|미안해	日常	半语		对不起（半语，朋友之间）
 duibuqi|미안해요	日常	敬语·해요		
 duibuqi|죄송합니다	日常	半语		对不起（最正式，对陌生人／长辈）
 duide|맞아요	日常	敬语·해요		
+duimianzhenduiwo|상대가 나만 노려	情绪			
 duixianshu|라인전 졌어	报点	半语		
 duixianying|라인전 이겼어	报点	半语		
 duixian|라인전	日常			
@@ -293,6 +313,7 @@ eng|엉	音译
 en|언	音译			
 er|얼	日常			
 er|이	日常			
+exin|역겨워	情绪	半语		
 eyu|레넥톤	英雄			
 e|어	音译	半语		
 facuole|잘못 보냈어	日常	半语		
@@ -300,13 +321,18 @@ faduanxin|문자 보낼게요	日常	敬语·해요
 faduanxin|문자할게요	日常	敬语·해요		
 fali|마나	日常			
 fangfa|방법	日常			
+fangguowo|봐줘	情绪	半语		
 fangshou|수비	日常			
 fangsongyidian|긴장 풀어요	整句			
 fangyuta|방어탑	日常			
 fangyu|방어	日常	半语		
 fang|방	音译			
 fanji|역습	战术			
+fannao|짜증	情绪			
 fanpan|역전	日常			翻盘／逆转
+fanren|짜증나게 하지 마	情绪			
+fansile|진짜 짜증나	情绪			
+fansile|짜증나 죽겠어	情绪	半语		
 fan|판	音译			
 faqiu|베이가	英雄			
 fashao|열이 나요	日常	敬语·해요		
@@ -387,6 +413,8 @@ goutou|나서스	英雄
 gou|고우	音译			
 guafeng|바람 불어요	日常	敬语·해요		
 guafu|이블린	英雄			
+guaidaye|정글 탓	日常			
+guaiwo|내 잘못이야	情绪			
 guai|과이	音译			
 guang|광	音译			
 guan|관	音译			
@@ -407,8 +435,9 @@ haimei|아직	日常
 haimei|아직이야	日常			
 hainengda|아직 이길 수 있어	日常	半语		
 hainengda|아직 할 만해	日常	半语		
-haipa|겁나요	日常	敬语·해요		
-haipa|무서워요	日常	敬语·해요		
+haipa|겁나요	情绪	敬语·해요		
+haipa|무서워	情绪	半语		
+haipa|무서워요	情绪	敬语·해요		
 hai|하이	音译			
 hanbing|애쉬	英雄			
 hanfu|한섭	日常			
@@ -421,12 +450,16 @@ haochi|맛있다	日常	半语
 haochi|맛있어요	日常	敬语·해요		
 haode|좋아요	日常	敬语·해요		
 haodianlema|좀 나아졌어요?	日常	敬语·해요		
+haofan|짜증나	情绪			
+haofan|짜증나요	情绪	敬语·해요		
 haojiubujianle|오랜만이에요	整句			
 haojiubujian|오랜만	日常			
 haojiubujian|오랜만이에요	日常	敬语·해요		
 haokan|멋있어요	日常	敬语·해요		
 haokan|예뻐요	日常	敬语·해요		
 haokexi|아깝다	日常	半语		
+haolei|너무 힘들어	情绪	半语		
+haolei|지쳐	情绪			
 haolema|됐어?	日常	半语		
 haopengyou|친한 친구	日常			
 haoyou|친구	日常			
@@ -462,6 +495,7 @@ hou|호우	日常
 huabanxie|카리스타	英雄			
 huaide|나빠요	日常	敬语·해요		
 huai|화이	音译			
+huangtang|황당해	情绪	半语		
 huangzi|자르반	英雄			
 huang|황	音译			
 huanying|어서 오세요	日常	敬语·해요		
@@ -538,7 +572,8 @@ jintianzhuangtaibuhao|오늘 컨디션이 안 좋아요	整句
 jintian|오늘	日常			
 jinyong|금지	日常	半语		
 jinyong|밴	日常			
-jinzhang|긴장돼요	日常	敬语·해요		
+jinzhang|긴장돼	情绪	半语		
+jinzhang|긴장돼요	情绪	敬语·해요		
 jin|진	音译			
 jiong|지옹	音译			
 jiqiren|블리츠크랭크	英雄			
@@ -553,6 +588,7 @@ juan|주안	音译
 jubaole|신고했어	日常	半语		
 jubao|신고	日常			
 juele|쩐다	日常	半语		绝了／牛（感叹）
+juewang|절망적이야	情绪			
 jue|줴	音译			
 jun|준	音译			
 ju|주	音译			
@@ -646,6 +682,7 @@ laopo|와이프	日常
 laoshi|선생님	日常			
 laoshu|트위치	英雄			
 laoyangzi|여전하네	日常			
+laozhuazhewo|자꾸 나만 잡아	情绪	半语		
 lao|라오	音译			
 la|라	音译			
 leile|피곤해요	日常	敬语·해요		
@@ -668,6 +705,7 @@ lia|리아	音译	半语
 lie|례	音译			
 lihai|대단해	日常	半语		
 lihai|쩐다	日常	半语		绝了／牛（感叹）
+lijiewo|이해해 줘	情绪	半语		
 limian|안	日常			
 ling|링	音译			
 lin|린	音译			
@@ -712,11 +750,13 @@ mashangjiulai|금방 갈게	日常
 mashang|곧	日常			
 mashang|금방	日常			
 ma|마	音译			
+meibanfa|어쩔 수 없지	情绪	半语		
 meicuo|맞아	日常	半语		
 meidazhao|궁 없어	报点	半语		
 meifayuqilai|못 컸어	报点	半语		
 meiguanxi|괜찮아요	日常	敬语·해요		
 meijihui|기회 없어	日常	半语		
+meijiule|답이 없어	情绪	半语		
 meikanjian|못 봤어	日常	半语		
 meilanle|마나 없어	报点	半语		
 meimei|여동생	日常			
@@ -724,6 +764,7 @@ meishijian|시간 없어요	日常	敬语·해요
 meishila|ㄱㅊ	缩写	缩写	괜찮아	
 meishi|괜찮습니다	日常	敬语·正式		
 meishi|아니에요	日常	敬语·해요		
+meitianzhiyouwo|맨날 나만	情绪			
 meixuele|피 없어	报点	半语		
 meiyisi|재미없어	日常	半语		
 mei|메이	音译			
@@ -905,7 +946,9 @@ qing|주세요	日常	敬语·해요
 qing|칭	日常			
 qin|친	音译			
 qiong|치옹	音译			
-qisile|빡쳤다	日常	半语		
+qisile|빡쳐	情绪			
+qisile|빡쳤다	情绪	半语		
+qisiwole|열받아 죽겠어	情绪	半语		
 qiu|추	音译			
 qi|치	日常			
 qi|칠	日常			
@@ -924,11 +967,14 @@ quyiyuan|병원 가요	日常	敬语·해요
 qu|가다	日常	半语		
 qu|가요	日常	敬语·해요		
 qu|츄	日常			
+rangwojingjing|혼자 있게 해 줘	情绪	半语		
 rang|랑	音译			
 ranhou|그리고	日常			
 ran|란	音译			
 raohou|둘러가자	战术	半语		
+raolewo|살려줘	情绪	半语		
 rao|라오	音译			
+renbuliao|못 참아	情绪	半语		
 rending|ㅇㅈ	缩写	缩写	인정	
 reng|렁	音译			
 renji|봇	日常			
@@ -969,6 +1015,7 @@ shangdan|탑	日常
 shanggexingqi|지난주	日常			
 shangke|수업	日常			
 shanglu|탑	日常			
+shangxinsile|너무 슬퍼	情绪			
 shang|상	日常			
 shang|위	日常			
 shanxian|점멸	日常			闪现（召唤师技能）
@@ -1008,6 +1055,8 @@ shiye|시야	日常
 shizigou|렌가	英雄			
 shi|시	音译			
 shi|십	音译			
+shoubuliaole|못 참겠어	情绪	半语		
+shoudou|손 떨려	情绪			
 shoujia|집 지켜	日常			
 shouta|타워	日常	半语		
 shouzhu|지켜	日常			
@@ -1041,8 +1090,10 @@ si|쓰	日常
 songle|던졌어	日常	半语		
 song|송	音译			
 sou|소우	音译			
+suanle|됐어	情绪	半语		
 suan|수안	音译			
 sudu|속도	日常			
+suibianba|아무거나 해	情绪	半语		
 suibian|마음대로	日常			
 suibian|아무거나	日常			
 sui|수이	音译			
@@ -1069,6 +1120,7 @@ tainanle|너무 어려워	日常	半语
 taiqiangle|너무 쎄다	日常	半语		
 tairuole|너무 약해	日常	半语		
 taishuangle|시원해	日常	半语		
+taiweiqule|너무 억울해	情绪	半语		
 taixianle|아슬아슬했어	日常	半语		好险
 taixiaole|너무 작아요	日常	敬语·해요		
 tai|타이	音译			
@@ -1138,7 +1190,7 @@ wandian|늦게	日常
 wangle|잊었어	日常	半语		
 wang|왕	音译			
 wanleyixiawu|오후 내내 했어	整句			
-wanle|끝났어	日常	半语		
+wanle|끝났어	情绪	半语		
 wanmei|퍼펙트	日常			
 wanshanghao|안녕하세요	日常	敬语·해요		你好（最常用问候，敬语）
 wanshanghao|좋은 저녁 되세요	日常	敬语·해요		
@@ -1148,6 +1200,11 @@ weia|야	日常			喂！（语气冲，熟人／催促用，对陌生人易冒�
 weien|베인	英雄			
 weilai|미래	日常			
 weilusi|바루스	英雄			
+weiqu|서운해	情绪	半语		
+weiqu|억울해	情绪	半语		
+weishenmezhenduiwo|왜 나만 노려	情绪			
+weishenmezhiyouwo|왜 나만 이래	情绪			
+weishenmezongshiwo|왜 항상 나만	情绪			
 weishenme|왜	日常			
 weixian|위험해	战术	半语		
 weixin|위챗	日常			
@@ -1164,6 +1221,8 @@ wobudong|이해 못 했어요	日常	敬语·해요
 wobudong|이해가 안 돼요	日常	敬语·해요		
 wobuhuihanyu|한국어 못해요	整句			
 wobutaidong|잘 모르겠어요	整句			
+wocai|나 못하나 봐	情绪	半语		
+wocai|나 못해	情绪	半语		
 wocao|헐	日常			卧槽／天呐（惊叹）
 wocarryle|캐리했어	缩写	半语		
 wochibaole|잘 먹었습니다	整句			
@@ -1175,15 +1234,18 @@ wodatouzhen|내가 앞설게	战术
 wodetian|세상에	日常			我的天
 woduanhou|내가 뒤에서 커버할게	日常			
 woduanhou|커버할게요	日常	敬语·해요		
+wofule|인정	情绪			
 woganmaole|감기 걸렸어요	整句			
 wohaoxiangni|보고 싶어요	整句			
 wohuihenilianxi|연락할게요	整句			
 wohuiyidianhanyu|한국어 조금 할 수 있어요	整句			
+wojinlile|최선을 다했어	情绪	半语		
 wojintianhenlei|오늘 진짜 피곤해요	整句			
 wokaituanle|한타 열게요	整句			
 wokanbudonghanwen|한글을 읽을 줄 몰라요	整句			
 wolaiyanhu|커버할게	战术			
 wolai|내가 갈게	日常			
+woliekaile|나 멘탈 터졌어	情绪	半语		
 womashanghuilai|금방 돌아올게요	整句			
 womenkaituanba|우리 한타 가자	整句			
 womenlingxian|이기고 있어	战术	半语		
@@ -1201,6 +1263,8 @@ woqumaizhuangbei|템 사러 갈게	战术
 woshangle|내가 간다	报点	半语		
 woshizhongguoren|저는 중국 사람이에요	日常	敬语·해요		
 woshizhongguoren|중국인이에요	日常	敬语·해요		
+wotainanle|나 너무 힘들어	情绪	半语		
+wotule|토나와	情绪	半语		
 woxianghuijia|나 갈게	整句			
 woxianzailai|지금 갈게	日常			
 woxianzoule|먼저 갈게요	日常	敬语·해요		
@@ -1210,14 +1274,17 @@ woyaochixian|라인 먹을게	日常
 woyaohuicheng|리콜할게	整句			
 woyaozhege|이거 주세요	日常	敬语·해요		
 woyaozhege|이걸로 할게요	日常	敬语·해요		
+woyejinlile|나도 최선을 다했어	情绪	半语		
 woyeshi|나도	日常			
 woyeshi|저도요	日常	敬语·해요		
 woyoudianbushufu|몸이 좀 안 좋아요	整句			
+woyu|어이없어	情绪	半语		
 wozaidaye|나 정글이야	日常			
 wozaifuzhu|나 서포터야	日常			
 wozaishanglu|나 탑이야	日常			
 wozaixialu|나 봇이야	日常			
 wozaizhonglu|나 미드야	日常			
+wozhaoshuirele|내가 뭘 잘못했어	情绪	半语		
 wozhichini|응원해요	整句			
 wo|나	日常			
 wo|워	日常	半语		
@@ -1225,6 +1292,7 @@ wo|저	日常
 wuliao|노잼	日常			无聊（재미없다 的缩写梗）
 wuliao|심심해요	日常	敬语·해요		
 wuliao|지루해요	日常	敬语·해요		
+wunai|어쩔 수 없어	情绪	半语		
 wuqidashi|자일스	英雄			
 wuwu|ㅠㅠ	缩写	缩写	（哭脸）	
 wuyu|할 말 없다	日常	半语		
@@ -1242,6 +1310,8 @@ xiajuzailai|다음 판 하자	日常	半语
 xiake|수업 끝났어요	日常	敬语·해요		
 xialu|봇	日常			
 xiancheyixia|잠깐 빼	战术			
+xiangfangqi|포기하고 싶어	情绪	半语		
+xiangku|울고 싶어	情绪	半语		
 xiangnian|그리워요	日常	敬语·해요		
 xiangnian|보고 싶어요	日常	敬语·해요		
 xiangni|보고 싶어	日常	半语		
@@ -1294,10 +1364,13 @@ xinkule|수고하셨습니다	日常	敬语·正式
 xinkule|수고했어	日常	半语		
 xinkule|수고했어요	日常	敬语·해요		
 xinku|ㅅㅅ	缩写	缩写	수고	
+xinlei|마음이 지쳐	情绪			
 xinniankuaile|새해 복 많이 받으세요	日常	敬语·해요		
 xinqingbuhao|기분 나빠요	日常	敬语·해요		
 xinqingbuhao|기분이 안 좋아요	日常	敬语·해요		
 xinqinghao|기분 좋아요	日常	敬语·해요		
+xintaibengle|멘탈 터졌어요	情绪	敬语·해요		
+xintaizhale|멘탈 터졌어	情绪	半语		
 xin|신	音译			
 xiong|시옹	音译			
 xishoujianzainali|화장실이 어디예요?	整句			
@@ -1387,6 +1460,7 @@ yo|요	音译	敬语·해요
 yuandi|원딜	日常			ADC 射手位（源自 one-deal）
 yuanma|멀어요?	日常	敬语·해요		
 yuanma|여기서 멀어요?	日常	敬语·해요		
+yuanwang|억울해요	情绪	敬语·해요		
 yuanyin|이유	日常			
 yuan|위안	音译			
 yuehui|데이트	日常			
@@ -1425,6 +1499,7 @@ zeli|제리	英雄
 zeng|정	音译			
 zenmeban|어떡해	日常	半语		
 zenmeban|어떡해요	日常	敬语·해요		
+zenmedoucuo|뭘 해도 욕먹네	情绪			
 zenmehuishi|무슨 일이야	日常			
 zenmele|무슨 일이에요?	日常	敬语·해요		
 zenmele|왜 그래요?	日常	敬语·해요		
@@ -1444,6 +1519,7 @@ zhaohuan|소환	日常
 zhaoxin|신 자오	英雄			
 zhao|자오	音译			
 zha|자	音译	半语		
+zhebushiwodecuo|내 잘못 아니야	情绪			
 zhegeduoshaoqian|이거 얼마예요?	整句			
 zhegehenhaochi|이거 진짜 맛있어요	整句			
 zhegeshishenme|이거 뭐예요?	日常	敬语·해요		
@@ -1462,11 +1538,17 @@ zhendema|진짜요?	日常	敬语·해요
 zhendeya|ㄹㅇ	缩写	缩写	리얼	
 zhende|정말	日常			
 zhende|진짜	日常			真的／真是（口语高频，表强调）
+zhenfan|진짜 짜증나	情绪			
 zheng|정	音译			
+zhenwuyu|진짜 어이없어	情绪	半语		
 zhen|젠	音译			
 zhe|저	音译			
 zhidaole|알겠어요	日常	敬语·해요		
 zhidaoma|알아요?	日常	敬语·해요		
+zhihuowo|나만 집중 공격해	情绪	半语		
+zhiyouwosi|나만 죽어	情绪	半语		
+zhiyouwozheyang|나만 이래	情绪			
+zhizhuawo|나만 갱 와	情绪	半语		
 zhi|지	音译	半语		
 zhongdan|미드	日常			
 zhongjian|가운데	日常			
@@ -1520,6 +1602,7 @@ zuile|어이없어	日常	半语		无语／荒唐
 zui|주이	音译			
 zun|준	音译			
 zuobian|왼쪽	日常			
+zuobudao|못 하겠어	情绪	半语		
 zuodehao|잘했어	整句			
 zuoditie|지하철 탈게요	日常	敬语·해요		
 zuofan|밥 할게요	日常	敬语·해요		

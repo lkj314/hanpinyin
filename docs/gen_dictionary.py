@@ -38,7 +38,7 @@ MEANINGS = os.path.join(ROOT, "data", "meanings.tsv")
 META = os.path.join(ROOT, "data", "dict_meta.tsv")
 OUT = os.path.join(ROOT, "docs", "HanPinyin词典.html")
 TRANSLIT_NOTE = "音译字（拼人名、地名等用）"
-CATS = ["英雄", "战术", "报点", "缩写", "英文", "日常", "音译", "整句"]
+CATS = ["英雄", "战术", "报点", "日常", "情绪", "缩写", "英文", "音译", "整句"]
 DEFAULT_OFF = {"音译"}
 MAX_VARIANTS = 20
 
@@ -396,7 +396,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="titlepage">
     <h1>HanPinyin 词典</h1>
     <div class="sub">用汉语拼音打韩文 · 输入法已实装词汇总览（体验增强版）</div>
-    <div class="stats">__STATS__ · 词库版本 v2.12 · __DATE__ 编成</div>
+    <div class="stats">__STATS__ · 词库版本 v2.13 · __DATE__ 编成</div>
   </div>
 
   <div class="toolbar">
@@ -497,6 +497,7 @@ function score(el,q){
   if(t.indexOf(q)===0) return 3;
   for(var i=0;i<c.length;i++){ if(c[i].indexOf(q)===0) return 3; }
   if((el.dataset.c||"").indexOf(q)>=0) return 2;
+  if(m.indexOf(q)===0||cat.indexOf(q)===0) return 2;
   if(m.indexOf(q)>=0||cat.indexOf(q)>=0) return 1;
   if((t+el.dataset.c+m).indexOf(q)>=0) return 0;
   return -1;

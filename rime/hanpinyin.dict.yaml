@@ -3,7 +3,7 @@
 # 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码
 ---
 name: hanpinyin
-version: "2.12"
+version: "2.13"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -2992,27 +2992,45 @@ gg	gg	14
 adc	adc	12
 afk	afk	12
 아칼리	akali	12
+조용히 해	anjingdian	12
+위로해 줘	anweiwo	12
 back	back	12
 ㅂㅇ	baibai	12
 와드 박아줘	bangwochayan	12
 좀 도와주세요	bangwoyixia	12
 배불러요	baole	12
 baron	baron	12
+억울하게 죽었어	beiyuanwang	12
+자꾸 나만 노려	beizhendui	12
+멘탈 터졌어	bengkui	12
 bg	bg	12
+시끄러워	biechaole	12
+때리지 마	biedawo	12
+귀찮게 하지 마	biefanwo	12
+정글 탓하지 마	bieguaidaye	12
+팀원 탓하지 마	bieguaiduiyou	12
+내 탓하지 마	bieguaiwo	12
+신경 쓰지 마	bieguanwo	12
 급하지 마	bieji	12
 진입하지 마	biejinchang	12
+화나게 하지 마	bieqifuren	12
+열 받게 하지 마	bieqifuwo	12
 들어가지 마	bieshang	12
+남 탓하지 마	bieshuaiguo	12
 던지지 마	biesong	12
 항복하지 마	bietouxiang	12
 서두르지 마	biezhaoji	12
+잡지 마	biezhuawo	12
 가지 마	biezou	12
 한타 피하자	bishangtuanzhan	12
 bot	bot	12
 brb	brb	12
 CS 먹어	budao	12
 포기하지 마	bufangqi	12
+몰라	buguanle	12
 맛없어요	buhaochi	12
 몸이 안 좋아요	bushufu	12
+하기 싫어	buxiangwanle	12
 몰라요	buzhidao	12
 메뉴 주세요	caidan	12
 care	care	12
@@ -3051,13 +3069,18 @@ def	def	12
 dragon	dragon	12
 티어	duanwei	12
 미안해	duibuqi	12
+상대가 나만 노려	duimianzhenduiwo	12
 라인전 졌어	duixianshu	12
 라인전 이겼어	duixianying	12
 대치	duizhi	12
 고맙습니다	duoxie	12
 ㅇㅇ	enen	12
+역겨워	exin	12
 ez	ez	12
+봐줘	fangguowo	12
 역습	fanji	12
+짜증나게 하지 마	fanren	12
+짜증나 죽겠어	fansile	12
 메시지 보낼게요	faxinxi	12
 성장했어	fayuqilaile	12
 ㅁㅊ	fengle	12
@@ -3074,6 +3097,8 @@ gl hf	glhf	12
 go next	gonext	12
 버스	gongjiaoche	12
 group	group	12
+정글 탓	guaidaye	12
+내 잘못이야	guaiwo	12
 스노우볼	gunxueqiu	12
 이리와	guolai	12
 와라	guolaia	12
@@ -3082,13 +3107,16 @@ group	group	12
 한섭	hanfu	12
 한국어	hanyu	12
 좋아요	hao	12
+짜증나	haofan	12
 오랜만이에요	haojiubujian	12
 아깝다	haokexi	12
+너무 힘들어	haolei	12
 help	help	12
 싸요	henpianyi	12
 멋져요	henshuai	12
 후반	houqi	12
 물러서	houtui	12
+황당해	huangtang	12
 집에 가요	huijia	12
 int	int	12
 친추	jiahaoyou	12
@@ -3103,6 +3131,7 @@ int	int	12
 들어가	jinqu	12
 밴	jinyong	12
 지금이야	jiushixianzai	12
+절망적이야	juewang	12
 jung	jung	12
 jung diff	jungdiff	12
 회의	kaihui	12
@@ -3119,19 +3148,24 @@ ks	ks	12
 lag	lag	12
 럭스	lakesi	12
 본진	laojia	12
+자꾸 나만 잡아	laozhuazhewo	12
 침착해	lengjing	12
 연패	lianbai	12
 연승	liansheng	12
 연락해 주세요	lianxiwo	12
+이해해 줘	lijiewo	12
 말도 안 돼	lipu	12
 lol	lol	12
 계산서 주세요	maidan	12
 리 신	mangseng	12
 천천히 해	manmanlai	12
 풀템	manzhuang	12
+어쩔 수 없지	meibanfa	12
 궁 없어	meidazhao	12
 못 컸어	meifayuqilai	12
+답이 없어	meijiule	12
 마나 없어	meilanle	12
+맨날 나만	meitianzhiyouwo	12
 피 없어	meixuele	12
 mia	mia	12
 mid	mid	12
@@ -3162,17 +3196,22 @@ push	push	12
 이리 오세요	qingguolai	12
 천천히 말해 주세요	qingmanyidian	12
 잠시만요	qingshaodeng	12
+열받아 죽겠어	qisiwole	12
 가라	qua	12
 사냥하자	qudaye	12
 기습 가자	qutouxi	12
 병원 가요	quyiyuan	12
+혼자 있게 해 줘	rangwojingjing	12
 그리고	ranhou	12
 둘러가자	raohou	12
+살려줘	raolewo	12
 remake	remake	12
+못 참아	renbuliao	12
 ㅇㅈ	rending	12
 봇	renji	12
 save me	saveme	12
 출근했어요	shangban	12
+너무 슬퍼	shangxinsile	12
 승점	shengdian	12
 승률	shenglv	12
 화나요	shengqi	12
@@ -3180,11 +3219,15 @@ save me	saveme	12
 비등해	shijunlidi	12
 실례합니다	shilile	12
 렌가	shizigou	12
+못 참겠어	shoubuliaole	12
+손 떨려	shoudou	12
 지켜	shouzhu	12
 듀오	shuangpai	12
 억제기	shuijing	12
 smurf	smurf	12
 sry	sry	12
+됐어	suanle	12
+아무거나 해	suibianba	12
 그래서	suoyi	12
 sup	sup	12
 짜릿해	taicijile	12
@@ -3194,6 +3237,7 @@ sup	sup	12
 너무 힘들어	taijiannanle	12
 너무 어려워	tainanle	12
 너무 쎄다	taiqiangle	12
+너무 억울해	taiweiqule	12
 탱커	tanke	12
 도망가	taopao	12
 싫어해요	taoyan	12
@@ -3215,33 +3259,52 @@ wait	wait	12
 망했다	wandanle	12
 야	weia	12
 베인	weien	12
+억울해	weiqu	12
+왜 나만 노려	weishenmezhenduiwo	12
+왜 나만 이래	weishenmezhiyouwo	12
+왜 항상 나만	weishenmezongshiwo	12
 위험해	weixian	12
 지켜줄게	wobaohuni	12
+나 못해	wocai	12
 내가 앞설게	wodatouzhen	12
 세상에	wodetian	12
+인정	wofule	12
+최선을 다했어	wojinlile	12
 커버할게	wolaiyanhu	12
+나 멘탈 터졌어	woliekaile	12
 이기고 있어	womenlingxian	12
 지고 있어	womenluohou	12
 우리 이길 수 있어	womennengying	12
 갱 갈게	woqugank	12
 템 사러 갈게	woqumaizhuangbei	12
 내가 간다	woshangle	12
+나 너무 힘들어	wotainanle	12
+토나와	wotule	12
 안녕히 계세요	woxianzoule	12
+나도 최선을 다했어	woyejinlile	12
 저도요	woyeshi	12
+어이없어	woyu	12
+내가 뭘 잘못했어	wozhaoshuirele	12
 wp	wp	12
 wtf	wtf	12
 심심해요	wuliao	12
+어쩔 수 없어	wunai	12
 ㅠㅠ	wuwu	12
 할 말 없다	wuyu	12
 퇴근했어요	xiaban	12
 전령	xiaguxianfeng	12
 잠깐 빼	xiancheyixia	12
+포기하고 싶어	xiangfangqi	12
+울고 싶어	xiangku	12
 미니언	xiaobing	12
 비 와요	xiayule	12
 ㄱㅅ	xiele	12
 감사합니다	xiexieni	12
 행복해요	xingfu	12
+마음이 지쳐	xinlei	12
 기분 좋아요	xinqinghao	12
+멘탈 터졌어요	xintaibengle	12
+멘탈 터졌어	xintaizhale	12
 공부	xuexi	12
 커버해 줘	yanhuwo	12
 물 주세요	yaoshui	12
@@ -3254,15 +3317,24 @@ wtf	wtf	12
 또 이겼어	youyingle	12
 또 만났네	youyujianle	12
 원딜	yuandi	12
+억울해요	yuanwang	12
 한 판 더	zailaiyiba	12
 다시 말해 주세요	zaishuoyibian	12
+뭘 해도 욕먹네	zenmedoucuo	12
 전적	zhanji	12
 시야 잡자	zhanshiye	12
+내 잘못 아니야	zhebushiwodecuo	12
 이거 뭐예요?	zhegeshishenme	12
 재수 없어	zhendaomei	12
 실화야?	zhendejiade	12
 정말요?	zhendema	12
 ㄹㅇ	zhendeya	12
+진짜 짜증나	zhenfan	12
+진짜 어이없어	zhenwuyu	12
+나만 집중 공격해	zhihuowo	12
+나만 죽어	zhiyouwosi	12
+나만 이래	zhiyouwozheyang	12
+나만 갱 와	zhizhuawo	12
 중반	zhongqi	12
 중국어	zhongwen	12
 템 나왔어	zhuangbeichengxing	12
@@ -3270,15 +3342,37 @@ wtf	wtf	12
 도우미	zhushou	12
 넥서스	zhushuijing	12
 가자	zouba	12
+못 하겠어	zuobudao	12
 숙제	zuoye	12
 아칼리	akani	11
 아칼리	akari	11
+조용히 해	angjindian	11
+조용히 해	angjindiang	11
+조용히 해	angjingdian	11
+조용히 해	angjingdiang	11
+위로해 줘	angweiwo	11
+조용히 해	anjindian	11
+조용히 해	anjindiang	11
+조용히 해	anjingdiang	11
 와드 박아줘	bangwocayan	11
 와드 박아줘	banwocayan	11
 와드 박아줘	banwochayan	11
 좀 도와주세요	banwoyixia	11
 배불러요	baone	11
 배불러요	baore	11
+자꾸 나만 노려	beizendui	11
+자꾸 나만 노려	beizengdui	11
+자꾸 나만 노려	beizhengdui	11
+멘탈 터졌어	benkui	11
+시끄러워	biecaole	11
+시끄러워	biecaone	11
+시끄러워	biecaore	11
+시끄러워	biechaone	11
+시끄러워	biechaore	11
+귀찮게 하지 마	biefangwo	11
+신경 쓰지 마	bieguangwo	11
+귀찮게 하지 마	biehangwo	11
+귀찮게 하지 마	biehanwo	11
 진입하지 마	biejincan	11
 진입하지 마	biejincang	11
 진입하지 마	biejinchan	11
@@ -3286,15 +3380,25 @@ wtf	wtf	12
 진입하지 마	biejingcang	11
 진입하지 마	biejingchan	11
 진입하지 마	biejingchang	11
+화나게 하지 마	bieqifulen	11
+화나게 하지 마	bieqifuleng	11
+화나게 하지 마	bieqifureng	11
+화나게 하지 마	bieqihulen	11
+화나게 하지 마	bieqihuleng	11
+화나게 하지 마	bieqihuren	11
+화나게 하지 마	bieqihureng	11
+열 받게 하지 마	bieqihuwo	11
 들어가지 마	biesan	11
 들어가지 마	biesang	11
 들어가지 마	bieshan	11
 던지지 마	bieshon	11
 던지지 마	bieshong	11
 던지지 마	bieson	11
+남 탓하지 마	biesuaiguo	11
 항복하지 마	bietouxian	11
 서두르지 마	biezaoji	11
 가지 마	biezhou	11
+잡지 마	biezuawo	11
 한타 피하자	bisangtuangzan	11
 한타 피하자	bisangtuangzang	11
 한타 피하자	bisangtuangzhan	11
@@ -3329,12 +3433,22 @@ wtf	wtf	12
 포기하지 마	bufanqi	11
 맛없어요	bufaochi	11
 맛없어요	bufaoci	11
+몰라	buguangle	11
+몰라	buguangne	11
+몰라	buguangre	11
+몰라	buguanne	11
+몰라	buguanre	11
 포기하지 마	buhangqi	11
 포기하지 마	buhanqi	11
 맛없어요	buhaoci	11
 몸이 안 좋아요	bushuhu	11
 몸이 안 좋아요	busufu	11
 몸이 안 좋아요	busuhu	11
+하기 싫어	buxiangwanne	11
+하기 싫어	buxiangwanre	11
+하기 싫어	buxianwanle	11
+하기 싫어	buxianwanne	11
+하기 싫어	buxianwanre	11
 몰라요	buzidao	11
 메뉴 주세요	caidang	11
 억제기 부수자	caishuijin	11
@@ -3491,6 +3605,13 @@ cs	chs	11
 지하철역	ditiezang	11
 지하철역	ditiezhang	11
 티어	duangwei	11
+상대가 나만 노려	duimiangzenduiwo	11
+상대가 나만 노려	duimiangzengduiwo	11
+상대가 나만 노려	duimiangzhenduiwo	11
+상대가 나만 노려	duimiangzhengduiwo	11
+상대가 나만 노려	duimianzenduiwo	11
+상대가 나만 노려	duimianzengduiwo	11
+상대가 나만 노려	duimianzhengduiwo	11
 라인전 졌어	duixiangshu	11
 라인전 졌어	duixiangsu	11
 라인전 이겼어	duixiangying	11
@@ -3498,6 +3619,7 @@ cs	chs	11
 ㅇㅇ	eneng	11
 ㅇㅇ	engen	11
 ㅇㅇ	engeng	11
+역겨워	exing	11
 살아있어	faifuoze	11
 살아있어	faifuozhe	11
 살아있어	faihuoze	11
@@ -3506,13 +3628,39 @@ cs	chs	11
 한섭	fanfu	11
 한섭	fangfu	11
 한섭	fanghu	11
+짜증나게 하지 마	fanglen	11
+짜증나게 하지 마	fangleng	11
+짜증나게 하지 마	fangren	11
+짜증나게 하지 마	fangreng	11
+짜증나 죽겠어	fangshile	11
+짜증나 죽겠어	fangshine	11
+짜증나 죽겠어	fangshire	11
+짜증나 죽겠어	fangsile	11
+짜증나 죽겠어	fangsine	11
+짜증나 죽겠어	fangsire	11
+봐줘	fanguowo	11
 한국어	fangyu	11
 한섭	fanhu	11
+짜증나게 하지 마	fanlen	11
+짜증나게 하지 마	fanleng	11
+짜증나게 하지 마	fanreng	11
+짜증나 죽겠어	fanshile	11
+짜증나 죽겠어	fanshine	11
+짜증나 죽겠어	fanshire	11
+짜증나 죽겠어	fansine	11
+짜증나 죽겠어	fansire	11
 한국어	fanyu	11
 좋아요	fao	11
+짜증나	faofan	11
+짜증나	faofang	11
+짜증나	faohan	11
+짜증나	faohang	11
 오랜만이에요	faojiubujian	11
 오랜만이에요	faojiubujiang	11
 아깝다	faokexi	11
+너무 힘들어	faolei	11
+너무 힘들어	faonei	11
+너무 힘들어	faorei	11
 메시지 보낼게요	faxingxi	11
 성장했어	fayuqilaine	11
 성장했어	fayuqilaire	11
@@ -3538,6 +3686,10 @@ help	felp	11
 멋져요	fensuai	11
 후반	fouqi	11
 물러서	foutui	11
+황당해	fuangtan	11
+황당해	fuangtang	11
+황당해	fuantan	11
+황당해	fuantang	11
 부활 중	fufuozhon	11
 부활 중	fufuozhong	11
 부활 중	fufuozon	11
@@ -3578,11 +3730,38 @@ go next	golext	11
 살아있어	haifuozhe	11
 살아있어	haihuoze	11
 한섭	hangfu	11
+봐줘	hangguowo	11
 한섭	hanghu	11
+짜증나게 하지 마	hanglen	11
+짜증나게 하지 마	hangleng	11
+짜증나게 하지 마	hangren	11
+짜증나게 하지 마	hangreng	11
+짜증나 죽겠어	hangshile	11
+짜증나 죽겠어	hangshine	11
+짜증나 죽겠어	hangshire	11
+짜증나 죽겠어	hangsile	11
+짜증나 죽겠어	hangsine	11
+짜증나 죽겠어	hangsire	11
+봐줘	hanguowo	11
 한국어	hangyu	11
 한섭	hanhu	11
 역습	hanji	11
+짜증나게 하지 마	hanlen	11
+짜증나게 하지 마	hanleng	11
+짜증나게 하지 마	hanren	11
+짜증나게 하지 마	hanreng	11
+짜증나 죽겠어	hanshile	11
+짜증나 죽겠어	hanshine	11
+짜증나 죽겠어	hanshire	11
+짜증나 죽겠어	hansile	11
+짜증나 죽겠어	hansine	11
+짜증나 죽겠어	hansire	11
+짜증나	haofang	11
+짜증나	haohan	11
+짜증나	haohang	11
 오랜만이에요	haojiubujiang	11
+너무 힘들어	haonei	11
+너무 힘들어	haorei	11
 메시지 보낼게요	haxingxi	11
 메시지 보낼게요	haxinxi	11
 성장했어	hayuqilaile	11
@@ -3607,6 +3786,9 @@ go next	golext	11
 ㅁㅊ	henre	11
 멋져요	hensuai	11
 ff	hf	11
+황당해	huangtan	11
+황당해	huantan	11
+황당해	huantang	11
 부활 중	hufuozhon	11
 부활 중	hufuozhong	11
 부활 중	hufuozon	11
@@ -3699,17 +3881,37 @@ ff	hf	11
 남자친구	langpengyou	11
 남자친구	langpenyou	11
 슬퍼요	languo	11
+혼자 있게 해 줘	langwojingjin	11
+혼자 있게 해 줘	langwojingjing	11
+혼자 있게 해 줘	langwojinjin	11
+혼자 있게 해 줘	langwojinjing	11
 그리고	lanhou	11
 남자친구	lanpengyou	11
 남자친구	lanpenyou	11
+혼자 있게 해 줘	lanwojingjin	11
+혼자 있게 해 줘	lanwojingjing	11
+혼자 있게 해 줘	lanwojinjin	11
+혼자 있게 해 줘	lanwojinjing	11
 둘러가자	laohou	11
+살려줘	laolewo	11
+살려줘	laonewo	11
+살려줘	laorewo	11
+자꾸 나만 잡아	laozhuazewo	11
+자꾸 나만 잡아	laozuazewo	11
+자꾸 나만 잡아	laozuazhewo	11
 remake	lemake	11
+못 참아	lenbuliao	11
+못 참아	lenbuniao	11
+못 참아	lenburiao	11
 ㅇㅈ	lendin	11
 ㅇㅈ	lending	11
 역전 가능해	lenfangpan	11
 역전 가능해	lenfangpang	11
 역전 가능해	lenfanpan	11
 역전 가능해	lenfanpang	11
+못 참아	lengbuliao	11
+못 참아	lengbuniao	11
+못 참아	lengburiao	11
 ㅇㅈ	lengdin	11
 ㅇㅈ	lengding	11
 역전 가능해	lengfangpan	11
@@ -3769,12 +3971,17 @@ nvm	lvm	11
 풀템	manzhuan	11
 풀템	manzuan	11
 풀템	manzuang	11
+어쩔 수 없지	meibangfa	11
+어쩔 수 없지	meibangha	11
+어쩔 수 없지	meibanha	11
 궁 없어	meidazao	11
 못 컸어	meifayuqinai	11
 못 컸어	meifayuqirai	11
 못 컸어	meihayuqilai	11
 못 컸어	meihayuqinai	11
 못 컸어	meihayuqirai	11
+답이 없어	meijiune	11
+답이 없어	meijiure	11
 마나 없어	meilangle	11
 마나 없어	meilangne	11
 마나 없어	meilangre	11
@@ -3792,6 +3999,9 @@ nvm	lvm	11
 마나 없어	meiranle	11
 마나 없어	meiranne	11
 마나 없어	meiranre	11
+맨날 나만	meitiangzhiyouwo	11
+맨날 나만	meitiangziyouwo	11
+맨날 나만	meitianziyouwo	11
 피 없어	meixuene	11
 피 없어	meixuere	11
 lag	nag	11
@@ -3802,6 +4012,10 @@ lag	nag	11
 남자친구	nangpenyou	11
 남자친구	nanpenyou	11
 본진	naojia	11
+자꾸 나만 잡아	naozhuazewo	11
+자꾸 나만 잡아	naozhuazhewo	11
+자꾸 나만 잡아	naozuazewo	11
+자꾸 나만 잡아	naozuazhewo	11
 역전 가능해	nenfangpan	11
 역전 가능해	nenfangpang	11
 역전 가능해	nenfanpan	11
@@ -3833,6 +4047,7 @@ lag	nag	11
 연승	nianshen	11
 연승	niansheng	11
 연락해 주세요	nianxiwo	11
+이해해 줘	nijiewo	11
 말도 안 돼	nipu	11
 lol	nol	11
 여자친구	nvpenyou	11
@@ -3885,14 +4100,37 @@ lol	nol	11
 잠시만요	qinsaodeng	11
 잠시만요	qinshaoden	11
 잠시만요	qinshaodeng	11
+열받아 죽겠어	qishiwole	11
+열받아 죽겠어	qishiwone	11
+열받아 죽겠어	qishiwore	11
+열받아 죽겠어	qisiwone	11
+열받아 죽겠어	qisiwore	11
 lag	rag	11
 럭스	rakeshi	11
 럭스	rakesi	11
 그리고	ranfou	11
 그리고	rangfou	11
 그리고	ranghou	11
+혼자 있게 해 줘	rangwojingjin	11
+혼자 있게 해 줘	rangwojinjin	11
+혼자 있게 해 줘	rangwojinjing	11
+혼자 있게 해 줘	ranwojingjin	11
+혼자 있게 해 줘	ranwojingjing	11
+혼자 있게 해 줘	ranwojinjin	11
+혼자 있게 해 줘	ranwojinjing	11
 본진	raojia	11
+살려줘	raonewo	11
+살려줘	raorewo	11
+자꾸 나만 잡아	raozhuazewo	11
+자꾸 나만 잡아	raozhuazhewo	11
+자꾸 나만 잡아	raozuazewo	11
+자꾸 나만 잡아	raozuazhewo	11
+못 참아	renbuniao	11
+못 참아	renburiao	11
 ㅇㅈ	rendin	11
+못 참아	rengbuliao	11
+못 참아	rengbuniao	11
+못 참아	rengburiao	11
 ㅇㅈ	rengdin	11
 ㅇㅈ	rengding	11
 봇	rengji	11
@@ -3912,12 +4150,37 @@ lag	rag	11
 연승	rianshen	11
 연승	riansheng	11
 연락해 주세요	rianxiwo	11
+이해해 줘	rijiewo	11
 말도 안 돼	ripu	11
 lol	rol	11
 출근했어요	sanban	11
 출근했어요	sanbang	11
 출근했어요	sangban	11
 출근했어요	sangbang	11
+너무 슬퍼	sangxingshile	11
+너무 슬퍼	sangxingshine	11
+너무 슬퍼	sangxingshire	11
+너무 슬퍼	sangxingsile	11
+너무 슬퍼	sangxingsine	11
+너무 슬퍼	sangxingsire	11
+너무 슬퍼	sangxinshile	11
+너무 슬퍼	sangxinshine	11
+너무 슬퍼	sangxinshire	11
+너무 슬퍼	sangxinsile	11
+너무 슬퍼	sangxinsine	11
+너무 슬퍼	sangxinsire	11
+너무 슬퍼	sanxingshile	11
+너무 슬퍼	sanxingshine	11
+너무 슬퍼	sanxingshire	11
+너무 슬퍼	sanxingsile	11
+너무 슬퍼	sanxingsine	11
+너무 슬퍼	sanxingsire	11
+너무 슬퍼	sanxinshile	11
+너무 슬퍼	sanxinshine	11
+너무 슬퍼	sanxinshire	11
+너무 슬퍼	sanxinsile	11
+너무 슬퍼	sanxinsine	11
+너무 슬퍼	sanxinsire	11
 승점	sendian	11
 승점	sendiang	11
 승점	sengdian	11
@@ -3945,6 +4208,29 @@ lol	rol	11
 출근했어요	shanban	11
 출근했어요	shanbang	11
 출근했어요	shangbang	11
+너무 슬퍼	shangxingshile	11
+너무 슬퍼	shangxingshine	11
+너무 슬퍼	shangxingshire	11
+너무 슬퍼	shangxingsile	11
+너무 슬퍼	shangxingsine	11
+너무 슬퍼	shangxingsire	11
+너무 슬퍼	shangxinshile	11
+너무 슬퍼	shangxinshine	11
+너무 슬퍼	shangxinshire	11
+너무 슬퍼	shangxinsine	11
+너무 슬퍼	shangxinsire	11
+너무 슬퍼	shanxingshile	11
+너무 슬퍼	shanxingshine	11
+너무 슬퍼	shanxingshire	11
+너무 슬퍼	shanxingsile	11
+너무 슬퍼	shanxingsine	11
+너무 슬퍼	shanxingsire	11
+너무 슬퍼	shanxinshile	11
+너무 슬퍼	shanxinshine	11
+너무 슬퍼	shanxinshire	11
+너무 슬퍼	shanxinsile	11
+너무 슬퍼	shanxinsine	11
+너무 슬퍼	shanxinsire	11
 save me	shaveme	11
 승점	shendian	11
 승점	shendiang	11
@@ -3978,9 +4264,25 @@ save me	shaveme	11
 실례합니다	shirire	11
 렌가	shizhigou	11
 smurf	shmurf	11
+못 참겠어	shoubuliaone	11
+못 참겠어	shoubuliaore	11
+못 참겠어	shoubuniaole	11
+못 참겠어	shoubuniaone	11
+못 참겠어	shoubuniaore	11
+못 참겠어	shouburiaole	11
+못 참겠어	shouburiaone	11
+못 참겠어	shouburiaore	11
 지켜	shouzu	11
 sry	shry	11
+됐어	shuangle	11
+됐어	shuangne	11
+됐어	shuangre	11
+됐어	shuanle	11
+됐어	shuanne	11
 듀오	shuanpai	11
+됐어	shuanre	11
+아무거나 해	shuibianba	11
+아무거나 해	shuibiangba	11
 억제기	shuijin	11
 그래서	shuoyi	11
 sup	shup	11
@@ -3998,10 +4300,26 @@ sup	shup	11
 실례합니다	sirire	11
 렌가	sizhigou	11
 렌가	sizigou	11
+못 참겠어	soubuliaole	11
+못 참겠어	soubuliaone	11
+못 참겠어	soubuliaore	11
+못 참겠어	soubuniaole	11
+못 참겠어	soubuniaone	11
+못 참겠어	soubuniaore	11
+못 참겠어	souburiaole	11
+못 참겠어	souburiaone	11
+못 참겠어	souburiaore	11
+손 떨려	soudou	11
 지켜	souzhu	11
 지켜	souzu	11
+됐어	suangle	11
+됐어	suangne	11
 듀오	suangpai	11
+됐어	suangre	11
+됐어	suanne	11
 듀오	suanpai	11
+됐어	suanre	11
+아무거나 해	suibiangba	11
 억제기	suijin	11
 억제기	suijing	11
 짜릿해	taichijile	11
@@ -4057,6 +4375,8 @@ sup	shup	11
 너무 쎄다	taiqianle	11
 너무 쎄다	taiqianne	11
 너무 쎄다	taiqianre	11
+너무 억울해	taiweiqune	11
+너무 억울해	taiweiqure	11
 탱커	tangke	11
 어디 갔어	taqulale	11
 어디 갔어	taqulane	11
@@ -4075,13 +4395,91 @@ sup	shup	11
 망했다	wandanne	11
 망했다	wandanre	11
 베인	weieng	11
+왜 나만 노려	weisengmezenduiwo	11
+왜 나만 노려	weisengmezengduiwo	11
+왜 나만 노려	weisengmezhenduiwo	11
+왜 나만 노려	weisengmezhengduiwo	11
+왜 나만 이래	weisengmezhiyouwo	11
+왜 항상 나만	weisengmezhongshiwo	11
+왜 항상 나만	weisengmezhongsiwo	11
+왜 항상 나만	weisengmezhonshiwo	11
+왜 항상 나만	weisengmezhonsiwo	11
+왜 나만 이래	weisengmeziyouwo	11
+왜 항상 나만	weisengmezongshiwo	11
+왜 항상 나만	weisengmezongsiwo	11
+왜 항상 나만	weisengmezonshiwo	11
+왜 항상 나만	weisengmezonsiwo	11
+왜 나만 노려	weisenmezenduiwo	11
+왜 나만 노려	weisenmezengduiwo	11
+왜 나만 노려	weisenmezhenduiwo	11
+왜 나만 노려	weisenmezhengduiwo	11
+왜 나만 이래	weisenmezhiyouwo	11
+왜 항상 나만	weisenmezhongshiwo	11
+왜 항상 나만	weisenmezhongsiwo	11
+왜 항상 나만	weisenmezhonshiwo	11
+왜 항상 나만	weisenmezhonsiwo	11
+왜 나만 이래	weisenmeziyouwo	11
+왜 항상 나만	weisenmezongshiwo	11
+왜 항상 나만	weisenmezongsiwo	11
+왜 항상 나만	weisenmezonshiwo	11
+왜 항상 나만	weisenmezonsiwo	11
+왜 나만 노려	weishengmezenduiwo	11
+왜 나만 노려	weishengmezengduiwo	11
+왜 나만 노려	weishengmezhenduiwo	11
+왜 나만 노려	weishengmezhengduiwo	11
+왜 나만 이래	weishengmezhiyouwo	11
+왜 항상 나만	weishengmezhongshiwo	11
+왜 항상 나만	weishengmezhongsiwo	11
+왜 항상 나만	weishengmezhonshiwo	11
+왜 항상 나만	weishengmezhonsiwo	11
+왜 나만 이래	weishengmeziyouwo	11
+왜 항상 나만	weishengmezongshiwo	11
+왜 항상 나만	weishengmezongsiwo	11
+왜 항상 나만	weishengmezonshiwo	11
+왜 항상 나만	weishengmezonsiwo	11
+왜 나만 노려	weishenmezenduiwo	11
+왜 나만 노려	weishenmezengduiwo	11
+왜 나만 노려	weishenmezhengduiwo	11
+왜 항상 나만	weishenmezhongshiwo	11
+왜 항상 나만	weishenmezhongsiwo	11
+왜 항상 나만	weishenmezhonshiwo	11
+왜 항상 나만	weishenmezhonsiwo	11
+왜 나만 이래	weishenmeziyouwo	11
+왜 항상 나만	weishenmezongsiwo	11
+왜 항상 나만	weishenmezonshiwo	11
+왜 항상 나만	weishenmezonsiwo	11
 위험해	weixiang	11
 지켜줄게	wobaofuni	11
+나 못해	wochai	11
 내가 앞설게	wodatouzen	11
 내가 앞설게	wodatouzeng	11
 내가 앞설게	wodatouzheng	11
 세상에	wodetiang	11
+인정	wofune	11
+인정	wofure	11
+인정	wohule	11
+인정	wohune	11
+인정	wohure	11
+최선을 다했어	wojinglile	11
+최선을 다했어	wojingline	11
+최선을 다했어	wojinglire	11
+최선을 다했어	wojingnile	11
+최선을 다했어	wojingnine	11
+최선을 다했어	wojingnire	11
+최선을 다했어	wojingrile	11
+최선을 다했어	wojingrine	11
+최선을 다했어	wojingrire	11
+최선을 다했어	wojinline	11
+최선을 다했어	wojinlire	11
+최선을 다했어	wojinnile	11
+최선을 다했어	wojinnine	11
+최선을 다했어	wojinnire	11
+최선을 다했어	wojinrile	11
+최선을 다했어	wojinrine	11
+최선을 다했어	wojinrire	11
 커버할게	wolaiyanfu	11
+나 멘탈 터졌어	woliekaine	11
+나 멘탈 터졌어	woliekaire	11
 우리 이길 수 있어	womenlengying	11
 우리 이길 수 있어	womenlenying	11
 이기고 있어	womenlingxiang	11
@@ -4103,11 +4501,17 @@ sup	shup	11
 지고 있어	womenruohou	11
 커버할게	wonaiyanfu	11
 커버할게	wonaiyanhu	11
+나 멘탈 터졌어	woniekaile	11
+나 멘탈 터졌어	woniekaine	11
+나 멘탈 터졌어	woniekaire	11
 템 사러 갈게	woqumaizhuanbei	11
 템 사러 갈게	woqumaizuanbei	11
 템 사러 갈게	woqumaizuangbei	11
 커버할게	woraiyanfu	11
 커버할게	woraiyanhu	11
+나 멘탈 터졌어	woriekaile	11
+나 멘탈 터졌어	woriekaine	11
+나 멘탈 터졌어	woriekaire	11
 내가 간다	wosangle	11
 내가 간다	wosangne	11
 내가 간다	wosangre	11
@@ -4119,6 +4523,19 @@ sup	shup	11
 내가 간다	woshanle	11
 내가 간다	woshanne	11
 내가 간다	woshanre	11
+나 너무 힘들어	wotailangle	11
+나 너무 힘들어	wotailangne	11
+나 너무 힘들어	wotailangre	11
+나 너무 힘들어	wotailanle	11
+나 너무 힘들어	wotailanne	11
+나 너무 힘들어	wotailanre	11
+나 너무 힘들어	wotainangle	11
+나 너무 힘들어	wotainangne	11
+나 너무 힘들어	wotainangre	11
+나 너무 힘들어	wotainanne	11
+나 너무 힘들어	wotainanre	11
+토나와	wotune	11
+토나와	woture	11
 안녕히 계세요	woxiangzhoule	11
 안녕히 계세요	woxiangzhoune	11
 안녕히 계세요	woxiangzhoure	11
@@ -4130,7 +4547,48 @@ sup	shup	11
 안녕히 계세요	woxianzhoure	11
 안녕히 계세요	woxianzoune	11
 안녕히 계세요	woxianzoure	11
+나도 최선을 다했어	woyejinglile	11
+나도 최선을 다했어	woyejingline	11
+나도 최선을 다했어	woyejinglire	11
+나도 최선을 다했어	woyejingnile	11
+나도 최선을 다했어	woyejingnine	11
+나도 최선을 다했어	woyejingnire	11
+나도 최선을 다했어	woyejingrile	11
+나도 최선을 다했어	woyejingrine	11
+나도 최선을 다했어	woyejingrire	11
+나도 최선을 다했어	woyejinline	11
+나도 최선을 다했어	woyejinlire	11
+나도 최선을 다했어	woyejinnile	11
+나도 최선을 다했어	woyejinnine	11
+나도 최선을 다했어	woyejinnire	11
+나도 최선을 다했어	woyejinrile	11
+나도 최선을 다했어	woyejinrine	11
+나도 최선을 다했어	woyejinrire	11
 저도요	woyesi	11
+내가 뭘 잘못했어	wozaoshuilele	11
+내가 뭘 잘못했어	wozaoshuilene	11
+내가 뭘 잘못했어	wozaoshuilere	11
+내가 뭘 잘못했어	wozaoshuirele	11
+내가 뭘 잘못했어	wozaoshuirene	11
+내가 뭘 잘못했어	wozaoshuirere	11
+내가 뭘 잘못했어	wozaosuilele	11
+내가 뭘 잘못했어	wozaosuilene	11
+내가 뭘 잘못했어	wozaosuilere	11
+내가 뭘 잘못했어	wozaosuirele	11
+내가 뭘 잘못했어	wozaosuirene	11
+내가 뭘 잘못했어	wozaosuirere	11
+내가 뭘 잘못했어	wozhaoshuilele	11
+내가 뭘 잘못했어	wozhaoshuilene	11
+내가 뭘 잘못했어	wozhaoshuilere	11
+내가 뭘 잘못했어	wozhaoshuirene	11
+내가 뭘 잘못했어	wozhaoshuirere	11
+내가 뭘 잘못했어	wozhaosuilele	11
+내가 뭘 잘못했어	wozhaosuilene	11
+내가 뭘 잘못했어	wozhaosuilere	11
+내가 뭘 잘못했어	wozhaosuirele	11
+내가 뭘 잘못했어	wozhaosuirene	11
+내가 뭘 잘못했어	wozhaosuirere	11
+어쩔 수 없어	wulai	11
 심심해요	wuniao	11
 심심해요	wuriao	11
 퇴근했어요	xiabang	11
@@ -4142,8 +4600,16 @@ sup	shup	11
 전령	xiaguxianhen	11
 전령	xiaguxianheng	11
 잠깐 빼	xianceyixia	11
+포기하고 싶어	xianfangqi	11
+포기하고 싶어	xianfanqi	11
 잠깐 빼	xiangceyixia	11
 잠깐 빼	xiangcheyixia	11
+포기하고 싶어	xiangfanqi	11
+포기하고 싶어	xianghangqi	11
+포기하고 싶어	xianghanqi	11
+포기하고 싶어	xianhangqi	11
+포기하고 싶어	xianhanqi	11
+울고 싶어	xianku	11
 미니언	xiaobin	11
 비 와요	xiayune	11
 비 와요	xiayure	11
@@ -4152,14 +4618,41 @@ sup	shup	11
 감사합니다	xiexieli	11
 행복해요	xinfu	11
 행복해요	xinghu	11
+마음이 지쳐	xinglei	11
+마음이 지쳐	xingnei	11
 기분 좋아요	xingqinfao	11
 기분 좋아요	xingqingfao	11
 기분 좋아요	xingqinghao	11
 기분 좋아요	xingqinhao	11
+마음이 지쳐	xingrei	11
+멘탈 터졌어요	xingtaibengle	11
+멘탈 터졌어요	xingtaibengne	11
+멘탈 터졌어요	xingtaibengre	11
+멘탈 터졌어요	xingtaibenle	11
+멘탈 터졌어요	xingtaibenne	11
+멘탈 터졌어요	xingtaibenre	11
+멘탈 터졌어	xingtaizale	11
+멘탈 터졌어	xingtaizane	11
+멘탈 터졌어	xingtaizare	11
+멘탈 터졌어	xingtaizhale	11
+멘탈 터졌어	xingtaizhane	11
+멘탈 터졌어	xingtaizhare	11
 행복해요	xinhu	11
+마음이 지쳐	xinnei	11
 기분 좋아요	xinqinfao	11
 기분 좋아요	xinqingfao	11
 기분 좋아요	xinqinhao	11
+마음이 지쳐	xinrei	11
+멘탈 터졌어요	xintaibengne	11
+멘탈 터졌어요	xintaibengre	11
+멘탈 터졌어요	xintaibenle	11
+멘탈 터졌어요	xintaibenne	11
+멘탈 터졌어요	xintaibenre	11
+멘탈 터졌어	xintaizale	11
+멘탈 터졌어	xintaizane	11
+멘탈 터졌어	xintaizare	11
+멘탈 터졌어	xintaizhane	11
+멘탈 터졌어	xintaizhare	11
 커버해 줘	yanfuwo	11
 물 주세요	yaosui	11
 궁 있어	youdazao	11
@@ -4187,6 +4680,10 @@ sup	shup	11
 전적	zanji	11
 시야 잡자	zanshiye	11
 시야 잡자	zansiye	11
+내 잘못 아니야	zebushiwodechuo	11
+내 잘못 아니야	zebushiwodecuo	11
+내 잘못 아니야	zebusiwodechuo	11
+내 잘못 아니야	zebusiwodecuo	11
 이거 뭐예요?	zegeshisengme	11
 이거 뭐예요?	zegeshisenme	11
 이거 뭐예요?	zegeshishengme	11
@@ -4199,10 +4696,23 @@ sup	shup	11
 실화야?	zendejiade	11
 정말요?	zendema	11
 ㄹㅇ	zendeya	11
+진짜 짜증나	zenfan	11
+진짜 짜증나	zenfang	11
 재수 없어	zengdaomei	11
 실화야?	zengdejiade	11
 정말요?	zengdema	11
 ㄹㅇ	zengdeya	11
+진짜 짜증나	zengfan	11
+진짜 짜증나	zengfang	11
+진짜 짜증나	zenghan	11
+진짜 짜증나	zenghang	11
+뭘 해도 욕먹네	zengmedouchuo	11
+뭘 해도 욕먹네	zengmedoucuo	11
+진짜 어이없어	zengwuyu	11
+진짜 짜증나	zenhan	11
+진짜 짜증나	zenhang	11
+뭘 해도 욕먹네	zenmedouchuo	11
+진짜 어이없어	zenwuyu	11
 한 판 더	zhailaiyiba	11
 한 판 더	zhainaiyiba	11
 한 판 더	zhairaiyiba	11
@@ -4214,6 +4724,9 @@ sup	shup	11
 시야 잡자	zhangshiye	11
 시야 잡자	zhangsiye	11
 시야 잡자	zhansiye	11
+내 잘못 아니야	zhebushiwodechuo	11
+내 잘못 아니야	zhebusiwodechuo	11
+내 잘못 아니야	zhebusiwodecuo	11
 이거 뭐예요?	zhegeshisengme	11
 이거 뭐예요?	zhegeshisenme	11
 이거 뭐예요?	zhegeshishengme	11
@@ -4221,10 +4734,26 @@ sup	shup	11
 이거 뭐예요?	zhegesisenme	11
 이거 뭐예요?	zhegesishengme	11
 이거 뭐예요?	zhegesishenme	11
+진짜 짜증나	zhenfang	11
 재수 없어	zhengdaomei	11
 실화야?	zhengdejiade	11
 정말요?	zhengdema	11
 ㄹㅇ	zhengdeya	11
+진짜 짜증나	zhengfan	11
+진짜 짜증나	zhengfang	11
+진짜 짜증나	zhenghan	11
+진짜 짜증나	zhenghang	11
+뭘 해도 욕먹네	zhengmedouchuo	11
+뭘 해도 욕먹네	zhengmedoucuo	11
+진짜 어이없어	zhengwuyu	11
+진짜 짜증나	zhenhan	11
+진짜 짜증나	zhenhang	11
+뭘 해도 욕먹네	zhenmedouchuo	11
+뭘 해도 욕먹네	zhenmedoucuo	11
+나만 집중 공격해	zhifuowo	11
+나만 죽어	zhiyouwoshi	11
+나만 이래	zhiyouwozeyang	11
+나만 갱 와	zhizuawo	11
 중반	zhonqi	11
 중국어	zhonwen	11
 가자	zhouba	11
@@ -4244,11 +4773,20 @@ sup	shup	11
 템 나왔어	zhuangbeichenxin	11
 템 나왔어	zhuangbeichenxing	11
 어시스트	zhugon	11
+못 하겠어	zhuobudao	11
 숙제	zhuoye	11
 넥서스	zhushuijin	11
 도우미	zhusou	11
 넥서스	zhusuijin	11
 넥서스	zhusuijing	11
+나만 집중 공격해	zifuowo	11
+나만 집중 공격해	zihuowo	11
+나만 죽어	ziyouwoshi	11
+나만 죽어	ziyouwosi	11
+나만 이래	ziyouwozeyang	11
+나만 이래	ziyouwozheyang	11
+나만 갱 와	zizhuawo	11
+나만 갱 와	zizuawo	11
 중반	zongqi	11
 중국어	zongwen	11
 중반	zonqi	11
@@ -4288,6 +4826,7 @@ bait	bait	10
 도와줘	bangbangwo	10
 니달리	baonv	10
 뭉쳐	baotuan	10
+나만 노려	beizhendui	10
 터졌어	bengle	10
 겁내지 마	biepa	10
 도망치지 마	biepao	10
@@ -4347,6 +4886,8 @@ engage	engage	10
 레넥톤	eyu	10
 잘못 보냈어	facuole	10
 문자할게요	faduanxin	10
+짜증	fannao	10
+진짜 짜증나	fansile	10
 farm	farm	10
 오리아나	fatiao	10
 feeder	feeder	10
@@ -4379,6 +4920,7 @@ gl	gl	10
 아직 할 만해	hainengda	10
 한국말	hanyu	10
 멋있어요	haokan	10
+지쳐	haolei	10
 됐어?	haolema	10
 ㅋㅋ	hehe	10
 hello	hello	10
@@ -4558,6 +5100,7 @@ thank you	ty	10
 ward	ward	10
 바루스	weilusi	10
 이거 이긴다	wenle	10
+나 못하나 봐	wocai	10
 캐리했어	wocarryle	10
 늦어서 미안해요	wochidaole	10
 제가 잘못했어요	wocuole	10
@@ -4656,6 +5199,9 @@ ward	ward	10
 니달리	baolv	9
 뭉쳐	baotuang	9
 도와주세요	bbw	9
+나만 노려	beizendui	9
+나만 노려	beizengdui	9
+나만 노려	beizhengdui	9
 터졌어	bengne	9
 터졌어	bengre	9
 터졌어	benle	9
@@ -4834,12 +5380,29 @@ counter	countel	9
 아직	faimei	9
 아직 할 만해	fainenda	9
 아직 할 만해	fainengda	9
+짜증	fanglao	9
+짜증	fangnao	9
+진짜 짜증나	fangshile	9
+진짜 짜증나	fangshine	9
+진짜 짜증나	fangshire	9
+진짜 짜증나	fangsile	9
+진짜 짜증나	fangsine	9
+진짜 짜증나	fangsire	9
 한국말	fangyu	9
+짜증	fanlao	9
+진짜 짜증나	fanshile	9
+진짜 짜증나	fanshine	9
+진짜 짜증나	fanshire	9
+진짜 짜증나	fansine	9
+진짜 짜증나	fansire	9
 한국말	fanyu	9
 멋있어요	faokan	9
 멋있어요	faokang	9
+지쳐	faolei	9
 됐어?	faolema	9
+지쳐	faonei	9
 됐어?	faonema	9
+지쳐	faorei	9
 됐어?	faorema	9
 감사드립니다	fcgx	9
 ㅋㅋ	fefe	9
@@ -4924,10 +5487,29 @@ herald	ferald	9
 아직 할 만해	hailengda	9
 아직 할 만해	hainenda	9
 아직 이길 수 있어	hainengda	9
+짜증	hanglao	9
+짜증	hangnao	9
+진짜 짜증나	hangshile	9
+진짜 짜증나	hangshine	9
+진짜 짜증나	hangshire	9
+진짜 짜증나	hangsile	9
+진짜 짜증나	hangsine	9
+진짜 짜증나	hangsire	9
 한국말	hangyu	9
+짜증	hanlao	9
+짜증	hannao	9
+진짜 짜증나	hanshile	9
+진짜 짜증나	hanshine	9
+진짜 짜증나	hanshire	9
+진짜 짜증나	hansile	9
+진짜 짜증나	hansine	9
+진짜 짜증나	hansire	9
 맛있어요	haoc	9
+짜증나요	haofan	9
 멋있어요	haokang	9
+지쳐	haonei	9
 됐어?	haonema	9
+지쳐	haorei	9
 됐어?	haorema	9
 친구	haoyou	9
 farm	harm	9
@@ -5611,6 +6193,7 @@ op	taiqian	9
 바루스	weilushi	9
 바루스	weinushi	9
 바루스	weinusi	9
+서운해	weiqu	9
 바루스	weirushi	9
 바루스	weirusi	9
 이거 이긴다	wenne	9
@@ -5628,6 +6211,7 @@ op	taiqian	9
 캐리했어	wocarlyre	9
 캐리했어	wocarryne	9
 캐리했어	wocarryre	9
+나 못하나 봐	wochai	9
 캐리했어	wochallyle	9
 캐리했어	wochallyne	9
 캐리했어	wochallyre	9
@@ -6130,6 +6714,10 @@ op	taiqian	9
 아직 이길 수 있어	failengda	8
 아직 이길 수 있어	fainenda	8
 아직 이길 수 있어	fainengda	8
+짜증나요	faofan	8
+짜증나요	faofang	8
+짜증나요	faohan	8
+짜증나요	faohang	8
 친구	faoyou	8
 열이 나요	fashao	8
 카톡 보낼게요	faxinxi	8
@@ -6145,8 +6733,12 @@ op	taiqian	9
 아직 이길 수 있어	hailengda	8
 아직이야	haimei	8
 아직 이길 수 있어	hainenda	8
+무서워	haipa	8
 맛있다	haochi	8
 좀 나아졌어요?	haodianlema	8
+짜증나요	haofang	8
+짜증나요	haohan	8
+짜증나요	haohang	8
 한잔할래요?	hejiu	8
 많이 바빠요	henmang	8
 저렴해요	henpianyi	8
@@ -6160,6 +6752,7 @@ op	taiqian	9
 지금 몇 시예요?	jidianle	8
 누나	jiejie	8
 끝났어	jieshu	8
+긴장돼	jinzhang	8
 살려줘	jiuming	8
 회의 중이에요	kaihui	8
 시작할까요	kaishiba	8
@@ -6207,6 +6800,7 @@ nevermind	nvm	8
 잠깐만요	qingshaodeng	8
 용서해 주세요	qingyuanliang	8
 앉으세요	qingzuo	8
+빡쳐	qisile	8
 가요	qu	8
 영화 보러 갈래요?	qukandianying	8
 자러 갈게요	qushuijiao	8
@@ -6304,47 +6898,83 @@ nevermind	nvm	8
 요리할게요	zuofan	8
 직업이 뭐예요?	zuoshenmegongzuo	8
 다 했어요	zuowanle	8
+조용히 해	ajd	7
 아칼리	akl	7
 아리	ani	7
+조용히 해	anjd	7
+위로해 줘	anww	7
 아리	ari	7
+위로해 줘	aww	7
 ㅂㅇ	baib	7
 와드 박아줘	bangwcy	7
 좀 도와주세요	bangwyx	7
 배불러요	baol	7
 ㅂㅇ	bb	7
+시끄러워	bcl	7
+때리지 마	bdw	7
+억울하게 죽었어	beiyw	7
+자꾸 나만 노려	beizd	7
+멘탈 터졌어	bengk	7
 포기하지 마	bfq	7
+귀찮게 하지 마	bfw	7
+정글 탓하지 마	bgdy	7
+팀원 탓하지 마	bgdy	7
+몰라	bgl	7
+내 탓하지 마	bgw	7
+신경 쓰지 마	bgw	7
 맛없어요	bhc	7
+시끄러워	biecl	7
+때리지 마	biedw	7
+귀찮게 하지 마	biefw	7
+정글 탓하지 마	biegdy	7
+팀원 탓하지 마	biegdy	7
+내 탓하지 마	biegw	7
+신경 쓰지 마	biegw	7
 급하지 마	biej	7
 진입하지 마	biejc	7
+화나게 하지 마	bieqfr	7
+열 받게 하지 마	bieqfw	7
 던지지 마	bies	7
 들어가지 마	bies	7
+남 탓하지 마	biesg	7
 항복하지 마	bietx	7
 가지 마	biez	7
 서두르지 마	biezj	7
+잡지 마	biezw	7
 한타 피하자	bistz	7
 급하지 마	bj	7
 진입하지 마	bjc	7
+멘탈 터졌어	bk	7
 배불러요	bl	7
+화나게 하지 마	bqfr	7
+열 받게 하지 마	bqfw	7
 던지지 마	bs	7
 들어가지 마	bs	7
 몸이 안 좋아요	bsf	7
+남 탓하지 마	bsg	7
 한타 피하자	bstz	7
 항복하지 마	btx	7
 나빠요	bufao	7
 별로예요	bufaokan	7
 별로예요	bufaokang	7
 포기하지 마	bufq	7
+몰라	bugl	7
 별로예요	buhaokang	7
 맛없어요	buhc	7
 몸이 안 좋아요	busf	7
 아니	busi	7
 안 돼요	buxin	7
+하기 싫어	buxwl	7
 몰라요	buzd	7
 와드 박아줘	bwcy	7
 좀 도와주세요	bwyx	7
+하기 싫어	bxwl	7
+억울하게 죽었어	byw	7
 가지 마	bz	7
 몰라요	bzd	7
+자꾸 나만 노려	bzd	7
 서두르지 마	bzj	7
+잡지 마	bzw	7
 돌격	ca	7
 메뉴 주세요	caid	7
 진짜 귀여워요	caojikeai	7
@@ -6474,11 +7104,13 @@ nevermind	nvm	8
 지하철역	ditz	7
 기다려	dj	7
 레벨	dj	7
+상대가 나만 노려	dmzdw	7
 당연하죠	dr	7
 하지만	ds	7
 지하철역	dtz	7
 티어	duanw	7
 미안해	duibq	7
+상대가 나만 노려	duimzdw	7
 라인전 졌어	duixs	7
 라인전 이겼어	duixy	7
 얼마야?	duosaoqian	7
@@ -6495,10 +7127,15 @@ nevermind	nvm	8
 버텨	dz	7
 ㅇㅇ	ee	7
 ㅇㅇ	ene	7
+역겨워	ex	7
 문자 보낼게요	faduangxin	7
 문자 보낼게요	faduangxing	7
 문자 보낼게요	faduanxing	7
 아직이야	faimei	7
+무서워	faipa	7
+봐줘	fanggw	7
+짜증나게 하지 마	fanr	7
+짜증나 죽겠어	fansl	7
 맛있다	faochi	7
 맛있다	faoci	7
 좀 나아졌어요?	faodianglema	7
@@ -6528,6 +7165,7 @@ nevermind	nvm	8
 많이 바빠요	fenmang	7
 저렴해요	fenpiangyi	7
 저렴해요	fenpianyi	7
+봐줘	fgw	7
 부활 중	fhz	7
 ㅁㅊ	fl	7
 레드	fonbaba	7
@@ -6540,6 +7178,8 @@ nevermind	nvm	8
 레드	fongbahu	7
 레드	fongbuff	7
 레드	fongbuhf	7
+짜증나게 하지 마	fr	7
+짜증나 죽겠어	fsl	7
 환영해요	fuangying	7
 환영해요	fuanying	7
 부활 중	fuhz	7
@@ -6565,6 +7205,7 @@ nevermind	nvm	8
 갱 왔다	gankll	7
 감기 걸렸어요	ganml	7
 쌈 붙자	ganyj	7
+정글 탓	gdy	7
 보여주세요	geiwk	7
 보여줘	geiwokang	7
 따라와요	gengwolai	7
@@ -6587,8 +7228,11 @@ go next	gon	7
 바람 불어요	guafen	7
 바람 불어요	guahen	7
 바람 불어요	guaheng	7
+정글 탓	guaidy	7
+내 잘못이야	guaiw	7
 스노우볼	gunxq	7
 와라	guola	7
+내 잘못이야	gw	7
 보여주세요	gwk	7
 스노우볼	gxq	7
 쌈 붙자	gyj	7
@@ -6606,8 +7250,10 @@ go next	gon	7
 좀 나아졌어요?	haodiangrema	7
 좀 나아졌어요?	haodiannema	7
 좀 나아졌어요?	haodianrema	7
+짜증나	haof	7
 오랜만이에요	haojbj	7
 아깝다	haokx	7
+너무 힘들어	haol	7
 열이 나요	hasao	7
 열이 나요	hashao	7
 카톡 보낼게요	haxingxi	7
@@ -6628,11 +7274,13 @@ go next	gon	7
 저렴해요	henpiangyi	7
 싸요	henpy	7
 멋져요	hens	7
+짜증나	hf	7
 한섭	hf	7
 살아있어	hhz	7
 집에 가요	hj	7
 오랜만이에요	hjbj	7
 아깝다	hkx	7
+너무 힘들어	hl	7
 레드	honbaba	7
 레드	honbafu	7
 레드	honbahu	7
@@ -6645,6 +7293,8 @@ go next	gon	7
 싸요	hpy	7
 후반	hq	7
 멋져요	hs	7
+황당해	ht	7
+황당해	huangt	7
 환영해요	huangying	7
 리콜	huicen	7
 리콜	huiceng	7
@@ -6682,12 +7332,21 @@ jung diff	jd	7
 끝났어	jiesu	7
 진입	jinc	7
 쿨 빠졌어	jinehl	7
+긴장돼	jingzan	7
+긴장돼	jingzang	7
+긴장돼	jingzhan	7
+긴장돼	jingzhang	7
 밴	jiny	7
+긴장돼	jinzan	7
+긴장돼	jinzang	7
+긴장돼	jinzhan	7
 살려줘	jiumin	7
 지금이야	jiusxz	7
 강등	jj	7
 지금이야	jsxz	7
+절망적이야	juew	7
 jung diff	jungd	7
+절망적이야	jw	7
 밴	jy	7
 교전	jz	7
 귀여워요	ka	7
@@ -6736,6 +7395,7 @@ jung diff	jungd	7
 속상해요	langguo	7
 속상해요	languo	7
 남편	laogon	7
+자꾸 나만 잡아	laozzw	7
 연패	lb	7
 힘들어요	leine	7
 힘들어요	leire	7
@@ -6762,6 +7422,7 @@ jung diff	jungd	7
 이름이 뭐야?	lijiaoshenmemingzi	7
 이름이 뭐야?	lijiaoshenmeminzhi	7
 이름이 뭐야?	lijiaoshenmeminzi	7
+이해해 줘	lijw	7
 말도 안 돼	lip	7
 맞는 말이네요	lishuodedui	7
 맞는 말이네요	lisuodedui	7
@@ -6774,28 +7435,36 @@ jung diff	jungd	7
 짱이에요	lizuiban	7
 짱이에요	lizuibang	7
 침착해	lj	7
+이해해 줘	ljw	7
 럭스	lks	7
 말도 안 돼	lp	7
 연승	ls	7
 nevermind	lvm	7
 연락해 주세요	lxw	7
+자꾸 나만 잡아	lzzw	7
 계산서 주세요	maid	7
 계산할게요	maidang	7
 리 신	mangs	7
 천천히 해	manml	7
 풀템	manz	7
+어쩔 수 없지	mbf	7
 mid diff	md	7
 계산서 주세요	md	7
 궁 없어	mdz	7
+어쩔 수 없지	meibf	7
 궁 없어	meidz	7
 못 컸어	meifyql	7
+답이 없어	meijl	7
 마나 없어	meill	7
+맨날 나만	meitzyw	7
 피 없어	meixl	7
 못 컸어	mfyql	7
 mid diff	midd	7
+답이 없어	mjl	7
 마나 없어	mll	7
 천천히 해	mml	7
 리 신	ms	7
+맨날 나만	mtzyw	7
 피 없어	mxl	7
 풀템	mz	7
 블루	nanbaba	7
@@ -6909,9 +7578,16 @@ mid diff	midd	7
 용서해 주세요	qinyuanriang	7
 앉으세요	qinzhuo	7
 앉으세요	qinzuo	7
+빡쳐	qishile	7
+빡쳐	qishine	7
+빡쳐	qishire	7
+빡쳐	qisine	7
+빡쳐	qisire	7
+열받아 죽겠어	qiswl	7
 천천히 말해 주세요	qmyd	7
 초반	qq	7
 잠시만요	qsd	7
+열받아 죽겠어	qswl	7
 기습 가자	qtx	7
 영화 보러 갈래요?	qukandiangying	7
 영화 보러 갈래요?	qukangdiangying	7
@@ -6930,21 +7606,27 @@ mid diff	midd	7
 블루	rangbahu	7
 블루	rangbuff	7
 블루	rangbuhf	7
+혼자 있게 해 줘	rangwjj	7
 그리고	ranh	7
 남편	raogon	7
 남편	raogong	7
+살려줘	raolw	7
 아내	raopo	7
 와이프	raopo	7
+못 참아	rbl	7
 ㅇㅈ	rd	7
 힘들어요	reile	7
 힘들어요	reine	7
 힘들어요	reire	7
+못 참아	renbl	7
 ㅇㅈ	rend	7
 봇	renj	7
 그리고	rh	7
 연락해	riangxiwo	7
 연락해	rianxiwo	7
 봇	rj	7
+살려줘	rlw	7
+혼자 있게 해 줘	rwjj	7
 위	san	7
 위	sang	7
 지난주	sangexingqi	7
@@ -6955,6 +7637,9 @@ mid diff	midd	7
 수업	sanke	7
 save me	savem	7
 출근했어요	sb	7
+아무거나 해	sbb	7
+못 참겠어	sbll	7
+손 떨려	sd	7
 승점	sd	7
 생일	sengli	7
 승리	sengli	7
@@ -6991,6 +7676,7 @@ save me	savem	7
 지난주	shangexingqi	7
 지난주	shangexinqi	7
 지난주	shanggexinqi	7
+너무 슬퍼	shangxsl	7
 수업	shanke	7
 승점	shengd	7
 승률	shengl	7
@@ -7025,12 +7711,15 @@ save me	savem	7
 비등해	shijld	7
 실례합니다	shill	7
 렌가	shizg	7
+못 참겠어	shoubll	7
+손 떨려	shoud	7
 지켜	shouz	7
 듀오	shuangp	7
 억제기	shuij	7
 패배	sibai	7
 억제기	sj	7
 비등해	sjld	7
+됐어	sl	7
 승률	sl	7
 실례합니다	sll	7
 save me	sm	7
@@ -7038,8 +7727,11 @@ save me	sm	7
 화나요	sq	7
 생일 축하해요	srkl	7
 카드로 할게요	suaka	7
+됐어	suanl	7
+아무거나 해	suibb	7
 자요	suijiao	7
 그래서	suoy	7
+너무 슬퍼	sxsl	7
 그래서	sy	7
 지켜	sz	7
 렌가	szg	7
@@ -7050,6 +7742,7 @@ save me	sm	7
 너무 힘들어	taijnl	7
 너무 어려워	tainl	7
 너무 쎄다	taiql	7
+너무 억울해	taiwql	7
 탱커	tank	7
 싫어해요	taoy	7
 어디 갔어	taqnl	7
@@ -7079,6 +7772,7 @@ save me	sm	7
 팀전	tuanzang	7
 팀전	tuanzhang	7
 라인 밀어	tuix	7
+너무 억울해	twql	7
 라인 밀어	tx	7
 항복하자	txb	7
 싫어해요	ty	7
@@ -7095,21 +7789,31 @@ save me	sm	7
 안녕하세요	wanshangfao	7
 안녕하세요	wanshanhao	7
 지켜줄게	wbhi	7
+나 못해	wc	7
 망했다	wdl	7
 세상에	wdt	7
 내가 앞설게	wdz	7
 베인	we	7
 베인	weie	7
+억울해	weiq	7
+왜 나만 노려	weismzdw	7
+왜 항상 나만	weismzsw	7
+왜 나만 이래	weismzyw	7
 위험해	weix	7
 위챗	weixing	7
+인정	wfl	7
 핵	wg	7
+최선을 다했어	wjll	7
 심심해요	wl	7
 지고 있어	wlh	7
+나 멘탈 터졌어	wlkl	7
 이기고 있어	wlx	7
 커버할게	wlyh	7
+어쩔 수 없어	wn	7
 우리 이길 수 있어	wny	7
 지켜줄게	wobhi	7
 이해가 안 돼요	wobudon	7
+나 못해	woc	7
 늦었어 미안	wochidaone	7
 늦었어 미안	wochidaore	7
 늦었어 미안	wocidaole	7
@@ -7120,6 +7824,9 @@ save me	sm	7
 커버할게요	woduangfou	7
 커버할게요	woduanghou	7
 내가 앞설게	wodz	7
+인정	wofl	7
+최선을 다했어	wojll	7
+나 멘탈 터졌어	wolkl	7
 커버할게	wolyh	7
 지고 있어	womenlh	7
 이기고 있어	womenlx	7
@@ -7127,6 +7834,8 @@ save me	sm	7
 갱 갈게	woqg	7
 템 사러 갈게	woqmzb	7
 내가 간다	wosl	7
+토나와	wotl	7
+나 너무 힘들어	wotnl	7
 먼저 갈게요	woxiangzhoule	7
 먼저 갈게요	woxiangzhoune	7
 먼저 갈게요	woxiangzhoure	7
@@ -7139,23 +7848,37 @@ save me	sm	7
 먼저 갈게요	woxianzoune	7
 먼저 갈게요	woxianzoure	7
 안녕히 계세요	woxzl	7
+어이없어	woy	7
 이걸로 할게요	woyaozege	7
+나도 최선을 다했어	woyjll	7
 저도요	woys	7
+내가 뭘 잘못했어	wozsrl	7
+억울해	wq	7
 갱 갈게	wqg	7
 템 사러 갈게	wqmzb	7
 내가 간다	wsl	7
+왜 나만 노려	wsmzdw	7
+왜 항상 나만	wsmzsw	7
+왜 나만 이래	wsmzyw	7
+토나와	wtl	7
+나 너무 힘들어	wtnl	7
 심심해요	wul	7
+어쩔 수 없어	wun	7
 ㅠㅠ	wuw	7
 할 말 없다	wuy	7
 ㅠㅠ	ww	7
 위험해	wx	7
 안녕히 계세요	wxzl	7
+어이없어	wy	7
 할 말 없다	wy	7
+나도 최선을 다했어	wyjll	7
 저도요	wys	7
+내가 뭘 잘못했어	wzsrl	7
 미니언	xb	7
 퇴근했어요	xb	7
 잠깐 빼	xcyx	7
 행복해요	xf	7
+포기하고 싶어	xfq	7
 전령	xgxf	7
 퇴근했어요	xiab	7
 또 봐요	xiachijian	7
@@ -7163,6 +7886,8 @@ save me	sm	7
 또 봐요	xiacijiang	7
 전령	xiagxf	7
 잠깐 빼	xiancyx	7
+포기하고 싶어	xiangfq	7
+울고 싶어	xiangk	7
 부러워요	xiangmu	7
 왼쪽으로 가세요	xiangzhuoguai	7
 오른쪽으로 가세요	xianyouguai	7
@@ -7193,6 +7918,7 @@ save me	sm	7
 새해 복 많이 받으세요	xingniankuaire	7
 수고했어요	xinkune	7
 수고했어요	xinkure	7
+마음이 지쳐	xinl	7
 새해 복 많이 받으세요	xinliangkuaile	7
 새해 복 많이 받으세요	xinliangkuaine	7
 새해 복 많이 받으세요	xinliangkuaire	7
@@ -7205,8 +7931,14 @@ save me	sm	7
 새해 복 많이 받으세요	xinniankuaine	7
 새해 복 많이 받으세요	xinniankuaire	7
 기분 좋아요	xinqh	7
+멘탈 터졌어요	xintbl	7
+멘탈 터졌어	xintzl	7
+울고 싶어	xk	7
 ㄱㅅ	xl	7
+마음이 지쳐	xl	7
 기분 좋아요	xqh	7
+멘탈 터졌어요	xtbl	7
+멘탈 터졌어	xtzl	7
 공부	xuex	7
 공부	xx	7
 감사합니다	xxn	7
@@ -7251,7 +7983,9 @@ save me	sm	7
 물 주세요	ys	7
 또 졌어	ysl	7
 원딜	yuand	7
+억울해요	yuanw	7
 데이트	yuefui	7
+억울해요	yw	7
 영어	yy	7
 또 만났네	yyjl	7
 또 이겼어	yyl	7
@@ -7275,10 +8009,14 @@ save me	sm	7
 좋은 아침	zaoshanhao	7
 가자	zb	7
 템 나왔어	zbcx	7
+못 하겠어	zbd	7
+내 잘못 아니야	zbswdc	7
 실화야?	zdjd	7
 재수 없어	zdm	7
 정말요?	zdm	7
 ㄹㅇ	zdy	7
+뭘 해도 욕먹네	zenmdc	7
+진짜 짜증나	zf	7
 어시스트	zg	7
 이거 뭐예요?	zgssm	7
 어디야?	zhailali	7
@@ -7303,11 +8041,18 @@ save me	sm	7
 좋은 아침	zhaoshangfao	7
 좋은 아침	zhaoshanghao	7
 좋은 아침	zhaoshanhao	7
+내 잘못 아니야	zhebswdc	7
 이거 뭐예요?	zhegssm	7
 실화야?	zhendjd	7
 재수 없어	zhendm	7
 정말요?	zhendm	7
 ㄹㅇ	zhendy	7
+진짜 짜증나	zhenf	7
+진짜 어이없어	zhenwy	7
+나만 집중 공격해	zhihw	7
+나만 죽어	zhiyws	7
+나만 이래	zhiywzy	7
+나만 갱 와	zhizw	7
 중반	zhongq	7
 중국어	zhongw	7
 템 나왔어	zhuangbcx	7
@@ -7371,8 +8116,10 @@ save me	sm	7
 다 했어요	zhuowanre	7
 도우미	zhus	7
 넥서스	zhusj	7
+나만 집중 공격해	zhw	7
 전적	zj	7
 한 판 더	zlyb	7
+뭘 해도 욕먹네	zmdc	7
 가자	zoub	7
 중반	zq	7
 도우미	zs	7
@@ -7411,6 +8158,7 @@ save me	sm	7
 빨리 나으세요	zunizhaorikangfu	7
 빨리 나으세요	zunizhaorikanghu	7
 빨리 나으세요	zunizhaorikanhu	7
+못 하겠어	zuobd	7
 왼쪽	zuobiang	7
 요리할게요	zuofang	7
 요리할게요	zuohan	7
@@ -7434,7 +8182,11 @@ save me	sm	7
 다 했어요	zuowanre	7
 숙제	zuoy	7
 중국어	zw	7
+진짜 어이없어	zwy	7
 숙제	zy	7
+나만 죽어	zyws	7
+나만 이래	zywzy	7
+나만 갱 와	zzw	7
 보고서	baogao	6
 배불러	baole	6
 죄송해요	baoqian	6
@@ -7537,6 +8289,7 @@ save me	sm	7
 뭉쳐	baot	5
 도와줘	bbw	5
 bot diff	bd	5
+나만 노려	beizd	5
 터졌어	bengl	5
 겁내지 마	biep	5
 도망치지 마	biep	5
@@ -7569,6 +8322,7 @@ bot diff	botd	5
 잘 모르겠어요	buzidao	5
 싫어요	by	5
 아니에요	byx	5
+나만 노려	bzd	5
 ㅁㄹ	bzda	5
 급하지 마	bzj	5
 메뉴판 주세요	caidang	5
@@ -7657,6 +8411,8 @@ counter	countr	5
 겁나요	faipa	5
 수비	fangshou	5
 방어탑	fangyuta	5
+짜증	fann	5
+진짜 짜증나	fansl	5
 오랜만	faojiubujian	5
 오랜만	faojiubujiang	5
 예뻐요	faokan	5
@@ -7673,8 +8429,10 @@ counter	countr	5
 정지	fh	5
 차단	fj	5
 follow me	fm	5
+짜증	fn	5
 follow me	followm	5
 뒤	fou	5
+진짜 짜증나	fsl	5
 부활	fuh	5
 저기요	fuwy	5
 서포터	fuz	5
@@ -7714,6 +8472,7 @@ follow me	followm	5
 오랜만	haojiubujiang	5
 멋있어요	haok	5
 예뻐요	haokang	5
+지쳐	haol	5
 됐어?	haolm	5
 친한 친구	haopenyou	5
 카리스타	hbx	5
@@ -7722,6 +8481,7 @@ follow me	followm	5
 리플레이	hf	5
 다행이다	hh	5
 멋있어요	hk	5
+지쳐	hl	5
 됐어?	hlm	5
 아직	hm	5
 브랜드	hn	5
@@ -8095,6 +8855,7 @@ op	tq	5
 좋은 저녁 되세요	wanshangfao	5
 좋은 저녁 되세요	wanshanhao	5
 ㅈㅈ	way	5
+나 못하나 봐	wc	5
 늦어서 미안해요	wcdl	5
 제가 잘못했어요	wcl	5
 캐리했어	wcrryl	5
@@ -8107,6 +8868,7 @@ op	tq	5
 바루스	wls	5
 퍼펙트	wm	5
 이해 못 했어요	wobudon	5
+나 못하나 봐	woc	5
 늦어서 미안해요	wocdl	5
 제가 잘못했어요	wocl	5
 캐리했어	wocrryl	5
@@ -8437,9 +9199,11 @@ op	tq	5
 수비	hansou	4
 한판 더	hanyipang	4
 방어탑	hanyuta	4
+짜증나요	haof	4
 친구	haoy	4
 베이가	haqiu	4
 허	he	4
+짜증나요	hf	4
 아직 이길 수 있어	hnd	4
 후	hu	4
 친구	hy	4
@@ -8504,7 +9268,9 @@ op	tq	5
 밖	waimiang	4
 잊었어	wangne	4
 잊었어	wangre	4
+서운해	weiq	4
 중국인이에요	woszgr	4
+서운해	wq	4
 중국인이에요	wszgr	4
 시	xi	4
 체력	xueliang	4
@@ -8735,6 +9501,7 @@ op	tq	5
 하	ha	3
 하이	hai	3
 아직이야	haim	3
+무서워	haip	3
 마나	hali	3
 판	han	3
 판	hang	3
@@ -8769,6 +9536,7 @@ op	tq	5
 레드	hongbb	3
 레드	hongbf	3
 호우	hou	3
+무서워	hp	3
 저렴해요	hpy	3
 푸	hu	3
 화	hua	3
@@ -8804,6 +9572,7 @@ op	tq	5
 징크스	jingks	3
 경험치	jingyan	3
 오늘	jintian	3
+긴장돼	jinz	3
 지옹	jiong	3
 지우	jiu	3
 살려줘	jium	3
@@ -8813,6 +9582,7 @@ op	tq	5
 주안	juan	3
 줴	jue	3
 준	jun	3
+긴장돼	jz	3
 카	ka	3
 카이	kai	3
 회의 중이에요	kaih	3
@@ -8984,11 +9754,13 @@ op	tq	5
 용서해 주세요	qingyl	3
 앉으세요	qingz	3
 치옹	qiong	3
+빡쳐	qisl	3
 추	qiu	3
 들어오세요	qj	3
 영화 보러 갈래요?	qkdy	3
 잠깐만요	qsd	3
 자러 갈게요	qsj	3
+빡쳐	qsl	3
 츄	qu	3
 촨	quan	3
 쳬	que	3

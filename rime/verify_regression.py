@@ -104,6 +104,27 @@ REGRESSION = [
     ("youdazhao", "궁 있어"),           # 有大招
     ("budao", "CS 먹어"),               # 补刀
     ("kuaidiankuaidian", "ㅂㄹㅂㄹ"),   # ㅂㄹㅂㄹ（빨리빨리）
+    # 2026-09-22 情绪表达批次（抽取核心场景）
+    ("beizhendui", "자꾸 나만 노려"),   # 被针对
+    ("weishenmezhenduiwo", "왜 나만 노려"),  # 为什么针对我
+    ("fansile", "짜증나 죽겠어"),       # 烦死了
+    ("haofan", "짜증나"),              # 好烦
+    ("qisiwole", "열받아 죽겠어"),      # 气死我了
+    ("bengkui", "멘탈 터졌어"),         # 崩溃
+    ("weiqu", "억울해"),               # 委屈
+    ("wozhaoshuirele", "내가 뭘 잘못했어"),  # 我招谁惹谁了
+    ("haolei", "너무 힘들어"),          # 好累
+    ("wotainanle", "나 너무 힘들어"),   # 我太难了
+    ("buxiangwanle", "하기 싫어"),      # 不想玩了
+    ("meibanfa", "어쩔 수 없지"),       # 没办法
+    ("huangtang", "황당해"),           # 荒唐
+    ("wotule", "토나와"),              # 我吐了
+    ("anweiwo", "위로해 줘"),           # 安慰我
+    ("rangwojingjing", "혼자 있게 해 줘"),  # 让我静静
+    ("bieshuaiguo", "남 탓하지 마"),    # 别甩锅
+    ("shoubuliaole", "못 참겠어"),      # 受不了了
+    ("xiangku", "울고 싶어"),           # 想哭
+    ("guaiwo", "내 잘못이야"),          # 怪我
 ]
 
 # 禁止项：这些「错误义项」曾经被挂错过，回归时断言它们不再同时出现
