@@ -57,21 +57,19 @@ def main():
     eng = s["engine"]["translators"]
     print("translators:", eng)
     assert "table_translator" in eng, "缺少默认 table_translator"
-    assert "script_translator@cn" in eng, "缺少中文 script_translator@cn"
+    assert "script_translator@cn" not in eng, "2026-09-25 起专攻韩文：中文 translator 必须移除"
     assert s["translator"]["dictionary"] == "hanpinyin", "默认 translator 须指向 hanpinyin"
-    assert s["cn"]["dictionary"] == "luna_pinyin", "中文须用 luna_pinyin"
+    assert s["translator"].get("enable_completion") is False, "韩文侧补全必须关闭（补全会拉入无关长码）"
+    assert s["translator"].get("enable_encoder") is True, "自造词编码（enable_encoder）必须开启"
+    assert s["translator"].get("encode_commit_history") is True, "长句历史编码（encode_commit_history）必须开启"
 
-    cn_alg = s["cn"].get("speller", {}).get("algebra", [])
-    cn_text = "\n".join(cn_alg)
-    has_fuzzy = bool(re.search(r"derive/\^\(\[zcs\]\)h", cn_text)) and "derive/^n/l/" in cn_text
-    has_abbrev = "abbrev/" in cn_text
-    print("  中文侧 模糊音:", "✔" if has_fuzzy else "�’✘", "| 简拼(abbrev):", "✔" if has_abbrev else "✘")
+    alg = s["speller"].get("algebra", [])
+    alg_text = "\n".join(alg)
+    has_fuzzy = bool(re.search(r"derive/\^\(\[zcs\]\)h", alg_text)) and "derive/^n/l/" in alg_text
+    print("  韩文侧 模糊音:", "✔" if has_fuzzy else "✘")
     if not has_fuzzy:
         ok = False
-        print("  [FAIL] 中文侧缺少模糊音 derive 规则")
-    if not has_abbrev:
-        ok = False
-        print("  [FAIL] 中文侧缺少 abbrev（简拼）规则")
+        print("  [FAIL] 全局 speller 缺少模糊音 derive 规则")
 
     # ---- 2) dict ----
     header, rows = load_dict_rows()

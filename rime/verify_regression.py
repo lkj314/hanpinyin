@@ -206,6 +206,39 @@ def load_dict_bycode():
     return bycode
 
 
+def load_dict_top():
+    """码 -> (最高权重, 对应词)：用于速记码「首位」断言。"""
+    top = {}
+    started = False
+    with open(DICT, encoding="utf-8") as f:
+        for ln in f:
+            s = ln.rstrip("\n")
+            if s.strip() == "...":
+                started = True
+                continue
+            if not started or not s.strip() or s.startswith("#"):
+                continue
+            parts = s.split("\t")
+            if len(parts) != 3 or not parts[2].strip().isdigit():
+                continue
+            t, c, w = parts[0], parts[1], int(parts[2])
+            if c not in top or w > top[c][0]:
+                top[c] = (w, t)
+    return top
+
+
+# 速记码首位断言：这些码的最高权重词必须是期望的韩文
+# （速记码是肌肉记忆，首位被别的词顶掉就是体验事故）
+SHORTCODE_DOM = [
+    ("nh", "안녕하세요"), ("xx", "감사합니다"), ("dbq", "죄송합니다"),
+    ("pw", "랭크"), ("dy", "정글"), ("sd", "탑"), ("zd", "미드"),
+    ("ht", "한타"), ("zb", "템"), ("bd", "CS 먹어"),
+    ("zmb", "어떡해"), ("beizd", "자꾸 나만 노려"),   # beizd=被针对混拼（bzd 与「不知道」共享，保持并列）
+    ("bk", "멘탈 터졌어"), ("hl", "너무 힘들어"), ("wq", "억울해"),
+    ("bb", "ㅂㅂ"), ("xk", "ㅅㅅ"), ("dd", "ㄱㄷ"), ("gw", "내 잘못이야"),
+]
+
+
 def main():
     fails, warns = fail_list(), []
 
@@ -252,6 +285,36 @@ def main():
             fails.append("禁止项重现: %s 下又出现 %s（%s）" % (code, text, why))
         else:
             print("  禁止项 %s 不含 %s ✔" % (code, text))
+
+    # E. 速记码首位断言（肌肉记忆保障：速记码的第一候选必须是指定词）
+    dtop = load_dict_top()
+    sc_bad = 0
+    for code, expect in SHORTCODE_DOM:
+        got = dtop.get(code)
+        if got and got[1] == expect:
+            print("  速记 %s 首位 = %s ✔" % (code, expect))
+        else:
+            print("  速记 %s 首位期望 %s，实际 %s ✘" % (code, expect, got[1] if got else "（码不存在）"))
+            fails.append("速记码首位错误: %s" % code)
+            sc_bad += 1
+
+    # F. schema 关键配置断言（专攻韩文后的引擎形态，防止被改回；忽略注释行）
+    schema_lines = [l for l in open(os.path.join(HERE, "sino_mix.schema.yaml"),
+                                    encoding="utf-8").read().split("\n")
+                    if not l.lstrip().startswith("#")]
+    schema = "\n".join(schema_lines)
+    checks = [
+        ("script_translator@cn" not in schema, "中文 translator 应已移除"),
+        ("enable_completion: false" in schema, "补全应已关闭"),
+        ("enable_encoder: true" in schema, "自造词编码应开启"),
+        ("encode_commit_history: true" in schema, "长句历史编码应开启"),
+    ]
+    for ok, why in checks:
+        if ok:
+            print("  schema 检查：%s ✔" % why)
+        else:
+            print("  schema 检查：%s ✘" % why)
+            fails.append("schema 配置错误: " + why)
 
     for w in warns:
         print("  [WARN]", w)

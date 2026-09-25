@@ -1,9 +1,9 @@
-# HanPinyin 词库（由 data/*.json + rime/extra_phrases.txt 自动生成，请勿手改；
+# HanPinyin 词库（由 data/*.json + rime/extra_phrases.txt + data/shortcodes.tsv 自动生成，请勿手改；
 # 改数据源后重跑 build_dict.py，再在小狼毫里「重新部署」）
-# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码
+# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码 + 速记码（权重 110）
 ---
 name: hanpinyin
-version: "2.13"
+version: "2.14"
 sort: by_weight
 use_preset_vocabulary: false
 columns:
@@ -12,6 +12,93 @@ columns:
   - weight
 max_phrase_length: 20
 ...
+위로해 줘	aww	110
+ㅂㅂ	bb	110
+CS 먹어	bd	110
+멘탈 터졌어	bk	110
+항복하지 마	btx	110
+안돼	bx	110
+하기 싫어	bxwl	110
+못한다	cj	110
+죄송합니다	dbq	110
+ㄱㄷ	dd	110
+점화	dh	110
+레벨	dj	110
+알겠어	dl	110
+솔로킬	ds	110
+라인전	dx	110
+정글	dy	110
+궁	dz	110
+배고파	el	110
+역전	fp	110
+짜증나 죽겠어	fsl	110
+파밍	fy	110
+서폿	fz	110
+내 잘못이야	gw	110
+축하해	gx	110
+귀환	hc	110
+좋아요	hd	110
+오랜만이에요	hjb	110
+너무 힘들어	hl	110
+아직 할 만해	hnd	110
+한타	ht	110
+다행이다	hw	110
+골드	jb	110
+모여	jh	110
+망했어	jl	110
+화이팅	jy	110
+빨리	kd	110
+졸려	kl	110
+돼	ky	110
+쩐다	lh	110
+어쩔 수 없지	mbf	110
+괜찮아요	mgx	110
+지쳤어	ml	110
+금방	ms	110
+개쩔	nb	110
+안녕하세요	nh	110
+스킨	pf	110
+예쁘다	pl	110
+랭크	pw	110
+친구	py	110
+열받아 죽겠어	qswl	110
+혼자 있게 해 줘	rwjj	110
+아무거나	sb	110
+못 참겠어	sbll	110
+탑	sd	110
+순풍	sf	110
+시간	sj	110
+졌어	sl	110
+빡쳤어	sq	110
+생일축하해	srkl	110
+더블킬	ss	110
+점멸	sx	110
+시야	sy	110
+접자	tl	110
+에이스	tm	110
+푸시	tt	110
+항복하자	txb	110
+잘자	wa	110
+헐	wc	110
+노잼	wl	110
+억울해	wq	110
+나 너무 힘들어	wtnl	110
+침착하게	wz	110
+좋아해	xh	110
+ㅅㅅ	xk	110
+ㅋㅋㅋ	xl	110
+감사합니다	xx	110
+궁 있어	ydz	110
+이겼어	yl	110
+좋은아침	za	110
+템	zb	110
+미드	zd	110
+안녕히 가세요	zj	110
+한판더	zl	110
+있어	zm	110
+어떡해	zmb	110
+ㄱㄱ	zq	110
+조심해	zx	110
 ㅂㅂ	baibai	100
 도와줘	bangmang	100
 턴 터졌어	batadale	100
@@ -222,25 +309,19 @@ max_phrase_length: 20
 ㄱㄱ	zouqi	100
 잘했어	zuodehao	100
 도와줘	bangman	99
-帮忙	bangmang	99
 도와줘	banman	99
 도와줘	banmang	99
 턴 터졌어	batadane	99
 턴 터졌어	batadare	99
 터졌어	benbuzhu	99
 터졌어	benbuzu	99
-绷不住	bengbuzhu	99
 터졌어	bengbuzu	99
 죄송해요	bufaoyishi	99
 죄송해요	bufaoyisi	99
 죄송해요	buhaoyishi	99
 안돼	buxin	99
-不行	buxing	99
-菜	caiji	99
 못한다	chaiji	99
 가자	chon	99
-冲	chong	99
-重开	chongkai	99
 리메이크	chonkai	99
 텔레포트	chuangshon	99
 텔레포트	chuangshong	99
@@ -249,7 +330,6 @@ max_phrase_length: 20
 텔레포트	chuanshon	99
 텔레포트	chuanshong	99
 텔레포트	chuanson	99
-传送	chuansong	99
 가자	con	99
 가자	cong	99
 리메이크	congkai	99
@@ -270,15 +350,12 @@ max_phrase_length: 20
 솔로킬	dangsa	99
 솔로킬	dangsha	99
 솔로킬	dansa	99
-单杀	dansha	99
 궁	dazao	99
-大招	dazhao	99
 나 살아나면 가자	dengwofuoguolai	99
 나 살아나면 가자	dengwofuoguonai	99
 나 살아나면 가자	dengwofuoguorai	99
 나 살아나면 가자	dengwohuoguonai	99
 나 살아나면 가자	dengwohuoguorai	99
-等下	dengyixia	99
 나 살아나면 가자	denwofuoguolai	99
 나 살아나면 가자	denwofuoguonai	99
 나 살아나면 가자	denwofuoguorai	99
@@ -289,7 +366,6 @@ max_phrase_length: 20
 점화	dianfuo	99
 점화	diangfuo	99
 점화	dianghuo	99
-点火	dianhuo	99
 적왔어	dilenglaile	99
 적왔어	dilenglaine	99
 적왔어	dilenglaire	99
@@ -335,7 +411,6 @@ max_phrase_length: 20
 적 사라졌어	direngxiaosile	99
 적 사라졌어	direngxiaosine	99
 적 사라졌어	direngxiaosire	99
-敌人来了	direnlaile	99
 적왔어	direnlaine	99
 적왔어	direnlaire	99
 적왔어	dirennaile	99
@@ -349,22 +424,15 @@ max_phrase_length: 20
 적 사라졌어	direnxiaosile	99
 적 사라졌어	direnxiaosine	99
 적 사라졌어	direnxiaosire	99
-一血	diyidixue	99
-懂了	dongle	99
 알겠어	dongne	99
 알겠어	dongre	99
-东西	dongxi	99
 알겠어	donle	99
 알겠어	donne	99
 알겠어	donre	99
 물건	donxi	99
-ごめんなさい	duibuqi	99
-对线	duixian	99
 라인전	duixiang	99
 팀원 조심해	duiyouxiaoxing	99
 얼마	duosao	99
-多少	duoshao	99
-饿	ele	99
 배고파	ene	99
 배고파	ere	99
 하하	fafa	99
@@ -378,7 +446,6 @@ max_phrase_length: 20
 긴장 풀어요	fangsongyidiang	99
 긴장 풀어요	fangsonyidian	99
 긴장 풀어요	fangsonyidiang	99
-翻盘	fanpan	99
 역전	fanpang	99
 긴장 풀어요	fanshongyidian	99
 긴장 풀어요	fanshongyidiang	99
@@ -395,13 +462,11 @@ max_phrase_length: 20
 오랜만이에요	faojiubujianle	99
 오랜만이에요	faojiubujianne	99
 오랜만이에요	faojiubujianre	99
-发育	fayu	99
 귀환	fuicen	99
 귀환	fuiceng	99
 귀환	fuichen	99
 귀환	fuicheng	99
 서폿	fuzu	99
-打	ganba	99
 잘했다	gandepiaolian	99
 잘했다	gandepiaonian	99
 잘했다	gandepiaoniang	99
@@ -430,10 +495,8 @@ max_phrase_length: 20
 아까는 제 잘못이에요	ganggansiwodechuo	99
 아까는 제 잘못이에요	ganggansiwodecuo	99
 물 한 잔 주세요	geiwoyibeisui	99
-恭喜	gongxi	99
 축하해	gonxi	99
 하하	hafa	99
-哈哈	haha	99
 역전	hangpan	99
 역전	hangpang	99
 긴장 풀어요	hangshongyidian	99
@@ -454,7 +517,6 @@ max_phrase_length: 20
 긴장 풀어요	hansongyidiang	99
 긴장 풀어요	hansonyidian	99
 긴장 풀어요	hansonyidiang	99
-好的	haode	99
 오랜만이에요	haojiubujiangle	99
 오랜만이에요	haojiubujiangne	99
 오랜만이에요	haojiubujiangre	99
@@ -464,15 +526,11 @@ max_phrase_length: 20
 귀환	huicen	99
 귀환	huiceng	99
 귀환	huichen	99
-回城	huicheng	99
 서폿	huzhu	99
 서폿	huzu	99
 친추 해 주세요	jiawofaoyou	99
-加油	jiayou	99
 화이팅 우리	jiayouwomeng	99
 모여	jife	99
-集合	jihe	99
-寄了	jile	99
 망했어	jine	99
 오늘 며칠이야?	jingtiangjifao	99
 오늘 며칠이야?	jingtiangjihao	99
@@ -576,10 +634,8 @@ max_phrase_length: 20
 오늘 컨디션이 안 좋아요	jintianzuantaibufao	99
 오늘 컨디션이 안 좋아요	jintianzuantaibuhao	99
 망했어	jire	99
-绝了	juele	99
 쩐다	juene	99
 쩐다	juere	99
-看	kan	99
 메시지 보면 답장해 주세요	kandaoxiaoxiqinfuifu	99
 메시지 보면 답장해 주세요	kandaoxiaoxiqinfuihu	99
 메시지 보면 답장해 주세요	kandaoxiaoxiqingfuifu	99
@@ -599,20 +655,14 @@ max_phrase_length: 20
 캐리	kani	99
 캐리	kari	99
 트롤	ken	99
-坑	keng	99
-可以	keyi	99
-哭	ku	99
-快点	kuaidian	99
 빨리	kuaidiang	99
 빨리 와서 도와줘	kuailaizuwo	99
 빨리 와서 도와줘	kuainaizhuwo	99
 빨리 와서 도와줘	kuainaizuwo	99
 빨리 와서 도와줘	kuairaizhuwo	99
 빨리 와서 도와줘	kuairaizuwo	99
-困了	kunle	99
 졸려	kunne	99
 졸려	kunre	99
-来	lai	99
 어디	lali	99
 바론	langjue	99
 어디	lani	99
@@ -673,7 +723,6 @@ max_phrase_length: 20
 한국어 할 줄 알아요?	lifuisuofanyuma	99
 한국어 할 줄 알아요?	lifuisuohangyuma	99
 한국어 할 줄 알아요?	lifuisuohanyuma	99
-厉害	lihai	99
 안녕하세요	lihao	99
 안녕 친구야	lihaopengyou	99
 안녕 친구야	lihaopenyou	99
@@ -772,16 +821,12 @@ max_phrase_length: 20
 요즘 어떻게 지내세요?	lizuijinguodezhengmeyang	99
 요즘 어떻게 지내세요?	lizuijinguodezhenmeyang	99
 용	lon	99
-龙	long	99
-麻了	male	99
 지쳤어	mane	99
 지쳤어	mare	99
 금방	masan	99
 금방	masang	99
 금방	mashan	99
-马上	mashang	99
 괜찮아요	meiguangxi	99
-没关系	meiguanxi	99
 내일 봐요	mingtiangjianba	99
 내일 봐요	mingtiangjiangba	99
 내일 시간 있어요?	mingtiangyoushijiangma	99
@@ -812,12 +857,9 @@ max_phrase_length: 20
 내일 또 같이 해요	mintianzaiyiqiwan	99
 내일 또 같이 해요	mintianzhaiyiqiwan	99
 오다	nai	99
-哪里	nali	99
 바론	nangjue	99
 어디	nani	99
-男爵	nanjue	99
 어디	nari	99
-你	ni	99
 실력이 좋으시네요	nidadezenfao	99
 실력이 좋으시네요	nidadezengfao	99
 실력이 좋으시네요	nidadezenghao	99
@@ -869,7 +911,6 @@ max_phrase_length: 20
 한국어 할 줄 알아요?	nifuisuohangyuma	99
 한국어 할 줄 알아요?	nifuisuohanyuma	99
 쩐다	nihai	99
-こんにちは	nihao	99
 안녕 친구야	nihaopenyou	99
 한국어 할 줄 알아요?	nihuishuofangyuma	99
 한국어 할 줄 알아요?	nihuishuofanyuma	99
@@ -918,7 +959,6 @@ max_phrase_length: 20
 너 진짜 대단하다	nitairihaile	99
 너 진짜 대단하다	nitairihaine	99
 너 진짜 대단하다	nitairihaire	99
-牛	niubi	99
 어느 서버에서 해요?	nizailagefuwuqi	99
 어느 서버에서 해요?	nizailagehuwuqi	99
 어느 서버에서 해요?	nizainagehuwuqi	99
@@ -959,10 +999,8 @@ max_phrase_length: 20
 요즘 어떻게 지내세요?	nizuijinguodezhenmeyang	99
 용	non	99
 용	nong	99
-朋友	pengyou	99
 친구	penyou	99
 예쁘다	piaolian	99
-漂亮	piaoliang	99
 예쁘다	piaonian	99
 예쁘다	piaoniang	99
 예쁘다	piaorian	99
@@ -1035,9 +1073,7 @@ max_phrase_length: 20
 다시 한번 말해 주세요	qinzhaisuoyibiang	99
 한번 불러봐	qinzhuyixia	99
 한번 불러봐	qinzuyixia	99
-去	qu	99
 오다	rai	99
-人	ren	99
 사람	reng	99
 쩐다	rifai	99
 쩐다	rihai	99
@@ -1058,7 +1094,6 @@ max_phrase_length: 20
 점멸	sangxian	99
 점멸	sangxiang	99
 트리플킬	sansa	99
-三杀	sansha	99
 점멸	sanxian	99
 점멸	sanxiang	99
 누구	sei	99
@@ -1111,9 +1146,7 @@ max_phrase_length: 20
 점멸	shangxiang	99
 트리플킬	shansa	99
 트리플킬	shansha	99
-闪现	shanxian	99
 점멸	shanxiang	99
-谁	shei	99
 생일축하해	shenglikuaile	99
 생일축하해	shenglikuaine	99
 생일축하해	shenglikuaire	99
@@ -1125,8 +1158,6 @@ max_phrase_length: 20
 승리는 우리 거야	shengnishiwomengde	99
 승리는 우리 거야	shengnisiwomende	99
 승리는 우리 거야	shengnisiwomengde	99
-生气	shengqi	99
-生日快乐	shengrikuaile	99
 생일축하해	shengrikuaine	99
 생일축하해	shengrikuaire	99
 승리는 우리 거야	shengrishiwomende	99
@@ -1140,7 +1171,6 @@ max_phrase_length: 20
 승리는 우리 거야	shenlishiwomengde	99
 승리는 우리 거야	shenlisiwomende	99
 승리는 우리 거야	shenlisiwomengde	99
-什么	shenme	99
 승리는 우리 거야	shennishiwomende	99
 승리는 우리 거야	shennishiwomengde	99
 승리는 우리 거야	shennisiwomende	99
@@ -1153,29 +1183,22 @@ max_phrase_length: 20
 승리는 우리 거야	shenrishiwomengde	99
 승리는 우리 거야	shenrisiwomende	99
 승리는 우리 거야	shenrisiwomengde	99
-时间	shijian	99
 시간	shijiang	99
 죽었어	shile	99
 죽었어	shine	99
 죽었어	shire	99
-视野	shiye	99
-帅	shuai	99
 더블킬	shuangsa	99
-双杀	shuangsha	99
 더블킬	shuansa	99
 더블킬	shuansha	99
 아무거나	shuibian	99
 아무거나	shuibiang	99
-输了	shule	99
 졌어	shune	99
 순풍	shunfen	99
-顺风	shunfeng	99
 순풍	shunhen	99
 순풍	shunheng	99
 졌어	shure	99
 시간	sijian	99
 시간	sijiang	99
-死了	sile	99
 죽었어	sine	99
 죽었어	sire	99
 시야	siye	99
@@ -1184,7 +1207,6 @@ max_phrase_length: 20
 더블킬	suangsha	99
 더블킬	suansa	99
 더블킬	suansha	99
-随便	suibian	99
 아무거나	suibiang	99
 졌어	sule	99
 졌어	sune	99
@@ -1193,7 +1215,6 @@ max_phrase_length: 20
 순풍	sunhen	99
 순풍	sunheng	99
 졌어	sure	99
-他	ta	99
 너무 잘한다	taibangne	99
 너무 잘한다	taibangre	99
 너무 잘한다	taibanle	99
@@ -1222,28 +1243,21 @@ max_phrase_length: 20
 얘네 바론 해	tamenzhaidanong	99
 얘네 바론 해	tamenzhaidaron	99
 얘네 바론 해	tamenzhaidarong	99
-讨厌	taoyan	99
 도망쳤어	tataopaone	99
 도망쳤어	tataopaore	99
 항복	touxian	99
-投降	touxiang	99
 에이스	tuangmie	99
 한타	tuangzan	99
 한타	tuangzang	99
 한타	tuangzhan	99
 한타	tuangzhang	99
-团灭	tuanmie	99
 한타	tuanzan	99
 한타	tuanzang	99
-团战	tuanzhan	99
 한타	tuanzhang	99
-推	tuita	99
-晚安	wanan	99
 잘자	wanang	99
 잘 자 친구야	wanangpengyou	99
 잘 자 친구야	wanangpenyou	99
 잘 자 친구야	wananpenyou	99
-完了	wanle	99
 끝났어	wanne	99
 오후 내내 했어	wanneyixiawu	99
 끝났어	wanre	99
@@ -1251,8 +1265,6 @@ max_phrase_length: 20
 왜	weisengme	99
 왜	weisenme	99
 왜	weishengme	99
-为什么	weishenme	99
-我	wo	99
 사랑해요	woaili	99
 한국어 못해요	wobufuifangyu	99
 한국어 못해요	wobufuifanyu	99
@@ -1262,7 +1274,6 @@ max_phrase_length: 20
 한국어 못해요	wobuhuifanyu	99
 한국어 못해요	wobuhuihangyu	99
 잘 모르겠어요	wobutaidon	99
-卧槽	wocao	99
 헐	wochao	99
 잘 먹었습니다	wochibaone	99
 잘 먹었습니다	wochibaore	99
@@ -1438,7 +1449,6 @@ max_phrase_length: 20
 금방 돌아올게요	womashanhuilai	99
 금방 돌아올게요	womashanhuinai	99
 금방 돌아올게요	womashanhuirai	99
-我们	women	99
 우리 한타 가자	womengkaituanba	99
 우리 한타 가자	womengkaituangba	99
 우리 이겼어	womengyingle	99
@@ -1579,7 +1589,6 @@ max_phrase_length: 20
 응원해요	wozichini	99
 응원해요	wozicili	99
 응원해요	wozicini	99
-无聊	wuliao	99
 노잼	wuniao	99
 노잼	wuriao	99
 다음 판 또 해요	xiabazainai	99
@@ -1603,10 +1612,8 @@ max_phrase_length: 20
 지금 몇 시예요?	xianzaijidiang	99
 지금 몇 시예요?	xianzhaijidian	99
 지금 몇 시예요?	xianzhaijidiang	99
-笑了	xiaole	99
 ㅋㅋㅋ	xiaone	99
 ㅋㅋㅋ	xiaore	99
-小心	xiaoxin	99
 적 조심해	xiaoxindifan	99
 적 조심해	xiaoxindihan	99
 적 조심해	xiaoxindihang	99
@@ -1616,7 +1623,6 @@ max_phrase_length: 20
 적 조심해	xiaoxingdihan	99
 적 조심해	xiaoxingdihang	99
 봇	xiaru	99
-ありがとう	xiexie	99
 고마워	xiexieli	99
 도와줘서 고마워요	xiexielidebangzhu	99
 도와줘서 고마워요	xiexielidebangzu	99
@@ -1627,7 +1633,6 @@ max_phrase_length: 20
 도와줘서 고마워요	xiexienidebanzu	99
 좋아해	xifuan	99
 좋아해	xifuang	99
-喜欢	xihuan	99
 좋아해	xihuang	99
 ㅅㅅ	xingku	99
 수고했어요, 푹 쉬어요	xingkulefaofaoxiuxi	99
@@ -1700,8 +1705,6 @@ max_phrase_length: 20
 화장실이 어디예요?	xisoujianzhainali	99
 화장실이 어디예요?	xisoujianzhainani	99
 화장실이 어디예요?	xisoujianzhainari	99
-学校	xuexiao	99
-眼	yan	99
 이따가 전화할게요	yifuiergeilidadianfua	99
 이따가 전화할게요	yifuiergeilidadiangfua	99
 이따가 전화할게요	yifuiergeilidadianghua	99
@@ -1720,7 +1723,6 @@ max_phrase_length: 20
 조심히 가세요	yilupinan	99
 조심히 가세요	yilupinang	99
 조심히 가세요	yilupingang	99
-赢了	yingle	99
 이겼어	yingne	99
 이겼어	yingre	99
 조심히 가세요	yinupinan	99
@@ -1734,14 +1736,11 @@ max_phrase_length: 20
 조심히 가세요	yirupinang	99
 조심히 가세요	yirupingan	99
 조심히 가세요	yirupingang	99
-再来	zailai	99
-在吗	zaima	99
 한판더	zainai	99
 한판더	zairai	99
 우리 물러나자	zangmengtuiba	99
 우리 물러나자	zangmentuiba	99
 우리 물러나자	zanmengtuiba	99
-早安	zaoan	99
 좋은아침	zaoang	99
 이것	zege	99
 이거 얼마예요?	zegeduosaoqian	99
@@ -1796,7 +1795,6 @@ max_phrase_length: 20
 기차역 어떻게 가요?	zengmequhuochezang	99
 기차역 어떻게 가요?	zengmequhuochezhan	99
 기차역 어떻게 가요?	zengmequhuochezhang	99
-怎么	zenme	99
 기차역 어떻게 가요?	zenmequfuocezan	99
 기차역 어떻게 가요?	zenmequfuocezang	99
 기차역 어떻게 가요?	zenmequfuocezhan	99
@@ -1822,7 +1820,6 @@ max_phrase_length: 20
 우리 물러나자	zhanmentuiba	99
 좋은아침	zhaoan	99
 좋은아침	zhaoang	99
-这个	zhege	99
 이거 얼마예요?	zhegeduosaoqian	99
 이거 얼마예요?	zhegeduosaoqiang	99
 이거 얼마예요?	zhegeduoshaoqiang	99
@@ -1850,7 +1847,6 @@ max_phrase_length: 20
 이 챔피언 센 느껴	zhegeyingxionghenqian	99
 이번 판 이겼어	zhejuwoyingne	99
 이번 판 이겼어	zhejuwoyingre	99
-真的	zhende	99
 진짜	zhengde	99
 정말 죄송합니다	zhengdeduibuqi	99
 어떻게	zhengme	99
@@ -1932,304 +1928,20 @@ max_phrase_length: 20
 준비 시작	zunbeikaishi	99
 준비 시작	zunbeikaisi	99
 잘했어	zuodefao	99
-帮忙	bangman	98
-帮忙	banman	98
-帮忙	banmang	98
-绷不住	benbuzhu	98
-绷不住	benbuzu	98
-绷不住	bengbuzu	98
-不行	buxin	98
-菜	chaiji	98
-冲	chon	98
-重开	chonkai	98
-传送	chuangshon	98
-传送	chuangshong	98
-传送	chuangson	98
-传送	chuangsong	98
-传送	chuanshon	98
-传送	chuanshong	98
-传送	chuanson	98
-冲	con	98
-冲	cong	98
-重开	congkai	98
-重开	conkai	98
-传送	cuangshon	98
-传送	cuangshong	98
-传送	cuangson	98
-传送	cuangsong	98
-传送	cuanshon	98
-传送	cuanshong	98
-传送	cuanson	98
-传送	cuansong	98
-单杀	dangsa	98
-单杀	dangsha	98
-单杀	dansa	98
-大招	dazao	98
-等下	denyixia	98
-点火	dianfuo	98
-点火	diangfuo	98
-点火	dianghuo	98
-敌人来了	dilenglaile	98
-敌人来了	dilenglaine	98
-敌人来了	dilenglaire	98
-敌人来了	dilengnaile	98
-敌人来了	dilengnaine	98
-敌人来了	dilengnaire	98
-敌人来了	dilengraile	98
-敌人来了	dilengraine	98
-敌人来了	dilengraire	98
-敌人来了	dilenlaile	98
-敌人来了	dilenlaine	98
-敌人来了	dilenlaire	98
-敌人来了	dilennaile	98
-敌人来了	dilennaine	98
-敌人来了	dilennaire	98
-敌人来了	dilenraile	98
-敌人来了	dilenraine	98
-敌人来了	dilenraire	98
-敌人来了	direnglaile	98
-敌人来了	direnglaine	98
-敌人来了	direnglaire	98
-敌人来了	direngnaile	98
-敌人来了	direngnaine	98
-敌人来了	direngnaire	98
-敌人来了	direngraile	98
-敌人来了	direngraine	98
-敌人来了	direngraire	98
-敌人来了	direnlaine	98
-敌人来了	direnlaire	98
-敌人来了	dirennaile	98
-敌人来了	dirennaine	98
-敌人来了	dirennaire	98
-敌人来了	direnraile	98
-敌人来了	direnraine	98
-敌人来了	direnraire	98
-懂了	dongne	98
-懂了	dongre	98
-懂了	donle	98
-懂了	donne	98
-懂了	donre	98
-东西	donxi	98
-sorry	duibuqi	98
-对线	duixiang	98
-多少	duosao	98
-饿	ene	98
-饿	ere	98
-哈哈	fafa	98
-哈哈	faha	98
-翻盘	fangpan	98
-翻盘	fangpang	98
-翻盘	fanpang	98
-好的	faode	98
-回城	fuicen	98
-回城	fuiceng	98
-回城	fuichen	98
-回城	fuicheng	98
-打	gangba	98
-恭喜	gonxi	98
-哈哈	hafa	98
-翻盘	hangpan	98
-翻盘	hangpang	98
-翻盘	hanpan	98
-翻盘	hanpang	98
-发育	hayu	98
-回城	huicen	98
-回城	huiceng	98
-回城	huichen	98
-集合	jife	98
 꽃됐어	jile	98
-寄了	jine	98
-寄了	jire	98
-绝了	juene	98
-绝了	juere	98
-看	kang	98
-坑	ken	98
-快点	kuaidiang	98
-困了	kunne	98
-困了	kunre	98
-哪里	lali	98
-男爵	langjue	98
-哪里	lani	98
-男爵	lanjue	98
-哪里	lari	98
-人	len	98
-人	leng	98
-你	li	98
-厉害	lifai	98
-こんにちは	lifao	98
-こんにちは	lihao	98
-牛	liubi	98
-龙	lon	98
 털렸어	male	98
-麻了	mane	98
-麻了	mare	98
-马上	masan	98
-马上	masang	98
-马上	mashan	98
-没关系	meiguangxi	98
-来	nai	98
-男爵	nangjue	98
-哪里	nani	98
-哪里	nari	98
-厉害	nifai	98
-こんにちは	nifao	98
-厉害	nihai	98
-hello	nihao	98
-龙	non	98
-龙	nong	98
-朋友	penyou	98
-漂亮	piaolian	98
-漂亮	piaonian	98
-漂亮	piaoniang	98
-漂亮	piaorian	98
-漂亮	piaoriang	98
-来	rai	98
-人	reng	98
-厉害	rifai	98
-厉害	rihai	98
-龙	ron	98
-龙	rong	98
-三杀	sangsa	98
-三杀	sangsha	98
-闪现	sangxian	98
-闪现	sangxiang	98
-三杀	sansa	98
-闪现	sanxian	98
-闪现	sanxiang	98
-谁	sei	98
-生日快乐	senglikuaile	98
-生日快乐	senglikuaine	98
-生日快乐	senglikuaire	98
-什么	sengme	98
-生气	sengqi	98
-生日快乐	sengrikuaile	98
-生日快乐	sengrikuaine	98
-生日快乐	sengrikuaire	98
-生日快乐	senlikuaile	98
-生日快乐	senlikuaine	98
-生日快乐	senlikuaire	98
-什么	senme	98
-生气	senqi	98
-生日快乐	senrikuaile	98
-生日快乐	senrikuaine	98
-生日快乐	senrikuaire	98
-三杀	shangsa	98
-三杀	shangsha	98
-闪现	shangxian	98
-闪现	shangxiang	98
-三杀	shansa	98
-三杀	shansha	98
-闪现	shanxiang	98
-生日快乐	shenglikuaile	98
-生日快乐	shenglikuaine	98
-生日快乐	shenglikuaire	98
-什么	shengme	98
-生日快乐	shengrikuaine	98
-生日快乐	shengrikuaire	98
-生日快乐	shenlikuaile	98
-生日快乐	shenlikuaine	98
-生日快乐	shenlikuaire	98
-生气	shenqi	98
-生日快乐	shenrikuaile	98
-生日快乐	shenrikuaine	98
-生日快乐	shenrikuaire	98
-时间	shijiang	98
-死了	shile	98
-死了	shine	98
-死了	shire	98
-双杀	shuangsa	98
-双杀	shuansa	98
-双杀	shuansha	98
-随便	shuibian	98
-随便	shuibiang	98
-输了	shune	98
-顺风	shunfen	98
-顺风	shunhen	98
-顺风	shunheng	98
-输了	shure	98
-时间	sijian	98
-时间	sijiang	98
-死了	sine	98
-死了	sire	98
-视野	siye	98
-帅	suai	98
-双杀	suangsa	98
-双杀	suangsha	98
-双杀	suansa	98
-双杀	suansha	98
-随便	suibiang	98
-输了	sule	98
-输了	sune	98
-顺风	sunfen	98
-顺风	sunfeng	98
-顺风	sunhen	98
-顺风	sunheng	98
-输了	sure	98
-投降	touxian	98
-团灭	tuangmie	98
-团战	tuangzan	98
-团战	tuangzang	98
-团战	tuangzhan	98
-团战	tuangzhang	98
-团战	tuanzan	98
-团战	tuanzang	98
-团战	tuanzhang	98
-晚安	wanang	98
-完了	wanne	98
-完了	wanre	98
-为什么	weisengme	98
-为什么	weisenme	98
-为什么	weishengme	98
-卧槽	wochao	98
-无聊	wuniao	98
-无聊	wuriao	98
 웃겼어	xiaole	98
-笑了	xiaone	98
-笑了	xiaore	98
-小心	xiaoxing	98
-thanks	xiexie	98
-喜欢	xifuan	98
-喜欢	xifuang	98
-喜欢	xihuang	98
-赢了	yingne	98
-赢了	yingre	98
 뭐해	zaima	98
-再来	zainai	98
-再来	zairai	98
-早安	zaoang	98
-这个	zege	98
-真的	zende	98
-真的	zengde	98
-怎么	zengme	98
-再来	zhailai	98
-在吗	zhaima	98
-再来	zhainai	98
-再来	zhairai	98
-早安	zhaoan	98
-早安	zhaoang	98
-真的	zhengde	98
-怎么	zhengme	98
-怎么	zhenme	98
-对不起	duibuqi	97
 꽃됐어	jine	97
 꽃됐어	jire	97
-hello	lifao	97
-hello	lihao	97
 털렸어	mane	97
 털렸어	mare	97
-hello	nifao	97
-你好	nihao	97
 웃겼어	xiaone	97
 웃겼어	xiaore	97
-谢谢	xiexie	97
 뭐해	zhaima	97
-你好	lifao	96
-你好	lihao	96
-你好	nifao	96
 ㅂㅂ	baib	95
 도와줘	bangm	95
 턴 터졌어	batdl	95
-ㅂㅂ	bb	95
 터졌어	bbz	95
 터졌어	bengbz	95
 죄송해요	bhys	95
@@ -2237,11 +1949,9 @@ hello	nifao	97
 턴 터졌어	btdl	95
 죄송해요	buhys	95
 안돼	bux	95
-안돼	bx	95
 못한다	caij	95
 리메이크	chongk	95
 텔레포트	chuans	95
-못한다	cj	95
 리메이크	ck	95
 텔레포트	cs	95
 여러분 수고하셨습니다	dajxkl	95
@@ -2250,21 +1960,17 @@ hello	nifao	97
 궁	daz	95
 ㅈㅅ	dbq	95
 미안해요	dbq	95
-죄송합니다	dbq	95
 나 살아나면 가자	dengwhgl	95
 잠깐만	dengyx	95
-점화	dh	95
 점화	dianh	95
 적왔어	dirll	95
 적 사라졌어	dirxsl	95
 퍼스트블러드	diydx	95
 여러분 수고하셨습니다	djxkl	95
-알겠어	dl	95
 알겠어	dongl	95
 물건	dongx	95
 적왔어	drll	95
 적 사라졌어	drxsl	95
-솔로킬	ds	95
 얼마	ds	95
 ㅈㅅ	duibq	95
 미안해요	duibq	95
@@ -2273,22 +1979,15 @@ hello	nifao	97
 팀원 조심해	duiyxx	95
 얼마	duos	95
 나 살아나면 가자	dwhgl	95
-라인전	dx	95
 물건	dx	95
-정글	dy	95
 퍼스트블러드	dydx	95
 잠깐만	dyx	95
 팀원 조심해	dyxx	95
-궁	dz	95
-배고파	el	95
 긴장 풀어요	fangsyd	95
 역전	fanp	95
 파밍	fay	95
-역전	fp	95
 긴장 풀어요	fsyd	95
 서폿	fuz	95
-파밍	fy	95
-서폿	fz	95
 치자	ganb	95
 잘했다	gandpl	95
 아까는 제 잘못이에요	ganggswdc	95
@@ -2300,18 +1999,14 @@ hello	nifao	97
 축하해	gongx	95
 와드 줘	gwy	95
 물 한 잔 주세요	gwybs	95
-축하해	gx	95
 하하	hah	95
 좋아요	haod	95
 오랜만이에요	haojbjl	95
-귀환	hc	95
-좋아요	hd	95
 만나서 반가워요	hengxrsn	95
 만나서 반가워요	hgxrsn	95
 하하	hh	95
 오랜만이에요	hjbjl	95
 귀환	huic	95
-모여	jh	95
 친추 해 주세요	jiawhy	95
 화이팅	jiay	95
 화이팅 우리	jiaywm	95
@@ -2320,51 +2015,40 @@ hello	nifao	97
 오늘 며칠이야?	jintjh	95
 오늘 날씨 진짜 좋아요	jinttqzh	95
 오늘 컨디션이 안 좋아요	jintztbh	95
-망했어	jl	95
 쩐다	jl	95
 오늘 며칠이야?	jtjh	95
 오늘 날씨 진짜 좋아요	jttqzh	95
 오늘 컨디션이 안 좋아요	jtztbh	95
 쩐다	juel	95
 친추 해 주세요	jwhy	95
-화이팅	jy	95
 화이팅 우리	jywm	95
 캐리	kal	95
 메시지 보면 답장해 주세요	kandxxqhf	95
-빨리	kd	95
 메시지 보면 답장해 주세요	kdxxqhf	95
 돼	key	95
 카드로 계산할 수 있어요?	keyykm	95
-졸려	kl	95
 캐리	kl	95
 빨리 와서 도와줘	klzw	95
 빨리	kuaid	95
 빨리 와서 도와줘	kuailzw	95
 졸려	kunl	95
-돼	ky	95
 카드로 계산할 수 있어요?	kyykm	95
-쩐다	lh	95
 쩐다	lih	95
 여기서 멀어요?	lizlym	95
 여기서 멀어요?	lzlym	95
 지쳤어	mal	95
 금방	mas	95
 괜찮아요	meigx	95
-괜찮아요	mgx	95
 내일 봐요	mingtjb	95
 내일 시간 있어요?	mingtysjm	95
 내일 또 같이 해요	mingtzyqw	95
-지쳤어	ml	95
-금방	ms	95
 내일 봐요	mtjb	95
 내일 시간 있어요?	mtysjm	95
 내일 또 같이 해요	mtzyqw	95
 어디	nal	95
 바론	nanj	95
-개쩔	nb	95
 전화번호가 몇 번이에요?	nddhhmsds	95
 실력이 좋으시네요	nddzh	95
-안녕하세요	nh	95
 안녕 친구야	nhpy	95
 한국어 할 줄 알아요?	nhshym	95
 전화번호가 몇 번이에요?	niddhhmsds	95
@@ -2393,8 +2077,6 @@ hello	nifao	97
 너 대단하다	nzx	95
 친구	pengy	95
 예쁘다	piaol	95
-예쁘다	pl	95
-친구	py	95
 용 잡아	qbl	95
 포장해 주세요	qbwdb	95
 잘 부탁드립니다	qddgz	95
@@ -2412,9 +2094,6 @@ hello	nifao	97
 다시 한번 말해 주세요	qzsyb	95
 한번 불러봐	qzyx	95
 트리플킬	sans	95
-아무거나	sb	95
-탑	sd	95
-순풍	sf	95
 탑	shangd	95
 점멸	shanx	95
 승리는 우리 거야	shenglswmd	95
@@ -2428,27 +2107,18 @@ hello	nifao	97
 순풍	shunf	95
 누구	si	95
 죽었어	sil	95
-시간	sj	95
-졌어	sl	95
 죽었어	sl	95
 승리는 우리 거야	slswmd	95
 뭐	sm	95
-빡쳤어	sq	95
-생일축하해	srkl	95
-더블킬	ss	95
 트리플킬	ss	95
 아무거나	suib	95
-점멸	sx	95
-시야	sy	95
 너무 잘한다	taibl	95
 얘네 바론 해	tamzdl	95
 싫어	taoy	95
 도망쳤어	tatpl	95
 너무 잘한다	tbl	95
-에이스	tm	95
 얘네 바론 해	tmzdl	95
 항복	toux	95
-푸시	tt	95
 도망쳤어	ttpl	95
 에이스	tuanm	95
 한타	tuanz	95
@@ -2456,7 +2126,6 @@ hello	nifao	97
 항복	tx	95
 싫어	ty	95
 한타	tz	95
-잘자	wa	95
 사랑해요	wan	95
 잘자	wana	95
 잘 자 친구야	wanapy	95
@@ -2465,7 +2134,6 @@ hello	nifao	97
 잘 자 친구야	wapy	95
 한국어 못해요	wbhhy	95
 잘 모르겠어요	wbtd	95
-헐	wc	95
 잘 먹었습니다	wcbl	95
 늦어서 죄송해요	wcdldbq	95
 왜	weism	95
@@ -2477,7 +2145,6 @@ hello	nifao	97
 한글을 읽을 줄 몰라요	wkbdhw	95
 한타 열게요	wktl	95
 끝났어	wl	95
-노잼	wl	95
 오후 내내 했어	wlyxw	95
 우리 한타 가자	wmktb	95
 길을 잃었어요	wmll	95
@@ -2535,7 +2202,6 @@ hello	nifao	97
 나 봇이야	wzxl	95
 나 미드야	wzzl	95
 다음 판 또 해요	xbzl	95
-좋아해	xh	95
 다음 판 또 해요	xiabzl	95
 다음 판 하자	xiajzl	95
 봇	xial	95
@@ -2553,13 +2219,10 @@ hello	nifao	97
 수고했어요, 푹 쉬어요	xinklhhxx	95
 화장실이 어디예요?	xisjznl	95
 다음 판 하자	xjzl	95
-ㅅㅅ	xk	95
 수고했어요, 푹 쉬어요	xklhhxx	95
-ㅋㅋㅋ	xl	95
 봇	xl	95
 화장실이 어디예요?	xsjznl	95
 학교	xuex	95
-감사합니다	xx	95
 조심	xx	95
 학교	xx	95
 적 조심해	xxdf	95
@@ -2573,16 +2236,13 @@ hello	nifao	97
 조심히 가세요	yilpa	95
 이겼어	yingl	95
 같이 가자	yiqs	95
-이겼어	yl	95
 조심히 가세요	ylpa	95
 같이 가자	yqs	95
-좋은아침	za	95
 한판더	zail	95
 있어	zaim	95
 우리 물러나자	zanmtb	95
 좋은아침	zaoa	95
 준비 시작	zbks	95
-미드	zd	95
 진짜	zd	95
 정말 죄송합니다	zddbq	95
 잘했어	zdh	95
@@ -2604,188 +2264,21 @@ hello	nifao	97
 준비 시작	zhunbks	95
 생일 축하해요	zhunsrkl	95
 이번 판 이겼어	zjwyl	95
-한판더	zl	95
 어떻게	zm	95
-있어	zm	95
 주말에 뭐 해요?	zmngsm	95
 기차역 어떻게 가요?	zmqhcz	95
 우리 물러나자	zmtb	95
 생일 축하해요	znsrkl	95
 ㄱㄱ	zouq	95
-ㄱㄱ	zq	95
 잘했어	zuodh	95
-帮忙	bangm	94
-绷不住	bbz	94
-绷不住	bengbz	94
-帮忙	bm	94
-不行	bux	94
-不行	bx	94
-菜	caij	94
-重开	chongk	94
-传送	chuans	94
-菜	cj	94
-重开	ck	94
-传送	cs	94
-单杀	dans	94
-大招	daz	94
-ごめんなさい	dbq	94
-等下	dengyx	94
-点火	dh	94
-点火	dianh	94
-敌人来了	dirll	94
-一血	diydx	94
-懂了	dl	94
-懂了	dongl	94
-东西	dongx	94
-敌人来了	drll	94
-单杀	ds	94
-多少	ds	94
-ごめんなさい	duibq	94
-对线	duix	94
-多少	duos	94
-东西	dx	94
-对线	dx	94
-一血	dydx	94
-等下	dyx	94
-大招	dz	94
-饿	el	94
-翻盘	fanp	94
-发育	fay	94
-翻盘	fp	94
-发育	fy	94
-打	ganb	94
-打	gb	94
-恭喜	gongx	94
-恭喜	gx	94
-哈哈	hah	94
-好的	haod	94
-回城	hc	94
-好的	hd	94
-哈哈	hh	94
-回城	huic	94
-集合	jh	94
-加油	jiay	94
-集合	jih	94
-寄了	jil	94
-寄了	jl	94
-绝了	jl	94
-绝了	juel	94
-加油	jy	94
-快点	kd	94
-可以	key	94
-困了	kl	94
-快点	kuaid	94
-困了	kunl	94
-可以	ky	94
-厉害	lh	94
-厉害	lih	94
-麻了	mal	94
-马上	mas	94
-没关系	meigx	94
-没关系	mgx	94
-麻了	ml	94
-马上	ms	94
-哪里	nal	94
-男爵	nanj	94
-牛	nb	94
-こんにちは	nh	94
-こんにちは	nih	94
-牛	niub	94
-男爵	nj	94
-哪里	nl	94
-朋友	pengy	94
-漂亮	piaol	94
-漂亮	pl	94
-朋友	py	94
-三杀	sans	94
-随便	sb	94
-顺风	sf	94
-闪现	shanx	94
-生气	shengq	94
-生日快乐	shengrkl	94
-什么	shenm	94
-时间	shij	94
-视野	shiy	94
-双杀	shuangs	94
-输了	shul	94
-顺风	shunf	94
-谁	si	94
-死了	sil	94
-时间	sj	94
-死了	sl	94
-输了	sl	94
-什么	sm	94
-生气	sq	94
-生日快乐	srkl	94
-三杀	ss	94
-双杀	ss	94
-随便	suib	94
-闪现	sx	94
-视野	sy	94
-讨厌	taoy	94
-团灭	tm	94
-投降	toux	94
-推	tt	94
-团灭	tuanm	94
-团战	tuanz	94
-推	tuit	94
-投降	tx	94
-讨厌	ty	94
-团战	tz	94
-晚安	wa	94
-晚安	wana	94
-完了	wanl	94
-卧槽	wc	94
-为什么	weism	94
-完了	wl	94
-无聊	wl	94
-卧槽	woc	94
-为什么	wsm	94
-无聊	wul	94
-喜欢	xh	94
-笑了	xiaol	94
-小心	xiaox	94
-ありがとう	xiex	94
-喜欢	xih	94
-笑了	xl	94
-学校	xuex	94
-ありがとう	xx	94
-学校	xx	94
-小心	xx	94
-赢了	yingl	94
-赢了	yl	94
-早安	za	94
-再来	zail	94
-在吗	zaim	94
-早安	zaoa	94
-真的	zd	94
-怎么	zenm	94
-这个	zg	94
-这个	zheg	94
-真的	zhend	94
-再来	zl	94
-在吗	zm	94
-怎么	zm	94
-sorry	dbq	93
-sorry	duibq	93
 꽃됐어	jil	93
 꽃됐어	jl	93
 털렸어	mal	93
 털렸어	ml	93
-hello	nh	93
-hello	nih	93
 웃겼어	xiaol	93
-thanks	xiex	93
 웃겼어	xl	93
-thanks	xx	93
 뭐해	zaim	93
 뭐해	zm	93
-对不起	dbq	92
-对不起	duibq	92
-你好	nh	92
-你好	nih	92
-谢谢	xiex	92
-谢谢	xx	92
 아니요	bushi	20
 네	shide	20
 아니요	busi	19
@@ -6275,7 +5768,6 @@ op	taiqian	9
 이거 주세요	woyzg	9
 자일스	wuqidasi	9
 이거 주세요	wyzg	9
-침착하게	wz	9
 좋아해요	xh	9
 다음에 봐요	xiachijian	9
 다음에 봐요	xiachijiang	9
@@ -6600,7 +6092,6 @@ op	taiqian	9
 몸 조심하세요	zhuyisenti	9
 몸 조심하세요	zhuyishengti	9
 알아요?	zidaoma	9
-어떡해	zmb	9
 어떻게 가요?	zmz	9
 어디예요?	znl	9
 미드	zonglu	9
@@ -6904,7 +6395,6 @@ nevermind	nvm	8
 조용히 해	anjd	7
 위로해 줘	anww	7
 아리	ari	7
-위로해 줘	aww	7
 ㅂㅇ	baib	7
 와드 박아줘	bangwcy	7
 좀 도와주세요	bangwyx	7
@@ -6944,7 +6434,6 @@ nevermind	nvm	8
 한타 피하자	bistz	7
 급하지 마	bj	7
 진입하지 마	bjc	7
-멘탈 터졌어	bk	7
 배불러요	bl	7
 화나게 하지 마	bqfr	7
 열 받게 하지 마	bqfw	7
@@ -6953,7 +6442,6 @@ nevermind	nvm	8
 몸이 안 좋아요	bsf	7
 남 탓하지 마	bsg	7
 한타 피하자	bstz	7
-항복하지 마	btx	7
 나빠요	bufao	7
 별로예요	bufaokan	7
 별로예요	bufaokang	7
@@ -6968,7 +6456,6 @@ nevermind	nvm	8
 몰라요	buzd	7
 와드 박아줘	bwcy	7
 좀 도와주세요	bwyx	7
-하기 싫어	bxwl	7
 억울하게 죽었어	byw	7
 가지 마	bz	7
 몰라요	bzd	7
@@ -7103,7 +6590,6 @@ nevermind	nvm	8
 적	direng	7
 지하철역	ditz	7
 기다려	dj	7
-레벨	dj	7
 상대가 나만 노려	dmzdw	7
 당연하죠	dr	7
 하지만	ds	7
@@ -7179,7 +6665,6 @@ nevermind	nvm	8
 레드	fongbuff	7
 레드	fongbuhf	7
 짜증나게 하지 마	fr	7
-짜증나 죽겠어	fsl	7
 환영해요	fuangying	7
 환영해요	fuanying	7
 부활 중	fuhz	7
@@ -7232,7 +6717,6 @@ go next	gon	7
 내 잘못이야	guaiw	7
 스노우볼	gunxq	7
 와라	guola	7
-내 잘못이야	gw	7
 보여주세요	gwk	7
 스노우볼	gxq	7
 쌈 붙자	gyj	7
@@ -7280,7 +6764,6 @@ go next	gon	7
 집에 가요	hj	7
 오랜만이에요	hjbj	7
 아깝다	hkx	7
-너무 힘들어	hl	7
 레드	honbaba	7
 레드	honbafu	7
 레드	honbahu	7
@@ -7447,7 +6930,6 @@ nevermind	lvm	7
 리 신	mangs	7
 천천히 해	manml	7
 풀템	manz	7
-어쩔 수 없지	mbf	7
 mid diff	md	7
 계산서 주세요	md	7
 궁 없어	mdz	7
@@ -7531,7 +7013,6 @@ mid diff	midd	7
 예뻐	piaoriang	7
 예뻐요	pl	7
 멘탈 나갔어	pofl	7
-랭크	pw	7
 깎아 주세요	pyyd	7
 가라	qa	7
 일어났어요	qcl	7
@@ -7587,7 +7068,6 @@ mid diff	midd	7
 천천히 말해 주세요	qmyd	7
 초반	qq	7
 잠시만요	qsd	7
-열받아 죽겠어	qswl	7
 기습 가자	qtx	7
 영화 보러 갈래요?	qukandiangying	7
 영화 보러 갈래요?	qukangdiangying	7
@@ -7626,7 +7106,6 @@ mid diff	midd	7
 연락해	rianxiwo	7
 봇	rj	7
 살려줘	rlw	7
-혼자 있게 해 줘	rwjj	7
 위	san	7
 위	sang	7
 지난주	sangexingqi	7
@@ -7638,7 +7117,6 @@ mid diff	midd	7
 save me	savem	7
 출근했어요	sb	7
 아무거나 해	sbb	7
-못 참겠어	sbll	7
 손 떨려	sd	7
 승점	sd	7
 생일	sengli	7
@@ -7774,7 +7252,6 @@ save me	sm	7
 라인 밀어	tuix	7
 너무 억울해	twql	7
 라인 밀어	tx	7
-항복하자	txb	7
 싫어해요	ty	7
 야	wa	7
 핵	waig	7
@@ -7853,7 +7330,6 @@ save me	sm	7
 나도 최선을 다했어	woyjll	7
 저도요	woys	7
 내가 뭘 잘못했어	wozsrl	7
-억울해	wq	7
 갱 갈게	wqg	7
 템 사러 갈게	wqmzb	7
 내가 간다	wsl	7
@@ -7861,7 +7337,6 @@ save me	sm	7
 왜 항상 나만	wsmzsw	7
 왜 나만 이래	wsmzyw	7
 토나와	wtl	7
-나 너무 힘들어	wtnl	7
 심심해요	wul	7
 어쩔 수 없어	wun	7
 ㅠㅠ	wuw	7
@@ -7947,7 +7422,6 @@ save me	sm	7
 물 주세요	yaos	7
 야스오	yashuo	7
 원딜	yd	7
-궁 있어	ydz	7
 커버해 줘	yhw	7
 나중에 연락해요	yifouliangxi	7
 나중에 연락해요	yifoulianxi	7
@@ -8380,7 +7854,6 @@ counter	countr	5
 못 버텨	dbz	5
 잘못 눌렀어	dcl	5
 초가스	dcz	5
-ㄱㄷ	dd	5
 남동생	dd	5
 드레이븐	delw	5
 잠깐	denden	5
@@ -8486,7 +7959,6 @@ follow me	followm	5
 아직	hm	5
 브랜드	hn	5
 애니	hn	5
-아직 할 만해	hnd	5
 잘생겼어요	hs	5
 카리스타	huabx	5
 자르반	huangz	5
@@ -8827,7 +8299,6 @@ top diff	td	5
 멈춰	tingyx	5
 너무 아까워	tkxl	5
 오바야	tkzl	5
-접자	tl	5
 카직스	tl	5
 티모	tm	5
 top diff	topd	5
@@ -9087,7 +8558,6 @@ op	tq	5
 알겠어요	zidaole	5
 알겠어요	zidaone	5
 알겠어요	zidaore	5
-안녕히 가세요	zj	5
 집에 있어요	zj	5
 요즘 잘 지내요?	zjhm	5
 잘 지냈어요	zjzmy	5
@@ -10583,7 +10053,6 @@ op	tq	5
 친한 친구	hpy	1
 나빠요	huaid	1
 한판 더	hyp	1
-골드	jb	1
 신고	jb	1
 야근해요	jb	1
 가짜	jd	1
@@ -10658,7 +10127,6 @@ op	tq	5
 다리우스	nuos	1
 너 최고야	nzb	1
 평딩	pd	1
-스킨	pf	1
 스킨	pif	1
 평딩	pingd	1
 클리어	qingx	1
@@ -10763,7 +10231,6 @@ op	tq	5
 재미있어	yys	1
 한판 더	zailyj	1
 준비	zb	1
-템	zb	1
 정말	zd	1
 알겠어요	zdl	1
 그래요?	zdm	1

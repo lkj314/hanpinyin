@@ -24,6 +24,7 @@ HanPinyin -> Rime(小狼毫) 词库生成器
 import os
 import sys
 import json
+import re
 import itertools
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # HanPinyin/
@@ -222,6 +223,40 @@ def load_raw():
     return raw
 
 
+# 纯中文 / 日文候选过滤（2026-09-25 起输入法专攻韩文输出，中文交给用户的搜狗）
+HAN_RE = re.compile(r"[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]")
+HANGUL_RE = re.compile(r"[\uAC00-\uD7A3\u3130-\u318F\u1100-\u11FF]")
+KANA_RE = re.compile(r"[\u3040-\u30FF]")
+
+
+def is_output_text(text):
+    """允许进入词库的输出文本：含谚文，或英文直打（拉丁/数字），不含纯汉字与假名。"""
+    if KANA_RE.search(text):
+        return False
+    if HANGUL_RE.search(text):
+        return True
+    if HAN_RE.search(text):
+        return False
+    return bool(re.fullmatch(r"[A-Za-z0-9 !?.,'\-]+", text))
+
+
+def load_shortcodes():
+    """速记码表：code, pinyin, 指定韩文(可空), 备注。"""
+    path = os.path.join(DATA_DIR, "shortcodes.tsv")
+    scs = []
+    if not os.path.exists(path):
+        return scs
+    for line in open(path, encoding="utf-8"):
+        if line.startswith("#") or not line.strip():
+            continue
+        p = line.rstrip("\n").split("\t")
+        if len(p) >= 2 and p[0].strip() and p[1].strip():
+            scs.append((p[0].strip(), p[1].strip(),
+                        p[2].strip() if len(p) >= 3 and p[2].strip() else "",
+                        p[3].strip() if len(p) >= 4 else ""))
+    return scs
+
+
 def expand(raw):
     """把每条原始词条展开为 (text, code, weight) 集合：
     规范码 + 逐音节模糊音变体 + 简拼/混拼码。按 (text, code) 去重取最大权重。"""
@@ -263,16 +298,48 @@ def expand(raw):
 # ---------------------------------------------------------------------------
 def main():
     raw = load_raw()
+    # 过滤纯中文 / 日文候选（专攻韩文后它们只是噪音）
+    kept, filtered = [], 0
+    for text, py, w, prov in raw:
+        if is_output_text(text):
+            kept.append((text, py, w, prov))
+        else:
+            filtered += 1
+    if filtered:
+        print(f"     已过滤非韩文输出 {filtered} 条（纯汉字/假名）")
+    raw = kept
+
     entries = expand(raw)
+
+    # 速记码：指定韩文（或 main 主候选）以权重 110 落库，保证该码首位
+    mains = {}
+    for e in json.load(open(MAIN, encoding="utf-8")):
+        mains[e["pinyin"].replace(" ", "").replace("'", "")] = e
+    sc_added, sc_skip = 0, []
+    for code, py, override, _note in load_shortcodes():
+        text = override
+        if not text:
+            e = mains.get(py.replace(" ", "").replace("'", ""))
+            text = e["candidates"][0][0] if e else None
+        if not text or not is_output_text(text):
+            sc_skip.append(code)
+            continue
+        key = (text, code)
+        entries[key] = max(entries.get(key, 0), 110)
+        sc_added += 1
+    if sc_skip:
+        print("     速记码跳过（无法解析主候选）:", sc_skip)
+    print(f"     速记码落库: {sc_added} 条（权重 110）")
+
     items = sorted(entries.items(), key=lambda kv: (-kv[1], kv[0][1], kv[0][0]))
 
     lines = [
-        "# HanPinyin 词库（由 data/*.json + rime/extra_phrases.txt 自动生成，请勿手改；",
+        "# HanPinyin 词库（由 data/*.json + rime/extra_phrases.txt + data/shortcodes.tsv 自动生成，请勿手改；",
         "# 改数据源后重跑 build_dict.py，再在小狼毫里「重新部署」）",
-        "# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码",
+        "# 每个词条含：规范拼音码 + 逐音节模糊音变体码 + 简拼/混拼码 + 速记码（权重 110）",
         "---",
         "name: hanpinyin",
-        'version: "2.13"',
+        'version: "2.14"',
         "sort: by_weight",
         "use_preset_vocabulary: false",
         "columns:",

@@ -1,0 +1,89 @@
+# 速记码表：码<TAB>拼音<TAB>指定韩文(空=主候选)<TAB>备注
+# 码 = 中文意思的拼音首字母；build_dict.py 按 (韩文, 码, 110) 落库，保证该码首位
+aww	an wei wo	위로해 줘	安慰我
+bb	bai bai	ㅂㅂ	拜拜
+bd	bu dao	CS 먹어	补刀
+bk	beng kui	멘탈 터졌어	崩溃
+btx	bie tou xiang	항복하지 마	别投降
+bx	bu xing	안돼	不行
+bxwl	bu xiang wan le	하기 싫어	不想玩了
+cj	cai ji	못한다	菜
+dbq	dui bu qi	죄송합니다	对不起
+dd	deng deng	ㄱㄷ	等等
+dh	dian huo	점화	点火
+dj	deng ji	레벨	等级
+dl	dong le	알겠어	懂了
+ds	dan sha	솔로킬	单杀
+dx	dui xian	라인전	对线
+dy	da ye	정글	打野
+dz	da zhao	궁	大招
+el	e le	배고파	饿了
+fp	fan pan	역전	翻盘
+fsl	fan si le	짜증나 죽겠어	烦死了
+fy	fa yu	파밍	发育
+fz	fu zhu	서폿	辅助
+gw	guai wo	내 잘못이야	怪我
+gx	gong xi	축하해	恭喜
+hc	hui cheng	귀환	回城
+hd	hao de	좋아요	好的
+hjb	hao jiu bu jian	오랜만이에요	好久不见
+hl	hao lei	너무 힘들어	好累
+hnd	hai neng da	아직 할 만해	还能打
+ht	tuan zhan	한타	团战
+hw	hai hao	다행이다	还好
+jb	jin bi	골드	金币
+jh	ji he	모여	集合
+jl	ji le	망했어	寄了
+jy	jia you	화이팅	加油
+kd	kuai dian	빨리	快点
+kl	kun le	졸려	困了
+ky	ke yi	돼	可以
+lh	li hai	쩐다	厉害
+mbf	mei ban fa	어쩔 수 없지	没办法
+mgx	mei guan xi	괜찮아요	没关系
+ml	ma le	지쳤어	麻了
+ms	ma shang	금방	马上
+nb	niu bi	개쩔	牛
+nh	ni hao	안녕하세요	你好
+pf	pi fu	스킨	皮肤
+pl	piao liang	예쁘다	漂亮
+pw	pai wei	랭크	排位
+py	peng you	친구	朋友
+qswl	qi si wo le	열받아 죽겠어	气死我了
+rwjj	rang wo jing jing	혼자 있게 해 줘	让我静静
+sb	sui bian	아무거나	随便
+sbll	shou bu liao le	못 참겠어	受不了了
+sd	shang dan	탑	上单
+sf	shun feng	순풍	顺风
+sj	shi jian	시간	时间
+sl	shu le	졌어	输了
+sq	sheng qi	빡쳤어	生气
+srkl	sheng ri kuai le	생일축하해	生日快乐
+ss	shuang sha	더블킬	双杀
+sx	shan xian	점멸	闪现
+sy	shi ye	시야	视野
+tl	tou le	접자	投了
+tm	tuan mie	에이스	团灭
+tt	tui ta	푸시	推塔
+txb	tou xiang ba	항복하자	想投降时
+wa	wan an	잘자	晚安
+wc	wo cao	헐	卧槽
+wl	wu liao	노잼	无聊
+wq	wei qu	억울해	委屈
+wtnl	wo tai nan le	나 너무 힘들어	我太难了
+wz	wen zhu	침착하게	稳住
+xh	xi huan	좋아해	喜欢
+xk	xin ku	ㅅㅅ	ㅅㅅ（수고）
+xl	xiao le	ㅋㅋㅋ	笑了
+xx	xie xie	감사합니다	谢谢
+ydz	you da zhao	궁 있어	有大招
+yl	ying le	이겼어	赢了
+za	zao an	좋은아침	早安
+zb	zhuang bei	템	装备
+zd	zhong dan	미드	中单
+zj	zai jian	안녕히 가세요	再见
+zl	zai lai	한판더	再来
+zm	zai ma	있어	在吗
+zmb	zen me ban	어떡해	怎么办
+zq	zou qi	ㄱㄱ	ㄱㄱ
+zx	xiao xin	조심해	小心

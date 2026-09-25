@@ -36,6 +36,7 @@ PHRASES = os.path.join(ROOT, "data", "phrases.json")
 EXTRA = os.path.join(RIME, "extra_phrases.txt")
 MEANINGS = os.path.join(ROOT, "data", "meanings.tsv")
 META = os.path.join(ROOT, "data", "dict_meta.tsv")
+SHORTCODES = os.path.join(ROOT, "data", "shortcodes.tsv")
 OUT = os.path.join(ROOT, "docs", "HanPinyin词典.html")
 TRANSLIT_NOTE = "音译字（拼人名、地名等用）"
 CATS = ["英雄", "战术", "报点", "日常", "情绪", "缩写", "英文", "音译", "整句"]
@@ -121,6 +122,31 @@ def main():
             raw.append((e["korean"], e["pinyin"], 100, "data"))
             phrases_all.append((code, " ".join(sylls), e["korean"]))
 
+    # 速记码（data/shortcodes.tsv）：码 = 中文意思拼音首字母，权重 110 保证该码首位
+    qs_list, qs_by_text = [], {}
+    mains = {e["pinyin"].replace(" ", "").replace("'", ""): e
+             for e in json.load(open(MAIN, encoding="utf-8"))}
+    if os.path.exists(SHORTCODES):
+        for line in open(SHORTCODES, encoding="utf-8"):
+            if line.startswith("#") or not line.strip():
+                continue
+            p = line.rstrip("\n").split("\t")
+            if len(p) < 2 or not p[0].strip() or not p[1].strip():
+                continue
+            code, py = p[0].strip(), p[1].strip()
+            override = p[2].strip() if len(p) >= 3 and p[2].strip() else ""
+            note = p[3].strip() if len(p) >= 4 else ""
+            text = override
+            if not text:
+                e = mains.get(py.replace(" ", "").replace("'", ""))
+                text = e["candidates"][0][0] if e else None
+            if not text or not HANGUL.search(text):
+                continue
+            add(code, text, 110, "", "qs")
+            qs_by_text.setdefault(text, []).append(code)
+            qs_list.append((code, text, note))
+    qs_list.sort()
+
     # 模糊音 / 简拼 / 混拼变体（与输入法同源）——写进搜索索引，让词典搜索 = 输入法规则
     variants = {}
     for (text, code) in build_dict.expand(raw):
@@ -150,8 +176,7 @@ def main():
     for text, info in words.items():
         info["codes"] = sorted(set(info["codes"]), key=lambda c: (-wmap[(c, text)], c))
         info["primary"] = info["codes"][0]
-        info["meaning"] = meaning_of(info["primary"], text)
-        # 元数据按来源优先级取码：正文词条优先用 main/extra 的码（整句来源的码只作打法）
+        # 元数据按来源优先级取码：正文词条优先用 main/extra 的码（速记/整句来源的码只作打法）
         mcode = info["primary"]
         for pref in ("main", "extra", "phrase"):
             hit = next((c for c in info["codes"] if src.get((c, text)) == pref), None)
@@ -159,8 +184,10 @@ def main():
                 mcode = hit
                 break
         info["mcode"] = mcode
+        # 释义按来源优先码解析（速记码本身在 meanings.tsv 无行，属正常）
+        info["meaning"] = meaning_of(info["mcode"], text)
         if not info["meaning"]:
-            missing.append(info["primary"])
+            missing.append(info["mcode"])
             info["meaning"] = "释义待补"
         info["cat"] = get2(meta, info["mcode"], text, 0) or (
             "音译" if "音译字" in info["meaning"] else
@@ -177,7 +204,8 @@ def main():
         info["note"] = get2(meta, info["mcode"], text, 3)
         vs = sorted(variants.get(text, set()) - set(info["codes"]), key=lambda c: (len(c), c))
         info["variants"] = vs[:MAX_VARIANTS]
-        info["search_codes"] = info["codes"] + info["variants"]
+        info["qs"] = "、".join(sorted(qs_by_text.get(text, [])))
+        info["search_codes"] = info["codes"] + info["variants"] + (qs_by_text.get(text) or [])
 
     body_texts = {t for t, i in words.items()
                   if any(src.get((c, t)) in ("main", "extra") for c in i["codes"])}
@@ -213,10 +241,12 @@ def main():
         typed = "、".join(info["codes"])
         py_show = "〕〔".join(disp.get(c, c) for c in info["codes"])
         ab = ""
+        if info.get("qs"):
+            ab = '<span class="ab">速记 <b>%s</b></span>' % esc(info["qs"])
         if not is_sentence and info["variants"]:
             short = [c for c in info["variants"] if len(c) <= 12][:2]
             if short:
-                ab = '<span class="ab">也可打 %s</span>' % esc("、".join(short))
+                ab += '<span class="ab">也可打 %s</span>' % esc("、".join(short))
         cands = ""
         for c in info["codes"]:
             grp = by_code.get(c, [])
@@ -304,7 +334,15 @@ def main():
         log = []
     ver_html = "".join("<li><code>%s</code></li>" % esc(x) for x in log if x.strip()) or "<li>（无 git 记录）</li>"
 
-    stats = "收录韩文词条 %d 条 · 整句短语 %d 句 · 同义聚类 %d 组" % (len(words), len(phrases), len(glist))
+    qs_rows = []
+    for code, text, note in qs_list:
+        meaning = words[text]["meaning"] if text in words else ""
+        qs_rows.append('<tr><td class="qsc"><code>%s</code></td><td class="qshw">%s</td><td>%s</td><td class="qsnt">%s</td></tr>'
+                       % (esc(code), esc(text), esc(meaning), esc(note)))
+    qs_html = "".join(qs_rows)
+
+    stats = "收录韩文词条 %d 条 · 整句短语 %d 句 · 同义聚类 %d 组 · 速记码 %d 个" % (
+        len(words), len(phrases), len(glist), len(qs_list))
     nav = "".join('<a href="#sec-%s">%s</a>' % (l, l) for l in sorted(body))
 
     HTML = TEMPLATE
@@ -314,8 +352,9 @@ def main():
                                           "" if c in DEFAULT_OFF else " checked", c) for c in CATS)),
                  ("__NAV__", nav), ("__BODY__", "\n".join(sections)), ("__PHRASES__", "\n".join(ph_html)),
                  ("__CLUSTER__", "\n".join(cluster_html)), ("__REVERSE__", "\n".join(rev_items)),
-                 ("__JUMP__", jump_html), ("__VER__", ver_html),
-                 ("__NCLUSTER__", str(len(glist))), ("__NPHASEDUP__", str(n_dup))]:
+                 ("__JUMP__", jump_html), ("__VER__", ver_html), ("__QSHTML__", qs_html),
+                 ("__NCLUSTER__", str(len(glist))), ("__NPHASEDUP__", str(n_dup)),
+                 ("__NQS__", str(len(qs_list)))]:
         HTML = HTML.replace(k, v)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
@@ -367,6 +406,12 @@ TEMPLATE = r"""<!DOCTYPE html>
   .act:hover{color:var(--acc);border-color:var(--acc);}
   .py{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;}
   .typed{color:var(--acc);margin-left:6px;}
+  .qstable{width:100%;border-collapse:collapse;font-size:13px;}
+  .qstable th,.qstable td{border-bottom:1px dotted var(--line);padding:4px 8px;text-align:left;vertical-align:top;}
+  .qstable th{color:var(--muted);font-weight:400;border-bottom:1px solid var(--line);}
+  .qstable .qsc code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 7px;color:var(--acc);font-size:13.5px;}
+  .qstable .qshw{font-size:15px;}
+  .qstable .qsnt{color:var(--muted);font-size:12px;}
   .ab{color:var(--muted);margin-left:6px;}
   .def{display:block;font-size:13px;color:var(--def);margin-top:2px;}
   .note{display:block;font-size:12.5px;color:var(--muted);margin-top:1px;}
@@ -405,7 +450,7 @@ TEMPLATE = r"""<!DOCTYPE html>
       <span class="count" id="cnt"></span>
     </div>
     <div class="chips">__CHIPS__</div>
-    <div class="nav">__NAV__ ｜ <a href="#appx-phrases">整句</a> <a href="#appx-cluster">中文反查</a> <a href="#appx-reverse">가나다</a> <a href="#appx-guide">上手</a> <a href="#appx-ver">版本</a></div>
+    <div class="nav">__NAV__ ｜ <a href="#appx-qs">速记码</a> <a href="#appx-phrases">整句</a> <a href="#appx-cluster">中文反查</a> <a href="#appx-reverse">가나다</a> <a href="#appx-guide">上手</a> <a href="#appx-ver">版本</a></div>
   </div>
 
   <div class="fanli">
@@ -434,19 +479,28 @@ TEMPLATE = r"""<!DOCTYPE html>
     <div class="cols">__REVERSE__</div>
   </div>
 
+  <div class="appx" id="appx-qs">
+    <h2>附录四　速记码表（__NQS__ 个）</h2>
+    <p style="font-size:12.5px;color:var(--muted)">码 = 中文意思的拼音首字母，输入后<b>第一候选</b>即下表韩文。这是打团的肌肉记忆包——先背这张表，其余词用全拼或本页搜索。</p>
+    <table class="qstable">
+      <thead><tr><th>码</th><th>韩文</th><th>释义</th><th>备注</th></tr></thead>
+      <tbody>__QSHTML__</tbody>
+    </table>
+  </div>
+
   <div class="appx" id="appx-guide">
-    <h2>附录四　新人上手指南</h2>
+    <h2>附录五　新人上手指南</h2>
     <div class="guide">
       <b>第一步 · 部署</b>：把 <span style="font-family:monospace">sino_mix.schema.yaml</span> 与 <span style="font-family:monospace">hanpinyin.dict.yaml</span> 复制到 <span style="font-family:monospace">%APPDATA%\Rime\</span>（覆盖旧文件）。<br>
       <b>第二步 · 重新部署</b>：右键任务栏小狼毫（Weasel）托盘图标 →「重新部署」。重启输入法 ≠ 重新部署。<br>
-      <b>第三步 · 打字验证</b>：切到「韩文拼音 HanPinyin」，打 <b>nihao</b> 应出 안녕하세요；<b>lihao</b>（模糊音）、<b>nh</b>（简拼）也应对应；打 <b>paiwei</b> 出 랭크。<br>
-      <b>本词典怎么用</b>：搜中文找说法（搜「怎么办」）、搜拼音查词义（搜 <span style="font-family:monospace">zmb</span>）、看到韩文不认识就去附录三按字母查打法。<br>
-      <b>小提示</b>：翻页用 <b>- / =</b>；常用词选过几次会自动上浮；重置自学习删除 <span style="font-family:monospace">%APPDATA%\Rime\hanpinyin.userdb\</span> 后重新部署。
+      <b>第三步 · 打字验证</b>：切到「韩文拼音 HanPinyin」，打 <b>nihao</b> 应出 안녕하세요；<b>lihao</b>（模糊音）、<b>nh</b>（简拼）也应对应；打 <b>paiwei</b> 出 랭크，打 <b>pw</b>（速记）也出 랭크。<br>
+      <b>本词典怎么用</b>：先背<b>附录四速记码表</b>（打团够用），搜中文找说法（搜「怎么办」）、搜拼音查词义（搜 <span style="font-family:monospace">zmb</span>）、看到韩文不认识就去附录三按字母查打法。<br>
+      <b>小提示</b>：翻页用 <b>- / =</b>；常用词选过几次会自动上浮，<b>连续打出的长句也会被记住</b>（候选带 ☯ 标记，之后敲开头几个字母即可整句调出）；重置自学习删除 <span style="font-family:monospace">%APPDATA%\Rime\hanpinyin.userdb\</span> 后重新部署。
     </div>
   </div>
 
   <div class="appx" id="appx-ver">
-    <h2>附录五　版本变更</h2>
+    <h2>附录六　版本变更</h2>
     <ul class="guide" style="margin:0;padding-left:34px">__VER__</ul>
   </div>
 
