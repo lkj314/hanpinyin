@@ -8,7 +8,7 @@
 
 ## 0. 30 秒版（TL;DR）
 
-- **这是什么**：HanPinyin 是**基于 Rime/小狼毫（Weasel）魔改的韩文拼音输入法**——用户敲中文拼音，候选栏出韩文词。**不是**自研输入法框架。
+- **这是什么**：HanPinyin 是**基于 Rime/小狼毫（Weasel）魔改的韩文拼音输入法**——用户敲中文拼音，候选栏出韩文词（**2026-09-26 起纯韩文输出**：中文候选已移除，另有速记码两三键出常用词、长句自学习）。**不是**自研输入法框架。
 - **真实在跑的代码**：只有 `rime/` 目录（一个 Rime 方案 + 一份生成词典）。`src/` 目录（自研 C++ TSF/EXE）是**已判死刑的死路**，只作历史存档，**绝不投入**。
 - **三条铁律**：
   1. **禁止用任何命令行自动化（.py / .bat / PowerShell）改动输入法或触发部署**——输入法是 Windows 系统级软件，脚本既改不动它、也无法判断它是否更新成功；
@@ -44,14 +44,19 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 **关键认知**：
 - 运行时**只读 `build\*.bin`**（编译后的二进制），**不读 YAML**。所以"把 YAML 拷过去"≠"生效"，必须经过**重新部署**这个编译动作。
-- 中文候选来自 **luna_pinyin**（小狼毫自带标准词库，复用官方已编译好的 `.bin`）；韩文/多语候选来自我们的 **hanpinyin** 词典。
+- **2026-09-26 起专攻韩文**：`script_translator@cn`（中文）已从方案中移除——实测中文候选占候选窗 75%，全是谐音噪音，且用户中文有搜狗负责。现在**唯一 translator 是 table_translator（hanpinyin 词典）**，输出纯韩文 + 游戏英文黑话。
 
-### 1.3 两条 translator 的分工（改 schema 必懂）
+### 1.3 translator 形态（改 schema 必懂）
 
 | translator | 词典 | 码型 | 说明 |
 |---|---|---|---|
-| 默认 `translator`（table_translator） | `hanpinyin.dict.yaml` | **连写码**（`nihao`，无 `'` 分隔） | 韩/英/多语自定义词。**必须挂在默认 translator 上**，见 6.2 事故 |
-| `script_translator@cn` | luna_pinyin | **音节分隔码**（`ni'hao`） | 中文候选，复用官方 .bin |
+| 默认 `translator`（table_translator） | `hanpinyin.dict.yaml` | **连写码**（`nihao`，无 `'` 分隔） | 韩文词 + 英文黑话直打（键=英文本身）。**必须挂在默认 translator 上**，见 6.2 事故 |
+
+**v2.4 关键开关（2026-09-26，均有 schema 断言守护）**：
+- `enable_completion: false`——补全会把无关长码拉进候选窗（打 `hao` 冒出 짜증나），且补全只 -1 质量几乎无效（quality = exp(权重) ± 小量）。
+- `enable_encoder: true` + `encode_commit_history: true`——**长句自学习**：连续上屏内容自动编码成用户词组（候选带 ☯），之后敲开头字母整句调出。查证 librime `table_translator.cc`，无需 `enable_sentence`。
+- 权重体系：**速记码 110 > 基石词 100 > 主词条 10~14 > 变体码 5~9**；质量 = exp(权重)，`initial_quality` 影响可忽略（旧注释"抬高起始质量让韩文排前"是错误的，已删）。
+- 速记码：`data/shortcodes.tsv`（87 条，码 = 中文意思拼音首字母，权重 110 保证该码首位）；`verify_regression.py` 有首位断言。
 
 ---
 
@@ -84,17 +89,20 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 ### 3.1 改词库（加词/改词/删词）
 
-1. 编辑数据源（三选一或组合）：
+1. 编辑数据源（按需组合）：
    - `data/main_dict.json` —— 主词库（拼音**空格分隔音节**，如 `"duo shao qian"`）
    - `data/phrases.json` —— 整句短语库
-   - `rime/extra_phrases.txt` —— 补充短语（拼音**连写**，build 时会拆分）
+   - `rime/extra_phrases.txt` —— 韩文基石高频词（权重 100；**只允许韩文与游戏缩写**）
+   - `data/shortcodes.tsv` —— 速记码表（码 = 中文意思拼音首字母，权重 110 保证首位）
+   - `data/meanings.tsv` —— 释义表（《HanPinyin 词典》用，加词需补一行）
 2. 运行开发期构建工具（这是纯数据生成，不属于"自动化改输入法"）：
    ```
    cd rime && python build_dict.py
    ```
-   产出 `hanpinyin.dict.yaml`（当前约 7088 条，含模糊音/简拼展开码）。
-3. 必跑校验：`python verify_regression.py`（数据质量 + 构建覆盖 + 回归点，必须 PASS）；
-   可选 `python validate_rime.py`（方案结构校验，需 PyYAML）。
+   产出 `hanpinyin.dict.yaml`（当前约 10246 条，含模糊音/简拼/速记码；纯中文与日文候选会被自动过滤）。
+3. 必跑校验：`python verify_regression.py`（数据质量 + 构建覆盖 + 回归点 + **速记码首位** + **schema 形态**，必须 PASS）；
+   必跑 `python validate_rime.py`（方案结构校验，需 PyYAML）；再跑 `python ../docs/gen_dictionary.py`（词典再版，EXIT=0）。
+4. 调权重/改配置后建议跑一遍面板体检对比：`python _bench_panel.py --fresh`。
 
 ### 3.2 部署到本机（用户手动，双击/GUI，无命令行）
 
@@ -112,15 +120,15 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | 敲的字母 | 应出现的候选 | 验证的能力 |
 |---|---|---|
 | `lihao` | 안녕하세요 | 模糊音 n↔l（`nihao` 的模糊变体码） |
-| `nih` | 你好 / 안녕하세요 | **混拼**简拼（ni + h） |
-| `nh` | 你好 / 안녕하세요 | **全缩**简拼 |
-| `dbq` | 죄송합니다 / 미안해요 | "对不起"简拼 |
-| `xx` | 감사합니다 | "谢谢"简拼 |
-| `paiwei` | 랭크 | 排位（2026-09-06 新增批次抽样） |
-| `jiawohaoyou` | 친추 해 주세요 | 整句短语（同批新增） |
+| `dbq` | **죄송합니다（首位）** | "对不起"速记码（2026-09-26 起首位=全词，ㅈㅅ 退居第二） |
+| `pw` | **랭크** | **速记码**（排位，两键） |
+| `ht` / `zb` | **한타 / 템** | **速记码**（团战/装备） |
+| `bk` | **멘탈 터졌어** | **速记码**（崩溃，情绪词） |
+| `gank` | gank（英文直打） | 英文黑话键=英文本身 |
+| — | **候选窗无任何中文** | 2026-09-26 起专攻韩文的标志 |
 
-**判定**：`lihao` 能出 안녕하세요、`dbq` 能出 죄송합니다 ⇒ 新版已生效。
-（2026-09-02 用户已实测通过：`안녕하세요`、`쩐다` 均正常出候选。）
+**判定**：`pw` 能出 랭크、`ht` 能出 한타、候选窗干净无中文 ⇒ v2.4 已生效。
+（2026-09-26 已用隔离环境 `_bench_panel.py --fresh` 实测：中文候选 0、日文 0、韩文全部首位。）
 
 ---
 
@@ -132,8 +140,8 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 - 所以韩文侧的模糊音与简拼/混拼**在 `build_dict.py` 里按音节拆分后逐音节生成变体码，直接写进词典**，完全不依赖 algebra：
   - 声母对：`zh↔z, ch↔c, sh↔s, n↔l, r↔l, f↔h`（`_INITIAL_PAIRS`，build_dict.py:128）
   - 韵母对：`ang↔an, eng↔en, ing↔in, iang↔ian, uang↔uan, ong↔on`（`_FINAL_PAIRS`，build_dict.py:131）
-  - `expand()`（build_dict.py:225）：每条词输出 规范码（原权重）+ 模糊码（权重-1）+ 简拼码（权重-5）
-- **中文侧**（luna_pinyin，码带 `'` 分隔）才能用 algebra：`cn.speller.algebra` 里加了两条 abbrev 规则（sino_mix.schema.yaml:112-113）。
+  - `expand()`（build_dict.py：`expand` 函数）：每条词输出 规范码（原权重）+ 模糊码（权重-1）+ 简拼码（权重-5）；速记码在 `main()` 里以权重 110 落库。
+- 全局 `speller.algebra`（韩文侧）保留模糊 derive 规则作为运行期兜底；**中文侧已随 `script_translator@cn` 移除**（2026-09-26），luna_pinyin 相关配置不再存在。
 
 ### 4.2 schema 排坑备忘（改 sino_mix.schema.yaml 前必读）
 
@@ -145,13 +153,18 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 | 路径 | 状态 | 职责 |
 |---|---|---|
-| `rime/sino_mix.schema.yaml` | ✅ 在用 | 方案配置：translator 挂载、模糊音、简拼规则、自学习/补全开关 |
-| `rime/hanpinyin.dict.yaml` | ✅ 在用 | 生成的多语词典（约 7088 码），**构建产物但已入库** |
-| `rime/build_dict.py` | ✅ 开发工具 | 数据源 → 词典生成（含模糊/简拼展开） |
-| `rime/verify_regression.py` | ✅ 开发工具 | 数据质量 + 构建覆盖 + 回归点校验（改词库后必跑） |
+| `rime/sino_mix.schema.yaml` | ✅ 在用 | 方案配置 v2.4：**纯韩文**（无中文 translator）、无补全、开长句自学习、模糊音规则 |
+| `rime/hanpinyin.dict.yaml` | ✅ 在用 | 生成的韩文词典（约 10246 码），**构建产物但已入库** |
+| `rime/build_dict.py` | ✅ 开发工具 | 数据源 → 词典生成（模糊/简拼展开 + 速记码落库 + 非韩文过滤） |
+| `rime/verify_regression.py` | ✅ 开发工具 | 数据质量 + 构建覆盖 + 回归点 + **速记码首位** + **schema 形态**校验（改词库后必跑） |
 | `rime/validate_rime.py` | ✅ 开发工具 | 方案/词典结构校验（需 PyYAML） |
-| `data/main_dict.json`、`data/phrases.json`、`rime/extra_phrases.txt` | ✅ 数据源 | 词库源头（改这里，不要直接改 dict.yaml） |
-| `src/`、`CMakeLists.txt`、`tests/`、`docs/` | 🗄️ 历史存档 | 自研 TSF/EXE 死路，仅供考古（见 6.4） |
+| `rime/_bench_panel.py` | ✅ 体检工具 | 候选面板量化（韩文/中文/日文占比、韩文位次），调权/改配置前后各跑一遍 |
+| `rime/_diag_select.py` | ✅ 诊断工具 | 端到端"能否选中上屏"（隔离环境模拟按键→选词→读上屏，绝不碰用户输入法数据） |
+| `data/main_dict.json`、`data/phrases.json`、`rime/extra_phrases.txt` | ✅ 数据源 | 词库源头（改这里，不要直接改 dict.yaml；extra 只允许韩文与游戏缩写） |
+| `data/shortcodes.tsv` | ✅ 数据源 | 速记码表（87 条，码=中文拼音首字母，权重 110 保证首位） |
+| `data/meanings.tsv`、`data/dict_meta.tsv` | ✅ 词典数据源 | 释义 / 分类·语体·备注（《HanPinyin 词典》用） |
+| `docs/gen_dictionary.py`、`docs/HanPinyin词典.html` | ✅ 词典 | 生成器（缺释义会报错退出）+ 新人词典（附录四=速记码表） |
+| `src/`、`CMakeLists.txt`、`tests/` | 🗄️ 历史存档 | 自研 TSF/EXE 死路，仅供考古（见 6.4） |
 | ~~`一键更新.bat`、`rime/deploy.py`、`rime/sino_mix.dict.yaml`、`installer/`、`sogou/`~~ | 🗑️ 已删除（2026-09-06） | 违规自动化产物与实验残留，勿恢复 |
 | `rime/_installers/`（12MB weasel.exe）、`build/`、`data/user_dict.json` | 🚫 gitignored | 本地文件，不入库 |
 
@@ -165,7 +178,7 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | 候选窗报 `Error loading table for dictionary 'hanpinyin'` | 词典没挂在**默认 translator** 上，部署阶段不编译它 | 检查 schema 第 80 行 `translator.dictionary: hanpinyin`（见 4.2） |
 | 只有打全拼才出词，简拼/模糊不出 | 词典里没生成对应码（多半是直接手改了 dict.yaml 或没重跑 build_dict.py） | 改数据源 → 重跑 `build_dict.py` → 重新部署（见 3.1） |
 | 「重新部署」了但候选还是旧的 | 复制的文件不对/没覆盖；或只重启了进程没部署 | 核对 `%APPDATA%\Rime` 下两个 YAML 的时间戳与内容；牢记重启 ≠ 部署（6.2） |
-| 中文正常、韩文简拼权重不对/排序怪 | expand() 的权重设计：规范码 > 模糊码(-1) > 简拼码(-5) | 调整 build_dict.py 中权重偏移后重建词典 |
+| 韩文候选排序怪/某词排不到首位 | 权重体系：速记码 110 > 基石词 100 > 主词条 10~14 > 变体码 -1/-5（质量=exp(权重)，放大明显） | 调数据源权重或 `data/shortcodes.tsv` 后重建；用 `_bench_panel.py --fresh` 实测对比 |
 | 改了 `data/*.json` 但没任何变化 | 数据源拼音格式不符（主库要**空格分隔音节**、全小写） | 对照 `data/schema.md`；`extra_phrases.txt` 才是连写格式 |
 
 > 通用原则：**先跑 `python validate_rime.py`，再做打字测试**。两步都过还有问题，才考虑动 schema。
@@ -254,25 +267,30 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | `304e698` | chore: 删除违规自动化产物与实验残留 |
 | `462fd90` | feat(data): 词库扩充（+41/+15）+ verify_regression.py 回归工具，词典 7088 码 |
 | `959fe8d` | feat(rime): 开启自学习与前缀补全（schema v2.3）+ README 纯 GUI 化 |
+| `782f779` | feat(dict): 词典体验升级（搜索=输入法同规则、分类/语体/聚类/速记工具链） |
+| `9a0859c` | feat(data): 第七批扩词——自我情绪表达 75 条 +「情绪」分类 |
+| `bf9a001` | **feat!: 专攻韩文**（schema v2.4）：移除中文 translator、关补全、开长句自学习；速记码体系 87 条；清理 extra 中日英对照 97 行；新增 _bench_panel.py 体检工具 |
 
 ---
 
-## 9. 当前遗留事项（2026-09-06 更新）
+## 9. 当前遗留事项（2026-09-26 更新）
 
-**已完成（2026-09-06，P0+P1+P2 一批）**：
+**已完成（2026-09-25/26，流畅度优化一轮）**：
 
-1. ✅ 删除 `一键更新.bat` 与 `rime/deploy.py`（违规产物正式清出仓库）；
-2. ✅ 删除 `rime/sino_mix.dict.yaml` 孤儿词典；
-3. ✅ 删除 `installer/`、`sogou/` 实验残留（搜狗渠道材料未再使用）；
-4. ✅ README 排版瑕疵修复（HTML 实体、坏链接）+ 部署章节改为纯 GUI 三步；
-5. ✅ 词库扩充：main_dict 816→857 条 / phrases 80→95 条（LoL 对局用语 + 日常交流双线），新增 `verify_regression.py` 回归工具；
-6. ✅ 输入体验：韩文/中文两侧开启用户词典自学习（已核实 librime `charset_filter` 不滤谚文）、韩文侧开启前缀补全。
+1. ✅ 候选窗噪音治理：实测中文候选占 75% → 移除 `script_translator@cn`，纯韩文输出；
+2. ✅ 前缀补全关闭（补全噪声实测 + librime 源码证实 -1 质量无效）；
+3. ✅ 长句自学习开启（`enable_encoder` + `encode_commit_history`，候选带 ☯）；
+4. ✅ 速记码体系 87 条（码=中文拼音首字母，权重 110 保证首位；回归校验含首位断言）；
+5. ✅ extra_phrases 清理：删除中文/日/英对照行 97 行，纯韩文基石词库；
+6. ✅ 体检工具链：`_bench_panel.py`（面板占比）+ `_diag_select.py`（上屏诊断）+ schema 形态断言；
+7. ✅ **P2 模糊音瘦身经测量后否决**：省约 25% 词典行数但零体感收益（补全已关），反而损失容错——保留现有规则。
 
 **待办**：
 
-1. 若要给最终用户做"一键体验"，**正确方向**是研究 Rime 官方的**安装器/plum（东风破）配方分发**等官方 GUI 机制——必须先调研再动手，且最终交付物不能是命令行脚本（铁律 1）；
-2. 自学习与补全（schema v2.3）需用户「重新部署」后手动打字验证（见 3.3 专属码表）；
-3. 远期可选：同一词典移植 Android Trime。
+1. ⏳ **用户操作**：schema v2.4 + 词典已复制到 `%APPDATA%\Rime\`（备份 `*.v1bak.20260926001450`），等用户**托盘「重新部署」**后按 3.3 打字测试（`pw`→랭크、候选窗无中文 = 生效）；
+2. ⏳ 长句自学习是全新机制，用户先用几天，观察 ☯ 词组是否出现、误记忆是否需要清理（删 `hanpinyin.userdb\` 重部署即清零）；
+3. 速记码首批准确 87 条，按用户实战反馈继续增补（改 `data/shortcodes.tsv` → build → verify）；
+4. 远期可选：同一词典移植 Android Trime；plum（东风破）配方分发给其他玩家（须先调研官方机制，交付物不能是命令行脚本——铁律 1）。
 
 ---
 
