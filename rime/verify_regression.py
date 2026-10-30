@@ -306,8 +306,9 @@ def main():
     checks = [
         ("script_translator@cn" not in schema, "中文 translator 应已移除"),
         ("enable_completion: false" in schema, "补全应已关闭"),
-        ("enable_encoder: true" in schema, "自造词编码应开启"),
-        ("encode_commit_history: true" in schema, "长句历史编码应开启"),
+        ("enable_user_dict: true" in schema, "选词自学习（用户词典）应开启"),
+        ("enable_encoder" not in schema and "encode_commit_history" not in schema,
+         "长句编码开关应已移除（2026-10-31 实测两层断裂，见 docs/SELF-LEARNING-MEMO.md）"),
     ]
     for ok, why in checks:
         if ok:

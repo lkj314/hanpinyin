@@ -8,7 +8,7 @@
 
 ## 0. 30 秒版（TL;DR）
 
-- **这是什么**：HanPinyin 是**基于 Rime/小狼毫（Weasel）魔改的韩文拼音输入法**——用户敲中文拼音，候选栏出韩文词（**2026-09-26 起纯韩文输出**：中文候选已移除，另有速记码两三键出常用词、长句自学习）。**不是**自研输入法框架。
+- **这是什么**：HanPinyin 是**基于 Rime/小狼毫（Weasel）魔改的韩文拼音输入法**——用户敲中文拼音，候选栏出韩文词（**2026-09-26 起纯韩文输出**：中文候选已移除，另有速记码两三键出常用词、选词自学习）。**不是**自研输入法框架。
 - **真实在跑的代码**：只有 `rime/` 目录（一个 Rime 方案 + 一份生成词典）。`src/` 目录（自研 C++ TSF/EXE）是**已判死刑的死路**，只作历史存档，**绝不投入**。
 - **三条铁律**：
   1. **禁止用任何命令行自动化（.py / .bat / PowerShell）改动输入法或触发部署**——输入法是 Windows 系统级软件，脚本既改不动它、也无法判断它是否更新成功；
@@ -54,7 +54,8 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 **v2.4 关键开关（2026-09-26，均有 schema 断言守护）**：
 - `enable_completion: false`——补全会把无关长码拉进候选窗（打 `hao` 冒出 짜증나），且补全只 -1 质量几乎无效（quality = exp(权重) ± 小量）。
-- `enable_encoder: true` + `encode_commit_history: true`——**长句自学习**：连续上屏内容自动编码成用户词组（候选带 ☯），之后敲开头字母整句调出。查证 librime `table_translator.cc`，无需 `enable_sentence`。
+- `enable_user_dict: true`——**选词自学习（实测有效）**：常选的词按「频次 × 新近度」加权上浮，下次同码跳首位，久不用衰减。用户词典存 `%APPDATA%\Rime\*.userdb\`。
+- ~~`enable_encoder` + `encode_commit_history`（长句编码）~~——**2026-10-31 实测两层断裂、v2.5 已移除**：①词典缺 `encoder:` 设置时编码器自禁用；②补上规则后编码产物对多音节连写韩文词典也不落库。完整归因见 `docs/SELF-LEARNING-MEMO.md`。
 - 权重体系：**速记码 110 > 基石词 100 > 主词条 10~14 > 变体码 5~9**；质量 = exp(权重)，`initial_quality` 影响可忽略（旧注释"抬高起始质量让韩文排前"是错误的，已删）。
 - 速记码：`data/shortcodes.tsv`（87 条，码 = 中文意思拼音首字母，权重 110 保证该码首位）；`verify_regression.py` 有首位断言。
 
@@ -160,10 +161,14 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 | `rime/validate_rime.py` | ✅ 开发工具 | 方案/词典结构校验（需 PyYAML） |
 | `rime/_bench_panel.py` | ✅ 体检工具 | 候选面板量化（韩文/中文/日文占比、韩文位次），调权/改配置前后各跑一遍 |
 | `rime/_diag_select.py` | ✅ 诊断工具 | 端到端"能否选中上屏"（隔离环境模拟按键→选词→读上屏，绝不碰用户输入法数据） |
+| `rime/_dump_userdb.py` | ✅ 挖矿工具 | userdb（学习数据）只读解析，固化管线与审计的地基 |
+| `rime/_exp_learn.py` / `_exp_learn4.py` | ✅ 实验工具 | 隔离验证选词记忆重排 / ☯ 编码链路（librime 升级后用后者复测） |
 | `data/main_dict.json`、`data/phrases.json`、`rime/extra_phrases.txt` | ✅ 数据源 | 词库源头（改这里，不要直接改 dict.yaml；extra 只允许韩文与游戏缩写） |
 | `data/shortcodes.tsv` | ✅ 数据源 | 速记码表（87 条，码=中文拼音首字母，权重 110 保证首位） |
 | `data/meanings.tsv`、`data/dict_meta.tsv` | ✅ 词典数据源 | 释义 / 分类·语体·备注（《HanPinyin 词典》用） |
 | `docs/gen_dictionary.py`、`docs/HanPinyin词典.html` | ✅ 词典 | 生成器（缺释义会报错退出）+ 新人词典（附录四=速记码表） |
+| `docs/OPTIMIZATION-BLUEPRINT.md` | ✅ 规划 | 全面优化更新蓝图（自适应流畅度主线，2026-10-31） |
+| `docs/SELF-LEARNING-MEMO.md` | ✅ 备忘录 | 自学习机制归因（实测证据 + ☯ 编码两层断裂结论 + 复验方法） |
 | `src/`、`CMakeLists.txt`、`tests/` | 🗄️ 历史存档 | 自研 TSF/EXE 死路，仅供考古（见 6.4） |
 | ~~`一键更新.bat`、`rime/deploy.py`、`rime/sino_mix.dict.yaml`、`installer/`、`sogou/`~~ | 🗑️ 已删除（2026-09-06） | 违规自动化产物与实验残留，勿恢复 |
 | `rime/_installers/`（12MB weasel.exe）、`build/`、`data/user_dict.json` | 🚫 gitignored | 本地文件，不入库 |
@@ -273,24 +278,31 @@ rime/sino_mix.schema.yaml（方案配置）────────────�
 
 ---
 
-## 9. 当前遗留事项（2026-09-26 更新）
+## 9. 当前遗留事项（2026-10-31 更新）
 
 **已完成（2026-09-25/26，流畅度优化一轮）**：
 
 1. ✅ 候选窗噪音治理：实测中文候选占 75% → 移除 `script_translator@cn`，纯韩文输出；
 2. ✅ 前缀补全关闭（补全噪声实测 + librime 源码证实 -1 质量无效）；
-3. ✅ 长句自学习开启（`enable_encoder` + `encode_commit_history`，候选带 ☯）；
-4. ✅ 速记码体系 87 条（码=中文拼音首字母，权重 110 保证首位；回归校验含首位断言）；
-5. ✅ extra_phrases 清理：删除中文/日/英对照行 97 行，纯韩文基石词库；
-6. ✅ 体检工具链：`_bench_panel.py`（面板占比）+ `_diag_select.py`（上屏诊断）+ schema 形态断言；
-7. ✅ **P2 模糊音瘦身经测量后否决**：省约 25% 词典行数但零体感收益（补全已关），反而损失容错——保留现有规则。
+3. ✅ 速记码体系 87 条（码=中文拼音首字母，权重 110 保证首位；回归校验含首位断言）；
+4. ✅ extra_phrases 清理：删除中文/日/英对照行 97 行，纯韩文基石词库；
+5. ✅ 体检工具链：`_bench_panel.py`（面板占比）+ `_diag_select.py`（上屏诊断）+ schema 形态断言；
+6. ✅ **P2 模糊音瘦身经测量后否决**：省约 25% 词典行数但零体感收益（补全已关），反而损失容错——保留现有规则。
+
+**已完成（2026-10-31，自学习归因 + 路线 B 一批）**：
+
+1. ✅ 自学习机制全面审计（源码引证 + 真实 userdb 逐条解析 + 隔离实验）：**选词自学习实测有效**；**☯ 长句编码两层断裂、判定不可修**（词典缺 `encoder:` 设置 + librime 拆词不兼容连写韩文词典），完整归因见 `docs/SELF-LEARNING-MEMO.md`；
+2. ✅ schema v2.5：移除无效的 `enable_encoder`/`encode_commit_history`；README/HANDOVER/rime-README 三处不实描述同步修正；verify/validate 断言反转为"必须移除"；
+3. ✅ 新工具：`_dump_userdb.py`（userdb 只读解析/挖矿地基）、`_exp_learn.py`/`_exp_learn4.py`（隔离实验，后者供 librime 升级后复测）；
+4. ✅ 《全面优化更新蓝图》落盘 `docs/OPTIMIZATION-BLUEPRINT.md`（自适应流畅度主线）；
+5. ✅ 首期 userdb 挖矿报告（`rime/_mine_userdb.py`）：54 条学习数据、Top 榜与污染条目已列出，固化清单待用户过目。
 
 **待办**：
 
-1. ⏳ **用户操作**：schema v2.4 + 词典已复制到 `%APPDATA%\Rime\`（备份 `*.v1bak.20260926001450`），等用户**托盘「重新部署」**后按 3.3 打字测试（`pw`→랭크、候选窗无中文 = 生效）；
-2. ⏳ 长句自学习是全新机制，用户先用几天，观察 ☯ 词组是否出现、误记忆是否需要清理（删 `hanpinyin.userdb\` 重部署即清零）；
-3. 速记码首批准确 87 条，按用户实战反馈继续增补（改 `data/shortcodes.tsv` → build → verify）；
-4. 远期可选：同一词典移植 Android Trime；plum（东风破）配方分发给其他玩家（须先调研官方机制，交付物不能是命令行脚本——铁律 1）。
+1. ⏳ **用户操作**：schema v2.5 已复制到 `%APPDATA%\Rime\`，**托盘「重新部署」**后按 3.3 打字测试（`pw`→랭크、候选窗无中文 = 生效）；
+2. ⏳ T1-3 固化：首期挖矿报告中的高频词经用户过目后进 `data/`（改 `data/shortcodes.tsv` / `extra_phrases.txt` → build → verify）；
+3. ⏳ 等用户拍板：① userdb 污染条目处置（`shengqi`→生气 等旧词典残留，见备忘录 1.4）；② 脏话档（씨발/병신/아 씨，09-06 遗留至今）；
+4. 远期可选：同一词典移植 Android Trime；plum（东风破）配方分发给其他玩家；GitHub Release 分发包（均须先调研官方机制，交付物不能是命令行脚本——铁律 1）。
 
 ---
 

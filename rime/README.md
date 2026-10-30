@@ -14,7 +14,7 @@
 ## 二、首次部署
 
 1. 复制这两个文件到小狼毫用户目录 `%APPDATA%\Rime\`（即 `C:\Users\<你>\AppData\Roaming\Rime\`）：
-   - `rime/sino_mix.schema.yaml`（方案定义，v2.4）
+   - `rime/sino_mix.schema.yaml`（方案定义，v2.5）
    - `rime/hanpinyin.dict.yaml`（生成的韩文词典）
 2. 右键任务栏小狼毫托盘图标 → **「重新部署」**（等几秒即可，旧编译产物 `*.table.bin` / `*.prism.bin` 会自动重建）。
 3. 若输入法列表里没有「韩文拼音 HanPinyin」：右键托盘 → **「输入法设定」** 勾选它；
@@ -66,7 +66,8 @@
 
 - `script_translator@cn` **已移除**——实测中文候选占候选窗 75%，全是谐音噪音；中文交给用户的搜狗。
 - `enable_completion: false`——实测补全会把无关长码拉进候选窗（打 `hao` 冒出 짜증나），且补全只 -1 质量几乎无效（quality = exp(weight) ± 小量）。
-- `enable_encoder: true` + `encode_commit_history: true`——**长句自学习**：连续上屏内容自动编码成用户词组（候选带 ☯），之后敲开头字母可整句调出。查证自 librime `table_translator.cc`，无需 `enable_sentence`。
+- `enable_user_dict: true`——**选词自学习**（实测有效）：常选的词按「频次 × 新近度」加权，下次同码跳到候选首位，久不用会衰减。用户词典存于 `%APPDATA%\Rime\hanpinyin.userdb\`。
+- ~~`enable_encoder` + `encode_commit_history`（长句编码成用户词组）~~——2026-10-31 实测**两层断裂、已移除**：词典缺 `encoder:` 设置时编码器自禁用；补上规则后编码产物对多音节连写韩文词典也不落库。归因与复验方法见 `docs/SELF-LEARNING-MEMO.md`；高频长句改走 userdb 挖矿固化。
 - 排序体系：质量 = exp(词典权重)；速记码 110 > 基石词 100 > 主词条 10~14 > 变体码 5~9。`initial_quality` 影响可忽略（此前"抬高起始质量"的注释是错的，已删）。
 
 排坑记录：韩文词典若挂在命名 translator（如 `table_translator@han`）上，部署阶段根本不会编译它，运行时报
@@ -79,7 +80,7 @@
 
 ```
 rime/
-  sino_mix.schema.yaml  # 方案定义 v2.4（纯韩文输出：无中文 translator、无补全、开长句自学习）
+  sino_mix.schema.yaml  # 方案定义 v2.5（纯韩文输出：无中文 translator、无补全、开选词自学习）
   hanpinyin.dict.yaml   # 生成的韩文词典（约 10246 码，勿手改）
   build_dict.py         # 数据源 -> 词典生成器（模糊音 + 简拼/混拼 + 速记码 + 非韩文过滤）
   verify_regression.py  # 数据质量 + 构建覆盖 + 回归点 + 速记码首位 + schema 形态校验（改词库后必跑）
@@ -90,6 +91,9 @@ rime/
                         #   用法：python _diag_select.py zmb pw
                         #        python _diag_select.py --fresh pw   # 用仓库最新词典重编译再测
                         #   判据：按 1 选词后读 RimeGetCommit，看是否真的上屏
+  _dump_userdb.py       # 只读解析 userdb（学习数据）：python _dump_userdb.py（挖矿/审计基础工具）
+  _exp_learn.py         # 隔离实验：选词记忆重排行为验证
+  _exp_learn4.py        # 隔离实验：☯ 长句编码持久化判别（librime 升级后复测用）
   extra_phrases.txt     # 韩文基石高频词（权重 100；只允许韩文与游戏缩写）
 ```
 

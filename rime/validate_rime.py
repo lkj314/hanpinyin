@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 校验 HanPinyin 的 Rime 方案是否合法：
-  * sino_mix.schema.yaml：方案结构、translator 指向、中文侧模糊音+简拼(abbrev)是否就位
+  * sino_mix.schema.yaml：方案结构、translator 指向、模糊音规则是否就位
   * hanpinyin.dict.yaml ：由 build_dict.py 生成的词库，码不含空格、字段数为 3、
                           且 nihao 等核心词条确实带模糊音/简拼变体码
 
@@ -60,8 +60,11 @@ def main():
     assert "script_translator@cn" not in eng, "2026-09-25 起专攻韩文：中文 translator 必须移除"
     assert s["translator"]["dictionary"] == "hanpinyin", "默认 translator 须指向 hanpinyin"
     assert s["translator"].get("enable_completion") is False, "韩文侧补全必须关闭（补全会拉入无关长码）"
-    assert s["translator"].get("enable_encoder") is True, "自造词编码（enable_encoder）必须开启"
-    assert s["translator"].get("encode_commit_history") is True, "长句历史编码（encode_commit_history）必须开启"
+    assert s["translator"].get("enable_user_dict") is True, "选词自学习（enable_user_dict）必须开启"
+    assert "enable_encoder" not in s["translator"], \
+        "长句编码（enable_encoder）2026-10-31 实测无效，应移除（见 docs/SELF-LEARNING-MEMO.md）"
+    assert "encode_commit_history" not in s["translator"], \
+        "长句历史编码（encode_commit_history）2026-10-31 实测无效，应移除（见 docs/SELF-LEARNING-MEMO.md）"
 
     alg = s["speller"].get("algebra", [])
     alg_text = "\n".join(alg)

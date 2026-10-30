@@ -69,11 +69,10 @@ HanPinyin 是一个 Windows 上的「拼音 → 韩文」输入方案。主要�
 - **模糊拼音（逐音节）**：`zh↔z`、`ang↔an`、`n↔l`、`f↔h` 等，且对韩文多音节词**每个音节**都生效（由 `build_dict.py` 预先生成模糊码）。例如 `lihao` 也能出 `안녕하세요`。
 - **简拼 / 混拼**：打 `nh` 出 `안녕하세요`，打 `beizd` 出 `자꾸 나만 노려`。
 - **速记码（2026-09-26 新增）**：87 条高频词的拼音首字母码（`pw`→랭크、`ht`→한타、`bk`→멘탈 터졌어…），权重 110 保证**第一候选**就是它。全表见词典附录四。
-- **长句自学习（2026-09-26 开启）**：连续打出的内容会被自动编码成词组（候选带 ☯ 标记）——**常用长句打过一次，之后敲开头几个字母就能整句调出**。
-- **自学习**：常选的词自动加权上浮（越用越顺手）。用户词典存于 `%APPDATA%\Rime\*.userdb\`，可随时删除重学。
+- **选词自学习（实测有效）**：常选的词自动加权上浮（越用越顺手）——实测选过的词下次输入同码会跳到首位，久不用会衰减。用户词典存于 `%APPDATA%\Rime\*.userdb\`，可用小狼毫托盘「用户词典管理」备份快照，也可随时删除重学。
 - **无前缀补全**（2026-09-26 关闭）：实测补全会把无关长码拉进候选窗（打 `hao` 冒出 짜증나 等噪声）且几乎无法降权，关掉后候选窗更干净。
 
-> 均已对照 librime 官方源码核实（`charset_filter.cc` 不滤谚文；`table_translator.cc` 支持 `enable_encoder`/`encode_commit_history`）。
+> 均已对照 librime 官方源码核实（`charset_filter.cc` 不滤谚文）。曾经开启的"长句编码成用户词组"（enable_encoder/encode_commit_history）经 2026-10-31 实测对韩文连写词典完全无效，已移除，详见 `docs/SELF-LEARNING-MEMO.md`。
 
 ---
 
@@ -115,7 +114,7 @@ HanPinyin/
 │   └── schema.md
 ├── docs/                 # 《HanPinyin 词典》与生成器
 ├── rime/                 # 真正在跑的输入法方案（小狼毫 / Rime）
-│   ├── sino_mix.schema.yaml  # 方案定义（纯韩文输出，v2.4：无中文 translator、无补全、开长句自学习）
+│   ├── sino_mix.schema.yaml  # 方案定义（纯韩文输出，v2.5：无中文 translator、无补全、开选词自学习）
 │   ├── build_dict.py         # 数据源 -> hanpinyin.dict.yaml 生成器（含模糊音/简拼/速记码）
 │   ├── verify_regression.py  # 数据质量 + 回归点 + 速记码首位 + schema 形态校验（改词库后必跑）
 │   ├── validate_rime.py      # 方案/词典结构校验

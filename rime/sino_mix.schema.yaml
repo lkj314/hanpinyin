@@ -16,8 +16,8 @@
 schema:
   schema_id: sino_mix
   name: "韩文拼音 HanPinyin"
-  version: "2.4"
-  description: 韩文拼音输入（专精版）：候选即韩文，支持模糊拼音、速记码与长句自学习
+  version: "2.5"
+  description: 韩文拼音输入（专精版）：候选即韩文，支持模糊拼音、速记码与选词自学习
 
 switches:
   - name: ascii_mode
@@ -80,17 +80,15 @@ speller:
 # 必须挂在默认 translator 上，部署阶段才会编译 hanpinyin 词典
 translator:
   dictionary: hanpinyin
-  enable_user_dict: true      # 自学习：常选的韩文词会加权上浮（已核实不滤谚文）
-  enable_sentence: false      # 连写码组句不可控，保持关闭
+  enable_user_dict: true      # 选词自学习：常选的韩文词会加权上浮（已核实不滤谚文；
+                              # 2026-10-31 隔离实验实测：选过的词下次同码跳到首位）
+  enable_sentence: false      # 连写码组句不可控，保持关闭（☯ 组句候选是临时的，不落库）
   enable_completion: false    # 2026-09-25 关闭：实测补全会把无关长码拉进候选窗
                               # （打 hao 冒出 맛있어요/짜증나），且补全只 -1 质量几乎无效
-  # —— 长句自学习（2026-09-25 开启，查证 librime table_translator.cc 支持）——
-  # enable_encoder + encode_commit_history：连续上屏的内容会被编码成用户词组
-  # （UnityTableEncoder，候选带 ☯ 标记），Query 阶段即参与检索，无需 enable_sentence。
-  # 效果：常用长句打过一次，之后敲开头几个字母就能整句调出。
-  enable_encoder: true
-  encode_commit_history: true
-  max_phrase_length: 20
+  # 注：2026-09-25 曾开启 enable_encoder + encode_commit_history（长句编码成用户词组），
+  # 2026-10-31 实测该链路对韩文连写词典完全无效（词典缺 encoder 设置 + librime 拆词
+  # 环节不兼容多音节连写词，编码产物从不落库），开关已移除，schema v2.5。
+  # 归因与复验方法见 docs/SELF-LEARNING-MEMO.md；高频长句改走 userdb 挖矿固化路线。
   # 排序说明：候选质量 = exp(词典权重) + initial_quality（librime 源码实测）。
   # 词典权重体系：速记码 110 > 基石词 100 > 主词条 10~14 > 变体码 5~9，
   # 韩文排前靠的是权重差，initial_quality 影响可忽略（此前注释有误，已删）。
